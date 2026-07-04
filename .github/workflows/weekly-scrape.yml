@@ -1,0 +1,53 @@
+name: Weekly Price Scraper
+
+on:
+  # Run every Monday at 8:00 AM AEST (22:00 UTC Sunday)
+  # This aligns with Woolworths/Coles weekly catalogue cycle (Wed–Tue)
+  schedule:
+    - cron: '0 22 * * 0'
+
+  # Allow manual trigger from GitHub Actions tab
+  workflow_dispatch:
+    inputs:
+      mock_mode:
+        description: 'Run in mock mode (no real HTTP requests)?'
+        required: false
+        default: 'false'
+        type: choice
+        options: ['false', 'true']
+
+jobs:
+  scrape-prices:
+    name: Scrape & Save Grocery Prices
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+          cache-dependency-path: scraper/requirements.txt
+
+      - name: Install dependencies
+        run: pip install -r scraper/requirements.txt
+
+      - name: Run price scraper
+        working-directory: scraper
+        env:
+          SUPABASE_URL:         ${{ secrets.SUPABASE_URL }}
+          SUPABASE_SERVICE_KEY: ${{ secrets.SUPABASE_SERVICE_KEY }}
+          MOCK_MODE:            ${{ github.event.inputs.mock_mode || 'false' }}
+        run: python main.py
+
+      - name: Upload logs on failure
+        if: failure()
+        uses: actions/upload-artifact@v4
+        with:
+          name: scraper-logs
+          path: scraper/*.log
+          retention-days: 7
