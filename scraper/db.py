@@ -33,6 +33,9 @@ def upsert_price_snapshot(
     Insert or update a price snapshot for this week.
     Uses UPSERT to avoid duplicates (unique on product_id + store_id + week_start).
     """
+    if client is None:
+        return
+
     week_start = get_week_start().isoformat()
 
     data = {
