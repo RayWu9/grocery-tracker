@@ -1,175 +1,141 @@
 """
 Coles price scraper.
 
-Uses Coles' public-facing search API endpoint. For personal use at low rates only.
+Queries the public search page and extracts product information from Next.js state payload.
+Bypasses anti-bot protection using curl-cffi.
 """
 
 import time
 import json
 import logging
-import requests
 from bs4 import BeautifulSoup
+
+# Try to import requests from curl_cffi to bypass Incapsula WAF
+try:
+    from curl_cffi import requests
+    USE_CURL_CFFI = True
+except ImportError:
+    import requests
+    USE_CURL_CFFI = False
 
 logger = logging.getLogger(__name__)
 
-SEARCH_URL = 'https://www.coles.com.au/api/2.0.0/page/searchresults'
-
 HEADERS = {
     'User-Agent':      'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
-                       '(KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36',
-    'Accept':          'application/json, text/plain, */*',
-    'Accept-Language': 'en-AU,en;q=0.9',
-    'Referer':         'https://www.coles.com.au/search?q=coca+cola',
-    'Origin':          'https://www.coles.com.au',
+                       '(KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
+    'Accept':          'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+    'Accept-Language': 'en-US,en;q=0.9',
 }
 
 
 def search_product(search_term: str, timeout: int = 15, retries: int = 3) -> dict | None:
     """
     Search Coles for a product and return the best-matching result.
-
-    Returns a dict with keys:
-        price, regular_price, on_sale, discount_pct, name
-    or None if not found / request failed.
     """
-    params = {
-        'q':                    search_term,
-        'page':                 '1',
-        'pageSize':             '5',
-        'inStoreProductsOnly': 'false',
-    }
+    url = f'https://www.coles.com.au/search?q={search_term.replace(" ", "+")}'
+
+    # Use a persistent session to maintain cookies during retry cycles
+    session = requests.Session()
+    session.headers.update(HEADERS)
 
     for attempt in range(1, retries + 1):
         try:
-            resp = requests.get(
-                SEARCH_URL,
-                params=params,
-                headers=HEADERS,
-                timeout=timeout,
-            )
+            if USE_CURL_CFFI:
+                resp = session.get(url, impersonate='chrome120', timeout=timeout)
+            else:
+                resp = session.get(url, timeout=timeout)
+
             resp.raise_for_status()
-            data = resp.json()
-            return _parse_response(data, search_term)
+            
+            # Parse the search page content
+            result = _parse_html_page(resp.text, search_term)
+            if result:
+                return result
+                
+            # If parse failed or was empty, check if we hit a block page
+            if "pardon our interruption" in resp.text.lower():
+                logger.warning(f'[Coles] Blocked by Incapsula challenge on attempt {attempt}')
+            else:
+                logger.warning(f'[Coles] Product not found in search results on attempt {attempt}')
 
-        except requests.HTTPError as e:
-            logger.warning(f'[Coles] HTTP {e.response.status_code} on attempt {attempt}')
-            if e.response.status_code == 403:
-                # Coles may block scraping — try the HTML fallback
-                logger.info('[Coles] Trying HTML fallback...')
-                result = _html_fallback(search_term, timeout)
-                if result:
-                    return result
-            if attempt < retries:
-                time.sleep(2 ** attempt)
+        except Exception as e:
+            logger.warning(f'[Coles] Connection/Request error on attempt {attempt}: {e}')
 
-        except (requests.RequestException, json.JSONDecodeError, KeyError) as e:
-            logger.warning(f'[Coles] Error on attempt {attempt}: {e}')
-            if attempt < retries:
-                time.sleep(2 ** attempt)
+        if attempt < retries:
+            time.sleep(2 ** attempt + 1)
 
     logger.error(f'[Coles] Failed to fetch "{search_term}" after {retries} attempts')
     return None
 
 
-def _parse_response(data: dict, search_term: str) -> dict | None:
-    """Parse the Coles JSON search response."""
-    # Coles API response structure varies — handle multiple patterns
-    results = (
-        data.get('results')
-        or data.get('searchResults', {}).get('results')
-        or data.get('catalogGroupView', [])
-    )
-
-    if not results:
-        logger.warning(f'[Coles] No results for "{search_term}"')
-        return None
-
-    product = results[0]
-
-    # Extract fields (Coles field names vary by API version)
-    price         = _extract_price(product)
-    was_price     = _extract_was_price(product)
-    is_on_special = _detect_special(product, price, was_price)
-    name          = product.get('name') or product.get('fullName', '')
-
-    if price is None:
-        return None
-
-    discount_pct = None
-    if was_price and was_price > price:
-        discount_pct = round((1 - price / was_price) * 100)
-
-    logger.info(
-        f'[Coles] "{name}" → ${price:.2f}'
-        + (f' (was ${was_price:.2f}, -{discount_pct}%)' if is_on_special else ' (regular)')
-    )
-
-    return {
-        'price':         float(price),
-        'regular_price': float(was_price) if was_price else float(price),
-        'on_sale':       bool(is_on_special),
-        'discount_pct':  discount_pct,
-        'name':          name,
-    }
-
-
-def _extract_price(product: dict) -> float | None:
-    """Try common field names for current price."""
-    for key in ['nowPrice', 'price', 'salePrice', 'priceValue']:
-        val = product.get(key)
-        if val is not None:
-            try:
-                return float(str(val).replace('$', '').strip())
-            except (ValueError, TypeError):
-                continue
-    return None
-
-
-def _extract_was_price(product: dict) -> float | None:
-    """Try common field names for regular/was price."""
-    for key in ['wasPrice', 'regularPrice', 'listPrice', 'originalPrice']:
-        val = product.get(key)
-        if val is not None:
-            try:
-                return float(str(val).replace('$', '').strip())
-            except (ValueError, TypeError):
-                continue
-    return None
-
-
-def _detect_special(product: dict, price: float | None, was_price: float | None) -> bool:
-    """Determine if the product is currently on sale."""
-    if product.get('isOnSpecial') or product.get('onSpecial'):
-        return True
-    if price and was_price and was_price > price * 1.05:
-        return True
-    return False
-
-
-def _html_fallback(search_term: str, timeout: int) -> dict | None:
+def _parse_html_page(html_text: str, search_term: str) -> dict | None:
     """
-    Fallback: scrape the Coles website HTML search results page.
-    Less reliable but works when the JSON API is blocked.
+    Parse Coles HTML search page, prioritizing Next.js JSON state payload.
     """
-    try:
-        url = f'https://www.coles.com.au/search?q={search_term.replace(" ", "+")}'
-        resp = requests.get(url, headers=HEADERS, timeout=timeout)
-        resp.raise_for_status()
-        soup = BeautifulSoup(resp.text, 'lxml')
+    soup = BeautifulSoup(html_text, 'lxml')
 
-        # Product prices are in data attributes on the page
-        price_els = soup.select('[data-testid="product-pricing"]')
-        if not price_els:
-            price_els = soup.select('.price')
+    # Try parsing Next.js page state (contains clean, raw product data)
+    script_tag = soup.find('script', id='__NEXT_DATA__')
+    if script_tag:
+        try:
+            data = json.loads(script_tag.get_text())
+            results = data.get('props', {}).get('pageProps', {}).get('searchResults', {}).get('results', [])
+            if results:
+                # Use first search result
+                product = results[0]
+                name = product.get('name') or product.get('fullName', '')
+                pricing = product.get('pricing', {})
 
-        if not price_els:
-            return None
+                price = pricing.get('now')
+                was_price = pricing.get('was')
 
-        price_text = price_els[0].get_text(strip=True)
-        price = float(price_text.replace('$', '').split()[0])
-        logger.info(f'[Coles HTML] Found price ${price:.2f} for "{search_term}"')
-        return {'price': price, 'regular_price': price, 'on_sale': False, 'discount_pct': None, 'name': search_term}
+                if price is not None:
+                    # Default regular price to current price if 'was' price is missing or 0
+                    if not was_price or was_price == 0:
+                        was_price = price
 
-    except Exception as e:
-        logger.warning(f'[Coles HTML fallback] Failed: {e}')
-        return None
+                    is_on_special = pricing.get('promotionType') == 'SPECIAL' or (was_price > price)
+                    discount_pct = None
+                    if is_on_special and was_price > price:
+                        discount_pct = round((1 - price / was_price) * 100)
+
+                    logger.info(
+                        f'[Coles] "{name[:50]}" → ${price:.2f}'
+                        + (f' (was ${was_price:.2f}, -{discount_pct}%)' if is_on_special else ' (regular)')
+                    )
+
+                    return {
+                        'price':         float(price),
+                        'regular_price': float(was_price),
+                        'on_sale':       bool(is_on_special),
+                        'discount_pct':  discount_pct,
+                        'name':          name,
+                    }
+        except Exception as e:
+            logger.debug(f'[Coles] Failed to parse NEXT_DATA script block: {e}')
+
+    # HTML Fallback: extract directly from DOM tags if script is blocked or missing
+    price_els = soup.select('[data-testid="product-pricing"]')
+    if not price_els:
+        price_els = soup.select('.price')
+
+    if price_els:
+        try:
+            price_text = price_els[0].get_text(strip=True)
+            # Match number structure in string: e.g. "$4.50"
+            import re
+            match = re.search(r'[\d,]+\.?\d*', price_text.replace('$', '').strip())
+            if match:
+                price = float(match.group())
+                logger.info(f'[Coles HTML] Extracted price ${price:.2f} for "{search_term}"')
+                return {
+                    'price':         price,
+                    'regular_price': price,
+                    'on_sale':       False,
+                    'discount_pct':  None,
+                    'name':          search_term,
+                }
+        except Exception as e:
+            logger.warning(f'[Coles HTML fallback] Failed to parse extracted price: {e}')
+
+    return None
