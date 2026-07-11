@@ -15,6 +15,7 @@ from datetime import datetime
 
 import config
 import db
+import alerts
 from scrapers import woolworths, coles, amazon_au
 
 # ── Logging setup ────────────────────────────────────
@@ -29,12 +30,15 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 
-def scrape_and_save(client, item: dict) -> None:
+def scrape_and_save(client, item: dict) -> dict:
     """
     Scrape all stores for a single tracked item and write results to Supabase.
+    Returns a dict mapping store ID to True (success), False (failure), or None (not tracked).
     """
     product_id = item['id']
     logger.info(f'━━━ {product_id} ━━━')
+
+    results = {'woolworths': None, 'coles': None, 'amazon': None}
 
     # ── Woolworths ──
     if item.get('woolworths_term'):
@@ -54,6 +58,9 @@ def scrape_and_save(client, item: dict) -> None:
                 on_sale=result.get('on_sale', False),
                 discount_pct=result.get('discount_pct'),
             )
+            results['woolworths'] = True
+        else:
+            results['woolworths'] = False
 
     # ── Coles ──
     if item.get('coles_term'):
@@ -73,6 +80,9 @@ def scrape_and_save(client, item: dict) -> None:
                 on_sale=result.get('on_sale', False),
                 discount_pct=result.get('discount_pct'),
             )
+            results['coles'] = True
+        else:
+            results['coles'] = False
 
     # ── Amazon AU ──
     asin = item.get('amazon_asin')
@@ -100,6 +110,11 @@ def scrape_and_save(client, item: dict) -> None:
                 pack_qty=pack_qty if pack_qty > 1 else None,
                 pack_label=pack_labels,
             )
+            results['amazon'] = True
+        else:
+            results['amazon'] = False
+
+    return results
 
 
 # Amazon pack information (qty and label per product)
@@ -144,12 +159,16 @@ def main():
     else:
         client = db.get_client()
 
+    failed_stores = {'woolworths': [], 'coles': [], 'amazon': []}
     success_count = 0
     error_count   = 0
 
     for item in config.TRACKED_ITEMS:
         try:
-            scrape_and_save(client, item)
+            results = scrape_and_save(client, item)
+            for store, status in results.items():
+                if status is False:
+                    failed_stores[store].append(item['id'])
             success_count += 1
         except Exception as e:
             logger.error(f'Error processing {item["id"]}: {e}', exc_info=True)
@@ -162,6 +181,20 @@ def main():
     elapsed = (datetime.now() - start).total_seconds()
     logger.info(f'')
     logger.info(f'✅ Done in {elapsed:.1f}s — {success_count} succeeded, {error_count} failed')
+
+    # Send alerts if there were failures and not in mock mode
+    if not config.MOCK_MODE:
+        total_failures = sum(len(items) for items in failed_stores.values())
+        if total_failures > 0:
+            alert_lines = [
+                f"⚠️ *PricePulse Scraper Warning* — Detected {total_failures} store scraping failures."
+            ]
+            for store, items in failed_stores.items():
+                if items:
+                    alert_lines.append(f"• *{store.capitalize()}* failed for {len(items)} items: {', '.join(items[:5])}" + ("..." if len(items) > 5 else ""))
+            
+            alert_msg = "\n".join(alert_lines)
+            alerts.send_alert(alert_msg)
 
 
 if __name__ == '__main__':
