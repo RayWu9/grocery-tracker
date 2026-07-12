@@ -26,6 +26,13 @@ const CATEGORIES = {
   'produce':      { label: 'Fresh Produce',      emoji: '🍎' },
   'dairy':        { label: 'Dairy & Cold',       emoji: '🥛' },
   'household':    { label: 'Household & Laundry', emoji: '🧼' },
+  'bakery':       { label: 'Bakery & Bread',     emoji: '🥖' },
+  'breakfast':    { label: 'Breakfast & Cereal',  emoji: '🥣' },
+  'meat':         { label: 'Meat & Seafood',     emoji: '🥩' },
+  'frozen':       { label: 'Frozen Foods',       emoji: '🍕' },
+  'personal-care':{ label: 'Personal Care',      emoji: '🧴' },
+  'baby':         { label: 'Baby Care',          emoji: '👶' },
+  'pet':          { label: 'Pet Supplies',       emoji: '🐾' },
 };
 
 // Reference date for mock data (matches "Last Updated" in the UI)
@@ -39,251 +46,435 @@ const TODAY = new Date(2026, 6, 4); // July 4 2026
 // null means that store doesn't carry this item
 
 const RAW_PRODUCTS = [
-
-  // ── Soft Drinks ──
   {
-    id: 'coca-cola-125l', name: 'Coca-Cola', size: '1.25L', brand: 'Coca-Cola',
+    id: 'coca-cola-125l', name: 'Coca-Cola Classic', size: '1.25L', brand: 'Coca-Cola',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 4,
     stores: {
       woolworths: { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 0 },
       coles:      { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 2 },
-      amazon:     { regularPrice: 58.00, salePrice: 44.00, phaseOffset: 1, packQty: 24, packLabel: '24 × 375ml' },
+      amazon:     { regularPrice: 63.36, salePrice: 42.84, phaseOffset: 1, packQty: 24, packLabel: '24 × 1.25L' },
     }
   },
   {
-    id: 'pepsi-max-125l', name: 'Pepsi Max', size: '1.25L', brand: 'PepsiCo',
+    id: 'pepsi-max-125l', name: 'Pepsi Max Cola No Sugar', size: '1.25L', brand: 'PepsiCo',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 4,
     stores: {
       woolworths: { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 1 },
       coles:      { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 3 },
-      amazon:     { regularPrice: 55.00, salePrice: 42.00, phaseOffset: 2, packQty: 24, packLabel: '24 × 375ml' },
+      amazon:     null,
     }
   },
   {
-    id: 'sprite-125l', name: 'Sprite', size: '1.25L', brand: 'Coca-Cola',
+    id: 'sprite-125l', name: 'Sprite Lemonade', size: '1.25L', brand: 'Coca-Cola',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 5,
     stores: {
       woolworths: { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 2 },
       coles:      { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 4 },
-      amazon:     { regularPrice: 56.00, salePrice: 43.00, phaseOffset: 0, packQty: 24, packLabel: '24 × 375ml' },
+      amazon:     { regularPrice: 63.36, salePrice: 42.84, phaseOffset: 3, packQty: 24, packLabel: '24 × 1.25L' },
     }
   },
   {
-    id: 'solo-125l', name: 'Solo', size: '1.25L', brand: 'Asahi',
+    id: 'solo-125l', name: 'Solo Original Lemon', size: '1.25L', brand: 'Asahi',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 6,
     stores: {
       woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 0 },
-      coles:      { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 3 },
+      coles:      { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 2 },
       amazon:     null,
     }
   },
   {
-    id: 'mt-franklin-600ml', name: 'Mount Franklin', size: '600ml', brand: 'Coca-Cola',
+    id: 'mt-franklin-600ml', name: 'Mount Franklin Sparkling', size: '600ml', brand: 'Coca-Cola',
     category: 'soft-drinks', emoji: '💧', cycleWeeks: 5,
     stores: {
       woolworths: { regularPrice: 3.50, salePrice: 2.00, phaseOffset: 1 },
-      coles:      { regularPrice: 3.50, salePrice: 2.00, phaseOffset: 4 },
-      amazon:     { regularPrice: 48.00, salePrice: 36.00, phaseOffset: 2, packQty: 24, packLabel: '24 × 600ml' },
+      coles:      { regularPrice: 3.50, salePrice: 2.00, phaseOffset: 3 },
+      amazon:     { regularPrice: 67.20, salePrice: 40.80, phaseOffset: 2, packQty: 24, packLabel: '24 × 600ml' },
     }
   },
-
-  // ── Confectionery ──
   {
-    id: 'skittles-original-160g', name: 'Skittles Original', size: '160g', brand: 'Mars',
-    category: 'confectionery', emoji: '🌈', cycleWeeks: 6,
+    id: 'red-bull-4pk', name: 'Red Bull Energy Drink', size: '4 x 250ml', brand: 'Red Bull',
+    category: 'soft-drinks', emoji: '⚡', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 2.50, phaseOffset: 0 },
-      coles:      { regularPrice: 4.00, salePrice: 2.50, phaseOffset: 3 },
-      amazon:     { regularPrice: 35.00, salePrice: 27.00, phaseOffset: 1, packQty: 12, packLabel: '12 × 160g' },
+      woolworths: { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 0 },
+      coles:      { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 2 },
+      amazon:     null,
     }
   },
   {
-    id: 'allens-snakes-220g', name: "Allen's Snakes Alive", size: '220g', brand: "Allen's",
-    category: 'confectionery', emoji: '🐍', cycleWeeks: 7,
+    id: 'v-energy-drink-500ml', name: 'V Green Energy Can', size: '500ml', brand: 'V Energy',
+    category: 'soft-drinks', emoji: '🟢', cycleWeeks: 4,
     stores: {
       woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
-      coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 5 },
+      coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
+      amazon:     { regularPrice: 86.40, salePrice: 61.20, phaseOffset: 3, packQty: 24, packLabel: '24 × 500ml' },
+    }
+  },
+  {
+    id: 'lipton-ice-tea-peach-15l', name: 'Lipton Ice Tea Peach', size: '1.5L', brand: 'Lipton',
+    category: 'soft-drinks', emoji: '🍹', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 3 },
+      coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
       amazon:     null,
     }
   },
   {
-    id: 'mentos-fruit-roll', name: 'Mentos Fruit Roll', size: '8 × 38g', brand: 'Mentos',
-    category: 'confectionery', emoji: '🍬', cycleWeeks: 8,
+    id: 'fanta-orange-125l', name: 'Fanta Orange', size: '1.25L', brand: 'Coca-Cola',
+    category: 'soft-drinks', emoji: '🥤', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
-      coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 4 },
-      amazon:     { regularPrice: 18.00, salePrice: 13.50, phaseOffset: 2, packQty: 24, packLabel: '24 × 38g' },
-    }
-  },
-
-  // ── Chocolate ──
-  {
-    id: 'cadbury-dairy-milk-180g', name: 'Cadbury Dairy Milk', size: '180g', brand: 'Cadbury',
-    category: 'chocolate', emoji: '🍫', cycleWeeks: 6,
-    stores: {
-      woolworths: { regularPrice: 5.00, salePrice: 3.50, phaseOffset: 0 },
-      coles:      { regularPrice: 5.00, salePrice: 3.50, phaseOffset: 3 },
-      amazon:     { regularPrice: 52.00, salePrice: 39.00, phaseOffset: 2, packQty: 12, packLabel: '12 × 180g' },
+      woolworths: { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 2 },
+      coles:      { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 0 },
+      amazon:     { regularPrice: 63.36, salePrice: 42.84, phaseOffset: 3, packQty: 24, packLabel: '24 × 1.25L' },
     }
   },
   {
-    id: 'cadbury-favourites-500g', name: 'Cadbury Favourites', size: '500g', brand: 'Cadbury',
-    category: 'chocolate', emoji: '🍫', cycleWeeks: 8,
+    id: 'schweppes-lemonade-11l', name: 'Schweppes Lemonade', size: '1.1L', brand: 'Schweppes',
+    category: 'soft-drinks', emoji: '🥤', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 12.00, salePrice: 8.00, phaseOffset: 1 },
-      coles:      { regularPrice: 12.00, salePrice: 8.00, phaseOffset: 5 },
+      woolworths: { regularPrice: 3.00, salePrice: 1.80, phaseOffset: 0 },
+      coles:      { regularPrice: 3.00, salePrice: 1.80, phaseOffset: 2 },
       amazon:     null,
     }
   },
   {
-    id: 'kitkat-chunky-4pk', name: 'Kit Kat Chunky', size: '4-pack', brand: 'Nestlé',
-    category: 'chocolate', emoji: '🍫', cycleWeeks: 6,
+    id: 'kirks-pasito-10pk', name: 'Kirks Pasito Cans', size: '10 x 375ml', brand: 'Kirks',
+    category: 'soft-drinks', emoji: '🥤', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 2 },
-      coles:      { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 4 },
-      amazon:     { regularPrice: 55.00, salePrice: 42.00, phaseOffset: 1, packQty: 12, packLabel: '12 × 4pk' },
+      woolworths: { regularPrice: 10.50, salePrice: 6.50, phaseOffset: 1 },
+      coles:      { regularPrice: 10.50, salePrice: 6.50, phaseOffset: 3 },
+      amazon:     { regularPrice: 201.60, salePrice: 132.60, phaseOffset: 2, packQty: 24, packLabel: '24 × 10 x 375ml' },
     }
   },
   {
-    id: 'lindt-excellence-85g', name: 'Lindt Excellence 70%', size: '85g', brand: 'Lindt',
-    category: 'chocolate', emoji: '🍫', cycleWeeks: 7,
-    stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
-      coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 4 },
-      amazon:     { regularPrice: 42.00, salePrice: 32.00, phaseOffset: 2, packQty: 12, packLabel: '12 × 85g' },
-    }
-  },
-  {
-    id: 'snickers-4pk', name: 'Snickers', size: '4-pack 167g', brand: 'Mars',
-    category: 'chocolate', emoji: '🍫', cycleWeeks: 5,
-    stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 1 },
-      coles:      { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 3 },
-      amazon:     null,
-    }
-  },
-
-  // ── Chips ──
-  {
-    id: 'pringles-original-134g', name: 'Pringles Original', size: '134g', brand: "Kellogg's",
-    category: 'chips', emoji: '🥔', cycleWeeks: 5,
+    id: 'gatorade-blue-bolt-1l', name: 'Gatorade Blue Bolt', size: '1L', brand: 'Gatorade',
+    category: 'soft-drinks', emoji: '🏃', cycleWeeks: 4,
     stores: {
       woolworths: { regularPrice: 4.80, salePrice: 3.00, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 3.00, phaseOffset: 2 },
-      amazon:     { regularPrice: 38.00, salePrice: 28.00, phaseOffset: 3, packQty: 12, packLabel: '12 × 134g' },
-    }
-  },
-  {
-    id: 'smiths-crinkle-150g', name: "Smith's Crinkle Cut", size: '150g', brand: "Smith's",
-    category: 'chips', emoji: '🥔', cycleWeeks: 4,
-    stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 2.50, phaseOffset: 2 },
-      coles:      { regularPrice: 4.00, salePrice: 2.50, phaseOffset: 0 },
       amazon:     null,
     }
   },
   {
-    id: 'kettle-sea-salt-150g', name: 'Kettle Sea Salt', size: '150g', brand: 'Kettle',
-    category: 'chips', emoji: '🥔', cycleWeeks: 6,
+    id: 'powerade-berry-ice-600ml', name: 'Powerade Berry Ice', size: '600ml', brand: 'Powerade',
+    category: 'soft-drinks', emoji: '🏃', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 1 },
+      woolworths: { regularPrice: 3.80, salePrice: 2.40, phaseOffset: 2 },
+      coles:      { regularPrice: 3.80, salePrice: 2.40, phaseOffset: 4 },
+      amazon:     { regularPrice: 72.96, salePrice: 48.96, phaseOffset: 3, packQty: 24, packLabel: '24 × 600ml' },
+    }
+  },
+  {
+    id: 'bundaberg-ginger-beer-4pk', name: 'Bundaberg Ginger Beer', size: '4 x 375ml', brand: 'Bundaberg',
+    category: 'soft-drinks', emoji: '🍺', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 0 },
+      coles:      { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'coke-zero-30pk', name: 'Coca-Cola Zero Sugar Cans', size: '30 x 375ml', brand: 'Coca-Cola',
+    category: 'soft-drinks', emoji: '🥤', cycleWeeks: 8,
+    stores: {
+      woolworths: { regularPrice: 39.00, salePrice: 26.00, phaseOffset: 4 },
+      coles:      { regularPrice: 39.00, salePrice: 26.00, phaseOffset: 6 },
+      amazon:     { regularPrice: 748.80, salePrice: 530.40, phaseOffset: 5, packQty: 24, packLabel: '24 × 30 x 375ml' },
+    }
+  },
+  {
+    id: 'skittles-original-160g', name: 'Skittles Original Fruit', size: '160g', brand: 'Mars',
+    category: 'confectionery', emoji: '🌈', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 4.00, salePrice: 2.50, phaseOffset: 0 },
+      coles:      { regularPrice: 4.00, salePrice: 2.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'allens-snakes-220g', name: 'Allens Snakes Alive', size: '220g', brand: 'Allens',
+    category: 'confectionery', emoji: '🐍', cycleWeeks: 7,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
       coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 4 },
-      amazon:     { regularPrice: 36.00, salePrice: 26.00, phaseOffset: 0, packQty: 8, packLabel: '8 × 150g' },
-    }
-  },
-
-  // ── Ice Cream ──
-  {
-    id: 'magnum-classic-4pk', name: 'Magnum Classic', size: '4-pack', brand: 'Streets',
-    category: 'ice-cream', emoji: '🍦', cycleWeeks: 5,
-    stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 0 },
-      coles:      { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 3 },
-      amazon:     null,
+      amazon:     { regularPrice: 43.20, salePrice: 30.60, phaseOffset: 3, packQty: 12, packLabel: '12 × 220g' },
     }
   },
   {
-    id: 'ben-jerrys-458ml', name: "Ben & Jerry's", size: '458ml', brand: "Ben & Jerry's",
-    category: 'ice-cream', emoji: '🍨', cycleWeeks: 6,
+    id: 'mentos-fruit-roll', name: 'Mentos Fruit Roll', size: '8 x 38g', brand: 'Mentos',
+    category: 'confectionery', emoji: '🍬', cycleWeeks: 8,
     stores: {
-      woolworths: { regularPrice: 10.00, salePrice: 7.00, phaseOffset: 2 },
-      coles:      { regularPrice: 10.00, salePrice: 7.00, phaseOffset: 5 },
-      amazon:     null,
-    }
-  },
-  {
-    id: 'streets-blue-ribbon-2l', name: 'Streets Blue Ribbon', size: '2L', brand: 'Streets',
-    category: 'ice-cream', emoji: '🍦', cycleWeeks: 5,
-    stores: {
-      woolworths: { regularPrice: 8.00, salePrice: 5.00, phaseOffset: 1 },
-      coles:      { regularPrice: 8.00, salePrice: 5.00, phaseOffset: 4 },
-      amazon:     null,
-    }
-  },
-  
-  // ── Everyday Essentials ──
-  {
-    id: 'woolworths-milk-2l', name: 'WW Full Cream Milk', size: '2L', brand: 'Woolworths',
-    category: 'essentials', emoji: '🥛', cycleWeeks: 99,
-    stores: {
-      woolworths: { regularPrice: 3.10, salePrice: 3.10, phaseOffset: 0 },
-      coles:      { regularPrice: 3.10, salePrice: 3.10, phaseOffset: 0 },
-      amazon:     null,
-    }
-  },
-  {
-    id: 'tip-top-bread-700g', name: 'Tip Top Bread', size: '700g', brand: 'Tip Top',
-    category: 'essentials', emoji: '🍞', cycleWeeks: 4,
-    stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
-      coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
-      amazon:     null,
-    }
-  },
-  {
-    id: 'western-star-butter-500g', name: 'Western Star Butter', size: '500g', brand: 'Western Star',
-    category: 'essentials', emoji: '🧈', cycleWeeks: 5,
-    stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 0 },
-      coles:      { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 2 },
-      amazon:     null,
-    }
-  },
-  {
-    id: 'nescafe-blend-43-150g', name: 'Nescafe Coffee', size: '150g', brand: 'Nescafe',
-    category: 'essentials', emoji: '☕', cycleWeeks: 6,
-    stores: {
-      woolworths: { regularPrice: 11.00, salePrice: 7.00, phaseOffset: 0 },
-      coles:      { regularPrice: 11.00, salePrice: 7.00, phaseOffset: 3 },
-      amazon:     null,
-    }
-  },
-  {
-    id: 'weetbix-1.2kg', name: 'Sanitarium Weet-Bix', size: '1.2kg', brand: 'Sanitarium',
-    category: 'essentials', emoji: '🥣', cycleWeeks: 6,
-    stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
+      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 3 },
       amazon:     null,
     }
   },
   {
-    id: 'quilton-toilet-paper-18pk', name: 'Quilton Toilet Paper', size: '18 Pack', brand: 'Quilton',
-    category: 'essentials', emoji: '🧻', cycleWeeks: 5,
+    id: 'allens-party-mix-190g', name: 'Allens Party Mix', size: '190g', brand: 'Allens',
+    category: 'confectionery', emoji: '🍬', cycleWeeks: 7,
     stores: {
-      woolworths: { regularPrice: 14.00, salePrice: 10.00, phaseOffset: 0 },
-      coles:      { regularPrice: 14.00, salePrice: 10.00, phaseOffset: 2 },
+      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
+      coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
+      amazon:     { regularPrice: 43.20, salePrice: 30.60, phaseOffset: 1, packQty: 12, packLabel: '12 × 190g' },
+    }
+  },
+  {
+    id: 'starburst-snakes-170g', name: 'Starburst Sour Snakes', size: '170g', brand: 'Starburst',
+    category: 'confectionery', emoji: '🐍', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 4.00, salePrice: 2.50, phaseOffset: 1 },
+      coles:      { regularPrice: 4.00, salePrice: 2.50, phaseOffset: 3 },
       amazon:     null,
     }
   },
-
-  // ── Snacks & Beverages ──
   {
-    id: 'red-bull-4pk', name: 'Red Bull 4x250ml', size: '4-pack', brand: 'Red Bull',
-    category: 'soft-drinks', emoji: '⚡', cycleWeeks: 5,
+    id: 'haribo-goldbears-150g', name: 'Haribo Goldbears', size: '150g', brand: 'Haribo',
+    category: 'confectionery', emoji: '🧸', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 0 },
-      coles:      { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 2 },
+      woolworths: { regularPrice: 3.80, salePrice: 2.40, phaseOffset: 0 },
+      coles:      { regularPrice: 3.80, salePrice: 2.40, phaseOffset: 2 },
+      amazon:     { regularPrice: 36.48, salePrice: 24.48, phaseOffset: 1, packQty: 12, packLabel: '12 × 150g' },
+    }
+  },
+  {
+    id: 'chupa-chups-10pk', name: 'Chupa Chups Lollipops', size: '10 Pack', brand: 'Chupa Chups',
+    category: 'confectionery', emoji: '🍭', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 2 },
+      coles:      { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'natural-confectionery-snakes-260g', name: 'TNCC Snakes', size: '260g', brand: 'TNCC',
+    category: 'confectionery', emoji: '🐍', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 5.00, salePrice: 3.50, phaseOffset: 0 },
+      coles:      { regularPrice: 5.00, salePrice: 3.50, phaseOffset: 2 },
+      amazon:     { regularPrice: 48.00, salePrice: 35.70, phaseOffset: 1, packQty: 12, packLabel: '12 × 260g' },
+    }
+  },
+  {
+    id: 'pascall-marshmallows-280g', name: 'Pascall Vanilla Marshmallows', size: '280g', brand: 'Pascall',
+    category: 'confectionery', emoji: '🍥', cycleWeeks: 7,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 3 },
+      coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 5 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'red-skins-allen-220g', name: 'Allens Red Ripperz', size: '220g', brand: 'Allens',
+    category: 'confectionery', emoji: '🍬', cycleWeeks: 7,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 1 },
+      coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 3 },
+      amazon:     { regularPrice: 43.20, salePrice: 30.60, phaseOffset: 2, packQty: 12, packLabel: '12 × 220g' },
+    }
+  },
+  {
+    id: 'werthers-original-140g', name: 'Werthers Original Butter Candies', size: '140g', brand: 'Werthers',
+    category: 'confectionery', emoji: '🍬', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
+      coles:      { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'eclipse-mints-peppermint-40g', name: 'Eclipse Mints Peppermint', size: '40g', brand: 'Eclipse',
+    category: 'confectionery', emoji: '🍃', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 3.50, salePrice: 2.20, phaseOffset: 1 },
+      coles:      { regularPrice: 3.50, salePrice: 2.20, phaseOffset: 3 },
+      amazon:     { regularPrice: 33.60, salePrice: 22.44, phaseOffset: 2, packQty: 12, packLabel: '12 × 40g' },
+    }
+  },
+  {
+    id: 'mentos-mint-rolls-4pk', name: 'Mentos Mint Rolls', size: '4 x 37.5g', brand: 'Mentos',
+    category: 'confectionery', emoji: '🍬', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 4.80, salePrice: 3.20, phaseOffset: 0 },
+      coles:      { regularPrice: 4.80, salePrice: 3.20, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'tictac-freshmint-24g', name: 'Tic Tac Fresh Mint', size: '24g', brand: 'Tic Tac',
+    category: 'confectionery', emoji: '🍬', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 2.00, salePrice: 1.40, phaseOffset: 0 },
+      coles:      { regularPrice: 2.00, salePrice: 1.40, phaseOffset: 2 },
+      amazon:     { regularPrice: 19.20, salePrice: 14.28, phaseOffset: 1, packQty: 12, packLabel: '12 × 24g' },
+    }
+  },
+  {
+    id: 'sour-patch-kids-190g', name: 'Sour Patch Kids', size: '190g', brand: 'Sour Patch',
+    category: 'confectionery', emoji: '👾', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
+      coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'cadbury-dairy-milk-180g', name: 'Cadbury Dairy Milk Block', size: '180g', brand: 'Cadbury',
+    category: 'chocolate', emoji: '🍫', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 0 },
+      coles:      { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 2 },
+      amazon:     { regularPrice: 57.60, salePrice: 35.70, phaseOffset: 1, packQty: 12, packLabel: '12 × 180g' },
+    }
+  },
+  {
+    id: 'cadbury-favourites-500g', name: 'Cadbury Favourites Box', size: '500g', brand: 'Cadbury',
+    category: 'chocolate', emoji: '🍫', cycleWeeks: 8,
+    stores: {
+      woolworths: { regularPrice: 16.00, salePrice: 8.00, phaseOffset: 1 },
+      coles:      { regularPrice: 16.00, salePrice: 8.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'kitkat-chunky-4pk', name: 'Kit Kat Chunky Pack', size: '4 Pack', brand: 'Nestle',
+    category: 'chocolate', emoji: '🍫', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 2 },
+      coles:      { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 4 },
+      amazon:     { regularPrice: 57.60, salePrice: 35.70, phaseOffset: 3, packQty: 12, packLabel: '12 × 4 Pack' },
+    }
+  },
+  {
+    id: 'lindt-excellence-85g', name: 'Lindt Excellence 70% Dark', size: '85g', brand: 'Lindt',
+    category: 'chocolate', emoji: '🍫', cycleWeeks: 7,
+    stores: {
+      woolworths: { regularPrice: 4.80, salePrice: 3.00, phaseOffset: 0 },
+      coles:      { regularPrice: 4.80, salePrice: 3.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'snickers-4pk', name: 'Snickers Multipack', size: '4 Pack', brand: 'Mars',
+    category: 'chocolate', emoji: '🍫', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 1 },
+      coles:      { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 3 },
+      amazon:     { regularPrice: 57.60, salePrice: 35.70, phaseOffset: 2, packQty: 12, packLabel: '12 × 4 Pack' },
+    }
+  },
+  {
+    id: 'arnotts-tim-tam-200g', name: 'Arnotts Tim Tam Original', size: '200g', brand: 'Arnotts',
+    category: 'chocolate', emoji: '🍪', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
+      coles:      { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'maltesers-400g', name: 'Maltesers Chocolate Bucket', size: '400g', brand: 'Maltesers',
+    category: 'chocolate', emoji: '🔴', cycleWeeks: 8,
+    stores: {
+      woolworths: { regularPrice: 12.00, salePrice: 7.00, phaseOffset: 3 },
+      coles:      { regularPrice: 12.00, salePrice: 7.00, phaseOffset: 5 },
+      amazon:     { regularPrice: 115.20, salePrice: 71.40, phaseOffset: 4, packQty: 12, packLabel: '12 × 400g' },
+    }
+  },
+  {
+    id: 'mms-milk-chocolate-180g', name: 'M&Ms Milk Chocolate Bag', size: '180g', brand: 'M&Ms',
+    category: 'chocolate', emoji: '🟤', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 1 },
+      coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'pods-snickers-160g', name: 'Pods Snickers Chocolate', size: '160g', brand: 'Mars',
+    category: 'chocolate', emoji: '🍪', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
+      coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 2 },
+      amazon:     { regularPrice: 52.80, salePrice: 35.70, phaseOffset: 1, packQty: 12, packLabel: '12 × 160g' },
+    }
+  },
+  {
+    id: 'mars-bar-53g', name: 'Mars Bar Single', size: '53g', brand: 'Mars',
+    category: 'chocolate', emoji: '🍫', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 2.50, salePrice: 1.50, phaseOffset: 0 },
+      coles:      { regularPrice: 2.50, salePrice: 1.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'cherry-ripe-double-dipped-block', name: 'Cadbury Cherry Ripe Block', size: '180g', brand: 'Cadbury',
+    category: 'chocolate', emoji: '🍫', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 4 },
+      coles:      { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 0 },
+      amazon:     { regularPrice: 57.60, salePrice: 35.70, phaseOffset: 5, packQty: 12, packLabel: '12 × 180g' },
+    }
+  },
+  {
+    id: 'toblerone-milk-360g', name: 'Toblerone Milk Chocolate', size: '360g', brand: 'Toblerone',
+    category: 'chocolate', emoji: '🔺', cycleWeeks: 8,
+    stores: {
+      woolworths: { regularPrice: 12.00, salePrice: 7.00, phaseOffset: 0 },
+      coles:      { regularPrice: 12.00, salePrice: 7.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'ferrero-rocher-16pk', name: 'Ferrero Rocher Gift Box', size: '16 Pack', brand: 'Ferrero',
+    category: 'chocolate', emoji: '🟡', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 15.00, salePrice: 10.00, phaseOffset: 2 },
+      coles:      { regularPrice: 15.00, salePrice: 10.00, phaseOffset: 4 },
+      amazon:     { regularPrice: 144.00, salePrice: 102.00, phaseOffset: 3, packQty: 12, packLabel: '12 × 16 Pack' },
+    }
+  },
+  {
+    id: 'twirl-cadbury-5pk', name: 'Cadbury Twirl Multipack', size: '5 Pack', brand: 'Cadbury',
+    category: 'chocolate', emoji: '🍫', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 1 },
+      coles:      { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'picnic-bar-4pk', name: 'Cadbury Picnic Multipack', size: '4 Pack', brand: 'Cadbury',
+    category: 'chocolate', emoji: '🍫', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 0 },
+      coles:      { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 2 },
+      amazon:     { regularPrice: 57.60, salePrice: 35.70, phaseOffset: 1, packQty: 12, packLabel: '12 × 4 Pack' },
+    }
+  },
+  {
+    id: 'pringles-original-134g', name: 'Pringles Original', size: '134g', brand: 'Pringles',
+    category: 'chips', emoji: '🥔', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 5.00, salePrice: 3.20, phaseOffset: 0 },
+      coles:      { regularPrice: 5.00, salePrice: 3.20, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'smiths-crinkle-150g', name: 'Smiths Crinkle Cut Potato', size: '150g', brand: 'Smiths',
+    category: 'chips', emoji: '🥔', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 2 },
+      coles:      { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 0 },
+      amazon:     { regularPrice: 46.08, salePrice: 24.48, phaseOffset: 3, packQty: 12, packLabel: '12 × 150g' },
+    }
+  },
+  {
+    id: 'kettle-sea-salt-150g', name: 'Kettle Sea Salt Chips', size: '150g', brand: 'Kettle',
+    category: 'chips', emoji: '🥔', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 1 },
+      coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 3 },
       amazon:     null,
     }
   },
@@ -293,24 +484,15 @@ const RAW_PRODUCTS = [
     stores: {
       woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 2 },
-      amazon:     null,
+      amazon:     { regularPrice: 46.08, salePrice: 24.48, phaseOffset: 1, packQty: 12, packLabel: '12 × 170g' },
     }
   },
   {
     id: 'thins-original-175g', name: 'Thins Chips Light & Tangy', size: '175g', brand: 'Thins',
     category: 'chips', emoji: '🥔', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 0 },
-      coles:      { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 2 },
-      amazon:     null,
-    }
-  },
-  {
-    id: 'arnotts-tim-tam-200g', name: 'Arnotts Tim Tam Original', size: '200g', brand: 'Arnotts',
-    category: 'chocolate', emoji: '🍪', cycleWeeks: 5,
-    stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
-      coles:      { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 3 },
+      woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 1 },
+      coles:      { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 3 },
       amazon:     null,
     }
   },
@@ -318,15 +500,364 @@ const RAW_PRODUCTS = [
     id: 'twisties-cheese-90g', name: 'Twisties Cheese', size: '90g', brand: 'Twisties',
     category: 'chips', emoji: '🧀', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.70, salePrice: 1.80, phaseOffset: 0 },
-      coles:      { regularPrice: 2.70, salePrice: 1.80, phaseOffset: 2 },
+      woolworths: { regularPrice: 2.70, salePrice: 1.80, phaseOffset: 2 },
+      coles:      { regularPrice: 2.70, salePrice: 1.80, phaseOffset: 0 },
+      amazon:     { regularPrice: 25.92, salePrice: 18.36, phaseOffset: 3, packQty: 12, packLabel: '12 × 90g' },
+    }
+  },
+  {
+    id: 'red-rock-deli-sea-salt-165g', name: 'Red Rock Deli Sea Salt', size: '165g', brand: 'Red Rock Deli',
+    category: 'chips', emoji: '🥔', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 3 },
+      coles:      { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 5 },
       amazon:     null,
     }
   },
-
-  // ── Pantry Staples ──
   {
-    id: 'san-remo-pasta-500g', name: 'San Remo Spaghetti', size: '500g', brand: 'San Remo',
+    id: 'cheezels-cheese-box-125g', name: 'Cheezels Cheese Snacks Box', size: '125g', brand: 'Cheezels',
+    category: 'chips', emoji: '⭕', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 3.50, salePrice: 2.20, phaseOffset: 0 },
+      coles:      { regularPrice: 3.50, salePrice: 2.20, phaseOffset: 2 },
+      amazon:     { regularPrice: 33.60, salePrice: 22.44, phaseOffset: 1, packQty: 12, packLabel: '12 × 125g' },
+    }
+  },
+  {
+    id: 'shapes-bbq-arnotts-175g', name: 'Arnotts Shapes BBQ', size: '175g', brand: 'Arnotts',
+    category: 'chips', emoji: '🍘', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 1 },
+      coles:      { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'grainwaves-sour-cream-170g', name: 'Grainwaves Sour Cream & Chives', size: '170g', brand: 'Grainwaves',
+    category: 'chips', emoji: '🌊', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 0 },
+      coles:      { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 2 },
+      amazon:     { regularPrice: 46.08, salePrice: 24.48, phaseOffset: 1, packQty: 12, packLabel: '12 × 170g' },
+    }
+  },
+  {
+    id: 'smiths-thinly-cut-175g', name: 'Smiths Thinly Cut Sour Cream', size: '175g', brand: 'Smiths',
+    category: 'chips', emoji: '🥔', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 3 },
+      coles:      { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 1 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'cc-tasty-cheese-175g', name: 'CCs Tasty Cheese Corn Chips', size: '175g', brand: 'CCs',
+    category: 'chips', emoji: '🍿', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
+      coles:      { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 2 },
+      amazon:     { regularPrice: 43.20, salePrice: 25.50, phaseOffset: 1, packQty: 12, packLabel: '12 × 175g' },
+    }
+  },
+  {
+    id: 'red-rock-honey-soy-165g', name: 'Red Rock Deli Honey Soy Chicken', size: '165g', brand: 'Red Rock Deli',
+    category: 'chips', emoji: '🍗', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 2 },
+      coles:      { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'vege-chips-natural-100g', name: 'Vege Chips Natural Flavor', size: '100g', brand: 'Vege Chips',
+    category: 'chips', emoji: '🌿', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 1 },
+      coles:      { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 3 },
+      amazon:     { regularPrice: 40.32, salePrice: 28.56, phaseOffset: 2, packQty: 12, packLabel: '12 × 100g' },
+    }
+  },
+  {
+    id: 'infuzions-vege-straws-110g', name: 'Infuzions Veggie Straws Sour Cream', size: '110g', brand: 'Infuzions',
+    category: 'chips', emoji: '🍟', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
+      coles:      { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'magnum-classic-4pk', name: 'Magnum Classic Chocolate Sticks', size: '4 Pack', brand: 'Streets',
+    category: 'ice-cream', emoji: '🍦', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 10.50, salePrice: 6.00, phaseOffset: 0 },
+      coles:      { regularPrice: 10.50, salePrice: 6.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'ben-jerrys-458ml', name: 'Ben & Jerry Half Baked Tub', size: '458ml', brand: 'Ben & Jerry',
+    category: 'ice-cream', emoji: '🍨', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 13.00, salePrice: 9.00, phaseOffset: 2 },
+      coles:      { regularPrice: 13.00, salePrice: 9.00, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'streets-blue-ribbon-2l', name: 'Streets Blue Ribbon Vanilla', size: '2L', brand: 'Streets',
+    category: 'ice-cream', emoji: '🍦', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 9.00, salePrice: 6.00, phaseOffset: 1 },
+      coles:      { regularPrice: 9.00, salePrice: 6.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'connoisseur-vanilla-1l', name: 'Connoisseur Classic Vanilla', size: '1L', brand: 'Connoisseur',
+    category: 'ice-cream', emoji: '🍨', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 12.00, salePrice: 8.00, phaseOffset: 0 },
+      coles:      { regularPrice: 12.00, salePrice: 8.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'bull-creamy-classics-2l', name: 'Bulla Creamy Classics Vanilla', size: '2L', brand: 'Bulla',
+    category: 'ice-cream', emoji: '🍨', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 3 },
+      coles:      { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 0 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'peters-original-vanilla-4l', name: 'Peters Original Vanilla Tub', size: '4L', brand: 'Peters',
+    category: 'ice-cream', emoji: '🍨', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 10.50, salePrice: 7.50, phaseOffset: 0 },
+      coles:      { regularPrice: 10.50, salePrice: 7.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'drumstick-vanilla-4pk', name: 'Peters Drumstick Vanilla Cone', size: '4 Pack', brand: 'Peters',
+    category: 'ice-cream', emoji: '🍦', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 2 },
+      coles:      { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'maxibon-original-4pk', name: 'Peters Maxibon Vanilla Sticks', size: '4 Pack', brand: 'Peters',
+    category: 'ice-cream', emoji: '🥪', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 10.00, salePrice: 6.00, phaseOffset: 4 },
+      coles:      { regularPrice: 10.00, salePrice: 6.00, phaseOffset: 1 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'cornetto-classic-4pk', name: 'Streets Cornetto Chocolate Cone', size: '4 Pack', brand: 'Streets',
+    category: 'ice-cream', emoji: '🍦', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 9.00, salePrice: 5.00, phaseOffset: 1 },
+      coles:      { regularPrice: 9.00, salePrice: 5.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'weis-mango-bar-4pk', name: 'Weis Mango Ice Cream Bars', size: '4 Pack', brand: 'Weis',
+    category: 'ice-cream', emoji: '🥭', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 0 },
+      coles:      { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'golden-gaytime-4pk', name: 'Streets Golden Gaytime Sticks', size: '4 Pack', brand: 'Streets',
+    category: 'ice-cream', emoji: '🍪', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 10.50, salePrice: 6.00, phaseOffset: 3 },
+      coles:      { regularPrice: 10.50, salePrice: 6.00, phaseOffset: 0 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'paddle-pop-rainbow-8pk', name: 'Streets Paddle Pop Rainbow', size: '8 Pack', brand: 'Streets',
+    category: 'ice-cream', emoji: '🌈', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 8.50, salePrice: 5.00, phaseOffset: 1 },
+      coles:      { regularPrice: 8.50, salePrice: 5.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'hagan-dazs-macadamia-460ml', name: 'Haagen-Dazs Macadamia Nut', size: '460ml', brand: 'Haagen-Dazs',
+    category: 'ice-cream', emoji: '🍨', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 13.00, salePrice: 9.00, phaseOffset: 0 },
+      coles:      { regularPrice: 13.00, salePrice: 9.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'streets-splices-pine-lime-8pk', name: 'Streets Splice Pine Lime', size: '8 Pack', brand: 'Streets',
+    category: 'ice-cream', emoji: '🍍', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 8.50, salePrice: 5.00, phaseOffset: 2 },
+      coles:      { regularPrice: 8.50, salePrice: 5.00, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'monaco-bar-ice-cream-4pk', name: 'Peters Monaco Bar Ice Cream Sandwich', size: '4 Pack', brand: 'Peters',
+    category: 'ice-cream', emoji: '🥪', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 0 },
+      coles:      { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'woolworths-milk-2l', name: 'WW Full Cream Milk', size: '2L', brand: 'Woolworths',
+    category: 'essentials', emoji: '🥛', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 3.10, salePrice: 3.10, phaseOffset: 0 },
+      coles:      { regularPrice: 3.10, salePrice: 3.10, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'tip-top-bread-700g', name: 'Tip Top Bread Toast Slices', size: '700g', brand: 'Tip Top',
+    category: 'essentials', emoji: '🍞', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
+      coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'western-star-butter-500g', name: 'Western Star Butter Salted block', size: '500g', brand: 'Western Star',
+    category: 'essentials', emoji: '🧈', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 0 },
+      coles:      { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'nescafe-blend-43-150g', name: 'Nescafe Blend 43 Instant Coffee', size: '150g', brand: 'Nescafe',
+    category: 'essentials', emoji: '☕', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 11.00, salePrice: 7.00, phaseOffset: 0 },
+      coles:      { regularPrice: 11.00, salePrice: 7.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'weetbix-1.2kg', name: 'Sanitarium Weet-Bix', size: '1.2kg', brand: 'Sanitarium',
+    category: 'essentials', emoji: '🥣', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
+      coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'quilton-toilet-paper-18pk', name: 'Quilton Toilet Paper 3ply', size: '18 Pack', brand: 'Quilton',
+    category: 'essentials', emoji: '🧻', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 14.00, salePrice: 10.00, phaseOffset: 0 },
+      coles:      { regularPrice: 14.00, salePrice: 10.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'dairy-farmers-milk-3l', name: 'Dairy Farmers Full Cream Milk', size: '3L', brand: 'Dairy Farmers',
+    category: 'essentials', emoji: '🥛', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 0 },
+      coles:      { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'wonder-white-bread-700g', name: 'Wonder White Sliced Bread Sandwich', size: '700g', brand: 'Wonder White',
+    category: 'essentials', emoji: '🍞', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 4.60, salePrice: 3.20, phaseOffset: 1 },
+      coles:      { regularPrice: 4.60, salePrice: 3.20, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'devondale-butter-500g', name: 'Devondale Salted Butter Block', size: '500g', brand: 'Devondale',
+    category: 'essentials', emoji: '🧈', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 1 },
+      coles:      { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'dilmah-tea-bags-100pk', name: 'Dilmah Premium Tea Bags', size: '100 Pack', brand: 'Dilmah',
+    category: 'essentials', emoji: '🍵', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
+      coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'lipton-tea-bags-100pk', name: 'Lipton Quality Black Tea Bags', size: '100 Pack', brand: 'Lipton',
+    category: 'essentials', emoji: '🍵', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 3.80, phaseOffset: 0 },
+      coles:      { regularPrice: 6.00, salePrice: 3.80, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'moccona-medium-roast-200g', name: 'Moccona Classic Medium Coffee Jar', size: '200g', brand: 'Moccona',
+    category: 'essentials', emoji: '☕', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 20.00, salePrice: 12.00, phaseOffset: 3 },
+      coles:      { regularPrice: 20.00, salePrice: 12.00, phaseOffset: 5 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'uncle-tobys-rolled-oats-1kg', name: 'Uncle Tobys Rolled Oats Bag', size: '1kg', brand: 'Uncle Tobys',
+    category: 'essentials', emoji: '🥣', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
+      coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'sorbent-toilet-paper-24pk', name: 'Sorbent Toilet Paper Silky White', size: '24 Pack', brand: 'Sorbent',
+    category: 'essentials', emoji: '🧻', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 17.50, salePrice: 12.00, phaseOffset: 3 },
+      coles:      { regularPrice: 17.50, salePrice: 12.00, phaseOffset: 0 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'coles-milk-2l', name: 'Coles Full Cream Milk', size: '2L', brand: 'Coles',
+    category: 'essentials', emoji: '🥛', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 3.10, salePrice: 3.10, phaseOffset: 0 },
+      coles:      { regularPrice: 3.10, salePrice: 3.10, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'san-remo-pasta-500g', name: 'San Remo Spaghetti Pasta', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🍝', cycleWeeks: 4,
     stores: {
       woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 0 },
@@ -335,25 +866,25 @@ const RAW_PRODUCTS = [
     }
   },
   {
-    id: 'sunrice-jasmine-rice-5kg', name: 'SunRice Jasmine Rice', size: '5kg', brand: 'SunRice',
+    id: 'sunrice-jasmine-rice-5kg', name: 'SunRice Jasmine Rice Bag', size: '5kg', brand: 'SunRice',
     category: 'pantry', emoji: '🌾', cycleWeeks: 6,
     stores: {
       woolworths: { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 0 },
-      coles:      { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 3 },
+      coles:      { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 2 },
       amazon:     null,
     }
   },
   {
-    id: 'cobram-estate-olive-oil-750ml', name: 'Cobram Estate Olive Oil', size: '750ml', brand: 'Cobram Estate',
+    id: 'cobram-estate-olive-oil-750ml', name: 'Cobram Estate EV Olive Oil', size: '750ml', brand: 'Cobram Estate',
     category: 'pantry', emoji: '🫒', cycleWeeks: 6,
     stores: {
       woolworths: { regularPrice: 18.00, salePrice: 12.00, phaseOffset: 0 },
-      coles:      { regularPrice: 18.00, salePrice: 12.00, phaseOffset: 3 },
+      coles:      { regularPrice: 18.00, salePrice: 12.00, phaseOffset: 2 },
       amazon:     null,
     }
   },
   {
-    id: 'john-west-tuna-95g', name: 'John West Tuna', size: '95g', brand: 'John West',
+    id: 'john-west-tuna-95g', name: 'John West Tuna Tempters Olive Oil', size: '95g', brand: 'John West',
     category: 'pantry', emoji: '🐟', cycleWeeks: 4,
     stores: {
       woolworths: { regularPrice: 2.70, salePrice: 1.50, phaseOffset: 0 },
@@ -362,7 +893,7 @@ const RAW_PRODUCTS = [
     }
   },
   {
-    id: 'leggos-tomato-paste-500g', name: 'Leggos Tomato Paste', size: '500g', brand: 'Leggos',
+    id: 'leggos-tomato-paste-500g', name: 'Leggos Tomato Paste Tub', size: '500g', brand: 'Leggos',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
@@ -370,19 +901,107 @@ const RAW_PRODUCTS = [
       amazon:     null,
     }
   },
-  
-  // ── Fresh Produce ──
   {
-    id: 'cavendish-bananas-1kg', name: 'Cavendish Bananas', size: '1kg', brand: 'Fresh',
-    category: 'produce', emoji: '🍌', cycleWeeks: 99,
+    id: 'bega-peanut-butter-375g', name: 'Bega Peanut Butter Crunchy', size: '375g', brand: 'Bega',
+    category: 'pantry', emoji: '🥜', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 0 },
-      coles:      { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 0 },
+      woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
+      coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 4 },
       amazon:     null,
     }
   },
   {
-    id: 'pink-lady-apples-1kg', name: 'Pink Lady Apples', size: '1kg bag', brand: 'Fresh',
+    id: 'vegemite-220g', name: 'Vegemite Yeast Extract Jar', size: '220g', brand: 'Vegemite',
+    category: 'pantry', emoji: '🍞', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 0 },
+      coles:      { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'spaghetti-pasta-san-remo-fettuccine', name: 'San Remo Fettuccine Pasta No 34', size: '500g', brand: 'San Remo',
+    category: 'pantry', emoji: '🍝', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 1 },
+      coles:      { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'heinz-baked-beans-3pk', name: 'Heinz Baked Beans English Recipe', size: '3 x 220g', brand: 'Heinz',
+    category: 'pantry', emoji: '🥫', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
+      coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'campbells-tomato-soup-400g', name: 'Campbells Condensed Tomato Soup', size: '400g', brand: 'Campbells',
+    category: 'pantry', emoji: '🥫', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 0 },
+      coles:      { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'glen-20-disinfectant-spray-300g', name: 'Glen 20 Disinfectant Lavender', size: '300g', brand: 'Glen 20',
+    category: 'pantry', emoji: '💨', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 9.50, salePrice: 5.00, phaseOffset: 1 },
+      coles:      { regularPrice: 9.50, salePrice: 5.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'heinz-tomato-ketchup-500ml', name: 'Heinz Tomato Ketchup Squeeze', size: '500ml', brand: 'Heinz',
+    category: 'pantry', emoji: '🍅', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 5.20, salePrice: 3.50, phaseOffset: 0 },
+      coles:      { regularPrice: 5.20, salePrice: 3.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'masterfoods-tomato-sauce-500ml', name: 'MasterFoods Tomato Sauce Squeeze', size: '500ml', brand: 'MasterFoods',
+    category: 'pantry', emoji: '🍅', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 2 },
+      coles:      { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 0 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'spam-luncheon-meat-340g', name: 'SPAM Luncheon Meat Can', size: '340g', brand: 'SPAM',
+    category: 'pantry', emoji: '🥫', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
+      coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'spc-sliced-peaches-410g', name: 'SPC Sliced Peaches in Juice', size: '410g', brand: 'SPC',
+    category: 'pantry', emoji: '🍑', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 1 },
+      coles:      { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'cavendish-bananas-1kg', name: 'Cavendish Bananas Fresh', size: '1kg', brand: 'Fresh',
+    category: 'produce', emoji: '🍌', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 0 },
+      coles:      { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'pink-lady-apples-1kg', name: 'Pink Lady Apples Pack', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 5,
     stores: {
       woolworths: { regularPrice: 5.50, salePrice: 4.50, phaseOffset: 0 },
@@ -391,36 +1010,142 @@ const RAW_PRODUCTS = [
     }
   },
   {
-    id: 'carrots-1kg', name: 'Carrots 1kg Bag', size: '1kg bag', brand: 'Fresh',
+    id: 'carrots-1kg', name: 'Carrots Orange Bag', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🥕', cycleWeeks: 99,
     stores: {
       woolworths: { regularPrice: 2.50, salePrice: 2.50, phaseOffset: 0 },
-      coles:      { regularPrice: 2.50, salePrice: 2.50, phaseOffset: 0 },
+      coles:      { regularPrice: 2.50, salePrice: 2.50, phaseOffset: 2 },
       amazon:     null,
     }
   },
-
-  // ── Dairy & Cold ──
+  {
+    id: 'avocado-hass-each', name: 'Hass Avocado Single', size: 'Each', brand: 'Fresh',
+    category: 'produce', emoji: '🥑', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 2.50, salePrice: 1.50, phaseOffset: 0 },
+      coles:      { regularPrice: 2.50, salePrice: 1.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'brown-onions-1kg', name: 'Brown Onions Fresh Bag', size: '1kg', brand: 'Fresh',
+    category: 'produce', emoji: '🧅', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 3.00, salePrice: 3.00, phaseOffset: 0 },
+      coles:      { regularPrice: 3.00, salePrice: 3.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'potatoes-brushed-2kg', name: 'Brushed Potatoes bag', size: '2kg', brand: 'Fresh',
+    category: 'produce', emoji: '🥔', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 5.00, salePrice: 4.00, phaseOffset: 0 },
+      coles:      { regularPrice: 5.00, salePrice: 4.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'broccoli-fresh-each', name: 'Broccoli Premium Head', size: 'Each', brand: 'Fresh',
+    category: 'produce', emoji: '🥦', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 1 },
+      coles:      { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'red-seedless-grapes-500g', name: 'Red Seedless Grapes Punnet', size: '500g', brand: 'Fresh',
+    category: 'produce', emoji: '🍇', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
+      coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'navel-oranges-1kg', name: 'Navel Oranges Bag', size: '1.5kg', brand: 'Fresh',
+    category: 'produce', emoji: '🍊', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
+      coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'punnet-strawberries-250g', name: 'Strawberries Sweet Punnet', size: '250g', brand: 'Fresh',
+    category: 'produce', emoji: '🍓', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
+      coles:      { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'cherry-tomatoes-250g', name: 'Cherry Tomatoes Punnet', size: '250g', brand: 'Fresh',
+    category: 'produce', emoji: '🍅', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 1 },
+      coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'baby-spinach-leaves-120g', name: 'Baby Spinach Leaves Tub', size: '120g', brand: 'Fresh',
+    category: 'produce', emoji: '🥬', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 0 },
+      coles:      { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'iceberg-lettuce-each', name: 'Iceberg Lettuce Head', size: 'Each', brand: 'Fresh',
+    category: 'produce', emoji: '🥬', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 0 },
+      coles:      { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'continental-cucumber-each', name: 'Continental Cucumber Fresh', size: 'Each', brand: 'Fresh',
+    category: 'produce', emoji: '🥒', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 0 },
+      coles:      { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'red-capsicum-each', name: 'Red Capsicum Fresh Single', size: 'Each', brand: 'Fresh',
+    category: 'produce', emoji: '🫑', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 3.50, salePrice: 2.00, phaseOffset: 1 },
+      coles:      { regularPrice: 3.50, salePrice: 2.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
   {
     id: 'bega-cheese-block-500g', name: 'Bega Tasty Cheese Block', size: '500g', brand: 'Bega',
     category: 'dairy', emoji: '🧀', cycleWeeks: 5,
     stores: {
       woolworths: { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 0 },
-      coles:      { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 3 },
+      coles:      { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 2 },
       amazon:     null,
     }
   },
   {
-    id: 'yoplait-vanilla-yogurt-1kg', name: 'Yoplait Vanilla Yogurt', size: '1kg', brand: 'Yoplait',
+    id: 'yoplait-vanilla-yogurt-1kg', name: 'Yoplait Vanilla Yogurt Tub', size: '1kg', brand: 'Yoplait',
     category: 'dairy', emoji: '🍨', cycleWeeks: 6,
     stores: {
       woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
-      coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 3 },
+      coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
       amazon:     null,
     }
   },
   {
-    id: 'chobani-greek-yogurt-170g', name: 'Chobani Greek Yogurt', size: '170g', brand: 'Chobani',
+    id: 'chobani-greek-yogurt-170g', name: 'Chobani Greek Yogurt Blueberry', size: '170g', brand: 'Chobani',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
       woolworths: { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 0 },
@@ -428,28 +1153,134 @@ const RAW_PRODUCTS = [
       amazon:     null,
     }
   },
-
-  // ── Household ──
   {
-    id: 'cold-power-laundry-liquid-2l', name: 'Cold Power Laundry Liquid', size: '2L', brand: 'Cold Power',
+    id: 'coon-tasty-cheese-block-500g', name: 'Cheer Tasty Cheese Block', size: '500g', brand: 'Cheer',
+    category: 'dairy', emoji: '🧀', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 1 },
+      coles:      { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'philadelphia-cream-cheese-250g', name: 'Philadelphia Cream Cheese Spread', size: '250g', brand: 'Philadelphia',
+    category: 'dairy', emoji: '🧀', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 5.20, salePrice: 3.80, phaseOffset: 0 },
+      coles:      { regularPrice: 5.20, salePrice: 3.80, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'dairy-farmers-sour-cream-300g', name: 'Dairy Farmers Sour Cream Tub', size: '300g', brand: 'Dairy Farmers',
+    category: 'dairy', emoji: '🥛', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 0 },
+      coles:      { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'perfect-italian-mozzarella-250g', name: 'Perfect Italian Mozzarella Grated', size: '250g', brand: 'Perfect Italian',
+    category: 'dairy', emoji: '🧀', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
+      coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'mainland-tasty-cheese-slices-250g', name: 'Mainland Tasty Slices 10pk', size: '250g', brand: 'Mainland',
+    category: 'dairy', emoji: '🧀', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 2 },
+      coles:      { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'flora-proactiv-margarine-250g', name: 'Flora ProActiv Margarine Spread', size: '250g', brand: 'Flora',
+    category: 'dairy', emoji: '🧈', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
+      coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'giel-thickened-cream-600ml', name: 'Bulla Thickened Cream Bottle', size: '600ml', brand: 'Bulla',
+    category: 'dairy', emoji: '🥛', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 3.80, phaseOffset: 0 },
+      coles:      { regularPrice: 4.50, salePrice: 3.80, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'danone-activia-yogurt-4pk', name: 'Danone Activia Probiotics Yogurt', size: '4 x 125g', brand: 'Danone',
+    category: 'dairy', emoji: '🥛', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 5.20, salePrice: 3.50, phaseOffset: 0 },
+      coles:      { regularPrice: 5.20, salePrice: 3.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'chobani-yogurt-pouch-140g', name: 'Chobani Greek Yogurt Pouch Strawberry', size: '140g', brand: 'Chobani',
+    category: 'dairy', emoji: '🥛', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 1 },
+      coles:      { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'yakult-fermented-milk-5pk', name: 'Yakult Fermented Milk Drink', size: '5 x 65ml', brand: 'Yakult',
+    category: 'dairy', emoji: '🥛', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 4.80, salePrice: 4.20, phaseOffset: 0 },
+      coles:      { regularPrice: 4.80, salePrice: 4.20, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'woolworths-feta-cheese-200g', name: 'Woolworths Danish Feta Cheese', size: '200g', brand: 'Woolworths',
+    category: 'dairy', emoji: '🧀', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 5.00, salePrice: 4.00, phaseOffset: 0 },
+      coles:      { regularPrice: 5.00, salePrice: 4.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'castello-creamy-blue-cheese-150g', name: 'Castello Double Cream Blue Cheese', size: '150g', brand: 'Castello',
+    category: 'dairy', emoji: '🧀', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 0 },
+      coles:      { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'cold-power-laundry-liquid-2l', name: 'Cold Power Laundry Liquid Sensitive', size: '2L', brand: 'Cold Power',
     category: 'household', emoji: '🧼', cycleWeeks: 6,
     stores: {
       woolworths: { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 0 },
-      coles:      { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 3 },
+      coles:      { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 2 },
       amazon:     null,
     }
   },
   {
-    id: 'fairy-dishwasher-tablets-44pk', name: 'Fairy Dishwasher Tablets', size: '44 Pack', brand: 'Fairy',
+    id: 'fairy-dishwasher-tablets-44pk', name: 'Fairy Dishwasher Tablets Plus', size: '44 Pack', brand: 'Fairy',
     category: 'household', emoji: '🍽️', cycleWeeks: 6,
     stores: {
       woolworths: { regularPrice: 42.00, salePrice: 21.00, phaseOffset: 0 },
-      coles:      { regularPrice: 42.00, salePrice: 21.00, phaseOffset: 3 },
+      coles:      { regularPrice: 42.00, salePrice: 21.00, phaseOffset: 2 },
       amazon:     null,
     }
   },
   {
-    id: 'dettol-liquid-handwash-refill-500ml', name: 'Dettol Handwash Refill', size: '500ml', brand: 'Dettol',
+    id: 'dettol-liquid-handwash-refill-500ml', name: 'Dettol Handwash Liquid Refill', size: '500ml', brand: 'Dettol',
     category: 'household', emoji: '🧴', cycleWeeks: 5,
     stores: {
       woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 0 },
@@ -457,26 +1288,834 @@ const RAW_PRODUCTS = [
       amazon:     null,
     }
   },
-
-  // ── Additional Drinks ──
   {
-    id: 'v-energy-drink-500ml', name: 'V Green Energy Can', size: '500ml', brand: 'V Energy',
-    category: 'soft-drinks', emoji: '🟢', cycleWeeks: 4,
+    id: 'finish-dishwasher-rinse-aid-500ml', name: 'Finish Rinse Aid Jet Dry', size: '500ml', brand: 'Finish',
+    category: 'household', emoji: '🍽️', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
-      coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
+      woolworths: { regularPrice: 11.50, salePrice: 7.00, phaseOffset: 1 },
+      coles:      { regularPrice: 11.50, salePrice: 7.00, phaseOffset: 3 },
       amazon:     null,
     }
   },
   {
-    id: 'lipton-ice-tea-peach-15l', name: 'Lipton Ice Tea Peach', size: '1.5L', brand: 'Lipton',
-    category: 'soft-drinks', emoji: '🍹', cycleWeeks: 5,
+    id: 'morning-fresh-dish-liquid-400ml', name: 'Morning Fresh Lemon Dishwashing', size: '400ml', brand: 'Morning Fresh',
+    category: 'household', emoji: '🧴', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 5.50, salePrice: 2.75, phaseOffset: 0 },
+      coles:      { regularPrice: 5.50, salePrice: 2.75, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'harpic-active-fresh-toilet-cleaner-700ml', name: 'Harpic Toilet Cleaner Gel Marine', size: '700ml', brand: 'Harpic',
+    category: 'household', emoji: '🚽', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 0 },
+      coles:      { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'pine-o-cleen-disinfectant-wipes-120pk', name: 'Pine O Cleen Disinfectant Wipes Lemon', size: '120 Pack', brand: 'Pine O Cleen',
+    category: 'household', emoji: '🧹', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 11.00, salePrice: 5.50, phaseOffset: 2 },
+      coles:      { regularPrice: 11.00, salePrice: 5.50, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'ajax-spray-wipe-glass-cleaner-500ml', name: 'Ajax Spray n Wipe Glass Cleaner', size: '500ml', brand: 'Ajax',
+    category: 'household', emoji: '💨', cycleWeeks: 5,
     stores: {
       woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
+      coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'palmolive-dish-liquid-original-750ml', name: 'Palmolive Ultra Dishwashing Liquid', size: '750ml', brand: 'Palmolive',
+    category: 'household', emoji: '🧴', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 6.50, salePrice: 4.00, phaseOffset: 1 },
+      coles:      { regularPrice: 6.50, salePrice: 4.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'earth-choice-dish-liquid-1l', name: 'Earth Choice Lemon Dishwashing Liquid', size: '1L', brand: 'Earth Choice',
+    category: 'household', emoji: '🌿', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 0 },
+      coles:      { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'vanish-napisan-oxipromote-3kg', name: 'Vanish NapiSan Oxi Action Powder', size: '3kg', brand: 'Vanish',
+    category: 'household', emoji: '🧺', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 26.00, salePrice: 16.00, phaseOffset: 3 },
+      coles:      { regularPrice: 26.00, salePrice: 16.00, phaseOffset: 5 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'dynamo-laundry-liquid-2l', name: 'Dynamo Professional Laundry Liquid', size: '2L', brand: 'Dynamo',
+    category: 'household', emoji: '🧼', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 24.00, salePrice: 12.00, phaseOffset: 0 },
+      coles:      { regularPrice: 24.00, salePrice: 12.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'comfort-fabric-softener-900ml', name: 'Comfort Fabric Conditioner Pure', size: '900ml', brand: 'Comfort',
+    category: 'household', emoji: '🌸', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 2 },
+      coles:      { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'duck-toilet-fresh-disc-starter', name: 'Toilet Duck Fresh Discs Lime', size: '36ml', brand: 'Duck',
+    category: 'household', emoji: '🚽', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 0 },
+      coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'chux-superwipes-10pk', name: 'Chux Superwipes Roll Cloths', size: '10 Pack', brand: 'Chux',
+    category: 'household', emoji: '🧹', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 0 },
+      coles:      { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'wonder-white-bread-sliced-700g', name: 'Wonder White Sliced Toast Bread', size: '700g', brand: 'Wonder White',
+    category: 'bakery', emoji: '🍞', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 4.60, salePrice: 3.20, phaseOffset: 0 },
+      coles:      { regularPrice: 4.60, salePrice: 3.20, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'helgas-rye-bread-680g', name: 'Helgas Traditional Rye Slices', size: '680g', brand: 'Helgas',
+    category: 'bakery', emoji: '🍞', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 1 },
+      coles:      { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'abbotts-sourdough-bread-loaf', name: 'Abbotts Bakery Sourdough Loaf', size: '680g', brand: 'Abbotts',
+    category: 'bakery', emoji: '🍞', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 5.50, salePrice: 4.50, phaseOffset: 0 },
+      coles:      { regularPrice: 5.50, salePrice: 4.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'coles-croissants-3pk', name: 'Coles Bakery Croissants', size: '3 Pack', brand: 'Coles',
+    category: 'bakery', emoji: '🥐', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 0 },
+      coles:      { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'woolworths-muffins-choc-chip-4pk', name: 'WW Choc Chip Muffins 4pk', size: '4 Pack', brand: 'Woolworths',
+    category: 'bakery', emoji: '🧁', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 5.00, salePrice: 5.00, phaseOffset: 0 },
+      coles:      { regularPrice: 5.00, salePrice: 5.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'helgas-wholemeal-bread-680g', name: 'Helgas Traditional Wholemeal Loaf', size: '680g', brand: 'Helgas',
+    category: 'bakery', emoji: '🍞', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 2 },
+      coles:      { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'mission-tortillas-large-8pk', name: 'Mission Original Tortillas Large', size: '8 Pack', brand: 'Mission',
+    category: 'bakery', emoji: '🌯', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
+      coles:      { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'tiptop-english-muffins-6pk', name: 'Tip Top English Muffins Original', size: '6 Pack', brand: 'Tip Top',
+    category: 'bakery', emoji: '🥯', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 1 },
       coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 3 },
       amazon:     null,
     }
   },
+  {
+    id: 'woolworths-crumpets-6pk', name: 'Woolworths Crumpets Original', size: '6 Pack', brand: 'Woolworths',
+    category: 'bakery', emoji: '🥯', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 2.50, salePrice: 2.50, phaseOffset: 0 },
+      coles:      { regularPrice: 2.50, salePrice: 2.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'tiptop-raisin-toast-bread-520g', name: 'Tip Top Cafe Raisin Toast Bread', size: '520g', brand: 'Tip Top',
+    category: 'bakery', emoji: '🍞', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
+      coles:      { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'mission-pita-bread-pocket-5pk', name: 'Mission White Pita Bread Pocket', size: '5 Pack', brand: 'Mission',
+    category: 'bakery', emoji: '🫓', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 1 },
+      coles:      { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'coles-chocolate-cookies-12pk', name: 'Coles Chocolate Chip Cookies Bakery', size: '12 Pack', brand: 'Coles',
+    category: 'bakery', emoji: '🍪', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 3.00, salePrice: 3.00, phaseOffset: 0 },
+      coles:      { regularPrice: 3.00, salePrice: 3.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'kelloggs-nutrigrain-500g', name: 'Kelloggs Nutri-Grain Cereal', size: '500g', brand: 'Kelloggs',
+    category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 1 },
+      coles:      { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'kelloggs-corn-flakes-380g', name: 'Kelloggs Corn Flakes Box', size: '380g', brand: 'Kelloggs',
+    category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
+      coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'sanitarium-weetbix-1kg', name: 'Sanitarium Weet-Bix Cereal Box', size: '1kg', brand: 'Sanitarium',
+    category: 'breakfast', emoji: '🥣', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 5.00, phaseOffset: 0 },
+      coles:      { regularPrice: 6.00, salePrice: 5.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'uncle-tobys-plus-sports-cereal', name: 'Uncle Tobys Plus Sports Protein', size: '705g', brand: 'Uncle Tobys',
+    category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 0 },
+      coles:      { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'kelloggs-coco-pops-375g', name: 'Kelloggs Coco Pops Cereal Chocolate', size: '375g', brand: 'Kelloggs',
+    category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 2 },
+      coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'kelloggs-sultana-bran-420g', name: 'Kelloggs Sultana Bran Cereal Box', size: '420g', brand: 'Kelloggs',
+    category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 3 },
+      coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 0 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'uncle-tobys-oat-quick-sachets', name: 'Uncle Tobys Quick Sachets Creamy Honey', size: '12 Pack', brand: 'Uncle Tobys',
+    category: 'breakfast', emoji: '🥣', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 7.00, salePrice: 4.50, phaseOffset: 0 },
+      coles:      { regularPrice: 7.00, salePrice: 4.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'carman-muesli-golden-oat-500g', name: 'Carmans Golden Oat Crunchy Muesli', size: '500g', brand: 'Carmans',
+    category: 'breakfast', emoji: '🥣', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 1 },
+      coles:      { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'kelloggs-froot-loops-285g', name: 'Kelloggs Froot Loops Colored Cereal', size: '285g', brand: 'Kelloggs',
+    category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 0 },
+      coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'sanitarium-upandgo-choc-6pk', name: 'Sanitarium Up & Go Liquid Breakfast Choc', size: '6 x 250ml', brand: 'Sanitarium',
+    category: 'breakfast', emoji: '🧃', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 11.50, salePrice: 7.00, phaseOffset: 2 },
+      coles:      { regularPrice: 11.50, salePrice: 7.00, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'carman-muesli-bars-classic-6pk', name: 'Carmans Classic Fruit & Nut Bars', size: '6 Pack', brand: 'Carmans',
+    category: 'breakfast', emoji: '🍫', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
+      coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'weetbix-bites-wild-berry-500g', name: 'Sanitarium Weet-Bix Bites Wild Berry', size: '500g', brand: 'Sanitarium',
+    category: 'breakfast', emoji: '🥣', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
+      coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'beef-mince-regular-1kg', name: 'WW Beef Mince 3 Star', size: '1kg', brand: 'Woolworths',
+    category: 'meat', emoji: '🥩', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 13.00, salePrice: 13.00, phaseOffset: 0 },
+      coles:      { regularPrice: 13.00, salePrice: 13.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'chicken-breast-fillets-1kg', name: 'WW Chicken Breast Fillets Skinless', size: '1kg', brand: 'Woolworths',
+    category: 'meat', emoji: '🍗', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 11.50, salePrice: 11.50, phaseOffset: 0 },
+      coles:      { regularPrice: 11.50, salePrice: 11.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'lamb-shoulder-chops-1kg', name: 'WW Lamb Shoulder Chops Fresh', size: '1kg', brand: 'Woolworths',
+    category: 'meat', emoji: '🥩', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 18.00, salePrice: 18.00, phaseOffset: 0 },
+      coles:      { regularPrice: 18.00, salePrice: 18.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'pork-loin-chops-1kg', name: 'Coles Pork Loin Chops Boneless', size: '1kg', brand: 'Coles',
+    category: 'meat', emoji: '🥩', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 16.00, salePrice: 16.00, phaseOffset: 0 },
+      coles:      { regularPrice: 16.00, salePrice: 16.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'salmon-fillets-skin-on-4pk', name: 'Tassal Salmon Fillets Skin On', size: '4 Pack 500g', brand: 'Tassal',
+    category: 'meat', emoji: '🐟', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 22.00, salePrice: 19.00, phaseOffset: 0 },
+      coles:      { regularPrice: 22.00, salePrice: 19.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'coles-beef-rump-steak-500g', name: 'Coles Beef Rump Steak Fresh', size: '500g', brand: 'Coles',
+    category: 'meat', emoji: '🥩', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 14.00, salePrice: 14.00, phaseOffset: 0 },
+      coles:      { regularPrice: 14.00, salePrice: 14.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'dondale-bacon-rashers-500g', name: 'Don Bacon Short Rashers Pack', size: '500g', brand: 'Don',
+    category: 'meat', emoji: '🥓', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 9.50, salePrice: 7.50, phaseOffset: 0 },
+      coles:      { regularPrice: 9.50, salePrice: 7.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'primas-frankfurts-skinless-1kg', name: 'Primo Skinless Frankfurts Tub', size: '1kg', brand: 'Primo',
+    category: 'meat', emoji: '🌭', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 11.00, salePrice: 8.50, phaseOffset: 1 },
+      coles:      { regularPrice: 11.00, salePrice: 8.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'primo-sliced-ham-value-pack', name: 'Primo English Ham Sliced Value Pack', size: '500g', brand: 'Primo',
+    category: 'meat', emoji: '🥩', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 0 },
+      coles:      { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'safcol-premium-salmon-100g', name: 'Safcol Salmon in Springwater', size: '100g', brand: 'Safcol',
+    category: 'meat', emoji: '🐟', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 1 },
+      coles:      { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'primo-chorizo-sausage-375g', name: 'Primo Chorizo Twin Pack', size: '375g', brand: 'Primo',
+    category: 'meat', emoji: '🌭', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 2 },
+      coles:      { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'woolworths-beef-sausages-18pk', name: 'WW Thin Beef Sausages Value Pack', size: '1.7kg', brand: 'Woolworths',
+    category: 'meat', emoji: '🌭', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 13.00, salePrice: 13.00, phaseOffset: 0 },
+      coles:      { regularPrice: 13.00, salePrice: 13.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'mccain-frozen-chips-1kg', name: 'McCain Frozen Chips Straight Cut', size: '1kg', brand: 'McCain',
+    category: 'frozen', emoji: '🍟', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 0 },
+      coles:      { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'birds-eye-fish-fingers-375g', name: 'Birds Eye Fish Fingers 15pk', size: '375g', brand: 'Birds Eye',
+    category: 'frozen', emoji: '🐟', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 1 },
+      coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'mccain-frozen-pizza-bbq-400g', name: 'McCain Frozen Pizza BBQ Chicken', size: '400g', brand: 'McCain',
+    category: 'frozen', emoji: '🍕', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 0 },
+      coles:      { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'nannas-frozen-apple-pie-600g', name: 'Nannas Frozen Family Apple Pie', size: '600g', brand: 'Nannas',
+    category: 'frozen', emoji: '🥧', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
+      coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'patties-party-pies-12pk', name: 'Patties Party Beef Pies 12pk', size: '560g', brand: 'Patties',
+    category: 'frozen', emoji: '🥧', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 0 },
+      coles:      { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'four-twenty-meat-pies-4pk', name: 'Four N Twenty Meat Pies Pack', size: '700g', brand: 'Four N Twenty',
+    category: 'frozen', emoji: '🥧', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 9.00, salePrice: 6.00, phaseOffset: 3 },
+      coles:      { regularPrice: 9.00, salePrice: 6.00, phaseOffset: 0 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'diana-chan-pork-dumplings', name: 'Diana Chan Pork & Chive Dumplings', size: '750g', brand: 'Diana Chan',
+    category: 'frozen', emoji: '🥟', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 15.00, salePrice: 10.00, phaseOffset: 0 },
+      coles:      { regularPrice: 15.00, salePrice: 10.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'steer-frozen-vegetables-peas-1kg', name: 'Birds Eye Frozen Garden Peas', size: '1kg', brand: 'Birds Eye',
+    category: 'frozen', emoji: '🥦', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 5.20, salePrice: 4.50, phaseOffset: 0 },
+      coles:      { regularPrice: 5.20, salePrice: 4.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'sara-lee-french-vanilla-cheesecake', name: 'Sara Lee French Vanilla Cheesecake', size: '360g', brand: 'Sara Lee',
+    category: 'frozen', emoji: '🍰', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 1 },
+      coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'mccain-frozen-lasagne-400g', name: 'McCain Frozen Lasagne Meal', size: '400g', brand: 'McCain',
+    category: 'frozen', emoji: '🍝', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
+      coles:      { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'patties-sausage-rolls-12pk', name: 'Patties Party Sausage Rolls 12pk', size: '450g', brand: 'Patties',
+    category: 'frozen', emoji: '🌭', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 1 },
+      coles:      { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'steers-garlic-bread-twin-pack', name: 'La Famiglia Garlic Bread Twin Pack', size: '400g', brand: 'La Famiglia',
+    category: 'frozen', emoji: '🥖', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 2 },
+      coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'colgate-toothpaste-total-115g', name: 'Colgate Total Clean Mint Toothpaste', size: '115g', brand: 'Colgate',
+    category: 'personal-care', emoji: '🪥', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
+      coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'palmolive-shampoo-milk-honey-350ml', name: 'Palmolive Shampoo Milk & Honey', size: '350ml', brand: 'Palmolive',
+    category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 1 },
+      coles:      { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'rexona-men-sport-deodorant-250ml', name: 'Rexona Men Sport Deodorant Aerosol', size: '250ml', brand: 'Rexona',
+    category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 0 },
+      coles:      { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'radox-shower-gel-lemon-500ml', name: 'Radox Shower Gel Lemon & Tea Tree', size: '500ml', brand: 'Radox',
+    category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 6.50, salePrice: 4.00, phaseOffset: 2 },
+      coles:      { regularPrice: 6.50, salePrice: 4.00, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'colgate-plax-mouthwash-mint-500ml', name: 'Colgate Plax Freshmint Mouthwash', size: '500ml', brand: 'Colgate',
+    category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 1 },
+      coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'head-shoulders-clean-shampoo-400ml', name: 'Head & Shoulders Clean Shampoo', size: '400ml', brand: 'Head & Shoulders',
+    category: 'personal-care', emoji: '🧴', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 12.50, salePrice: 8.00, phaseOffset: 0 },
+      coles:      { regularPrice: 12.50, salePrice: 8.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'pantene-conditioner-smooth-350ml', name: 'Pantene Conditioner Daily Moisture', size: '350ml', brand: 'Pantene',
+    category: 'personal-care', emoji: '🧴', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 9.00, salePrice: 5.50, phaseOffset: 2 },
+      coles:      { regularPrice: 9.00, salePrice: 5.50, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'palmolive-soap-bars-milk-honey-4pk', name: 'Palmolive Soap Bars Moisture Care', size: '4 Pack', brand: 'Palmolive',
+    category: 'personal-care', emoji: '🧼', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 0 },
+      coles:      { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'dove-body-wash-beauty-cream-1l', name: 'Dove Body Wash Beauty Nourishing', size: '1L', brand: 'Dove',
+    category: 'personal-care', emoji: '🧴', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 14.00, salePrice: 9.00, phaseOffset: 1 },
+      coles:      { regularPrice: 14.00, salePrice: 9.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'gillette-mach3-razor-blades-4pk', name: 'Gillette Mach3 Razor Blades Refills', size: '4 Pack', brand: 'Gillette',
+    category: 'personal-care', emoji: '🪒', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 18.00, salePrice: 14.50, phaseOffset: 0 },
+      coles:      { regularPrice: 18.00, salePrice: 14.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'lynx-africa-body-spray-155ml', name: 'Lynx Africa Men Body Spray', size: '155ml', brand: 'Lynx',
+    category: 'personal-care', emoji: '💨', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 3 },
+      coles:      { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 0 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'listerine-freshburst-mouthwash-250ml', name: 'Listerine Freshburst Mouthwash', size: '250ml', brand: 'Listerine',
+    category: 'personal-care', emoji: '🧴', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 0 },
+      coles:      { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'huggies-nappies-size-4-60pk', name: 'Huggies Ultra Dry Nappies Size 4', size: '60 Pack', brand: 'Huggies',
+    category: 'baby', emoji: '👶', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 36.00, salePrice: 29.00, phaseOffset: 0 },
+      coles:      { regularPrice: 36.00, salePrice: 29.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'johnsons-baby-wipes-fragrance-free-80pk', name: 'Johnsons Baby Wipes Fragrance Free', size: '80 Pack', brand: 'Johnsons',
+    category: 'baby', emoji: '👶', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 3.20, phaseOffset: 1 },
+      coles:      { regularPrice: 4.50, salePrice: 3.20, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'baby-love-nappies-size-3-50pk', name: 'BabyLove Cosifit Nappies Size 3', size: '50 Pack', brand: 'BabyLove',
+    category: 'baby', emoji: '👶', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 24.00, salePrice: 19.00, phaseOffset: 2 },
+      coles:      { regularPrice: 24.00, salePrice: 19.00, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'curash-baby-wipes-soap-free-80pk', name: 'Curash Baby Wipes Soap Free', size: '80 Pack', brand: 'Curash',
+    category: 'baby', emoji: '👶', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
+      coles:      { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'farex-baby-rice-cereal-125g', name: 'Farex Baby Cereal Rice', size: '125g', brand: 'Farex',
+    category: 'baby', emoji: '🥣', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 0 },
+      coles:      { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'sudocrem-baby-healing-cream-125g', name: 'Sudocrem Nappy Recovery Cream', size: '125g', brand: 'Sudocrem',
+    category: 'baby', emoji: '🧴', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 12.00, salePrice: 9.50, phaseOffset: 0 },
+      coles:      { regularPrice: 12.00, salePrice: 9.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'karicare-toddler-milk-stage-3-900g', name: 'Karicare Toddler Milk Stage 3 Formula', size: '900g', brand: 'Karicare',
+    category: 'baby', emoji: '🍼', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 0 },
+      coles:      { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'bellamys-organic-apple-cinnamon-120g', name: 'Bellamys Organic Apple Cinnamon Puree', size: '120g', brand: 'Bellamys',
+    category: 'baby', emoji: '🍎', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 1 },
+      coles:      { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'raffertys-garden-banana-pear-120g', name: 'Raffertys Garden Custard Banana Pear', size: '120g', brand: 'Raffertys',
+    category: 'baby', emoji: '🍌', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 0 },
+      coles:      { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'baby-balm-johnson-100ml', name: 'Johnsons Baby Moisturizing Balm', size: '100ml', brand: 'Johnsons',
+    category: 'baby', emoji: '🧴', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 0 },
+      coles:      { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'pedigree-dog-food-beef-12kg-bag', name: 'Pedigree Dry Dog Food Beef Bag', size: '1.2kg', brand: 'Pedigree',
+    category: 'pet', emoji: '🐶', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 0 },
+      coles:      { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'dine-cat-food-tuna-pouch-85g', name: 'Dine Daily Wet Cat Food Tuna', size: '85g', brand: 'Dine',
+    category: 'pet', emoji: '🐱', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 1 },
+      coles:      { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'supercoat-dog-food-chicken-26kg', name: 'Purina Supercoat Adult Dry Dog Food', size: '2.6kg', brand: 'Purina',
+    category: 'pet', emoji: '🐶', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 2 },
+      coles:      { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'optimum-dry-cat-food-chicken-800g', name: 'Optimum Adult Dry Cat Food Chicken', size: '800g', brand: 'Optimum',
+    category: 'pet', emoji: '🐱', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 11.50, salePrice: 8.50, phaseOffset: 0 },
+      coles:      { regularPrice: 11.50, salePrice: 8.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'my-dog-beef-poultry-meat-400g', name: 'My Dog Wet Dog Food Beef Cans', size: '400g', brand: 'My Dog',
+    category: 'pet', emoji: '🐶', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 3.30, salePrice: 2.40, phaseOffset: 0 },
+      coles:      { regularPrice: 3.30, salePrice: 2.40, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'whiskas-cat-food-poultry-12pk', name: 'Whiskas Wet Cat Food Gravy Pouches', size: '12 Pack', brand: 'Whiskas',
+    category: 'pet', emoji: '🐱', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 10.50, salePrice: 8.00, phaseOffset: 1 },
+      coles:      { regularPrice: 10.50, salePrice: 8.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'schmackos-dog-treats-beef-strap', name: 'Schmackos Strapz Dog Treats Beef', size: '200g', brand: 'Schmackos',
+    category: 'pet', emoji: '🍖', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 6.80, salePrice: 4.50, phaseOffset: 3 },
+      coles:      { regularPrice: 6.80, salePrice: 4.50, phaseOffset: 0 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'fancies-cat-treat-puree-4pk', name: 'Fancy Feast Puree Kiss Treats', size: '4 Pack', brand: 'Fancy Feast',
+    category: 'pet', emoji: '🐱', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 3.20, phaseOffset: 0 },
+      coles:      { regularPrice: 4.50, salePrice: 3.20, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'tux-dog-biscuits-value-pack-1kg', name: 'Purina Lucky Dog Bones Biscuits', size: '1kg', brand: 'Purina',
+    category: 'pet', emoji: '🍖', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 7.50, salePrice: 6.00, phaseOffset: 0 },
+      coles:      { regularPrice: 7.50, salePrice: 6.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'friskies-cat-dry-food-15kg-box', name: 'Purina Friskies Seafood Sensations', size: '1.5kg', brand: 'Purina',
+    category: 'pet', emoji: '🐱', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 10.50, salePrice: 7.50, phaseOffset: 0 },
+      coles:      { regularPrice: 10.50, salePrice: 7.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  }
 ];
 
 // =====================================================
