@@ -23,6 +23,9 @@ const CATEGORIES = {
   'ice-cream':    { label: 'Ice Cream',      emoji: '🍦' },
   'essentials':   { label: 'Everyday Essentials', emoji: '🍞' },
   'pantry':       { label: 'Pantry Staples',      emoji: '🥫' },
+  'produce':      { label: 'Fresh Produce',      emoji: '🍎' },
+  'dairy':        { label: 'Dairy & Cold',       emoji: '🥛' },
+  'household':    { label: 'Household & Laundry', emoji: '🧼' },
 };
 
 // Reference date for mock data (matches "Last Updated" in the UI)
@@ -364,6 +367,113 @@ const RAW_PRODUCTS = [
     stores: {
       woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
       coles:      { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  
+  // ── Fresh Produce ──
+  {
+    id: 'cavendish-bananas-1kg', name: 'Cavendish Bananas', size: '1kg', brand: 'Fresh',
+    category: 'produce', emoji: '🍌', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 0 },
+      coles:      { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 0 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'pink-lady-apples-1kg', name: 'Pink Lady Apples', size: '1kg bag', brand: 'Fresh',
+    category: 'produce', emoji: '🍎', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 5.50, salePrice: 4.50, phaseOffset: 0 },
+      coles:      { regularPrice: 5.50, salePrice: 4.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'carrots-1kg', name: 'Carrots 1kg Bag', size: '1kg bag', brand: 'Fresh',
+    category: 'produce', emoji: '🥕', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 2.50, salePrice: 2.50, phaseOffset: 0 },
+      coles:      { regularPrice: 2.50, salePrice: 2.50, phaseOffset: 0 },
+      amazon:     null,
+    }
+  },
+
+  // ── Dairy & Cold ──
+  {
+    id: 'bega-cheese-block-500g', name: 'Bega Tasty Cheese Block', size: '500g', brand: 'Bega',
+    category: 'dairy', emoji: '🧀', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 0 },
+      coles:      { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'yoplait-vanilla-yogurt-1kg', name: 'Yoplait Vanilla Yogurt', size: '1kg', brand: 'Yoplait',
+    category: 'dairy', emoji: '🍨', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
+      coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'chobani-greek-yogurt-170g', name: 'Chobani Greek Yogurt', size: '170g', brand: 'Chobani',
+    category: 'dairy', emoji: '🥛', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 0 },
+      coles:      { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+
+  // ── Household ──
+  {
+    id: 'cold-power-laundry-liquid-2l', name: 'Cold Power Laundry Liquid', size: '2L', brand: 'Cold Power',
+    category: 'household', emoji: '🧼', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 0 },
+      coles:      { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'fairy-dishwasher-tablets-44pk', name: 'Fairy Dishwasher Tablets', size: '44 Pack', brand: 'Fairy',
+    category: 'household', emoji: '🍽️', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 42.00, salePrice: 21.00, phaseOffset: 0 },
+      coles:      { regularPrice: 42.00, salePrice: 21.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'dettol-liquid-handwash-refill-500ml', name: 'Dettol Handwash Refill', size: '500ml', brand: 'Dettol',
+    category: 'household', emoji: '🧴', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 0 },
+      coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+
+  // ── Additional Drinks ──
+  {
+    id: 'v-energy-drink-500ml', name: 'V Green Energy Can', size: '500ml', brand: 'V Energy',
+    category: 'soft-drinks', emoji: '🟢', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
+      coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'lipton-ice-tea-peach-15l', name: 'Lipton Ice Tea Peach', size: '1.5L', brand: 'Lipton',
+    category: 'soft-drinks', emoji: '🍹', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
+      coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 3 },
       amazon:     null,
     }
   },

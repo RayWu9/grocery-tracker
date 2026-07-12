@@ -246,4 +246,74 @@ TRACKED_ITEMS = [
         'coles_term':      'leggos tomato paste 500g',
         'amazon_asin':     None,
     },
+    # ── Produce ──
+    {
+        'id': 'cavendish-bananas-1kg',
+        'woolworths_term': 'fresh cavendish bananas 1kg',
+        'coles_term':      'fresh cavendish bananas 1kg',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'pink-lady-apples-1kg',
+        'woolworths_term': 'pink lady apples 1kg bag',
+        'coles_term':      'pink lady apples 1kg bag',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'carrots-1kg',
+        'woolworths_term': 'carrots 1kg bag',
+        'coles_term':      'carrots 1kg bag',
+        'amazon_asin':     None,
+    },
+    # ── Dairy & Cold ──
+    {
+        'id': 'bega-cheese-block-500g',
+        'woolworths_term': 'bega tasty cheese block 500g',
+        'coles_term':      'bega tasty cheese block 500g',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'yoplait-vanilla-yogurt-1kg',
+        'woolworths_term': 'yoplait vanilla yoghurt 1kg',
+        'coles_term':      'yoplait vanilla yoghurt 1kg',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'chobani-greek-yogurt-170g',
+        'woolworths_term': 'chobani greek yogurt 170g',
+        'coles_term':      'chobani greek yogurt 170g',
+        'amazon_asin':     None,
+    },
+    # ── Household ──
+    {
+        'id': 'cold-power-laundry-liquid-2l',
+        'woolworths_term': 'cold power laundry liquid 2l',
+        'coles_term':      'cold power laundry liquid 2l',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'fairy-dishwasher-tablets-44pk',
+        'woolworths_term': 'fairy platinum dishwasher tablets 44 pack',
+        'coles_term':      'fairy platinum dishwasher tablets 44 pack',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'dettol-liquid-handwash-refill-500ml',
+        'woolworths_term': 'dettol liquid handwash refill 500ml',
+        'coles_term':      'dettol liquid handwash refill 500ml',
+        'amazon_asin':     None,
+    },
+    # ── Additional Drinks ──
+    {
+        'id': 'v-energy-drink-500ml',
+        'woolworths_term': 'v energy drink green 500ml',
+        'coles_term':      'v energy drink green 500ml',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'lipton-ice-tea-peach-15l',
+        'woolworths_term': 'lipton ice tea peach 1.5l',
+        'coles_term':      'lipton ice tea peach 1.5l',
+        'amazon_asin':     None,
+    },
 ]
