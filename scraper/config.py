@@ -147,4 +147,103 @@ TRACKED_ITEMS = [
         'coles_term':      'streets blue ribbon 2l',
         'amazon_asin':     None,
     },
+    # ── Essentials ──
+    {
+        'id': 'woolworths-milk-2l',
+        'woolworths_term': 'woolworths full cream milk 2l',
+        'coles_term':      'coles full cream milk 2l',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'tip-top-bread-700g',
+        'woolworths_term': 'tip top the one bread 700g',
+        'coles_term':      'tip top the one bread 700g',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'western-star-butter-500g',
+        'woolworths_term': 'western star butter 500g',
+        'coles_term':      'western star butter 500g',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'nescafe-blend-43-150g',
+        'woolworths_term': 'nescafe blend 43 150g',
+        'coles_term':      'nescafe blend 43 150g',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'weetbix-1.2kg',
+        'woolworths_term': 'sanitarium weet bix 1.2kg',
+        'coles_term':      'sanitarium weet bix 1.2kg',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'quilton-toilet-paper-18pk',
+        'woolworths_term': 'quilton toilet tissue 3 ply 18 pack',
+        'coles_term':      'quilton toilet tissue 3 ply 18 pack',
+        'amazon_asin':     None,
+    },
+    # ── Snacks & Beverages ──
+    {
+        'id': 'red-bull-4pk',
+        'woolworths_term': 'red bull energy drink 4 x 250ml',
+        'coles_term':      'red bull energy drink 4 pack',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'doritos-cheese-170g',
+        'woolworths_term': 'doritos cheese supreme 170g',
+        'coles_term':      'doritos cheese supreme 170g',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'thins-original-175g',
+        'woolworths_term': 'thins potato chips light tangy 175g',
+        'coles_term':      'thins potato chips light tangy 175g',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'arnotts-tim-tam-200g',
+        'woolworths_term': 'arnotts tim tam chocolate biscuits 200g',
+        'coles_term':      'arnotts tim tam chocolate biscuits 200g',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'twisties-cheese-90g',
+        'woolworths_term': 'twisties cheese 90g',
+        'coles_term':      'twisties cheese 90g',
+        'amazon_asin':     None,
+    },
+    # ── Pantry Staples ──
+    {
+        'id': 'san-remo-pasta-500g',
+        'woolworths_term': 'san remo spaghetti 500g',
+        'coles_term':      'san remo spaghetti 500g',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'sunrice-jasmine-rice-5kg',
+        'woolworths_term': 'sunrice jasmine rice 5kg',
+        'coles_term':      'sunrice jasmine rice 5kg',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'cobram-estate-olive-oil-750ml',
+        'woolworths_term': 'cobram estate extra virgin olive oil classic 750ml',
+        'coles_term':      'cobram estate extra virgin olive oil classic 750ml',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'john-west-tuna-95g',
+        'woolworths_term': 'john west tuna tempters olive oil 95g',
+        'coles_term':      'john west tuna tempters olive oil 95g',
+        'amazon_asin':     None,
+    },
+    {
+        'id': 'leggos-tomato-paste-500g',
+        'woolworths_term': 'leggos tomato paste 500g',
+        'coles_term':      'leggos tomato paste 500g',
+        'amazon_asin':     None,
+    },
 ]

@@ -21,6 +21,8 @@ const CATEGORIES = {
   'chocolate':    { label: 'Chocolate',      emoji: '🍫' },
   'chips':        { label: 'Chips',          emoji: '🥔' },
   'ice-cream':    { label: 'Ice Cream',      emoji: '🍦' },
+  'essentials':   { label: 'Everyday Essentials', emoji: '🍞' },
+  'pantry':       { label: 'Pantry Staples',      emoji: '🥫' },
 };
 
 // Reference date for mock data (matches "Last Updated" in the UI)
@@ -212,6 +214,156 @@ const RAW_PRODUCTS = [
     stores: {
       woolworths: { regularPrice: 8.00, salePrice: 5.00, phaseOffset: 1 },
       coles:      { regularPrice: 8.00, salePrice: 5.00, phaseOffset: 4 },
+      amazon:     null,
+    }
+  },
+  
+  // ── Everyday Essentials ──
+  {
+    id: 'woolworths-milk-2l', name: 'WW Full Cream Milk', size: '2L', brand: 'Woolworths',
+    category: 'essentials', emoji: '🥛', cycleWeeks: 99,
+    stores: {
+      woolworths: { regularPrice: 3.10, salePrice: 3.10, phaseOffset: 0 },
+      coles:      { regularPrice: 3.10, salePrice: 3.10, phaseOffset: 0 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'tip-top-bread-700g', name: 'Tip Top Bread', size: '700g', brand: 'Tip Top',
+    category: 'essentials', emoji: '🍞', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
+      coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'western-star-butter-500g', name: 'Western Star Butter', size: '500g', brand: 'Western Star',
+    category: 'essentials', emoji: '🧈', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 0 },
+      coles:      { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'nescafe-blend-43-150g', name: 'Nescafe Coffee', size: '150g', brand: 'Nescafe',
+    category: 'essentials', emoji: '☕', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 11.00, salePrice: 7.00, phaseOffset: 0 },
+      coles:      { regularPrice: 11.00, salePrice: 7.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'weetbix-1.2kg', name: 'Sanitarium Weet-Bix', size: '1.2kg', brand: 'Sanitarium',
+    category: 'essentials', emoji: '🥣', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
+      coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'quilton-toilet-paper-18pk', name: 'Quilton Toilet Paper', size: '18 Pack', brand: 'Quilton',
+    category: 'essentials', emoji: '🧻', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 14.00, salePrice: 10.00, phaseOffset: 0 },
+      coles:      { regularPrice: 14.00, salePrice: 10.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+
+  // ── Snacks & Beverages ──
+  {
+    id: 'red-bull-4pk', name: 'Red Bull 4x250ml', size: '4-pack', brand: 'Red Bull',
+    category: 'soft-drinks', emoji: '⚡', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 0 },
+      coles:      { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'doritos-cheese-170g', name: 'Doritos Cheese Supreme', size: '170g', brand: 'Doritos',
+    category: 'chips', emoji: '🍿', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 0 },
+      coles:      { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'thins-original-175g', name: 'Thins Chips Light & Tangy', size: '175g', brand: 'Thins',
+    category: 'chips', emoji: '🥔', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 0 },
+      coles:      { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'arnotts-tim-tam-200g', name: 'Arnotts Tim Tam Original', size: '200g', brand: 'Arnotts',
+    category: 'chocolate', emoji: '🍪', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
+      coles:      { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'twisties-cheese-90g', name: 'Twisties Cheese', size: '90g', brand: 'Twisties',
+    category: 'chips', emoji: '🧀', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 2.70, salePrice: 1.80, phaseOffset: 0 },
+      coles:      { regularPrice: 2.70, salePrice: 1.80, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+
+  // ── Pantry Staples ──
+  {
+    id: 'san-remo-pasta-500g', name: 'San Remo Spaghetti', size: '500g', brand: 'San Remo',
+    category: 'pantry', emoji: '🍝', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 0 },
+      coles:      { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'sunrice-jasmine-rice-5kg', name: 'SunRice Jasmine Rice', size: '5kg', brand: 'SunRice',
+    category: 'pantry', emoji: '🌾', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 0 },
+      coles:      { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'cobram-estate-olive-oil-750ml', name: 'Cobram Estate Olive Oil', size: '750ml', brand: 'Cobram Estate',
+    category: 'pantry', emoji: '🫒', cycleWeeks: 6,
+    stores: {
+      woolworths: { regularPrice: 18.00, salePrice: 12.00, phaseOffset: 0 },
+      coles:      { regularPrice: 18.00, salePrice: 12.00, phaseOffset: 3 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'john-west-tuna-95g', name: 'John West Tuna', size: '95g', brand: 'John West',
+    category: 'pantry', emoji: '🐟', cycleWeeks: 4,
+    stores: {
+      woolworths: { regularPrice: 2.70, salePrice: 1.50, phaseOffset: 0 },
+      coles:      { regularPrice: 2.70, salePrice: 1.50, phaseOffset: 2 },
+      amazon:     null,
+    }
+  },
+  {
+    id: 'leggos-tomato-paste-500g', name: 'Leggos Tomato Paste', size: '500g', brand: 'Leggos',
+    category: 'pantry', emoji: '🥫', cycleWeeks: 5,
+    stores: {
+      woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
+      coles:      { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 2 },
       amazon:     null,
     }
   },
