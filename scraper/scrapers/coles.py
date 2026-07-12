@@ -2,7 +2,7 @@
 Coles price scraper.
 
 Queries the public search page and extracts product information from Next.js state payload.
-Bypasses anti-bot protection using curl-cffi.
+Bypasses anti-bot protection using curl-cffi and persistent session cookie sharing.
 """
 
 import time
@@ -27,16 +27,23 @@ HEADERS = {
     'Accept-Language': 'en-US,en;q=0.9',
 }
 
+# Module-level persistent session to share cookies across all product searches
+_session = None
+
+def get_session():
+    global _session
+    if _session is None:
+        _session = requests.Session()
+        _session.headers.update(HEADERS)
+    return _session
+
 
 def search_product(search_term: str, timeout: int = 15, retries: int = 3) -> dict | None:
     """
     Search Coles for a product and return the best-matching result.
     """
     url = f'https://www.coles.com.au/search?q={search_term.replace(" ", "+")}'
-
-    # Use a persistent session to maintain cookies during retry cycles
-    session = requests.Session()
-    session.headers.update(HEADERS)
+    session = get_session()
 
     for attempt in range(1, retries + 1):
         try:
@@ -62,7 +69,8 @@ def search_product(search_term: str, timeout: int = 15, retries: int = 3) -> dic
             logger.warning(f'[Coles] Connection/Request error on attempt {attempt}: {e}')
 
         if attempt < retries:
-            time.sleep(2 ** attempt + 1)
+            # Sleep with exponential backoff on block/failure
+            time.sleep(2 ** attempt + 3)
 
     logger.error(f'[Coles] Failed to fetch "{search_term}" after {retries} attempts')
     return None
@@ -122,7 +130,6 @@ def _parse_html_page(html_text: str, search_term: str) -> dict | None:
     if price_els:
         try:
             price_text = price_els[0].get_text(strip=True)
-            # Match number structure in string: e.g. "$4.50"
             import re
             match = re.search(r'[\d,]+\.?\d*', price_text.replace('$', '').strip())
             if match:

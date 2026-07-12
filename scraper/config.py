@@ -25,7 +25,7 @@ if not SUPABASE_URL or not SUPABASE_SERVICE_KEY:
 
 # ── Scraper behaviour ───────────────────────────────
 REQUEST_TIMEOUT   = 15       # seconds per HTTP request
-REQUEST_DELAY     = 2.0      # seconds between requests (be polite)
+REQUEST_DELAY     = 4.5      # seconds between requests (be polite)
 MAX_RETRIES       = 3        # retry failed requests this many times
 MOCK_MODE         = os.getenv('MOCK_MODE', 'false').lower() == 'true'
                              # Set MOCK_MODE=true to skip real HTTP calls during dev
