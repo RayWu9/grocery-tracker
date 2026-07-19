@@ -2249,6 +2249,7 @@ let products = [];
 
 const state = {
   category:  'all',
+  store:     'all',
   search:    '',
   sort:      'name',
   saleOnly:  false,
@@ -2275,20 +2276,46 @@ function getVisibleProducts() {
     );
   }
 
+  if (state.store !== 'all') {
+    list = list.filter(p => p.stores[state.store] !== null);
+  }
+
   if (state.saleOnly) {
-    list = list.filter(p => p.anyOnSale);
+    if (state.store !== 'all') {
+      list = list.filter(p => p.stores[state.store]?.onSale);
+    } else {
+      list = list.filter(p => p.anyOnSale);
+    }
   }
 
   list = [...list].sort((a, b) => {
+    const getPrice = (p) => {
+      if (state.store !== 'all' && p.stores[state.store]) {
+        const s = p.stores[state.store];
+        return s.currentUnitPrice ?? s.currentPrice;
+      }
+      return p.lowestPrice;
+    };
     switch (state.sort) {
-      case 'price-asc':  return a.lowestPrice - b.lowestPrice;
-      case 'price-desc': return b.lowestPrice - a.lowestPrice;
-      case 'discount':   return Math.max(...Object.values(b.stores).filter(Boolean).map(s => s.discountPct))
-                              - Math.max(...Object.values(a.stores).filter(Boolean).map(s => s.discountPct));
+      case 'price-asc':  return getPrice(a) - getPrice(b);
+      case 'price-desc': return getPrice(b) - getPrice(a);
+      case 'discount':   {
+        const getDiscount = (p) => {
+          if (state.store !== 'all' && p.stores[state.store]) {
+            return p.stores[state.store].discountPct;
+          }
+          return Math.max(...Object.values(p.stores).filter(Boolean).map(s => s.discountPct));
+        };
+        return getDiscount(b) - getDiscount(a);
+      }
       case 'next-sale':  {
-        const da = a.earliestNextSale?.daysUntil ?? 9999;
-        const db = b.earliestNextSale?.daysUntil ?? 9999;
-        return da - db;
+        const getNextSaleDays = (p) => {
+          if (state.store !== 'all' && p.stores[state.store]?.nextSale) {
+            return p.stores[state.store].nextSale.daysUntil;
+          }
+          return p.earliestNextSale?.daysUntil ?? 9999;
+        };
+        return getNextSaleDays(a) - getNextSaleDays(b);
       }
       default: return a.name.localeCompare(b.name);
     }
@@ -2326,7 +2353,8 @@ function renderGrid() {
 
   empty.hidden = true;
   const cat = state.category !== 'all' ? CATEGORIES[state.category]?.label : null;
-  info.textContent = `Showing ${visible.length} item${visible.length !== 1 ? 's' : ''}${cat ? ' in ' + cat : ''}`;
+  const storeLabel = state.store !== 'all' ? (state.store === 'amazon' ? 'Amazon AU' : state.store.charAt(0).toUpperCase() + state.store.slice(1)) : null;
+  info.textContent = `Showing ${visible.length} item${visible.length !== 1 ? 's' : ''}${cat ? ' in ' + cat : ''}${storeLabel ? ' available at ' + storeLabel : ''}`;
 
   grid.innerHTML = visible.map((p, i) => cardHTML(p, i)).join('');
 
@@ -2349,7 +2377,8 @@ function cardHTML(p, idx) {
         <span class="na-text">Not available</span>
       </div>`;
 
-    const isBest  = p.bestStore === key;
+    const storePrice = s.currentUnitPrice ?? s.currentPrice;
+    const isBest  = storePrice === p.lowestPrice;
     const isAmazon = key === 'amazon';
     const bestTag  = isBest ? '<span class="best-tag">Best</span>' : '';
 
@@ -2473,7 +2502,8 @@ function modalHTML(p) {
         <div></div>
       </div>`;
 
-    const isBest  = p.bestStore === key;
+    const storePrice = s.currentUnitPrice ?? s.currentPrice;
+    const isBest  = storePrice === p.lowestPrice;
     const isAmazon = key === 'amazon';
     const bestTag  = isBest ? '<span class="best-tag">✓ Best Value</span>' : '';
 
@@ -2699,6 +2729,12 @@ function initListeners() {
   // Search
   document.getElementById('searchInput').addEventListener('input', e => {
     state.search = e.target.value.trim();
+    renderGrid();
+  });
+
+  // Store filter
+  document.getElementById('storeSelect').addEventListener('change', e => {
+    state.store = e.target.value;
     renderGrid();
   });
 
