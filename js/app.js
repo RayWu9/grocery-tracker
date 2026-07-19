@@ -2354,7 +2354,7 @@ function cardHTML(p, idx) {
     const bestTag  = isBest ? '<span class="best-tag">Best</span>' : '';
 
     let priceHTML;
-    if (isAmazon && s.packLabel) {
+    if (isAmazon && s.packQty && s.packLabel) {
       const displayUnitPrice = s.currentUnitPrice;
       const displayPackPrice = s.currentPrice;
       const unitLabel = s.packLabel.split('×')[0].trim() + '× = $' + displayPackPrice.toFixed(2);
@@ -2478,7 +2478,7 @@ function modalHTML(p) {
     const bestTag  = isBest ? '<span class="best-tag">✓ Best Value</span>' : '';
 
     let mainPrice, detailLine;
-    if (isAmazon && s.packLabel) {
+    if (isAmazon && s.packQty && s.packLabel) {
       mainPrice  = `$${s.currentUnitPrice.toFixed(2)}/unit`;
       detailLine = `${s.packLabel} = $${s.currentPrice.toFixed(2)} total` + (s.onSale ? ` (was $${s.unitPrice.toFixed(2)}/unit)` : '');
     } else {
