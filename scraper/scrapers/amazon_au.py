@@ -109,7 +109,7 @@ def _parse_page(html: str, pack_qty: int, asin: str) -> dict | None:
     unit_price = round(price / pack_qty, 2) if pack_qty > 1 else price
 
     logger.info(
-        f'[Amazon] "{name[:50]}" (ASIN: {asin}) → '
+        f'[Amazon] "{name[:50]}" (ASIN: {asin}) -> '
         f'${price:.2f} total, ${unit_price:.2f}/unit'
         + (f' (SALE -{discount_pct}%)' if on_sale else '')
     )
