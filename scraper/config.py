@@ -37,19 +37,19 @@ TRACKED_ITEMS = [
         'id': 'coca-cola-125l',
         'woolworths_term': 'coca-cola classic',
         'coles_term':      'coca-cola classic',
-        'amazon_asin':     None,
+        'amazon_asin':     'B07D89LCQ7',
     },
     {
         'id': 'pepsi-max-125l',
         'woolworths_term': 'pepsi max cola no sugar',
         'coles_term':      'pepsi max cola no sugar',
-        'amazon_asin':     None,
+        'amazon_asin':     'B07XCWG89V',
     },
     {
         'id': 'sprite-125l',
         'woolworths_term': 'sprite lemonade',
         'coles_term':      'sprite lemonade',
-        'amazon_asin':     None,
+        'amazon_asin':     'B0B5P1H8D1',
     },
     {
         'id': 'solo-125l',
@@ -61,7 +61,7 @@ TRACKED_ITEMS = [
         'id': 'mt-franklin-600ml',
         'woolworths_term': 'mount franklin sparkling',
         'coles_term':      'mount franklin sparkling',
-        'amazon_asin':     None,
+        'amazon_asin':     'B0C57Y4FB7',
     },
     {
         'id': 'red-bull-4pk',
@@ -97,7 +97,7 @@ TRACKED_ITEMS = [
         'id': 'kirks-pasito-10pk',
         'woolworths_term': 'kirks pasito cans',
         'coles_term':      'kirks pasito cans',
-        'amazon_asin':     None,
+        'amazon_asin':     'B0C53F7VFV',
     },
     {
         'id': 'gatorade-blue-bolt-1l',
@@ -127,19 +127,19 @@ TRACKED_ITEMS = [
         'id': 'skittles-original-160g',
         'woolworths_term': 'skittles original fruit',
         'coles_term':      'skittles original fruit',
-        'amazon_asin':     None,
+        'amazon_asin':     'B08C636GFT',
     },
     {
         'id': 'allens-snakes-220g',
         'woolworths_term': 'allens snakes alive',
         'coles_term':      'allens snakes alive',
-        'amazon_asin':     None,
+        'amazon_asin':     'B0031ZPHFO',
     },
     {
         'id': 'mentos-fruit-roll',
         'woolworths_term': 'mentos fruit roll',
         'coles_term':      'mentos fruit roll',
-        'amazon_asin':     None,
+        'amazon_asin':     'B07XDHCXDS',
     },
     {
         'id': 'allens-party-mix-190g',
@@ -217,7 +217,7 @@ TRACKED_ITEMS = [
         'id': 'cadbury-dairy-milk-180g',
         'woolworths_term': 'cadbury dairy milk block',
         'coles_term':      'cadbury dairy milk block',
-        'amazon_asin':     None,
+        'amazon_asin':     'B0B1QV3H5Q',
     },
     {
         'id': 'cadbury-favourites-500g',
@@ -307,7 +307,7 @@ TRACKED_ITEMS = [
         'id': 'pringles-original-134g',
         'woolworths_term': 'pringles original',
         'coles_term':      'pringles original',
-        'amazon_asin':     None,
+        'amazon_asin':     'B07GJVV3YM',
     },
     {
         'id': 'smiths-crinkle-150g',
@@ -865,7 +865,7 @@ TRACKED_ITEMS = [
         'id': 'finish-dishwasher-rinse-aid-500ml',
         'woolworths_term': 'finish rinse aid jet dry',
         'coles_term':      'finish rinse aid jet dry',
-        'amazon_asin':     None,
+        'amazon_asin':     'B0866669JX',
     },
     {
         'id': 'morning-fresh-dish-liquid-400ml',
