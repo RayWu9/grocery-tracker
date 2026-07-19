@@ -4688,6 +4688,14 @@ const state = {
   sort:      'name',
   saleOnly:  false,
   activeChart: null, // Chart.js instance
+  favorites: (() => {
+    try {
+      const saved = localStorage.getItem('pricepulse_favorites');
+      return saved ? JSON.parse(saved) : [];
+    } catch (e) {
+      return [];
+    }
+  })()
 };
 
 // =====================================================
@@ -4697,7 +4705,9 @@ const state = {
 function getVisibleProducts() {
   let list = products;
 
-  if (state.category !== 'all') {
+  if (state.category === 'favorites') {
+    list = list.filter(p => state.favorites.includes(p.id));
+  } else if (state.category !== 'all') {
     list = list.filter(p => p.category === state.category);
   }
 
@@ -4782,19 +4792,34 @@ function renderGrid() {
     grid.innerHTML = '';
     empty.hidden   = false;
     info.textContent = '';
+    if (state.category === 'favorites') {
+      empty.innerHTML = `
+        <span class="empty-emoji">⭐</span>
+        <p>Your watchlist is empty.</p>
+        <p style="font-size:13px;color:var(--text-muted);margin-top:6px">Click the star icon on any product card to add it to your watchlist!</p>
+      `;
+    } else {
+      empty.innerHTML = `
+        <span class="empty-emoji">🔎</span>
+        <p>No products match your search. Try a different term or category.</p>
+      `;
+    }
     return;
   }
 
   empty.hidden = true;
-  const cat = state.category !== 'all' ? CATEGORIES[state.category]?.label : null;
+  const cat = state.category !== 'all' ? (state.category === 'favorites' ? 'Watchlist' : CATEGORIES[state.category]?.label) : null;
   const storeLabel = state.store !== 'all' ? (state.store === 'amazon' ? 'Amazon AU' : state.store.charAt(0).toUpperCase() + state.store.slice(1)) : null;
   info.textContent = `Showing ${visible.length} item${visible.length !== 1 ? 's' : ''}${cat ? ' in ' + cat : ''}${storeLabel ? ' available at ' + storeLabel : ''}`;
 
   grid.innerHTML = visible.map((p, i) => cardHTML(p, i)).join('');
 
-  // Attach click events to all cards
+  // Attach click events to all cards (ignoring favorite button clicks)
   grid.querySelectorAll('.product-card').forEach(card => {
-    card.addEventListener('click', () => openModal(card.dataset.id));
+    card.addEventListener('click', (e) => {
+      if (e.target.closest('.favorite-btn')) return;
+      openModal(card.dataset.id);
+    });
     card.style.animationDelay = card.dataset.delay + 'ms';
   });
 }
@@ -4858,6 +4883,10 @@ function cardHTML(p, idx) {
     nextSaleHTML = `<span class="next-sale-txt">📅 Next sale <span class="${cls}">${d === 0 ? 'today' : d + 'd away'}</span></span>`;
   }
 
+  const isFav = state.favorites.includes(p.id);
+  const favClass = isFav ? 'active' : '';
+  const favStar = isFav ? '★' : '☆';
+
   return `
     <article class="product-card ${p.anyOnSale ? 'on-sale' : ''}"
              role="listitem"
@@ -4865,6 +4894,7 @@ function cardHTML(p, idx) {
              data-delay="${idx * 35}"
              tabindex="0"
              aria-label="${p.name} ${p.size} – click to view price history">
+      <button class="favorite-btn ${favClass}" onclick="toggleFavorite('${p.id}', event)" title="${isFav ? 'Remove from Watchlist' : 'Add to Watchlist'}" aria-label="${isFav ? 'Remove from Watchlist' : 'Add to Watchlist'}">${favStar}</button>
       <div class="card-head">
         <div>
           <div class="card-emoji" aria-hidden="true">${p.emoji}</div>
@@ -5204,6 +5234,50 @@ function initListeners() {
       if (card) { e.preventDefault(); openModal(card.dataset.id); }
     }
   });
+
+  // Cache sync button
+  const syncBtn = document.getElementById('syncCacheBtn');
+  if (syncBtn) {
+    syncBtn.addEventListener('click', async () => {
+      syncBtn.classList.add('spinning');
+      syncBtn.disabled = true;
+      updateSourceBadge('Syncing...', 'info');
+      try {
+        // Clear IndexedDB cache
+        await DBCache.clear();
+        
+        // Re-run init to fetch fresh data
+        const creds = getSavedCredentials();
+        if (creds && creds.url && creds.key) {
+          const client = initSupabase(creds.url, creds.key);
+          const dbData = await fetchDbData(client);
+          
+          if (dbData.products && dbData.products.length > 0) {
+            products = processSupabaseData(dbData.products, dbData.snapshots);
+            updateSourceBadge('Supabase', 'connected');
+            
+            // Write fresh data to cache
+            await DBCache.set('products', dbData.products);
+            await DBCache.set('snapshots', dbData.snapshots);
+            await DBCache.set('cache_timestamp', Date.now());
+            
+            if (dbData.snapshots.length > 0) {
+              const dates = dbData.snapshots.map(s => s.week_start);
+              const maxDate = new Date(dates.reduce((a, b) => a > b ? a : b));
+              document.getElementById('statDate').textContent = formatDateLabel(maxDate) + ' ' + maxDate.getFullYear();
+            }
+          }
+        }
+      } catch (e) {
+        console.error('Manual cache sync failed', e);
+      } finally {
+        syncBtn.classList.remove('spinning');
+        syncBtn.disabled = false;
+        renderStats();
+        renderGrid();
+      }
+    });
+  }
 }
 
 // =====================================================
@@ -5433,10 +5507,14 @@ function setupSettingsUI() {
   settingsBackdrop.addEventListener('click', closeSettings);
 
   // Disconnect button
-  disconnectBtn.addEventListener('click', () => {
+  disconnectBtn.addEventListener('click', async () => {
     clearCredentials();
     urlInput.value = '';
     keyInput.value = '';
+    
+    try {
+      await DBCache.clear();
+    } catch (cacheErr) {}
     
     statusBox.textContent = 'Disconnected. Using mock dataset.';
     statusBox.className = 'status-msg-box info';
@@ -5478,6 +5556,14 @@ function setupSettingsUI() {
       statusBox.className = 'status-msg-box success';
 
       const dbData = await fetchDbData(supabaseClient);
+      
+      // Save to cache
+      try {
+        await DBCache.set('products', dbData.products);
+        await DBCache.set('snapshots', dbData.snapshots);
+        await DBCache.set('cache_timestamp', Date.now());
+      } catch (cacheErr) {}
+
       if (dbData.products && dbData.products.length > 0) {
         products = processSupabaseData(dbData.products, dbData.snapshots);
         updateSourceBadge('Supabase', 'connected');
@@ -5503,6 +5589,83 @@ function setupSettingsUI() {
   });
 }
 
+// =====================================================
+// INDEXEDDB CACHE HELPER & WATCHLIST HELPERS
+// =====================================================
+const DBCache = {
+  dbName: 'PricePulseCache',
+  storeName: 'snapshots',
+  
+  open() {
+    return new Promise((resolve, reject) => {
+      const req = indexedDB.open(this.dbName, 1);
+      req.onupgradeneeded = () => req.result.createObjectStore(this.storeName);
+      req.onsuccess = () => resolve(req.result);
+      req.onerror = () => reject(req.error);
+    });
+  },
+  
+  async get(key) {
+    try {
+      const db = await this.open();
+      return new Promise((resolve) => {
+        const tx = db.transaction(this.storeName, 'readonly');
+        const req = tx.objectStore(this.storeName).get(key);
+        req.onsuccess = () => resolve(req.result);
+        req.onerror = () => resolve(null);
+      });
+    } catch (e) {
+      return null;
+    }
+  },
+  
+  async set(key, value) {
+    try {
+      const db = await this.open();
+      return new Promise((resolve) => {
+        const tx = db.transaction(this.storeName, 'readwrite');
+        tx.objectStore(this.storeName).put(value, key);
+        tx.oncomplete = () => resolve(true);
+      });
+    } catch (e) {
+      return false;
+    }
+  },
+  
+  async clear() {
+    try {
+      const db = await this.open();
+      return new Promise((resolve) => {
+        const tx = db.transaction(this.storeName, 'readwrite');
+        tx.objectStore(this.storeName).clear();
+        tx.oncomplete = () => resolve(true);
+      });
+    } catch (e) {
+      return false;
+    }
+  }
+};
+
+function toggleFavorite(productId, event) {
+  if (event) {
+    event.stopPropagation();
+    event.preventDefault();
+  }
+  const idx = state.favorites.indexOf(productId);
+  if (idx > -1) {
+    state.favorites.splice(idx, 1);
+  } else {
+    state.favorites.push(productId);
+  }
+  try {
+    localStorage.setItem('pricepulse_favorites', JSON.stringify(state.favorites));
+  } catch (e) {}
+  
+  renderGrid();
+  renderStats();
+}
+window.toggleFavorite = toggleFavorite;
+
 async function init() {
   initListeners();
   setupSettingsUI();
@@ -5513,7 +5676,29 @@ async function init() {
     try {
       updateSourceBadge('Connecting...', 'info');
       supabaseClient = initSupabase(creds.url, creds.key);
-      const dbData = await fetchDbData(supabaseClient);
+      
+      // Check cache first
+      const cachedTime = await DBCache.get('cache_timestamp');
+      const twelveHours = 12 * 60 * 60 * 1000;
+      let dbData = null;
+      
+      if (cachedTime && (Date.now() - cachedTime) < twelveHours) {
+        const cachedProducts = await DBCache.get('products');
+        const cachedSnapshots = await DBCache.get('snapshots');
+        if (cachedProducts && cachedSnapshots) {
+          dbData = { products: cachedProducts, snapshots: cachedSnapshots };
+          console.log('Loaded database catalog and snapshots from client IndexedDB cache.');
+        }
+      }
+      
+      if (!dbData) {
+        dbData = await fetchDbData(supabaseClient);
+        // Save to cache
+        await DBCache.set('products', dbData.products);
+        await DBCache.set('snapshots', dbData.snapshots);
+        await DBCache.set('cache_timestamp', Date.now());
+        console.log('Saved database catalog and snapshots to client IndexedDB cache.');
+      }
 
       if (dbData.products && dbData.products.length > 0) {
         products = processSupabaseData(dbData.products, dbData.snapshots);

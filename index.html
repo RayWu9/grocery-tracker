@@ -120,6 +120,7 @@
 
       <!-- Category filter tabs -->
       <nav class="cat-nav" aria-label="Filter by category">
+        <button class="cat-btn" data-cat="favorites" id="cat-favorites">⭐ Watchlist</button>
         <button class="cat-btn active" data-cat="all" id="cat-all">All</button>
         <button class="cat-btn" data-cat="soft-drinks" id="cat-soft-drinks">🥤 Drinks</button>
         <button class="cat-btn" data-cat="confectionery" id="cat-confectionery">🍬 Sweets</button>
@@ -134,7 +135,7 @@
         <button class="cat-btn" data-cat="bakery" id="cat-bakery">🥖 Bakery</button>
         <button class="cat-btn" data-cat="breakfast" id="cat-breakfast">🥣 Breakfast</button>
         <button class="cat-btn" data-cat="meat" id="cat-meat">🥩 Meat</button>
-        <button class="cat-btn" data-cat="frozen" id="cat-frozen">🍕 Frozen</button>
+        <button class="cat-btn" data-cat="frozen" id="cat-frozen">❄️ Frozen</button>
         <button class="cat-btn" data-cat="personal-care" id="cat-personal-care">🧴 Personal Care</button>
         <button class="cat-btn" data-cat="baby" id="cat-baby">👶 Baby</button>
         <button class="cat-btn" data-cat="pet" id="cat-pet">🐾 Pet</button>
@@ -143,7 +144,17 @@
       </nav>
 
       <!-- Results count line -->
-      <p class="results-info" id="resultsInfo" aria-live="polite"></p>
+      <div class="results-info-bar">
+        <p class="results-info" id="resultsInfo" aria-live="polite"></p>
+        <button class="sync-cache-btn" id="syncCacheBtn" title="Sync with latest live database prices">
+          <svg class="sync-icon" viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"></polyline>
+            <polyline points="1 20 1 14 7 14"></polyline>
+            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+          </svg>
+          <span>Sync Now</span>
+        </button>
+      </div>
 
       <!-- Product cards grid -->
       <div class="product-grid" id="productGrid" role="list" aria-label="Product price list"></div>
