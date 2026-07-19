@@ -2546,11 +2546,13 @@ function modalHTML(p) {
 
     const ns = s.nextSale;
     let predInfo;
-    if (ns.currentlyOnSale) {
+    if (ns && ns.currentlyOnSale) {
       predInfo = `<div class="pred-days onsale">🟢 On sale now!</div><div class="pred-days" style="margin-top:2px">Next cycle ~${ns.daysUntil}d</div>`;
-    } else {
+    } else if (ns) {
       const cls = ns.daysUntil <= 7 ? 'soon' : '';
       predInfo  = `<div class="pred-date">${ns.label}</div><div class="pred-days ${cls}">${ns.daysUntil === 0 ? 'Today' : `~${ns.daysUntil} days away`}</div>`;
+    } else {
+      predInfo  = `<div class="pred-days" style="color:var(--text-muted)">No sales cycle tracked</div>`;
     }
 
     return `
@@ -2632,7 +2634,8 @@ function renderChart(p) {
   }
 
   // Build datasets — use per-unit prices for Amazon for fair comparison
-  const labels   = p.stores.woolworths?.history.map(h => h.label) ?? [];
+  const firstStore = Object.values(p.stores).find(Boolean);
+  const labels   = firstStore?.history.map(h => h.label) ?? [];
   const datasets = [];
 
   for (const [key, store] of Object.entries(STORES)) {
