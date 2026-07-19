@@ -5352,18 +5352,35 @@ async function fetchDbData(client) {
   cutoffDate.setDate(cutoffDate.getDate() - 26 * 7);
   const cutoffStr = cutoffDate.toISOString().split('T')[0];
 
-  const snapshotsResponse = await client
-    .from('price_snapshots')
-    .select('*')
-    .gte('week_start', cutoffStr);
+  let snapshots = [];
+  let start = 0;
+  const batchSize = 10000;
+  let keepFetching = true;
 
-  if (snapshotsResponse.error) {
-    throw new Error(`Failed to fetch price snapshots: ${snapshotsResponse.error.message}`);
+  while (keepFetching) {
+    const snapshotsResponse = await client
+      .from('price_snapshots')
+      .select('*')
+      .gte('week_start', cutoffStr)
+      .range(start, start + batchSize - 1);
+
+    if (snapshotsResponse.error) {
+      throw new Error(`Failed to fetch price snapshots: ${snapshotsResponse.error.message}`);
+    }
+
+    const data = snapshotsResponse.data;
+    snapshots = snapshots.concat(data);
+
+    if (data.length < batchSize) {
+      keepFetching = false;
+    } else {
+      start += batchSize;
+    }
   }
 
   return {
     products: productsResponse.data,
-    snapshots: snapshotsResponse.data,
+    snapshots: snapshots,
   };
 }
 
@@ -5685,7 +5702,7 @@ async function init() {
       if (cachedTime && (Date.now() - cachedTime) < twelveHours) {
         const cachedProducts = await DBCache.get('products');
         const cachedSnapshots = await DBCache.get('snapshots');
-        if (cachedProducts && cachedSnapshots) {
+        if (cachedProducts && cachedSnapshots && cachedSnapshots.length > 5000) {
           dbData = { products: cachedProducts, snapshots: cachedSnapshots };
           console.log('Loaded database catalog and snapshots from client IndexedDB cache.');
         }
