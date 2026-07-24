@@ -4712,6 +4712,8 @@ function getVisibleProducts() {
       const maxPct = Math.max(...Object.values(p.stores).filter(Boolean).map(s => s.discountPct || 0), 0);
       return p.anyOnSale || maxPct >= 20 || state.favorites.includes(p.id);
     });
+  } else if (state.category === 'rare-sales') {
+    list = list.filter(p => p.cycleWeeks >= 6 || !p.anyOnSale || (p.earliestNextSale && p.earliestNextSale.daysUntil > 30));
   } else if (state.category !== 'all') {
     list = list.filter(p => p.category === state.category);
   }
@@ -4780,6 +4782,9 @@ function getVisibleProducts() {
         };
         return getScore(b) - getScore(a);
       }
+      case 'cycle-longest': {
+        return (b.cycleWeeks || 0) - (a.cycleWeeks || 0);
+      }
       case 'next-sale':  {
         const getNextSaleDays = (p) => {
           if (state.store !== 'all' && p.stores[state.store]?.nextSale) {
@@ -4802,8 +4807,11 @@ function getVisibleProducts() {
 
 function renderStats() {
   const onSaleCount = products.filter(p => p.anyOnSale).length;
+  const rareCount   = products.filter(p => p.cycleWeeks >= 6 || !p.anyOnSale || (p.earliestNextSale && p.earliestNextSale.daysUntil > 30)).length;
   document.getElementById('statItems').textContent = products.length;
   document.getElementById('statSale').textContent  = onSaleCount;
+  const rareEl = document.getElementById('statRare');
+  if (rareEl) rareEl.textContent = rareCount;
 }
 
 // =====================================================
@@ -4836,7 +4844,7 @@ function renderGrid() {
   }
 
   empty.hidden = true;
-  const cat = state.category !== 'all' ? (state.category === 'favorites' ? 'Watchlist' : (state.category === 'featured' ? 'Featured Deals' : CATEGORIES[state.category]?.label)) : null;
+  const cat = state.category !== 'all' ? (state.category === 'favorites' ? 'Watchlist' : (state.category === 'featured' ? 'Featured Deals' : (state.category === 'rare-sales' ? 'Rare Sales & Staples' : CATEGORIES[state.category]?.label))) : null;
   const storeLabel = state.store !== 'all' ? (state.store === 'amazon' ? 'Amazon AU' : state.store.charAt(0).toUpperCase() + state.store.slice(1)) : null;
   info.textContent = `Showing ${visible.length} item${visible.length !== 1 ? 's' : ''}${cat ? ' in ' + cat : ''}${storeLabel ? ' available at ' + storeLabel : ''}`;
 
@@ -4915,6 +4923,8 @@ function cardHTML(p, idx) {
   const favClass = isFav ? 'active' : '';
   const favStar = isFav ? '★' : '☆';
 
+  const badgeHTML = p.anyOnSale ? '<span class="sale-badge">On Sale</span>' : (p.cycleWeeks >= 6 ? `<span class="rare-sale-badge">${p.cycleWeeks}wk Cycle</span>` : '<span class="rare-sale-badge">Rare Sale</span>');
+
   return `
     <article class="product-card ${p.anyOnSale ? 'on-sale' : ''}"
              role="listitem"
@@ -4927,7 +4937,7 @@ function cardHTML(p, idx) {
         <div>
           <div class="card-emoji" aria-hidden="true">${p.emoji}</div>
         </div>
-        ${p.anyOnSale ? '<span class="sale-badge">On Sale</span>' : ''}
+        ${badgeHTML}
       </div>
       <div class="card-name">${p.name}</div>
       <div class="card-meta">${p.size} · ${p.brand}</div>

@@ -70,6 +70,11 @@
           <span class="stat-lbl">On Sale Now 🔥</span>
         </div>
         <div class="stat-divider"></div>
+        <div class="stat-item" title="Items with long sale cycles (6+ weeks) or rare sale frequency">
+          <span class="stat-val yellow" id="statRare">—</span>
+          <span class="stat-lbl">Rare Sales ⏳</span>
+        </div>
+        <div class="stat-divider"></div>
         <div class="stat-item">
           <span class="stat-val" id="statDate">4 Jul 2026</span>
           <span class="stat-lbl">Last Updated</span>
@@ -111,6 +116,7 @@
             <option value="discount-pct">Sort: Biggest % Discount (% Off)</option>
             <option value="discount-dollar">Sort: Biggest $ Savings ($ Off)</option>
             <option value="next-sale">Sort: Sale Soonest</option>
+            <option value="cycle-longest">Sort: Longest Sale Cycle (Rare Sales)</option>
           </select>
           <label class="sale-toggle-wrap" for="saleToggle" title="Show only items currently on sale at any store">
             <input type="checkbox" id="saleToggle" role="switch">
@@ -123,6 +129,7 @@
       <!-- Category filter tabs -->
       <nav class="cat-nav" aria-label="Filter by category">
         <button class="cat-btn" data-cat="featured" id="cat-featured">🔥 Featured Deals</button>
+        <button class="cat-btn" data-cat="rare-sales" id="cat-rare-sales">⏳ Rare Sales & Staples</button>
         <button class="cat-btn" data-cat="favorites" id="cat-favorites">⭐ Watchlist</button>
         <button class="cat-btn active" data-cat="all" id="cat-all">All</button>
         <button class="cat-btn" data-cat="soft-drinks" id="cat-soft-drinks">🥤 Drinks</button>
