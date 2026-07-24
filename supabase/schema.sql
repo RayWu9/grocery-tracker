@@ -19,9 +19,10 @@ CREATE TABLE stores (
 );
 
 INSERT INTO stores (id, name, url, color) VALUES
-  ('woolworths', 'Woolworths', 'https://www.woolworths.com.au', '#00a94f'),
-  ('coles',      'Coles',      'https://www.coles.com.au',      '#e2001a'),
-  ('amazon',     'Amazon AU',  'https://www.amazon.com.au',     '#ff9900');
+  ('woolworths',         'Woolworths',         'https://www.woolworths.com.au',         '#00a94f'),
+  ('coles',              'Coles',              'https://www.coles.com.au',              '#e2001a'),
+  ('amazon',             'Amazon AU',          'https://www.amazon.com.au',             '#ff9900'),
+  ('chemist_warehouse',  'Chemist Warehouse',  'https://www.chemistwarehouse.com.au',  '#e30613');
 
 -- ── Products ─────────────────────────────────────────
 CREATE TABLE products (

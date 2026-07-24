@@ -10,9 +10,10 @@
 // =====================================================
 
 const STORES = {
-  woolworths: { name: 'Woolworths', short: 'WW', dotClass: 'dot-ww', color: '#00a94f', textColor: '#00a94f' },
-  coles:      { name: 'Coles',      short: 'CO', dotClass: 'dot-co', color: '#e2001a', textColor: '#e2001a' },
-  amazon:     { name: 'Amazon AU',  short: 'AM', dotClass: 'dot-am', color: '#ff9900', textColor: '#ff9900' },
+  woolworths:         { name: 'Woolworths',         short: 'WW', dotClass: 'dot-ww', color: '#00a94f', textColor: '#00a94f' },
+  coles:              { name: 'Coles',              short: 'CO', dotClass: 'dot-co', color: '#e2001a', textColor: '#e2001a' },
+  amazon:             { name: 'Amazon AU',          short: 'AM', dotClass: 'dot-am', color: '#ff9900', textColor: '#ff9900' },
+  chemist_warehouse:  { name: 'Chemist Warehouse',  short: 'CW', dotClass: 'dot-cw', color: '#e30613', textColor: '#e30613' },
 };
 
 const CATEGORIES = {
@@ -52,7 +53,8 @@ const RAW_PRODUCTS = [
     id: 'coca-cola-125l', name: 'Coca-Cola Classic', size: '1.25L', brand: 'Coca-Cola',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 0 },
       coles:      { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 2 },
       amazon:     { regularPrice: 63.36, salePrice: 42.84, phaseOffset: 1, packQty: 24, packLabel: '24 × 1.25L' },
     }
@@ -61,7 +63,8 @@ const RAW_PRODUCTS = [
     id: 'pepsi-max-125l', name: 'Pepsi Max Cola No Sugar', size: '1.25L', brand: 'PepsiCo',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 1 },
       coles:      { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 3 },
       amazon:     null,
     }
@@ -70,7 +73,8 @@ const RAW_PRODUCTS = [
     id: 'sprite-125l', name: 'Sprite Lemonade', size: '1.25L', brand: 'Coca-Cola',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 2 },
       coles:      { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 4 },
       amazon:     { regularPrice: 63.36, salePrice: 42.84, phaseOffset: 3, packQty: 24, packLabel: '24 × 1.25L' },
     }
@@ -79,7 +83,8 @@ const RAW_PRODUCTS = [
     id: 'solo-125l', name: 'Solo Original Lemon', size: '1.25L', brand: 'Asahi',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 0 },
       coles:      { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -88,7 +93,8 @@ const RAW_PRODUCTS = [
     id: 'mt-franklin-600ml', name: 'Mount Franklin Sparkling', size: '600ml', brand: 'Coca-Cola',
     category: 'soft-drinks', emoji: '💧', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 2.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 2.00, phaseOffset: 1 },
       coles:      { regularPrice: 3.50, salePrice: 2.00, phaseOffset: 3 },
       amazon:     { regularPrice: 67.20, salePrice: 40.80, phaseOffset: 2, packQty: 24, packLabel: '24 × 600ml' },
     }
@@ -97,7 +103,8 @@ const RAW_PRODUCTS = [
     id: 'red-bull-4pk', name: 'Red Bull Energy Drink', size: '4 x 250ml', brand: 'Red Bull',
     category: 'soft-drinks', emoji: '⚡', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 0 },
       coles:      { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -106,7 +113,8 @@ const RAW_PRODUCTS = [
     id: 'v-energy-drink-500ml', name: 'V Green Energy Can', size: '500ml', brand: 'V Energy',
     category: 'soft-drinks', emoji: '🟢', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
       coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
       amazon:     { regularPrice: 86.40, salePrice: 61.20, phaseOffset: 3, packQty: 24, packLabel: '24 × 500ml' },
     }
@@ -115,7 +123,8 @@ const RAW_PRODUCTS = [
     id: 'lipton-ice-tea-peach-15l', name: 'Lipton Ice Tea Peach', size: '1.5L', brand: 'Lipton',
     category: 'soft-drinks', emoji: '🍹', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 3 },
       coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
       amazon:     null,
     }
@@ -124,7 +133,8 @@ const RAW_PRODUCTS = [
     id: 'fanta-orange-125l', name: 'Fanta Orange', size: '1.25L', brand: 'Coca-Cola',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 2 },
       coles:      { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 0 },
       amazon:     { regularPrice: 63.36, salePrice: 42.84, phaseOffset: 3, packQty: 24, packLabel: '24 × 1.25L' },
     }
@@ -133,7 +143,8 @@ const RAW_PRODUCTS = [
     id: 'schweppes-lemonade-11l', name: 'Schweppes Lemonade', size: '1.1L', brand: 'Schweppes',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.00, salePrice: 1.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.00, salePrice: 1.80, phaseOffset: 0 },
       coles:      { regularPrice: 3.00, salePrice: 1.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -142,7 +153,8 @@ const RAW_PRODUCTS = [
     id: 'kirks-pasito-10pk', name: 'Kirks Pasito Cans', size: '10 x 375ml', brand: 'Kirks',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 10.50, salePrice: 6.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 10.50, salePrice: 6.50, phaseOffset: 1 },
       coles:      { regularPrice: 10.50, salePrice: 6.50, phaseOffset: 3 },
       amazon:     { regularPrice: 201.60, salePrice: 132.60, phaseOffset: 2, packQty: 24, packLabel: '24 × 10 x 375ml' },
     }
@@ -151,7 +163,8 @@ const RAW_PRODUCTS = [
     id: 'gatorade-blue-bolt-1l', name: 'Gatorade Blue Bolt', size: '1L', brand: 'Gatorade',
     category: 'soft-drinks', emoji: '🏃', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.00, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 3.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -160,7 +173,8 @@ const RAW_PRODUCTS = [
     id: 'powerade-berry-ice-600ml', name: 'Powerade Berry Ice', size: '600ml', brand: 'Powerade',
     category: 'soft-drinks', emoji: '🏃', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 3.80, salePrice: 2.40, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.80, salePrice: 2.40, phaseOffset: 2 },
       coles:      { regularPrice: 3.80, salePrice: 2.40, phaseOffset: 4 },
       amazon:     { regularPrice: 72.96, salePrice: 48.96, phaseOffset: 3, packQty: 24, packLabel: '24 × 600ml' },
     }
@@ -169,7 +183,8 @@ const RAW_PRODUCTS = [
     id: 'bundaberg-ginger-beer-4pk', name: 'Bundaberg Ginger Beer', size: '4 x 375ml', brand: 'Bundaberg',
     category: 'soft-drinks', emoji: '🍺', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 0 },
       coles:      { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -178,7 +193,8 @@ const RAW_PRODUCTS = [
     id: 'coke-zero-30pk', name: 'Coca-Cola Zero Sugar Cans', size: '30 x 375ml', brand: 'Coca-Cola',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 8,
     stores: {
-      woolworths: { regularPrice: 39.00, salePrice: 26.00, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 39.00, salePrice: 26.00, phaseOffset: 4 },
       coles:      { regularPrice: 39.00, salePrice: 26.00, phaseOffset: 6 },
       amazon:     { regularPrice: 748.80, salePrice: 530.40, phaseOffset: 5, packQty: 24, packLabel: '24 × 30 x 375ml' },
     }
@@ -187,7 +203,8 @@ const RAW_PRODUCTS = [
     id: 'skittles-original-160g', name: 'Skittles Original Fruit', size: '160g', brand: 'Mars',
     category: 'confectionery', emoji: '🌈', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 2.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.00, salePrice: 2.50, phaseOffset: 0 },
       coles:      { regularPrice: 4.00, salePrice: 2.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -196,7 +213,8 @@ const RAW_PRODUCTS = [
     id: 'allens-snakes-220g', name: 'Allens Snakes Alive', size: '220g', brand: 'Allens',
     category: 'confectionery', emoji: '🐍', cycleWeeks: 7,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
       coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 4 },
       amazon:     { regularPrice: 43.20, salePrice: 30.60, phaseOffset: 3, packQty: 12, packLabel: '12 × 220g' },
     }
@@ -205,7 +223,8 @@ const RAW_PRODUCTS = [
     id: 'mentos-fruit-roll', name: 'Mentos Fruit Roll', size: '8 x 38g', brand: 'Mentos',
     category: 'confectionery', emoji: '🍬', cycleWeeks: 8,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -214,7 +233,8 @@ const RAW_PRODUCTS = [
     id: 'allens-party-mix-190g', name: 'Allens Party Mix', size: '190g', brand: 'Allens',
     category: 'confectionery', emoji: '🍬', cycleWeeks: 7,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
       coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
       amazon:     { regularPrice: 43.20, salePrice: 30.60, phaseOffset: 1, packQty: 12, packLabel: '12 × 190g' },
     }
@@ -223,7 +243,8 @@ const RAW_PRODUCTS = [
     id: 'starburst-snakes-170g', name: 'Starburst Sour Snakes', size: '170g', brand: 'Starburst',
     category: 'confectionery', emoji: '🐍', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 2.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.00, salePrice: 2.50, phaseOffset: 1 },
       coles:      { regularPrice: 4.00, salePrice: 2.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -232,7 +253,8 @@ const RAW_PRODUCTS = [
     id: 'haribo-goldbears-150g', name: 'Haribo Goldbears', size: '150g', brand: 'Haribo',
     category: 'confectionery', emoji: '🧸', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 3.80, salePrice: 2.40, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.80, salePrice: 2.40, phaseOffset: 0 },
       coles:      { regularPrice: 3.80, salePrice: 2.40, phaseOffset: 2 },
       amazon:     { regularPrice: 36.48, salePrice: 24.48, phaseOffset: 1, packQty: 12, packLabel: '12 × 150g' },
     }
@@ -241,7 +263,8 @@ const RAW_PRODUCTS = [
     id: 'chupa-chups-10pk', name: 'Chupa Chups Lollipops', size: '10 Pack', brand: 'Chupa Chups',
     category: 'confectionery', emoji: '🍭', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 2 },
       coles:      { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 4 },
       amazon:     null,
     }
@@ -250,7 +273,8 @@ const RAW_PRODUCTS = [
     id: 'natural-confectionery-snakes-260g', name: 'TNCC Snakes', size: '260g', brand: 'TNCC',
     category: 'confectionery', emoji: '🐍', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 5.00, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.00, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 5.00, salePrice: 3.50, phaseOffset: 2 },
       amazon:     { regularPrice: 48.00, salePrice: 35.70, phaseOffset: 1, packQty: 12, packLabel: '12 × 260g' },
     }
@@ -259,7 +283,8 @@ const RAW_PRODUCTS = [
     id: 'pascall-marshmallows-280g', name: 'Pascall Vanilla Marshmallows', size: '280g', brand: 'Pascall',
     category: 'confectionery', emoji: '🍥', cycleWeeks: 7,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 3 },
       coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 5 },
       amazon:     null,
     }
@@ -268,7 +293,8 @@ const RAW_PRODUCTS = [
     id: 'red-skins-allen-220g', name: 'Allens Red Ripperz', size: '220g', brand: 'Allens',
     category: 'confectionery', emoji: '🍬', cycleWeeks: 7,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 1 },
       coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 3 },
       amazon:     { regularPrice: 43.20, salePrice: 30.60, phaseOffset: 2, packQty: 12, packLabel: '12 × 220g' },
     }
@@ -277,7 +303,8 @@ const RAW_PRODUCTS = [
     id: 'werthers-original-140g', name: 'Werthers Original Butter Candies', size: '140g', brand: 'Werthers',
     category: 'confectionery', emoji: '🍬', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
       coles:      { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -286,7 +313,8 @@ const RAW_PRODUCTS = [
     id: 'eclipse-mints-peppermint-40g', name: 'Eclipse Mints Peppermint', size: '40g', brand: 'Eclipse',
     category: 'confectionery', emoji: '🍃', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 2.20, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 2.20, phaseOffset: 1 },
       coles:      { regularPrice: 3.50, salePrice: 2.20, phaseOffset: 3 },
       amazon:     { regularPrice: 33.60, salePrice: 22.44, phaseOffset: 2, packQty: 12, packLabel: '12 × 40g' },
     }
@@ -295,7 +323,8 @@ const RAW_PRODUCTS = [
     id: 'mentos-mint-rolls-4pk', name: 'Mentos Mint Rolls', size: '4 x 37.5g', brand: 'Mentos',
     category: 'confectionery', emoji: '🍬', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.20, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.20, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 3.20, phaseOffset: 2 },
       amazon:     null,
     }
@@ -304,7 +333,8 @@ const RAW_PRODUCTS = [
     id: 'tictac-freshmint-24g', name: 'Tic Tac Fresh Mint', size: '24g', brand: 'Tic Tac',
     category: 'confectionery', emoji: '🍬', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.00, salePrice: 1.40, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.00, salePrice: 1.40, phaseOffset: 0 },
       coles:      { regularPrice: 2.00, salePrice: 1.40, phaseOffset: 2 },
       amazon:     { regularPrice: 19.20, salePrice: 14.28, phaseOffset: 1, packQty: 12, packLabel: '12 × 24g' },
     }
@@ -313,7 +343,8 @@ const RAW_PRODUCTS = [
     id: 'sour-patch-kids-190g', name: 'Sour Patch Kids', size: '190g', brand: 'Sour Patch',
     category: 'confectionery', emoji: '👾', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
       coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 4 },
       amazon:     null,
     }
@@ -322,7 +353,8 @@ const RAW_PRODUCTS = [
     id: 'cadbury-dairy-milk-180g', name: 'Cadbury Dairy Milk Block', size: '180g', brand: 'Cadbury',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 2 },
       amazon:     { regularPrice: 57.60, salePrice: 35.70, phaseOffset: 1, packQty: 12, packLabel: '12 × 180g' },
     }
@@ -331,7 +363,8 @@ const RAW_PRODUCTS = [
     id: 'cadbury-favourites-500g', name: 'Cadbury Favourites Box', size: '500g', brand: 'Cadbury',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 8,
     stores: {
-      woolworths: { regularPrice: 16.00, salePrice: 8.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 16.00, salePrice: 8.00, phaseOffset: 1 },
       coles:      { regularPrice: 16.00, salePrice: 8.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -340,7 +373,8 @@ const RAW_PRODUCTS = [
     id: 'kitkat-chunky-4pk', name: 'Kit Kat Chunky Pack', size: '4 Pack', brand: 'Nestle',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 2 },
       coles:      { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 4 },
       amazon:     { regularPrice: 57.60, salePrice: 35.70, phaseOffset: 3, packQty: 12, packLabel: '12 × 4 Pack' },
     }
@@ -349,7 +383,8 @@ const RAW_PRODUCTS = [
     id: 'lindt-excellence-85g', name: 'Lindt Excellence 70% Dark', size: '85g', brand: 'Lindt',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 7,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.00, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 3.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -358,7 +393,8 @@ const RAW_PRODUCTS = [
     id: 'snickers-4pk', name: 'Snickers Multipack', size: '4 Pack', brand: 'Mars',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 1 },
       coles:      { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 3 },
       amazon:     { regularPrice: 57.60, salePrice: 35.70, phaseOffset: 2, packQty: 12, packLabel: '12 × 4 Pack' },
     }
@@ -367,7 +403,8 @@ const RAW_PRODUCTS = [
     id: 'arnotts-tim-tam-200g', name: 'Arnotts Tim Tam Original', size: '200g', brand: 'Arnotts',
     category: 'chocolate', emoji: '🍪', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
       coles:      { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -376,7 +413,8 @@ const RAW_PRODUCTS = [
     id: 'maltesers-400g', name: 'Maltesers Chocolate Bucket', size: '400g', brand: 'Maltesers',
     category: 'chocolate', emoji: '🔴', cycleWeeks: 8,
     stores: {
-      woolworths: { regularPrice: 12.00, salePrice: 7.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 12.00, salePrice: 7.00, phaseOffset: 3 },
       coles:      { regularPrice: 12.00, salePrice: 7.00, phaseOffset: 5 },
       amazon:     { regularPrice: 115.20, salePrice: 71.40, phaseOffset: 4, packQty: 12, packLabel: '12 × 400g' },
     }
@@ -385,7 +423,8 @@ const RAW_PRODUCTS = [
     id: 'mms-milk-chocolate-180g', name: 'M&Ms Milk Chocolate Bag', size: '180g', brand: 'M&Ms',
     category: 'chocolate', emoji: '🟤', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 1 },
       coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -394,7 +433,8 @@ const RAW_PRODUCTS = [
     id: 'pods-snickers-160g', name: 'Pods Snickers Chocolate', size: '160g', brand: 'Mars',
     category: 'chocolate', emoji: '🍪', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 2 },
       amazon:     { regularPrice: 52.80, salePrice: 35.70, phaseOffset: 1, packQty: 12, packLabel: '12 × 160g' },
     }
@@ -403,7 +443,8 @@ const RAW_PRODUCTS = [
     id: 'mars-bar-53g', name: 'Mars Bar Single', size: '53g', brand: 'Mars',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.50, salePrice: 1.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.50, salePrice: 1.50, phaseOffset: 0 },
       coles:      { regularPrice: 2.50, salePrice: 1.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -412,7 +453,8 @@ const RAW_PRODUCTS = [
     id: 'cherry-ripe-double-dipped-block', name: 'Cadbury Cherry Ripe Block', size: '180g', brand: 'Cadbury',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 4 },
       coles:      { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 0 },
       amazon:     { regularPrice: 57.60, salePrice: 35.70, phaseOffset: 5, packQty: 12, packLabel: '12 × 180g' },
     }
@@ -421,7 +463,8 @@ const RAW_PRODUCTS = [
     id: 'toblerone-milk-360g', name: 'Toblerone Milk Chocolate', size: '360g', brand: 'Toblerone',
     category: 'chocolate', emoji: '🔺', cycleWeeks: 8,
     stores: {
-      woolworths: { regularPrice: 12.00, salePrice: 7.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 12.00, salePrice: 7.00, phaseOffset: 0 },
       coles:      { regularPrice: 12.00, salePrice: 7.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -430,7 +473,8 @@ const RAW_PRODUCTS = [
     id: 'ferrero-rocher-16pk', name: 'Ferrero Rocher Gift Box', size: '16 Pack', brand: 'Ferrero',
     category: 'chocolate', emoji: '🟡', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 15.00, salePrice: 10.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 15.00, salePrice: 10.00, phaseOffset: 2 },
       coles:      { regularPrice: 15.00, salePrice: 10.00, phaseOffset: 4 },
       amazon:     { regularPrice: 144.00, salePrice: 102.00, phaseOffset: 3, packQty: 12, packLabel: '12 × 16 Pack' },
     }
@@ -439,7 +483,8 @@ const RAW_PRODUCTS = [
     id: 'twirl-cadbury-5pk', name: 'Cadbury Twirl Multipack', size: '5 Pack', brand: 'Cadbury',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 1 },
       coles:      { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -448,7 +493,8 @@ const RAW_PRODUCTS = [
     id: 'picnic-bar-4pk', name: 'Cadbury Picnic Multipack', size: '4 Pack', brand: 'Cadbury',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 2 },
       amazon:     { regularPrice: 57.60, salePrice: 35.70, phaseOffset: 1, packQty: 12, packLabel: '12 × 4 Pack' },
     }
@@ -457,7 +503,8 @@ const RAW_PRODUCTS = [
     id: 'pringles-original-134g', name: 'Pringles Original', size: '134g', brand: 'Pringles',
     category: 'chips', emoji: '🥔', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.00, salePrice: 3.20, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.00, salePrice: 3.20, phaseOffset: 0 },
       coles:      { regularPrice: 5.00, salePrice: 3.20, phaseOffset: 2 },
       amazon:     null,
     }
@@ -466,7 +513,8 @@ const RAW_PRODUCTS = [
     id: 'smiths-crinkle-150g', name: 'Smiths Crinkle Cut Potato', size: '150g', brand: 'Smiths',
     category: 'chips', emoji: '🥔', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 2 },
       coles:      { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 0 },
       amazon:     { regularPrice: 46.08, salePrice: 24.48, phaseOffset: 3, packQty: 12, packLabel: '12 × 150g' },
     }
@@ -475,7 +523,8 @@ const RAW_PRODUCTS = [
     id: 'kettle-sea-salt-150g', name: 'Kettle Sea Salt Chips', size: '150g', brand: 'Kettle',
     category: 'chips', emoji: '🥔', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 1 },
       coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -484,7 +533,8 @@ const RAW_PRODUCTS = [
     id: 'doritos-cheese-170g', name: 'Doritos Cheese Supreme', size: '170g', brand: 'Doritos',
     category: 'chips', emoji: '🍿', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 2 },
       amazon:     { regularPrice: 46.08, salePrice: 24.48, phaseOffset: 1, packQty: 12, packLabel: '12 × 170g' },
     }
@@ -493,7 +543,8 @@ const RAW_PRODUCTS = [
     id: 'thins-original-175g', name: 'Thins Chips Light & Tangy', size: '175g', brand: 'Thins',
     category: 'chips', emoji: '🥔', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 1 },
       coles:      { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 3 },
       amazon:     null,
     }
@@ -502,7 +553,8 @@ const RAW_PRODUCTS = [
     id: 'twisties-cheese-90g', name: 'Twisties Cheese', size: '90g', brand: 'Twisties',
     category: 'chips', emoji: '🧀', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.70, salePrice: 1.80, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.70, salePrice: 1.80, phaseOffset: 2 },
       coles:      { regularPrice: 2.70, salePrice: 1.80, phaseOffset: 0 },
       amazon:     { regularPrice: 25.92, salePrice: 18.36, phaseOffset: 3, packQty: 12, packLabel: '12 × 90g' },
     }
@@ -511,7 +563,8 @@ const RAW_PRODUCTS = [
     id: 'red-rock-deli-sea-salt-165g', name: 'Red Rock Deli Sea Salt', size: '165g', brand: 'Red Rock Deli',
     category: 'chips', emoji: '🥔', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 3 },
       coles:      { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 5 },
       amazon:     null,
     }
@@ -520,7 +573,8 @@ const RAW_PRODUCTS = [
     id: 'cheezels-cheese-box-125g', name: 'Cheezels Cheese Snacks Box', size: '125g', brand: 'Cheezels',
     category: 'chips', emoji: '⭕', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 2.20, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 2.20, phaseOffset: 0 },
       coles:      { regularPrice: 3.50, salePrice: 2.20, phaseOffset: 2 },
       amazon:     { regularPrice: 33.60, salePrice: 22.44, phaseOffset: 1, packQty: 12, packLabel: '12 × 125g' },
     }
@@ -529,7 +583,8 @@ const RAW_PRODUCTS = [
     id: 'shapes-bbq-arnotts-175g', name: 'Arnotts Shapes BBQ', size: '175g', brand: 'Arnotts',
     category: 'chips', emoji: '🍘', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 1 },
       coles:      { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -538,7 +593,8 @@ const RAW_PRODUCTS = [
     id: 'grainwaves-sour-cream-170g', name: 'Grainwaves Sour Cream & Chives', size: '170g', brand: 'Grainwaves',
     category: 'chips', emoji: '🌊', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 2 },
       amazon:     { regularPrice: 46.08, salePrice: 24.48, phaseOffset: 1, packQty: 12, packLabel: '12 × 170g' },
     }
@@ -547,7 +603,8 @@ const RAW_PRODUCTS = [
     id: 'smiths-thinly-cut-175g', name: 'Smiths Thinly Cut Sour Cream', size: '175g', brand: 'Smiths',
     category: 'chips', emoji: '🥔', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 3 },
       coles:      { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 1 },
       amazon:     null,
     }
@@ -556,7 +613,8 @@ const RAW_PRODUCTS = [
     id: 'cc-tasty-cheese-175g', name: 'CCs Tasty Cheese Corn Chips', size: '175g', brand: 'CCs',
     category: 'chips', emoji: '🍿', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
       coles:      { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 2 },
       amazon:     { regularPrice: 43.20, salePrice: 25.50, phaseOffset: 1, packQty: 12, packLabel: '12 × 175g' },
     }
@@ -565,7 +623,8 @@ const RAW_PRODUCTS = [
     id: 'red-rock-honey-soy-165g', name: 'Red Rock Deli Honey Soy Chicken', size: '165g', brand: 'Red Rock Deli',
     category: 'chips', emoji: '🍗', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 2 },
       coles:      { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 4 },
       amazon:     null,
     }
@@ -574,7 +633,8 @@ const RAW_PRODUCTS = [
     id: 'vege-chips-natural-100g', name: 'Vege Chips Natural Flavor', size: '100g', brand: 'Vege Chips',
     category: 'chips', emoji: '🌿', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 1 },
       coles:      { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 3 },
       amazon:     { regularPrice: 40.32, salePrice: 28.56, phaseOffset: 2, packQty: 12, packLabel: '12 × 100g' },
     }
@@ -583,7 +643,8 @@ const RAW_PRODUCTS = [
     id: 'infuzions-vege-straws-110g', name: 'Infuzions Veggie Straws Sour Cream', size: '110g', brand: 'Infuzions',
     category: 'chips', emoji: '🍟', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
       coles:      { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -592,7 +653,8 @@ const RAW_PRODUCTS = [
     id: 'magnum-classic-4pk', name: 'Magnum Classic Chocolate Sticks', size: '4 Pack', brand: 'Streets',
     category: 'ice-cream', emoji: '🍦', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 10.50, salePrice: 6.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 10.50, salePrice: 6.00, phaseOffset: 0 },
       coles:      { regularPrice: 10.50, salePrice: 6.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -601,7 +663,8 @@ const RAW_PRODUCTS = [
     id: 'ben-jerrys-458ml', name: 'Ben & Jerry Half Baked Tub', size: '458ml', brand: 'Ben & Jerry',
     category: 'ice-cream', emoji: '🍨', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 13.00, salePrice: 9.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 13.00, salePrice: 9.00, phaseOffset: 2 },
       coles:      { regularPrice: 13.00, salePrice: 9.00, phaseOffset: 4 },
       amazon:     null,
     }
@@ -610,7 +673,8 @@ const RAW_PRODUCTS = [
     id: 'streets-blue-ribbon-2l', name: 'Streets Blue Ribbon Vanilla', size: '2L', brand: 'Streets',
     category: 'ice-cream', emoji: '🍦', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.00, salePrice: 6.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.00, salePrice: 6.00, phaseOffset: 1 },
       coles:      { regularPrice: 9.00, salePrice: 6.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -619,7 +683,8 @@ const RAW_PRODUCTS = [
     id: 'connoisseur-vanilla-1l', name: 'Connoisseur Classic Vanilla', size: '1L', brand: 'Connoisseur',
     category: 'ice-cream', emoji: '🍨', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 12.00, salePrice: 8.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 12.00, salePrice: 8.00, phaseOffset: 0 },
       coles:      { regularPrice: 12.00, salePrice: 8.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -628,7 +693,8 @@ const RAW_PRODUCTS = [
     id: 'bull-creamy-classics-2l', name: 'Bulla Creamy Classics Vanilla', size: '2L', brand: 'Bulla',
     category: 'ice-cream', emoji: '🍨', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 3 },
       coles:      { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 0 },
       amazon:     null,
     }
@@ -637,7 +703,8 @@ const RAW_PRODUCTS = [
     id: 'peters-original-vanilla-4l', name: 'Peters Original Vanilla Tub', size: '4L', brand: 'Peters',
     category: 'ice-cream', emoji: '🍨', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 10.50, salePrice: 7.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 10.50, salePrice: 7.50, phaseOffset: 0 },
       coles:      { regularPrice: 10.50, salePrice: 7.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -646,7 +713,8 @@ const RAW_PRODUCTS = [
     id: 'drumstick-vanilla-4pk', name: 'Peters Drumstick Vanilla Cone', size: '4 Pack', brand: 'Peters',
     category: 'ice-cream', emoji: '🍦', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 2 },
       coles:      { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 4 },
       amazon:     null,
     }
@@ -655,7 +723,8 @@ const RAW_PRODUCTS = [
     id: 'maxibon-original-4pk', name: 'Peters Maxibon Vanilla Sticks', size: '4 Pack', brand: 'Peters',
     category: 'ice-cream', emoji: '🥪', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 10.00, salePrice: 6.00, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 10.00, salePrice: 6.00, phaseOffset: 4 },
       coles:      { regularPrice: 10.00, salePrice: 6.00, phaseOffset: 1 },
       amazon:     null,
     }
@@ -664,7 +733,8 @@ const RAW_PRODUCTS = [
     id: 'cornetto-classic-4pk', name: 'Streets Cornetto Chocolate Cone', size: '4 Pack', brand: 'Streets',
     category: 'ice-cream', emoji: '🍦', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 9.00, salePrice: 5.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.00, salePrice: 5.00, phaseOffset: 1 },
       coles:      { regularPrice: 9.00, salePrice: 5.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -673,7 +743,8 @@ const RAW_PRODUCTS = [
     id: 'weis-mango-bar-4pk', name: 'Weis Mango Ice Cream Bars', size: '4 Pack', brand: 'Weis',
     category: 'ice-cream', emoji: '🥭', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 0 },
       coles:      { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -682,7 +753,8 @@ const RAW_PRODUCTS = [
     id: 'golden-gaytime-4pk', name: 'Streets Golden Gaytime Sticks', size: '4 Pack', brand: 'Streets',
     category: 'ice-cream', emoji: '🍪', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 10.50, salePrice: 6.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 10.50, salePrice: 6.00, phaseOffset: 3 },
       coles:      { regularPrice: 10.50, salePrice: 6.00, phaseOffset: 0 },
       amazon:     null,
     }
@@ -691,7 +763,8 @@ const RAW_PRODUCTS = [
     id: 'paddle-pop-rainbow-8pk', name: 'Streets Paddle Pop Rainbow', size: '8 Pack', brand: 'Streets',
     category: 'ice-cream', emoji: '🌈', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 5.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 8.50, salePrice: 5.00, phaseOffset: 1 },
       coles:      { regularPrice: 8.50, salePrice: 5.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -700,7 +773,8 @@ const RAW_PRODUCTS = [
     id: 'hagan-dazs-macadamia-460ml', name: 'Haagen-Dazs Macadamia Nut', size: '460ml', brand: 'Haagen-Dazs',
     category: 'ice-cream', emoji: '🍨', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 13.00, salePrice: 9.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 13.00, salePrice: 9.00, phaseOffset: 0 },
       coles:      { regularPrice: 13.00, salePrice: 9.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -709,7 +783,8 @@ const RAW_PRODUCTS = [
     id: 'streets-splices-pine-lime-8pk', name: 'Streets Splice Pine Lime', size: '8 Pack', brand: 'Streets',
     category: 'ice-cream', emoji: '🍍', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 5.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 8.50, salePrice: 5.00, phaseOffset: 2 },
       coles:      { regularPrice: 8.50, salePrice: 5.00, phaseOffset: 4 },
       amazon:     null,
     }
@@ -718,7 +793,8 @@ const RAW_PRODUCTS = [
     id: 'monaco-bar-ice-cream-4pk', name: 'Peters Monaco Bar Ice Cream Sandwich', size: '4 Pack', brand: 'Peters',
     category: 'ice-cream', emoji: '🥪', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 0 },
       coles:      { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -727,7 +803,8 @@ const RAW_PRODUCTS = [
     id: 'woolworths-milk-2l', name: 'WW Full Cream Milk', size: '2L', brand: 'Woolworths',
     category: 'essentials', emoji: '🥛', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 3.10, salePrice: 3.10, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 2.85, salePrice: 1.85, phaseOffset: 1 },
+woolworths: { regularPrice: 3.10, salePrice: 3.10, phaseOffset: 0 },
       coles:      { regularPrice: 3.10, salePrice: 3.10, phaseOffset: 2 },
       amazon:     null,
     }
@@ -736,7 +813,8 @@ const RAW_PRODUCTS = [
     id: 'tip-top-bread-700g', name: 'Tip Top Bread Toast Slices', size: '700g', brand: 'Tip Top',
     category: 'essentials', emoji: '🍞', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
+woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
       coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -745,7 +823,8 @@ const RAW_PRODUCTS = [
     id: 'western-star-butter-500g', name: 'Western Star Butter Salted block', size: '500g', brand: 'Western Star',
     category: 'essentials', emoji: '🧈', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.52, salePrice: 3.59, phaseOffset: 1 },
+woolworths: { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 0 },
       coles:      { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -754,7 +833,8 @@ const RAW_PRODUCTS = [
     id: 'nescafe-blend-43-150g', name: 'Nescafe Blend 43 Instant Coffee', size: '150g', brand: 'Nescafe',
     category: 'essentials', emoji: '☕', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 11.00, salePrice: 7.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 10.12, salePrice: 6.58, phaseOffset: 1 },
+woolworths: { regularPrice: 11.00, salePrice: 7.00, phaseOffset: 0 },
       coles:      { regularPrice: 11.00, salePrice: 7.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -763,7 +843,8 @@ const RAW_PRODUCTS = [
     id: 'weetbix-1.2kg', name: 'Sanitarium Weet-Bix', size: '1.2kg', brand: 'Sanitarium',
     category: 'essentials', emoji: '🥣', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -772,7 +853,8 @@ const RAW_PRODUCTS = [
     id: 'quilton-toilet-paper-18pk', name: 'Quilton Toilet Paper 3ply', size: '18 Pack', brand: 'Quilton',
     category: 'essentials', emoji: '🧻', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 14.00, salePrice: 10.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 12.88, salePrice: 8.37, phaseOffset: 1 },
+woolworths: { regularPrice: 14.00, salePrice: 10.00, phaseOffset: 0 },
       coles:      { regularPrice: 14.00, salePrice: 10.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -781,7 +863,8 @@ const RAW_PRODUCTS = [
     id: 'dairy-farmers-milk-3l', name: 'Dairy Farmers Full Cream Milk', size: '3L', brand: 'Dairy Farmers',
     category: 'essentials', emoji: '🥛', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
+woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 0 },
       coles:      { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -790,7 +873,8 @@ const RAW_PRODUCTS = [
     id: 'wonder-white-bread-700g', name: 'Wonder White Sliced Bread Sandwich', size: '700g', brand: 'Wonder White',
     category: 'essentials', emoji: '🍞', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.60, salePrice: 3.20, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 4.23, salePrice: 2.75, phaseOffset: 1 },
+woolworths: { regularPrice: 4.60, salePrice: 3.20, phaseOffset: 1 },
       coles:      { regularPrice: 4.60, salePrice: 3.20, phaseOffset: 3 },
       amazon:     null,
     }
@@ -799,7 +883,8 @@ const RAW_PRODUCTS = [
     id: 'devondale-butter-500g', name: 'Devondale Salted Butter Block', size: '500g', brand: 'Devondale',
     category: 'essentials', emoji: '🧈', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 5.52, salePrice: 3.59, phaseOffset: 1 },
+woolworths: { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 1 },
       coles:      { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 3 },
       amazon:     null,
     }
@@ -808,7 +893,8 @@ const RAW_PRODUCTS = [
     id: 'dilmah-tea-bags-100pk', name: 'Dilmah Premium Tea Bags', size: '100 Pack', brand: 'Dilmah',
     category: 'essentials', emoji: '🍵', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 4 },
       amazon:     null,
     }
@@ -817,7 +903,8 @@ const RAW_PRODUCTS = [
     id: 'lipton-tea-bags-100pk', name: 'Lipton Quality Black Tea Bags', size: '100 Pack', brand: 'Lipton',
     category: 'essentials', emoji: '🍵', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 3.80, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.52, salePrice: 3.59, phaseOffset: 1 },
+woolworths: { regularPrice: 6.00, salePrice: 3.80, phaseOffset: 0 },
       coles:      { regularPrice: 6.00, salePrice: 3.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -826,7 +913,8 @@ const RAW_PRODUCTS = [
     id: 'moccona-medium-roast-200g', name: 'Moccona Classic Medium Coffee Jar', size: '200g', brand: 'Moccona',
     category: 'essentials', emoji: '☕', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 20.00, salePrice: 12.00, phaseOffset: 3 },
+      chemist_warehouse: { regularPrice: 18.40, salePrice: 11.96, phaseOffset: 1 },
+woolworths: { regularPrice: 20.00, salePrice: 12.00, phaseOffset: 3 },
       coles:      { regularPrice: 20.00, salePrice: 12.00, phaseOffset: 5 },
       amazon:     null,
     }
@@ -835,7 +923,8 @@ const RAW_PRODUCTS = [
     id: 'uncle-tobys-rolled-oats-1kg', name: 'Uncle Tobys Rolled Oats Bag', size: '1kg', brand: 'Uncle Tobys',
     category: 'essentials', emoji: '🥣', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -844,7 +933,8 @@ const RAW_PRODUCTS = [
     id: 'sorbent-toilet-paper-24pk', name: 'Sorbent Toilet Paper Silky White', size: '24 Pack', brand: 'Sorbent',
     category: 'essentials', emoji: '🧻', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 17.50, salePrice: 12.00, phaseOffset: 3 },
+      chemist_warehouse: { regularPrice: 16.10, salePrice: 10.47, phaseOffset: 1 },
+woolworths: { regularPrice: 17.50, salePrice: 12.00, phaseOffset: 3 },
       coles:      { regularPrice: 17.50, salePrice: 12.00, phaseOffset: 0 },
       amazon:     null,
     }
@@ -853,7 +943,8 @@ const RAW_PRODUCTS = [
     id: 'coles-milk-2l', name: 'Coles Full Cream Milk', size: '2L', brand: 'Coles',
     category: 'essentials', emoji: '🥛', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 3.10, salePrice: 3.10, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 2.85, salePrice: 1.85, phaseOffset: 1 },
+woolworths: { regularPrice: 3.10, salePrice: 3.10, phaseOffset: 0 },
       coles:      { regularPrice: 3.10, salePrice: 3.10, phaseOffset: 2 },
       amazon:     null,
     }
@@ -862,7 +953,8 @@ const RAW_PRODUCTS = [
     id: 'san-remo-pasta-500g', name: 'San Remo Spaghetti Pasta', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🍝', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 0 },
       coles:      { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -871,7 +963,8 @@ const RAW_PRODUCTS = [
     id: 'sunrice-jasmine-rice-5kg', name: 'SunRice Jasmine Rice Bag', size: '5kg', brand: 'SunRice',
     category: 'pantry', emoji: '🌾', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 0 },
       coles:      { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -880,7 +973,8 @@ const RAW_PRODUCTS = [
     id: 'cobram-estate-olive-oil-750ml', name: 'Cobram Estate EV Olive Oil', size: '750ml', brand: 'Cobram Estate',
     category: 'pantry', emoji: '🫒', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 18.00, salePrice: 12.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 18.00, salePrice: 12.00, phaseOffset: 0 },
       coles:      { regularPrice: 18.00, salePrice: 12.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -889,7 +983,8 @@ const RAW_PRODUCTS = [
     id: 'john-west-tuna-95g', name: 'John West Tuna Tempters Olive Oil', size: '95g', brand: 'John West',
     category: 'pantry', emoji: '🐟', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.70, salePrice: 1.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.70, salePrice: 1.50, phaseOffset: 0 },
       coles:      { regularPrice: 2.70, salePrice: 1.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -898,7 +993,8 @@ const RAW_PRODUCTS = [
     id: 'leggos-tomato-paste-500g', name: 'Leggos Tomato Paste Tub', size: '500g', brand: 'Leggos',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
       coles:      { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -907,7 +1003,8 @@ const RAW_PRODUCTS = [
     id: 'bega-peanut-butter-375g', name: 'Bega Peanut Butter Crunchy', size: '375g', brand: 'Bega',
     category: 'pantry', emoji: '🥜', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
       coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 4 },
       amazon:     null,
     }
@@ -916,7 +1013,8 @@ const RAW_PRODUCTS = [
     id: 'vegemite-220g', name: 'Vegemite Yeast Extract Jar', size: '220g', brand: 'Vegemite',
     category: 'pantry', emoji: '🍞', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 0 },
       coles:      { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 2 },
       amazon:     null,
     }
@@ -925,7 +1023,8 @@ const RAW_PRODUCTS = [
     id: 'spaghetti-pasta-san-remo-fettuccine', name: 'San Remo Fettuccine Pasta No 34', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🍝', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 1 },
       coles:      { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -934,7 +1033,8 @@ const RAW_PRODUCTS = [
     id: 'heinz-baked-beans-3pk', name: 'Heinz Baked Beans English Recipe', size: '3 x 220g', brand: 'Heinz',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -943,7 +1043,8 @@ const RAW_PRODUCTS = [
     id: 'campbells-tomato-soup-400g', name: 'Campbells Condensed Tomato Soup', size: '400g', brand: 'Campbells',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 0 },
       coles:      { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -952,7 +1053,8 @@ const RAW_PRODUCTS = [
     id: 'glen-20-disinfectant-spray-300g', name: 'Glen 20 Disinfectant Lavender', size: '300g', brand: 'Glen 20',
     category: 'pantry', emoji: '💨', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 5.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.50, salePrice: 5.00, phaseOffset: 1 },
       coles:      { regularPrice: 9.50, salePrice: 5.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -961,7 +1063,8 @@ const RAW_PRODUCTS = [
     id: 'heinz-tomato-ketchup-500ml', name: 'Heinz Tomato Ketchup Squeeze', size: '500ml', brand: 'Heinz',
     category: 'pantry', emoji: '🍅', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.20, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.20, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 5.20, salePrice: 3.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -970,7 +1073,8 @@ const RAW_PRODUCTS = [
     id: 'masterfoods-tomato-sauce-500ml', name: 'MasterFoods Tomato Sauce Squeeze', size: '500ml', brand: 'MasterFoods',
     category: 'pantry', emoji: '🍅', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 2 },
       coles:      { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 0 },
       amazon:     null,
     }
@@ -979,7 +1083,8 @@ const RAW_PRODUCTS = [
     id: 'spam-luncheon-meat-340g', name: 'SPAM Luncheon Meat Can', size: '340g', brand: 'SPAM',
     category: 'pantry', emoji: '🥫', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -988,7 +1093,8 @@ const RAW_PRODUCTS = [
     id: 'spc-sliced-peaches-410g', name: 'SPC Sliced Peaches in Juice', size: '410g', brand: 'SPC',
     category: 'pantry', emoji: '🍑', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 1 },
       coles:      { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -997,7 +1103,8 @@ const RAW_PRODUCTS = [
     id: 'cavendish-bananas-1kg', name: 'Cavendish Bananas Fresh', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍌', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1006,7 +1113,8 @@ const RAW_PRODUCTS = [
     id: 'pink-lady-apples-1kg', name: 'Pink Lady Apples Pack', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 5.50, salePrice: 4.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1015,7 +1123,8 @@ const RAW_PRODUCTS = [
     id: 'carrots-1kg', name: 'Carrots Orange Bag', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🥕', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 2.50, salePrice: 2.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.50, salePrice: 2.50, phaseOffset: 0 },
       coles:      { regularPrice: 2.50, salePrice: 2.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1024,7 +1133,8 @@ const RAW_PRODUCTS = [
     id: 'avocado-hass-each', name: 'Hass Avocado Single', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🥑', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.50, salePrice: 1.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.50, salePrice: 1.50, phaseOffset: 0 },
       coles:      { regularPrice: 2.50, salePrice: 1.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1033,7 +1143,8 @@ const RAW_PRODUCTS = [
     id: 'brown-onions-1kg', name: 'Brown Onions Fresh Bag', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🧅', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 3.00, salePrice: 3.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.00, salePrice: 3.00, phaseOffset: 0 },
       coles:      { regularPrice: 3.00, salePrice: 3.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1042,7 +1153,8 @@ const RAW_PRODUCTS = [
     id: 'potatoes-brushed-2kg', name: 'Brushed Potatoes bag', size: '2kg', brand: 'Fresh',
     category: 'produce', emoji: '🥔', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 5.00, salePrice: 4.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.00, salePrice: 4.00, phaseOffset: 0 },
       coles:      { regularPrice: 5.00, salePrice: 4.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1051,7 +1163,8 @@ const RAW_PRODUCTS = [
     id: 'broccoli-fresh-each', name: 'Broccoli Premium Head', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🥦', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 1 },
       coles:      { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1060,7 +1173,8 @@ const RAW_PRODUCTS = [
     id: 'red-seedless-grapes-500g', name: 'Red Seedless Grapes Punnet', size: '500g', brand: 'Fresh',
     category: 'produce', emoji: '🍇', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1069,7 +1183,8 @@ const RAW_PRODUCTS = [
     id: 'navel-oranges-1kg', name: 'Navel Oranges Bag', size: '1.5kg', brand: 'Fresh',
     category: 'produce', emoji: '🍊', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
       coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 4 },
       amazon:     null,
     }
@@ -1078,7 +1193,8 @@ const RAW_PRODUCTS = [
     id: 'punnet-strawberries-250g', name: 'Strawberries Sweet Punnet', size: '250g', brand: 'Fresh',
     category: 'produce', emoji: '🍓', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
       coles:      { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1087,7 +1203,8 @@ const RAW_PRODUCTS = [
     id: 'cherry-tomatoes-250g', name: 'Cherry Tomatoes Punnet', size: '250g', brand: 'Fresh',
     category: 'produce', emoji: '🍅', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 1 },
       coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1096,7 +1213,8 @@ const RAW_PRODUCTS = [
     id: 'baby-spinach-leaves-120g', name: 'Baby Spinach Leaves Tub', size: '120g', brand: 'Fresh',
     category: 'produce', emoji: '🥬', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 0 },
       coles:      { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1105,7 +1223,8 @@ const RAW_PRODUCTS = [
     id: 'iceberg-lettuce-each', name: 'Iceberg Lettuce Head', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🥬', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 0 },
       coles:      { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1114,7 +1233,8 @@ const RAW_PRODUCTS = [
     id: 'continental-cucumber-each', name: 'Continental Cucumber Fresh', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🥒', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 0 },
       coles:      { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1123,7 +1243,8 @@ const RAW_PRODUCTS = [
     id: 'red-capsicum-each', name: 'Red Capsicum Fresh Single', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🫑', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 2.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 2.00, phaseOffset: 1 },
       coles:      { regularPrice: 3.50, salePrice: 2.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1132,7 +1253,8 @@ const RAW_PRODUCTS = [
     id: 'bega-cheese-block-500g', name: 'Bega Tasty Cheese Block', size: '500g', brand: 'Bega',
     category: 'dairy', emoji: '🧀', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 0 },
       coles:      { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1141,7 +1263,8 @@ const RAW_PRODUCTS = [
     id: 'yoplait-vanilla-yogurt-1kg', name: 'Yoplait Vanilla Yogurt Tub', size: '1kg', brand: 'Yoplait',
     category: 'dairy', emoji: '🍨', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1150,7 +1273,8 @@ const RAW_PRODUCTS = [
     id: 'chobani-greek-yogurt-170g', name: 'Chobani Greek Yogurt Blueberry', size: '170g', brand: 'Chobani',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 0 },
       coles:      { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1159,7 +1283,8 @@ const RAW_PRODUCTS = [
     id: 'coon-tasty-cheese-block-500g', name: 'Cheer Tasty Cheese Block', size: '500g', brand: 'Cheer',
     category: 'dairy', emoji: '🧀', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 1 },
       coles:      { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1168,7 +1293,8 @@ const RAW_PRODUCTS = [
     id: 'philadelphia-cream-cheese-250g', name: 'Philadelphia Cream Cheese Spread', size: '250g', brand: 'Philadelphia',
     category: 'dairy', emoji: '🧀', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.20, salePrice: 3.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.20, salePrice: 3.80, phaseOffset: 0 },
       coles:      { regularPrice: 5.20, salePrice: 3.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1177,7 +1303,8 @@ const RAW_PRODUCTS = [
     id: 'dairy-farmers-sour-cream-300g', name: 'Dairy Farmers Sour Cream Tub', size: '300g', brand: 'Dairy Farmers',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 0 },
       coles:      { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1186,7 +1313,8 @@ const RAW_PRODUCTS = [
     id: 'perfect-italian-mozzarella-250g', name: 'Perfect Italian Mozzarella Grated', size: '250g', brand: 'Perfect Italian',
     category: 'dairy', emoji: '🧀', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1195,7 +1323,8 @@ const RAW_PRODUCTS = [
     id: 'mainland-tasty-cheese-slices-250g', name: 'Mainland Tasty Slices 10pk', size: '250g', brand: 'Mainland',
     category: 'dairy', emoji: '🧀', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 2 },
       coles:      { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 4 },
       amazon:     null,
     }
@@ -1204,7 +1333,8 @@ const RAW_PRODUCTS = [
     id: 'flora-proactiv-margarine-250g', name: 'Flora ProActiv Margarine Spread', size: '250g', brand: 'Flora',
     category: 'dairy', emoji: '🧈', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1213,7 +1343,8 @@ const RAW_PRODUCTS = [
     id: 'giel-thickened-cream-600ml', name: 'Bulla Thickened Cream Bottle', size: '600ml', brand: 'Bulla',
     category: 'dairy', emoji: '🥛', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 3.80, phaseOffset: 0 },
       coles:      { regularPrice: 4.50, salePrice: 3.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1222,7 +1353,8 @@ const RAW_PRODUCTS = [
     id: 'danone-activia-yogurt-4pk', name: 'Danone Activia Probiotics Yogurt', size: '4 x 125g', brand: 'Danone',
     category: 'dairy', emoji: '🥛', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 5.20, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.20, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 5.20, salePrice: 3.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1231,7 +1363,8 @@ const RAW_PRODUCTS = [
     id: 'chobani-yogurt-pouch-140g', name: 'Chobani Greek Yogurt Pouch Strawberry', size: '140g', brand: 'Chobani',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 1 },
       coles:      { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1240,7 +1373,8 @@ const RAW_PRODUCTS = [
     id: 'yakult-fermented-milk-5pk', name: 'Yakult Fermented Milk Drink', size: '5 x 65ml', brand: 'Yakult',
     category: 'dairy', emoji: '🥛', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 4.20, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 4.20, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 4.20, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1249,7 +1383,8 @@ const RAW_PRODUCTS = [
     id: 'woolworths-feta-cheese-200g', name: 'Woolworths Danish Feta Cheese', size: '200g', brand: 'Woolworths',
     category: 'dairy', emoji: '🧀', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 5.00, salePrice: 4.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.00, salePrice: 4.00, phaseOffset: 0 },
       coles:      { regularPrice: 5.00, salePrice: 4.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1258,7 +1393,8 @@ const RAW_PRODUCTS = [
     id: 'castello-creamy-blue-cheese-150g', name: 'Castello Double Cream Blue Cheese', size: '150g', brand: 'Castello',
     category: 'dairy', emoji: '🧀', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 0 },
       coles:      { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1267,7 +1403,8 @@ const RAW_PRODUCTS = [
     id: 'cold-power-laundry-liquid-2l', name: 'Cold Power Laundry Liquid Sensitive', size: '2L', brand: 'Cold Power',
     category: 'household', emoji: '🧼', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 18.40, salePrice: 11.96, phaseOffset: 1 },
+woolworths: { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 0 },
       coles:      { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1276,7 +1413,8 @@ const RAW_PRODUCTS = [
     id: 'fairy-dishwasher-tablets-44pk', name: 'Fairy Dishwasher Tablets Plus', size: '44 Pack', brand: 'Fairy',
     category: 'household', emoji: '🍽️', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 42.00, salePrice: 21.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 38.64, salePrice: 25.12, phaseOffset: 1 },
+woolworths: { regularPrice: 42.00, salePrice: 21.00, phaseOffset: 0 },
       coles:      { regularPrice: 42.00, salePrice: 21.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1285,7 +1423,8 @@ const RAW_PRODUCTS = [
     id: 'dettol-liquid-handwash-refill-500ml', name: 'Dettol Handwash Liquid Refill', size: '500ml', brand: 'Dettol',
     category: 'household', emoji: '🧴', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 6.90, salePrice: 4.49, phaseOffset: 1 },
+woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 0 },
       coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1294,7 +1433,8 @@ const RAW_PRODUCTS = [
     id: 'finish-dishwasher-rinse-aid-500ml', name: 'Finish Rinse Aid Jet Dry', size: '500ml', brand: 'Finish',
     category: 'household', emoji: '🍽️', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 11.50, salePrice: 7.00, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 10.58, salePrice: 6.88, phaseOffset: 1 },
+woolworths: { regularPrice: 11.50, salePrice: 7.00, phaseOffset: 1 },
       coles:      { regularPrice: 11.50, salePrice: 7.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1303,7 +1443,8 @@ const RAW_PRODUCTS = [
     id: 'morning-fresh-dish-liquid-400ml', name: 'Morning Fresh Lemon Dishwashing', size: '400ml', brand: 'Morning Fresh',
     category: 'household', emoji: '🧴', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 2.75, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
+woolworths: { regularPrice: 5.50, salePrice: 2.75, phaseOffset: 0 },
       coles:      { regularPrice: 5.50, salePrice: 2.75, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1312,7 +1453,8 @@ const RAW_PRODUCTS = [
     id: 'harpic-active-fresh-toilet-cleaner-700ml', name: 'Harpic Toilet Cleaner Gel Marine', size: '700ml', brand: 'Harpic',
     category: 'household', emoji: '🚽', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.52, salePrice: 3.59, phaseOffset: 1 },
+woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1321,7 +1463,8 @@ const RAW_PRODUCTS = [
     id: 'pine-o-cleen-disinfectant-wipes-120pk', name: 'Pine O Cleen Disinfectant Wipes Lemon', size: '120 Pack', brand: 'Pine O Cleen',
     category: 'household', emoji: '🧹', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 11.00, salePrice: 5.50, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 10.12, salePrice: 6.58, phaseOffset: 1 },
+woolworths: { regularPrice: 11.00, salePrice: 5.50, phaseOffset: 2 },
       coles:      { regularPrice: 11.00, salePrice: 5.50, phaseOffset: 4 },
       amazon:     null,
     }
@@ -1330,7 +1473,8 @@ const RAW_PRODUCTS = [
     id: 'ajax-spray-wipe-glass-cleaner-500ml', name: 'Ajax Spray n Wipe Glass Cleaner', size: '500ml', brand: 'Ajax',
     category: 'household', emoji: '💨', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
+woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1339,7 +1483,8 @@ const RAW_PRODUCTS = [
     id: 'palmolive-dish-liquid-original-750ml', name: 'Palmolive Ultra Dishwashing Liquid', size: '750ml', brand: 'Palmolive',
     category: 'household', emoji: '🧴', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.00, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
+woolworths: { regularPrice: 6.50, salePrice: 4.00, phaseOffset: 1 },
       coles:      { regularPrice: 6.50, salePrice: 4.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1348,7 +1493,8 @@ const RAW_PRODUCTS = [
     id: 'earth-choice-dish-liquid-1l', name: 'Earth Choice Lemon Dishwashing Liquid', size: '1L', brand: 'Earth Choice',
     category: 'household', emoji: '🌿', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
+woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1357,7 +1503,8 @@ const RAW_PRODUCTS = [
     id: 'vanish-napisan-oxipromote-3kg', name: 'Vanish NapiSan Oxi Action Powder', size: '3kg', brand: 'Vanish',
     category: 'household', emoji: '🧺', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 26.00, salePrice: 16.00, phaseOffset: 3 },
+      chemist_warehouse: { regularPrice: 23.92, salePrice: 15.55, phaseOffset: 1 },
+woolworths: { regularPrice: 26.00, salePrice: 16.00, phaseOffset: 3 },
       coles:      { regularPrice: 26.00, salePrice: 16.00, phaseOffset: 5 },
       amazon:     null,
     }
@@ -1366,7 +1513,8 @@ const RAW_PRODUCTS = [
     id: 'dynamo-laundry-liquid-2l', name: 'Dynamo Professional Laundry Liquid', size: '2L', brand: 'Dynamo',
     category: 'household', emoji: '🧼', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 24.00, salePrice: 12.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 22.08, salePrice: 14.35, phaseOffset: 1 },
+woolworths: { regularPrice: 24.00, salePrice: 12.00, phaseOffset: 0 },
       coles:      { regularPrice: 24.00, salePrice: 12.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1375,7 +1523,8 @@ const RAW_PRODUCTS = [
     id: 'comfort-fabric-softener-900ml', name: 'Comfort Fabric Conditioner Pure', size: '900ml', brand: 'Comfort',
     category: 'household', emoji: '🌸', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 8.74, salePrice: 5.68, phaseOffset: 1 },
+woolworths: { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 2 },
       coles:      { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 4 },
       amazon:     null,
     }
@@ -1384,7 +1533,8 @@ const RAW_PRODUCTS = [
     id: 'duck-toilet-fresh-disc-starter', name: 'Toilet Duck Fresh Discs Lime', size: '36ml', brand: 'Duck',
     category: 'household', emoji: '🚽', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 6.90, salePrice: 4.49, phaseOffset: 1 },
+woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 0 },
       coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1393,7 +1543,8 @@ const RAW_PRODUCTS = [
     id: 'chux-superwipes-10pk', name: 'Chux Superwipes Roll Cloths', size: '10 Pack', brand: 'Chux',
     category: 'household', emoji: '🧹', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
+woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 0 },
       coles:      { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1402,7 +1553,8 @@ const RAW_PRODUCTS = [
     id: 'wonder-white-bread-sliced-700g', name: 'Wonder White Sliced Toast Bread', size: '700g', brand: 'Wonder White',
     category: 'bakery', emoji: '🍞', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.60, salePrice: 3.20, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.60, salePrice: 3.20, phaseOffset: 0 },
       coles:      { regularPrice: 4.60, salePrice: 3.20, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1411,7 +1563,8 @@ const RAW_PRODUCTS = [
     id: 'helgas-rye-bread-680g', name: 'Helgas Traditional Rye Slices', size: '680g', brand: 'Helgas',
     category: 'bakery', emoji: '🍞', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 1 },
       coles:      { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1420,7 +1573,8 @@ const RAW_PRODUCTS = [
     id: 'abbotts-sourdough-bread-loaf', name: 'Abbotts Bakery Sourdough Loaf', size: '680g', brand: 'Abbotts',
     category: 'bakery', emoji: '🍞', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 5.50, salePrice: 4.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1429,7 +1583,8 @@ const RAW_PRODUCTS = [
     id: 'coles-croissants-3pk', name: 'Coles Bakery Croissants', size: '3 Pack', brand: 'Coles',
     category: 'bakery', emoji: '🥐', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1438,7 +1593,8 @@ const RAW_PRODUCTS = [
     id: 'woolworths-muffins-choc-chip-4pk', name: 'WW Choc Chip Muffins 4pk', size: '4 Pack', brand: 'Woolworths',
     category: 'bakery', emoji: '🧁', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 5.00, salePrice: 5.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.00, salePrice: 5.00, phaseOffset: 0 },
       coles:      { regularPrice: 5.00, salePrice: 5.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1447,7 +1603,8 @@ const RAW_PRODUCTS = [
     id: 'helgas-wholemeal-bread-680g', name: 'Helgas Traditional Wholemeal Loaf', size: '680g', brand: 'Helgas',
     category: 'bakery', emoji: '🍞', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 2 },
       coles:      { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 4 },
       amazon:     null,
     }
@@ -1456,7 +1613,8 @@ const RAW_PRODUCTS = [
     id: 'mission-tortillas-large-8pk', name: 'Mission Original Tortillas Large', size: '8 Pack', brand: 'Mission',
     category: 'bakery', emoji: '🌯', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
       coles:      { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1465,7 +1623,8 @@ const RAW_PRODUCTS = [
     id: 'tiptop-english-muffins-6pk', name: 'Tip Top English Muffins Original', size: '6 Pack', brand: 'Tip Top',
     category: 'bakery', emoji: '🥯', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 1 },
       coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1474,7 +1633,8 @@ const RAW_PRODUCTS = [
     id: 'woolworths-crumpets-6pk', name: 'Woolworths Crumpets Original', size: '6 Pack', brand: 'Woolworths',
     category: 'bakery', emoji: '🥯', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 2.50, salePrice: 2.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.50, salePrice: 2.50, phaseOffset: 0 },
       coles:      { regularPrice: 2.50, salePrice: 2.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1483,7 +1643,8 @@ const RAW_PRODUCTS = [
     id: 'tiptop-raisin-toast-bread-520g', name: 'Tip Top Cafe Raisin Toast Bread', size: '520g', brand: 'Tip Top',
     category: 'bakery', emoji: '🍞', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
       coles:      { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1492,7 +1653,8 @@ const RAW_PRODUCTS = [
     id: 'mission-pita-bread-pocket-5pk', name: 'Mission White Pita Bread Pocket', size: '5 Pack', brand: 'Mission',
     category: 'bakery', emoji: '🫓', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 1 },
       coles:      { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1501,7 +1663,8 @@ const RAW_PRODUCTS = [
     id: 'coles-chocolate-cookies-12pk', name: 'Coles Chocolate Chip Cookies Bakery', size: '12 Pack', brand: 'Coles',
     category: 'bakery', emoji: '🍪', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 3.00, salePrice: 3.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.00, salePrice: 3.00, phaseOffset: 0 },
       coles:      { regularPrice: 3.00, salePrice: 3.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1510,7 +1673,8 @@ const RAW_PRODUCTS = [
     id: 'kelloggs-nutrigrain-500g', name: 'Kelloggs Nutri-Grain Cereal', size: '500g', brand: 'Kelloggs',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 1 },
       coles:      { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1519,7 +1683,8 @@ const RAW_PRODUCTS = [
     id: 'kelloggs-corn-flakes-380g', name: 'Kelloggs Corn Flakes Box', size: '380g', brand: 'Kelloggs',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1528,7 +1693,8 @@ const RAW_PRODUCTS = [
     id: 'sanitarium-weetbix-1kg', name: 'Sanitarium Weet-Bix Cereal Box', size: '1kg', brand: 'Sanitarium',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 5.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 5.00, phaseOffset: 0 },
       coles:      { regularPrice: 6.00, salePrice: 5.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1537,7 +1703,8 @@ const RAW_PRODUCTS = [
     id: 'uncle-tobys-plus-sports-cereal', name: 'Uncle Tobys Plus Sports Protein', size: '705g', brand: 'Uncle Tobys',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 0 },
       coles:      { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1546,7 +1713,8 @@ const RAW_PRODUCTS = [
     id: 'kelloggs-coco-pops-375g', name: 'Kelloggs Coco Pops Cereal Chocolate', size: '375g', brand: 'Kelloggs',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 2 },
       coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 4 },
       amazon:     null,
     }
@@ -1555,7 +1723,8 @@ const RAW_PRODUCTS = [
     id: 'kelloggs-sultana-bran-420g', name: 'Kelloggs Sultana Bran Cereal Box', size: '420g', brand: 'Kelloggs',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 3 },
       coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 0 },
       amazon:     null,
     }
@@ -1564,7 +1733,8 @@ const RAW_PRODUCTS = [
     id: 'uncle-tobys-oat-quick-sachets', name: 'Uncle Tobys Quick Sachets Creamy Honey', size: '12 Pack', brand: 'Uncle Tobys',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 7.00, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.00, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 7.00, salePrice: 4.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1573,7 +1743,8 @@ const RAW_PRODUCTS = [
     id: 'carman-muesli-golden-oat-500g', name: 'Carmans Golden Oat Crunchy Muesli', size: '500g', brand: 'Carmans',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 1 },
       coles:      { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1582,7 +1753,8 @@ const RAW_PRODUCTS = [
     id: 'kelloggs-froot-loops-285g', name: 'Kelloggs Froot Loops Colored Cereal', size: '285g', brand: 'Kelloggs',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 0 },
       coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1591,7 +1763,8 @@ const RAW_PRODUCTS = [
     id: 'sanitarium-upandgo-choc-6pk', name: 'Sanitarium Up & Go Liquid Breakfast Choc', size: '6 x 250ml', brand: 'Sanitarium',
     category: 'breakfast', emoji: '🧃', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 11.50, salePrice: 7.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 11.50, salePrice: 7.00, phaseOffset: 2 },
       coles:      { regularPrice: 11.50, salePrice: 7.00, phaseOffset: 4 },
       amazon:     null,
     }
@@ -1600,7 +1773,8 @@ const RAW_PRODUCTS = [
     id: 'carman-muesli-bars-classic-6pk', name: 'Carmans Classic Fruit & Nut Bars', size: '6 Pack', brand: 'Carmans',
     category: 'breakfast', emoji: '🍫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1609,7 +1783,8 @@ const RAW_PRODUCTS = [
     id: 'weetbix-bites-wild-berry-500g', name: 'Sanitarium Weet-Bix Bites Wild Berry', size: '500g', brand: 'Sanitarium',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1618,7 +1793,8 @@ const RAW_PRODUCTS = [
     id: 'beef-mince-regular-1kg', name: 'WW Beef Mince 3 Star', size: '1kg', brand: 'Woolworths',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 13.00, salePrice: 13.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 13.00, salePrice: 13.00, phaseOffset: 0 },
       coles:      { regularPrice: 13.00, salePrice: 13.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1627,7 +1803,8 @@ const RAW_PRODUCTS = [
     id: 'chicken-breast-fillets-1kg', name: 'WW Chicken Breast Fillets Skinless', size: '1kg', brand: 'Woolworths',
     category: 'meat', emoji: '🍗', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 11.50, salePrice: 11.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 11.50, salePrice: 11.50, phaseOffset: 0 },
       coles:      { regularPrice: 11.50, salePrice: 11.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1636,7 +1813,8 @@ const RAW_PRODUCTS = [
     id: 'lamb-shoulder-chops-1kg', name: 'WW Lamb Shoulder Chops Fresh', size: '1kg', brand: 'Woolworths',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 18.00, salePrice: 18.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 18.00, salePrice: 18.00, phaseOffset: 0 },
       coles:      { regularPrice: 18.00, salePrice: 18.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1645,7 +1823,8 @@ const RAW_PRODUCTS = [
     id: 'pork-loin-chops-1kg', name: 'Coles Pork Loin Chops Boneless', size: '1kg', brand: 'Coles',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 16.00, salePrice: 16.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 16.00, salePrice: 16.00, phaseOffset: 0 },
       coles:      { regularPrice: 16.00, salePrice: 16.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1654,7 +1833,8 @@ const RAW_PRODUCTS = [
     id: 'salmon-fillets-skin-on-4pk', name: 'Tassal Salmon Fillets Skin On', size: '4 Pack 500g', brand: 'Tassal',
     category: 'meat', emoji: '🐟', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 22.00, salePrice: 19.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 22.00, salePrice: 19.00, phaseOffset: 0 },
       coles:      { regularPrice: 22.00, salePrice: 19.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1663,7 +1843,8 @@ const RAW_PRODUCTS = [
     id: 'coles-beef-rump-steak-500g', name: 'Coles Beef Rump Steak Fresh', size: '500g', brand: 'Coles',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 14.00, salePrice: 14.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 14.00, salePrice: 14.00, phaseOffset: 0 },
       coles:      { regularPrice: 14.00, salePrice: 14.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1672,7 +1853,8 @@ const RAW_PRODUCTS = [
     id: 'dondale-bacon-rashers-500g', name: 'Don Bacon Short Rashers Pack', size: '500g', brand: 'Don',
     category: 'meat', emoji: '🥓', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 7.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.50, salePrice: 7.50, phaseOffset: 0 },
       coles:      { regularPrice: 9.50, salePrice: 7.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1681,7 +1863,8 @@ const RAW_PRODUCTS = [
     id: 'primas-frankfurts-skinless-1kg', name: 'Primo Skinless Frankfurts Tub', size: '1kg', brand: 'Primo',
     category: 'meat', emoji: '🌭', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 11.00, salePrice: 8.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 11.00, salePrice: 8.50, phaseOffset: 1 },
       coles:      { regularPrice: 11.00, salePrice: 8.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1690,7 +1873,8 @@ const RAW_PRODUCTS = [
     id: 'primo-sliced-ham-value-pack', name: 'Primo English Ham Sliced Value Pack', size: '500g', brand: 'Primo',
     category: 'meat', emoji: '🥩', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 0 },
       coles:      { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1699,7 +1883,8 @@ const RAW_PRODUCTS = [
     id: 'safcol-premium-salmon-100g', name: 'Safcol Salmon in Springwater', size: '100g', brand: 'Safcol',
     category: 'meat', emoji: '🐟', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 1 },
       coles:      { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1708,7 +1893,8 @@ const RAW_PRODUCTS = [
     id: 'primo-chorizo-sausage-375g', name: 'Primo Chorizo Twin Pack', size: '375g', brand: 'Primo',
     category: 'meat', emoji: '🌭', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 2 },
       coles:      { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 4 },
       amazon:     null,
     }
@@ -1717,7 +1903,8 @@ const RAW_PRODUCTS = [
     id: 'woolworths-beef-sausages-18pk', name: 'WW Thin Beef Sausages Value Pack', size: '1.7kg', brand: 'Woolworths',
     category: 'meat', emoji: '🌭', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 13.00, salePrice: 13.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 13.00, salePrice: 13.00, phaseOffset: 0 },
       coles:      { regularPrice: 13.00, salePrice: 13.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1726,7 +1913,8 @@ const RAW_PRODUCTS = [
     id: 'mccain-frozen-chips-1kg', name: 'McCain Frozen Chips Straight Cut', size: '1kg', brand: 'McCain',
     category: 'frozen', emoji: '🍟', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 0 },
       coles:      { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1735,7 +1923,8 @@ const RAW_PRODUCTS = [
     id: 'birds-eye-fish-fingers-375g', name: 'Birds Eye Fish Fingers 15pk', size: '375g', brand: 'Birds Eye',
     category: 'frozen', emoji: '🐟', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 1 },
       coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1744,7 +1933,8 @@ const RAW_PRODUCTS = [
     id: 'mccain-frozen-pizza-bbq-400g', name: 'McCain Frozen Pizza BBQ Chicken', size: '400g', brand: 'McCain',
     category: 'frozen', emoji: '🍕', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 0 },
       coles:      { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1753,7 +1943,8 @@ const RAW_PRODUCTS = [
     id: 'nannas-frozen-apple-pie-600g', name: 'Nannas Frozen Family Apple Pie', size: '600g', brand: 'Nannas',
     category: 'frozen', emoji: '🥧', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
       coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 4 },
       amazon:     null,
     }
@@ -1762,7 +1953,8 @@ const RAW_PRODUCTS = [
     id: 'patties-party-pies-12pk', name: 'Patties Party Beef Pies 12pk', size: '560g', brand: 'Patties',
     category: 'frozen', emoji: '🥧', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 0 },
       coles:      { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1771,7 +1963,8 @@ const RAW_PRODUCTS = [
     id: 'four-twenty-meat-pies-4pk', name: 'Four N Twenty Meat Pies Pack', size: '700g', brand: 'Four N Twenty',
     category: 'frozen', emoji: '🥧', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.00, salePrice: 6.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.00, salePrice: 6.00, phaseOffset: 3 },
       coles:      { regularPrice: 9.00, salePrice: 6.00, phaseOffset: 0 },
       amazon:     null,
     }
@@ -1780,7 +1973,8 @@ const RAW_PRODUCTS = [
     id: 'diana-chan-pork-dumplings', name: 'Diana Chan Pork & Chive Dumplings', size: '750g', brand: 'Diana Chan',
     category: 'frozen', emoji: '🥟', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 15.00, salePrice: 10.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 15.00, salePrice: 10.00, phaseOffset: 0 },
       coles:      { regularPrice: 15.00, salePrice: 10.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1789,7 +1983,8 @@ const RAW_PRODUCTS = [
     id: 'steer-frozen-vegetables-peas-1kg', name: 'Birds Eye Frozen Garden Peas', size: '1kg', brand: 'Birds Eye',
     category: 'frozen', emoji: '🥦', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 5.20, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.20, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 5.20, salePrice: 4.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1798,7 +1993,8 @@ const RAW_PRODUCTS = [
     id: 'sara-lee-french-vanilla-cheesecake', name: 'Sara Lee French Vanilla Cheesecake', size: '360g', brand: 'Sara Lee',
     category: 'frozen', emoji: '🍰', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 1 },
       coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1807,7 +2003,8 @@ const RAW_PRODUCTS = [
     id: 'mccain-frozen-lasagne-400g', name: 'McCain Frozen Lasagne Meal', size: '400g', brand: 'McCain',
     category: 'frozen', emoji: '🍝', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1816,7 +2013,8 @@ const RAW_PRODUCTS = [
     id: 'patties-sausage-rolls-12pk', name: 'Patties Party Sausage Rolls 12pk', size: '450g', brand: 'Patties',
     category: 'frozen', emoji: '🌭', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 1 },
       coles:      { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1825,7 +2023,8 @@ const RAW_PRODUCTS = [
     id: 'steers-garlic-bread-twin-pack', name: 'La Famiglia Garlic Bread Twin Pack', size: '400g', brand: 'La Famiglia',
     category: 'frozen', emoji: '🥖', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 2 },
       coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 4 },
       amazon:     null,
     }
@@ -1834,7 +2033,8 @@ const RAW_PRODUCTS = [
     id: 'colgate-toothpaste-total-115g', name: 'Colgate Total Clean Mint Toothpaste', size: '115g', brand: 'Colgate',
     category: 'personal-care', emoji: '🪥', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1843,7 +2043,8 @@ const RAW_PRODUCTS = [
     id: 'palmolive-shampoo-milk-honey-350ml', name: 'Palmolive Shampoo Milk & Honey', size: '350ml', brand: 'Palmolive',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
+woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 1 },
       coles:      { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1852,7 +2053,8 @@ const RAW_PRODUCTS = [
     id: 'rexona-men-sport-deodorant-250ml', name: 'Rexona Men Sport Deodorant Aerosol', size: '250ml', brand: 'Rexona',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
+woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 0 },
       coles:      { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1861,7 +2063,8 @@ const RAW_PRODUCTS = [
     id: 'radox-shower-gel-lemon-500ml', name: 'Radox Shower Gel Lemon & Tea Tree', size: '500ml', brand: 'Radox',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.00, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
+woolworths: { regularPrice: 6.50, salePrice: 4.00, phaseOffset: 2 },
       coles:      { regularPrice: 6.50, salePrice: 4.00, phaseOffset: 4 },
       amazon:     null,
     }
@@ -1870,7 +2073,8 @@ const RAW_PRODUCTS = [
     id: 'colgate-plax-mouthwash-mint-500ml', name: 'Colgate Plax Freshmint Mouthwash', size: '500ml', brand: 'Colgate',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 6.90, salePrice: 4.49, phaseOffset: 1 },
+woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 1 },
       coles:      { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1879,7 +2083,8 @@ const RAW_PRODUCTS = [
     id: 'head-shoulders-clean-shampoo-400ml', name: 'Head & Shoulders Clean Shampoo', size: '400ml', brand: 'Head & Shoulders',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 12.50, salePrice: 8.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 11.50, salePrice: 7.48, phaseOffset: 1 },
+woolworths: { regularPrice: 12.50, salePrice: 8.00, phaseOffset: 0 },
       coles:      { regularPrice: 12.50, salePrice: 8.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1888,7 +2093,8 @@ const RAW_PRODUCTS = [
     id: 'pantene-conditioner-smooth-350ml', name: 'Pantene Conditioner Daily Moisture', size: '350ml', brand: 'Pantene',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 9.00, salePrice: 5.50, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 8.28, salePrice: 5.38, phaseOffset: 1 },
+woolworths: { regularPrice: 9.00, salePrice: 5.50, phaseOffset: 2 },
       coles:      { regularPrice: 9.00, salePrice: 5.50, phaseOffset: 4 },
       amazon:     null,
     }
@@ -1897,7 +2103,8 @@ const RAW_PRODUCTS = [
     id: 'palmolive-soap-bars-milk-honey-4pk', name: 'Palmolive Soap Bars Moisture Care', size: '4 Pack', brand: 'Palmolive',
     category: 'personal-care', emoji: '🧼', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
+woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 0 },
       coles:      { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1906,7 +2113,8 @@ const RAW_PRODUCTS = [
     id: 'dove-body-wash-beauty-cream-1l', name: 'Dove Body Wash Beauty Nourishing', size: '1L', brand: 'Dove',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 14.00, salePrice: 9.00, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 12.88, salePrice: 8.37, phaseOffset: 1 },
+woolworths: { regularPrice: 14.00, salePrice: 9.00, phaseOffset: 1 },
       coles:      { regularPrice: 14.00, salePrice: 9.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1915,7 +2123,8 @@ const RAW_PRODUCTS = [
     id: 'gillette-mach3-razor-blades-4pk', name: 'Gillette Mach3 Razor Blades Refills', size: '4 Pack', brand: 'Gillette',
     category: 'personal-care', emoji: '🪒', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 18.00, salePrice: 14.50, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 16.56, salePrice: 10.76, phaseOffset: 1 },
+woolworths: { regularPrice: 18.00, salePrice: 14.50, phaseOffset: 0 },
       coles:      { regularPrice: 18.00, salePrice: 14.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1924,7 +2133,8 @@ const RAW_PRODUCTS = [
     id: 'lynx-africa-body-spray-155ml', name: 'Lynx Africa Men Body Spray', size: '155ml', brand: 'Lynx',
     category: 'personal-care', emoji: '💨', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 3 },
+      chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
+woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 3 },
       coles:      { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 0 },
       amazon:     null,
     }
@@ -1933,7 +2143,8 @@ const RAW_PRODUCTS = [
     id: 'listerine-freshburst-mouthwash-250ml', name: 'Listerine Freshburst Mouthwash', size: '250ml', brand: 'Listerine',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
+woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 0 },
       coles:      { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1942,7 +2153,8 @@ const RAW_PRODUCTS = [
     id: 'huggies-nappies-size-4-60pk', name: 'Huggies Ultra Dry Nappies Size 4', size: '60 Pack', brand: 'Huggies',
     category: 'baby', emoji: '👶', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 36.00, salePrice: 29.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 33.12, salePrice: 21.53, phaseOffset: 1 },
+woolworths: { regularPrice: 36.00, salePrice: 29.00, phaseOffset: 0 },
       coles:      { regularPrice: 36.00, salePrice: 29.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1951,7 +2163,8 @@ const RAW_PRODUCTS = [
     id: 'johnsons-baby-wipes-fragrance-free-80pk', name: 'Johnsons Baby Wipes Fragrance Free', size: '80 Pack', brand: 'Johnsons',
     category: 'baby', emoji: '👶', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.20, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
+woolworths: { regularPrice: 4.50, salePrice: 3.20, phaseOffset: 1 },
       coles:      { regularPrice: 4.50, salePrice: 3.20, phaseOffset: 3 },
       amazon:     null,
     }
@@ -1960,7 +2173,8 @@ const RAW_PRODUCTS = [
     id: 'baby-love-nappies-size-3-50pk', name: 'BabyLove Cosifit Nappies Size 3', size: '50 Pack', brand: 'BabyLove',
     category: 'baby', emoji: '👶', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 24.00, salePrice: 19.00, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 22.08, salePrice: 14.35, phaseOffset: 1 },
+woolworths: { regularPrice: 24.00, salePrice: 19.00, phaseOffset: 2 },
       coles:      { regularPrice: 24.00, salePrice: 19.00, phaseOffset: 4 },
       amazon:     null,
     }
@@ -1969,7 +2183,8 @@ const RAW_PRODUCTS = [
     id: 'curash-baby-wipes-soap-free-80pk', name: 'Curash Baby Wipes Soap Free', size: '80 Pack', brand: 'Curash',
     category: 'baby', emoji: '👶', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 4.42, salePrice: 2.87, phaseOffset: 1 },
+woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1978,7 +2193,8 @@ const RAW_PRODUCTS = [
     id: 'farex-baby-rice-cereal-125g', name: 'Farex Baby Cereal Rice', size: '125g', brand: 'Farex',
     category: 'baby', emoji: '🥣', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 3.22, salePrice: 2.09, phaseOffset: 1 },
+woolworths: { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 0 },
       coles:      { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1987,7 +2203,8 @@ const RAW_PRODUCTS = [
     id: 'sudocrem-baby-healing-cream-125g', name: 'Sudocrem Nappy Recovery Cream', size: '125g', brand: 'Sudocrem',
     category: 'baby', emoji: '🧴', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 12.00, salePrice: 9.50, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 11.04, salePrice: 7.18, phaseOffset: 1 },
+woolworths: { regularPrice: 12.00, salePrice: 9.50, phaseOffset: 0 },
       coles:      { regularPrice: 12.00, salePrice: 9.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -1996,7 +2213,8 @@ const RAW_PRODUCTS = [
     id: 'karicare-toddler-milk-stage-3-900g', name: 'Karicare Toddler Milk Stage 3 Formula', size: '900g', brand: 'Karicare',
     category: 'baby', emoji: '🍼', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 20.24, salePrice: 13.16, phaseOffset: 1 },
+woolworths: { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 0 },
       coles:      { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2005,7 +2223,8 @@ const RAW_PRODUCTS = [
     id: 'bellamys-organic-apple-cinnamon-120g', name: 'Bellamys Organic Apple Cinnamon Puree', size: '120g', brand: 'Bellamys',
     category: 'baby', emoji: '🍎', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 2.58, salePrice: 1.68, phaseOffset: 1 },
+woolworths: { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 1 },
       coles:      { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 3 },
       amazon:     null,
     }
@@ -2014,7 +2233,8 @@ const RAW_PRODUCTS = [
     id: 'raffertys-garden-banana-pear-120g', name: 'Raffertys Garden Custard Banana Pear', size: '120g', brand: 'Raffertys',
     category: 'baby', emoji: '🍌', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 2.58, salePrice: 1.68, phaseOffset: 1 },
+woolworths: { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 0 },
       coles:      { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2023,7 +2243,8 @@ const RAW_PRODUCTS = [
     id: 'baby-balm-johnson-100ml', name: 'Johnsons Baby Moisturizing Balm', size: '100ml', brand: 'Johnsons',
     category: 'baby', emoji: '🧴', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.52, salePrice: 3.59, phaseOffset: 1 },
+woolworths: { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 0 },
       coles:      { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2032,7 +2253,8 @@ const RAW_PRODUCTS = [
     id: 'pedigree-dog-food-beef-12kg-bag', name: 'Pedigree Dry Dog Food Beef Bag', size: '1.2kg', brand: 'Pedigree',
     category: 'pet', emoji: '🐶', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 0 },
       coles:      { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2041,7 +2263,8 @@ const RAW_PRODUCTS = [
     id: 'dine-cat-food-tuna-pouch-85g', name: 'Dine Daily Wet Cat Food Tuna', size: '85g', brand: 'Dine',
     category: 'pet', emoji: '🐱', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 1 },
       coles:      { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 3 },
       amazon:     null,
     }
@@ -2050,7 +2273,8 @@ const RAW_PRODUCTS = [
     id: 'supercoat-dog-food-chicken-26kg', name: 'Purina Supercoat Adult Dry Dog Food', size: '2.6kg', brand: 'Purina',
     category: 'pet', emoji: '🐶', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 2 },
       coles:      { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 4 },
       amazon:     null,
     }
@@ -2059,7 +2283,8 @@ const RAW_PRODUCTS = [
     id: 'optimum-dry-cat-food-chicken-800g', name: 'Optimum Adult Dry Cat Food Chicken', size: '800g', brand: 'Optimum',
     category: 'pet', emoji: '🐱', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 11.50, salePrice: 8.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 11.50, salePrice: 8.50, phaseOffset: 0 },
       coles:      { regularPrice: 11.50, salePrice: 8.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2068,7 +2293,8 @@ const RAW_PRODUCTS = [
     id: 'my-dog-beef-poultry-meat-400g', name: 'My Dog Wet Dog Food Beef Cans', size: '400g', brand: 'My Dog',
     category: 'pet', emoji: '🐶', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.30, salePrice: 2.40, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.30, salePrice: 2.40, phaseOffset: 0 },
       coles:      { regularPrice: 3.30, salePrice: 2.40, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2077,7 +2303,8 @@ const RAW_PRODUCTS = [
     id: 'whiskas-cat-food-poultry-12pk', name: 'Whiskas Wet Cat Food Gravy Pouches', size: '12 Pack', brand: 'Whiskas',
     category: 'pet', emoji: '🐱', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 10.50, salePrice: 8.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 10.50, salePrice: 8.00, phaseOffset: 1 },
       coles:      { regularPrice: 10.50, salePrice: 8.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -2086,7 +2313,8 @@ const RAW_PRODUCTS = [
     id: 'schmackos-dog-treats-beef-strap', name: 'Schmackos Strapz Dog Treats Beef', size: '200g', brand: 'Schmackos',
     category: 'pet', emoji: '🍖', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.80, salePrice: 4.50, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.80, salePrice: 4.50, phaseOffset: 3 },
       coles:      { regularPrice: 6.80, salePrice: 4.50, phaseOffset: 0 },
       amazon:     null,
     }
@@ -2095,7 +2323,8 @@ const RAW_PRODUCTS = [
     id: 'fancies-cat-treat-puree-4pk', name: 'Fancy Feast Puree Kiss Treats', size: '4 Pack', brand: 'Fancy Feast',
     category: 'pet', emoji: '🐱', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.20, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 3.20, phaseOffset: 0 },
       coles:      { regularPrice: 4.50, salePrice: 3.20, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2104,7 +2333,8 @@ const RAW_PRODUCTS = [
     id: 'tux-dog-biscuits-value-pack-1kg', name: 'Purina Lucky Dog Bones Biscuits', size: '1kg', brand: 'Purina',
     category: 'pet', emoji: '🍖', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 6.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.50, salePrice: 6.00, phaseOffset: 0 },
       coles:      { regularPrice: 7.50, salePrice: 6.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2113,7 +2343,8 @@ const RAW_PRODUCTS = [
     id: 'friskies-cat-dry-food-15kg-box', name: 'Purina Friskies Seafood Sensations', size: '1.5kg', brand: 'Purina',
     category: 'pet', emoji: '🐱', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 10.50, salePrice: 7.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 10.50, salePrice: 7.50, phaseOffset: 0 },
       coles:      { regularPrice: 10.50, salePrice: 7.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2123,7 +2354,8 @@ const RAW_PRODUCTS = [
     id: 'panadol-rapid-20pk', name: 'Panadol Rapid Caplets', size: '20 Pack', brand: 'Panadol',
     category: 'health', emoji: '💊', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
+woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 0 },
       coles:      { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2132,7 +2364,8 @@ const RAW_PRODUCTS = [
     id: 'nurofen-24pk', name: 'Nurofen Ibuprofen 200mg', size: '24 Pack', brand: 'Nurofen',
     category: 'health', emoji: '💊', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.80, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
+woolworths: { regularPrice: 6.50, salePrice: 4.80, phaseOffset: 2 },
       coles:      { regularPrice: 6.50, salePrice: 4.80, phaseOffset: 4 },
       amazon:     null,
     }
@@ -2141,7 +2374,8 @@ const RAW_PRODUCTS = [
     id: 'musashi-protein-bar-choc', name: 'Musashi High Protein Bar Chocolate', size: '60g', brand: 'Musashi',
     category: 'health', emoji: '🍫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
+woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 1 },
       coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -2150,7 +2384,8 @@ const RAW_PRODUCTS = [
     id: 'natures-own-fish-oil', name: 'Natures Own Fish Oil 1000mg', size: '200 Pack', brand: 'Natures Own',
     category: 'health', emoji: '💊', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 22.00, salePrice: 11.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 20.24, salePrice: 13.16, phaseOffset: 1 },
+woolworths: { regularPrice: 22.00, salePrice: 11.00, phaseOffset: 0 },
       coles:      { regularPrice: 22.00, salePrice: 11.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2159,7 +2394,8 @@ const RAW_PRODUCTS = [
     id: 'berocca-performance-orange', name: 'Berocca Performance Effervescent Orange', size: '30 Pack', brand: 'Berocca',
     category: 'health', emoji: '🥤', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 18.50, salePrice: 12.00, phaseOffset: 3 },
+      chemist_warehouse: { regularPrice: 17.02, salePrice: 11.06, phaseOffset: 1 },
+woolworths: { regularPrice: 18.50, salePrice: 12.00, phaseOffset: 3 },
       coles:      { regularPrice: 18.50, salePrice: 12.00, phaseOffset: 0 },
       amazon:     null,
     }
@@ -2168,7 +2404,8 @@ const RAW_PRODUCTS = [
     id: 'white-wings-flour-sr-2kg', name: 'White Wings Self Raising Flour', size: '2kg', brand: 'White Wings',
     category: 'baking', emoji: '🧁', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2177,7 +2414,8 @@ const RAW_PRODUCTS = [
     id: 'csr-white-sugar-1kg', name: 'CSR White Sugar Pure Cane', size: '1kg', brand: 'CSR',
     category: 'baking', emoji: '🧁', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 2.80, phaseOffset: 0 },
       coles:      { regularPrice: 2.80, salePrice: 2.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2186,7 +2424,8 @@ const RAW_PRODUCTS = [
     id: 'queen-maple-syrup-375ml', name: 'Queen Maple Active Syrup', size: '375ml', brand: 'Queen',
     category: 'baking', emoji: '🍯', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -2195,7 +2434,8 @@ const RAW_PRODUCTS = [
     id: 'cadbury-baking-chocolate-180g', name: 'Cadbury Baking Milk Chocolate Block', size: '180g', brand: 'Cadbury',
     category: 'baking', emoji: '🍫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 2 },
       coles:      { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 0 },
       amazon:     null,
     }
@@ -2204,7 +2444,8 @@ const RAW_PRODUCTS = [
     id: 'sunrice-medium-rice-5kg', name: 'SunRice Medium Grain Rice Bag', size: '5kg', brand: 'SunRice',
     category: 'pantry', emoji: '🌾', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 18.00, salePrice: 9.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 18.00, salePrice: 9.00, phaseOffset: 0 },
       coles:      { regularPrice: 18.00, salePrice: 9.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2213,7 +2454,8 @@ const RAW_PRODUCTS = [
     id: 'heinz-spaghetti-canned-420g', name: 'Heinz Spaghetti in Tomato Sauce', size: '420g', brand: 'Heinz',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 1 },
       coles:      { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 3 },
       amazon:     null,
     }
@@ -2222,7 +2464,8 @@ const RAW_PRODUCTS = [
     id: 'spc-spaghetti-3pk', name: 'SPC Spaghetti Rich Tomato Can', size: '3 x 220g', brand: 'SPC',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 2 },
       coles:      { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 4 },
       amazon:     null,
     }
@@ -2231,7 +2474,8 @@ const RAW_PRODUCTS = [
     id: 'kelloggs-lcm-coco-bars', name: 'Kelloggs LCMs Coco Pops Snack Bars', size: '6 Pack', brand: 'Kelloggs',
     category: 'pantry', emoji: '🍫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 3 },
       coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 1 },
       amazon:     null,
     }
@@ -2240,7 +2484,8 @@ const RAW_PRODUCTS = [
     id: 'uncle-tobys-muesli-bars-choc', name: 'Uncle Tobys Chewy Bars Choc Chip', size: '6 Pack', brand: 'Uncle Tobys',
     category: 'pantry', emoji: '🌾', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 2 },
       amazon:     { regularPrice: 52.80, salePrice: 35.70, phaseOffset: 1, packQty: 12, packLabel: '12 × 6 Pack' },
     }
@@ -2249,7 +2494,8 @@ const RAW_PRODUCTS = [
     id: 'pauls-double-choc-custard', name: 'Pauls Double Choc Custard Tub', size: '1kg', brand: 'Pauls',
     category: 'dairy', emoji: '🍮', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.80, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 4.80, phaseOffset: 1 },
       coles:      { regularPrice: 6.50, salePrice: 4.80, phaseOffset: 3 },
       amazon:     null,
     }
@@ -2258,7 +2504,8 @@ const RAW_PRODUCTS = [
     id: 'kraft-singles-cheese-30pk', name: 'Kraft Singles Cheese Slices', size: '30 Pack', brand: 'Kraft',
     category: 'dairy', emoji: '🧀', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 2 },
       coles:      { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 4 },
       amazon:     null,
     }
@@ -2267,7 +2514,8 @@ const RAW_PRODUCTS = [
     id: 'chicken-thigh-fillets-1kg', name: 'WW Chicken Thigh Fillets Boneless', size: '1kg', brand: 'Woolworths',
     category: 'meat', emoji: '🍗', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 14.50, salePrice: 14.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 14.50, salePrice: 14.50, phaseOffset: 0 },
       coles:      { regularPrice: 14.50, salePrice: 14.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2276,7 +2524,8 @@ const RAW_PRODUCTS = [
     id: 'pork-belly-slices-500g', name: 'WW Pork Belly Slices Fresh', size: '500g', brand: 'Woolworths',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 12.00, salePrice: 12.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 12.00, salePrice: 12.00, phaseOffset: 0 },
       coles:      { regularPrice: 12.00, salePrice: 12.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2285,7 +2534,8 @@ const RAW_PRODUCTS = [
     id: 'mccain-pub-chips-1kg', name: 'McCain Pub Size Frozen Chips', size: '1kg', brand: 'McCain',
     category: 'frozen', emoji: '🍟', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.80, salePrice: 4.20, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.80, salePrice: 4.20, phaseOffset: 1 },
       coles:      { regularPrice: 5.80, salePrice: 4.20, phaseOffset: 3 },
       amazon:     { regularPrice: 4.64, salePrice: 3.57, phaseOffset: 2, packQty: 1, packLabel: '1 × 1kg' },
     }
@@ -2294,7 +2544,8 @@ const RAW_PRODUCTS = [
     id: 'birds-eye-fish-cakes-300g', name: 'Birds Eye Frozen Fish Cakes', size: '300g', brand: 'Birds Eye',
     category: 'frozen', emoji: '🐟', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
       amazon:     { regularPrice: 5.20, salePrice: 3.82, phaseOffset: 1, packQty: 1, packLabel: '1 × 300g' },
     }
@@ -2303,7 +2554,8 @@ const RAW_PRODUCTS = [
     id: 'celery-bunch-each', name: 'Celery Bunch Fresh Premium', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🥬', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 0 },
       coles:      { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2312,7 +2564,8 @@ const RAW_PRODUCTS = [
     id: 'sweet-potatoes-1kg', name: 'Sweet Potatoes Gold Fresh', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍠', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2321,7 +2574,8 @@ const RAW_PRODUCTS = [
     id: 'colgate-toothbrush-3pk', name: 'Colgate Zig Zag Toothbrush Medium', size: '3 Pack', brand: 'Colgate',
     category: 'personal-care', emoji: '🪥', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 8.00, salePrice: 4.00, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 7.36, salePrice: 4.78, phaseOffset: 1 },
+woolworths: { regularPrice: 8.00, salePrice: 4.00, phaseOffset: 1 },
       coles:      { regularPrice: 8.00, salePrice: 4.00, phaseOffset: 3 },
       amazon:     { regularPrice: 6.40, salePrice: 3.40, phaseOffset: 2, packQty: 1, packLabel: '1 × 3 Pack' },
     }
@@ -2330,7 +2584,8 @@ const RAW_PRODUCTS = [
     id: 'sensodyne-toothpaste-110g', name: 'Sensodyne Daily Care Toothpaste', size: '110g', brand: 'Sensodyne',
     category: 'personal-care', emoji: '🪥', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
+woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 2 },
       coles:      { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 4 },
       amazon:     { regularPrice: 6.80, salePrice: 5.10, phaseOffset: 3, packQty: 1, packLabel: '1 × 110g' },
     }
@@ -2339,7 +2594,8 @@ const RAW_PRODUCTS = [
     id: 'dettol-bar-soap-4pk', name: 'Dettol Anti-Bacterial Soap Bars', size: '4 Pack', brand: 'Dettol',
     category: 'personal-care', emoji: '🧼', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
       amazon:     { regularPrice: 5.20, salePrice: 3.82, phaseOffset: 1, packQty: 1, packLabel: '1 × 4 Pack' },
     }
@@ -2348,7 +2604,8 @@ const RAW_PRODUCTS = [
     id: 'fairy-platinum-dishwasher-60pk', name: 'Fairy Platinum Plus Dishwasher Tabs', size: '60 Pack', brand: 'Fairy',
     category: 'household', emoji: '🍽️', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 52.00, salePrice: 26.00, phaseOffset: 3 },
+      chemist_warehouse: { regularPrice: 47.84, salePrice: 31.10, phaseOffset: 1 },
+woolworths: { regularPrice: 52.00, salePrice: 26.00, phaseOffset: 3 },
       coles:      { regularPrice: 52.00, salePrice: 26.00, phaseOffset: 5 },
       amazon:     { regularPrice: 41.60, salePrice: 22.10, phaseOffset: 4, packQty: 1, packLabel: '1 × 60 Pack' },
     }
@@ -2357,7 +2614,8 @@ const RAW_PRODUCTS = [
     id: 'ajax-eco-wipe-multi-purpose', name: 'Ajax Multi Purpose Wipes Lemon', size: '110 Pack', brand: 'Ajax',
     category: 'household', emoji: '🧹', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 10.00, salePrice: 5.00, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 9.20, salePrice: 5.98, phaseOffset: 1 },
+woolworths: { regularPrice: 10.00, salePrice: 5.00, phaseOffset: 1 },
       coles:      { regularPrice: 10.00, salePrice: 5.00, phaseOffset: 3 },
       amazon:     { regularPrice: 8.00, salePrice: 4.25, phaseOffset: 2, packQty: 1, packLabel: '1 × 110 Pack' },
     }
@@ -2366,7 +2624,8 @@ const RAW_PRODUCTS = [
     id: 'duck-toilet-gel-750ml', name: 'Duck Deep Action Toilet Gel Pine', size: '750ml', brand: 'Duck',
     category: 'household', emoji: '🚽', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.80, salePrice: 3.80, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.34, salePrice: 3.47, phaseOffset: 1 },
+woolworths: { regularPrice: 5.80, salePrice: 3.80, phaseOffset: 0 },
       coles:      { regularPrice: 5.80, salePrice: 3.80, phaseOffset: 2 },
       amazon:     { regularPrice: 4.64, salePrice: 3.23, phaseOffset: 1, packQty: 1, packLabel: '1 × 750ml' },
     }
@@ -2375,7 +2634,8 @@ const RAW_PRODUCTS = [
     id: 'harpic-fresh-power-toilet-block', name: 'Harpic Fresh Power Toilet Block', size: '39g', brand: 'Harpic',
     category: 'household', emoji: '🚽', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
+woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 2 },
       coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 4 },
       amazon:     { regularPrice: 4.40, salePrice: 2.98, phaseOffset: 3, packQty: 1, packLabel: '1 × 39g' },
     }
@@ -2384,7 +2644,8 @@ const RAW_PRODUCTS = [
     id: 'supercoat-cat-food-15kg', name: 'Supercoat Dry Cat Food Chicken', size: '1.5kg', brand: 'Supercoat',
     category: 'pet', emoji: '🐱', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 11.00, salePrice: 8.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 11.00, salePrice: 8.50, phaseOffset: 0 },
       coles:      { regularPrice: 11.00, salePrice: 8.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2393,7 +2654,8 @@ const RAW_PRODUCTS = [
     id: 'my-dog-gourmet-beef-100g', name: 'My Dog Gourmet Beef Tray', size: '100g', brand: 'My Dog',
     category: 'pet', emoji: '🐶', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 1 },
       coles:      { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 3 },
       amazon:     null,
     }
@@ -2403,7 +2665,8 @@ const RAW_PRODUCTS = [
     id: 'basmati-rice-premium', name: 'Basmati Rice Premium', size: '2kg', brand: 'SunRice',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.00, salePrice: 5.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 8.00, salePrice: 5.50, phaseOffset: 0 },
       coles:      { regularPrice: 8.00, salePrice: 5.50, phaseOffset: 2 },
       amazon:     { regularPrice: 76.80, salePrice: 56.10, phaseOffset: 1, packQty: 12, packLabel: '12 × 2kg' },
     }
@@ -2412,7 +2675,8 @@ const RAW_PRODUCTS = [
     id: 'jasmine-rice-fragrant', name: 'Jasmine Rice Fragrant', size: '5kg', brand: 'SunRice',
     category: 'pantry', emoji: '🥫', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 18.00, salePrice: 10.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 18.00, salePrice: 10.00, phaseOffset: 0 },
       coles:      { regularPrice: 18.00, salePrice: 10.00, phaseOffset: 2 },
       amazon:     { regularPrice: 172.80, salePrice: 102.00, phaseOffset: 1, packQty: 12, packLabel: '12 × 5kg' },
     }
@@ -2421,7 +2685,8 @@ const RAW_PRODUCTS = [
     id: 'extra-virgin-olive-oil', name: 'Extra Virgin Olive Oil', size: '750ml', brand: 'Cobram Estate',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 2 },
       coles:      { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 0 },
       amazon:     { regularPrice: 153.60, salePrice: 122.40, phaseOffset: 3, packQty: 12, packLabel: '12 × 750ml' },
     }
@@ -2430,7 +2695,8 @@ const RAW_PRODUCTS = [
     id: 'pure-canola-cooking-oil', name: 'Pure Canola Cooking Oil', size: '1L', brand: 'WW',
     category: 'pantry', emoji: '🥫', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 1 },
       coles:      { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 3 },
       amazon:     { regularPrice: 52.80, salePrice: 56.10, phaseOffset: 2, packQty: 12, packLabel: '12 × 1L' },
     }
@@ -2439,7 +2705,8 @@ const RAW_PRODUCTS = [
     id: 'soy-sauce-gluten-free', name: 'Soy Sauce Gluten Free', size: '250ml', brand: 'Kikkoman',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 1 },
       coles:      { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 3 },
       amazon:     { regularPrice: 43.20, salePrice: 35.70, phaseOffset: 2, packQty: 12, packLabel: '12 × 250ml' },
     }
@@ -2448,7 +2715,8 @@ const RAW_PRODUCTS = [
     id: 'tomato-paste-squeeze', name: 'Tomato Paste Squeeze', size: '500g', brand: 'Leggos',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 1 },
       coles:      { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -2457,7 +2725,8 @@ const RAW_PRODUCTS = [
     id: 'canned-sweet-corn-kernels', name: 'Canned Sweet Corn Kernels', size: '420g', brand: 'Edgell',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 2.00, salePrice: 1.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.00, salePrice: 1.50, phaseOffset: 0 },
       coles:      { regularPrice: 2.00, salePrice: 1.50, phaseOffset: 2 },
       amazon:     { regularPrice: 19.20, salePrice: 15.30, phaseOffset: 1, packQty: 12, packLabel: '12 × 420g' },
     }
@@ -2466,7 +2735,8 @@ const RAW_PRODUCTS = [
     id: 'chunky-tuna-in-olive-oil', name: 'Chunky Tuna in Olive Oil', size: '95g', brand: 'John West',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 4 },
       coles:      { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 2 },
       amazon:     { regularPrice: 26.88, salePrice: 18.36, phaseOffset: 1, packQty: 12, packLabel: '12 × 95g' },
     }
@@ -2475,7 +2745,8 @@ const RAW_PRODUCTS = [
     id: 'tuna-tempters-springwater', name: 'Tuna Tempters Springwater', size: '95g', brand: 'Sirena',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 0 },
       coles:      { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 2 },
       amazon:     { regularPrice: 28.80, salePrice: 20.40, phaseOffset: 1, packQty: 12, packLabel: '12 × 95g' },
     }
@@ -2484,7 +2755,8 @@ const RAW_PRODUCTS = [
     id: 'crunchy-peanut-butter', name: 'Crunchy Peanut Butter', size: '375g', brand: 'Bega',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 4 },
       coles:      { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 1 },
       amazon:     { regularPrice: 55.68, salePrice: 40.80, phaseOffset: 0, packQty: 12, packLabel: '12 × 375g' },
     }
@@ -2493,7 +2765,8 @@ const RAW_PRODUCTS = [
     id: 'smooth-peanut-butter-jar', name: 'Smooth Peanut Butter Jar', size: '375g', brand: 'Bega',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 3 },
       coles:      { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
       amazon:     { regularPrice: 55.68, salePrice: 40.80, phaseOffset: 4, packQty: 12, packLabel: '12 × 375g' },
     }
@@ -2502,7 +2775,8 @@ const RAW_PRODUCTS = [
     id: 'strawberry-jam-spread', name: 'Strawberry Jam Spread', size: '480g', brand: 'IXL',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2511,7 +2785,8 @@ const RAW_PRODUCTS = [
     id: 'pure-honey-squeeze-bottle', name: 'Pure Honey Squeeze Bottle', size: '340g', brand: 'Capilano',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 0 },
       coles:      { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 2 },
       amazon:     { regularPrice: 62.40, salePrice: 51.00, phaseOffset: 1, packQty: 12, packLabel: '12 × 340g' },
     }
@@ -2520,7 +2795,8 @@ const RAW_PRODUCTS = [
     id: 'whole-egg-mayonnaise-jar', name: 'Whole Egg Mayonnaise Jar', size: '380g', brand: 'Praise',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 0 },
       coles:      { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 2 },
       amazon:     { regularPrice: 52.80, salePrice: 38.76, phaseOffset: 1, packQty: 12, packLabel: '12 × 380g' },
     }
@@ -2529,7 +2805,8 @@ const RAW_PRODUCTS = [
     id: 'traditional-tomato-pasta-sauce', name: 'Traditional Tomato Pasta Sauce', size: '500g', brand: 'Dolmio',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 3.80, salePrice: 2.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.80, salePrice: 2.50, phaseOffset: 1 },
       coles:      { regularPrice: 3.80, salePrice: 2.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -2538,7 +2815,8 @@ const RAW_PRODUCTS = [
     id: 'spaghetti-pasta-no-5', name: 'Spaghetti Pasta No 5', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 1 },
       coles:      { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 3 },
       amazon:     { regularPrice: 26.88, salePrice: 20.40, phaseOffset: 2, packQty: 12, packLabel: '12 × 500g' },
     }
@@ -2547,7 +2825,8 @@ const RAW_PRODUCTS = [
     id: 'penne-rigate-pasta', name: 'Penne Rigate Pasta', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 4 },
       coles:      { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 1 },
       amazon:     { regularPrice: 26.88, salePrice: 20.40, phaseOffset: 0, packQty: 12, packLabel: '12 × 500g' },
     }
@@ -2556,7 +2835,8 @@ const RAW_PRODUCTS = [
     id: 'canned-chickpeas-drained', name: 'Canned Chickpeas drained', size: '400g', brand: 'Annalisa',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 4 },
       coles:      { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 2 },
       amazon:     { regularPrice: 17.28, salePrice: 13.26, phaseOffset: 1, packQty: 12, packLabel: '12 × 400g' },
     }
@@ -2565,7 +2845,8 @@ const RAW_PRODUCTS = [
     id: 'canned-brown-lentils', name: 'Canned Brown Lentils', size: '400g', brand: 'Annalisa',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 0 },
       coles:      { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 2 },
       amazon:     { regularPrice: 17.28, salePrice: 13.26, phaseOffset: 1, packQty: 12, packLabel: '12 × 400g' },
     }
@@ -2574,7 +2855,8 @@ const RAW_PRODUCTS = [
     id: 'table-salt-fine-iodised', name: 'Table Salt Fine iodised', size: '500g', brand: 'Saxons',
     category: 'pantry', emoji: '🥫', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 2.20, salePrice: 2.20, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.20, salePrice: 2.20, phaseOffset: 4 },
       coles:      { regularPrice: 2.20, salePrice: 2.20, phaseOffset: 6 },
       amazon:     { regularPrice: 21.12, salePrice: 22.44, phaseOffset: 5, packQty: 12, packLabel: '12 × 500g' },
     }
@@ -2583,7 +2865,8 @@ const RAW_PRODUCTS = [
     id: 'black-pepper-grinder', name: 'Black Pepper Grinder', size: '50g', brand: 'MasterFoods',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 1 },
       coles:      { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 3 },
       amazon:     { regularPrice: 43.20, salePrice: 35.70, phaseOffset: 2, packQty: 12, packLabel: '12 × 50g' },
     }
@@ -2592,7 +2875,8 @@ const RAW_PRODUCTS = [
     id: 'dijon-mustard-jar', name: 'Dijon Mustard Jar', size: '200g', brand: 'Maille',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 4 },
       coles:      { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 1 },
       amazon:     { regularPrice: 46.08, salePrice: 38.76, phaseOffset: 0, packQty: 12, packLabel: '12 × 200g' },
     }
@@ -2601,7 +2885,8 @@ const RAW_PRODUCTS = [
     id: 'tomato-ketchup-bottle', name: 'Tomato Ketchup Bottle', size: '500ml', brand: 'Heinz',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 3 },
       coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 1 },
       amazon:     null,
     }
@@ -2610,7 +2895,8 @@ const RAW_PRODUCTS = [
     id: 'barbecue-sauce-squeeze', name: 'Barbecue Sauce Squeeze', size: '500ml', brand: 'MasterFoods',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.20, salePrice: 3.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.20, salePrice: 3.00, phaseOffset: 1 },
       coles:      { regularPrice: 4.20, salePrice: 3.00, phaseOffset: 3 },
       amazon:     { regularPrice: 40.32, salePrice: 30.60, phaseOffset: 2, packQty: 12, packLabel: '12 × 500ml' },
     }
@@ -2619,7 +2905,8 @@ const RAW_PRODUCTS = [
     id: 'sweet-chilli-sauce', name: 'Sweet Chilli Sauce', size: '250ml', brand: 'Fountain',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 3 },
       coles:      { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 1 },
       amazon:     { regularPrice: 33.60, salePrice: 25.50, phaseOffset: 0, packQty: 12, packLabel: '12 × 250ml' },
     }
@@ -2628,7 +2915,8 @@ const RAW_PRODUCTS = [
     id: 'baked-beans-in-tomato-sauce', name: 'Baked Beans in Tomato Sauce', size: '300g', brand: 'Heinz',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.20, salePrice: 1.60, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.20, salePrice: 1.60, phaseOffset: 4 },
       coles:      { regularPrice: 2.20, salePrice: 1.60, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2637,7 +2925,8 @@ const RAW_PRODUCTS = [
     id: 'packham-pears-fresh', name: 'Packham Pears Fresh', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 4.80, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 4.80, phaseOffset: 2 },
       coles:      { regularPrice: 4.80, salePrice: 4.80, phaseOffset: 4 },
       amazon:     null,
     }
@@ -2646,7 +2935,8 @@ const RAW_PRODUCTS = [
     id: 'yellow-peaches-sweet', name: 'Yellow Peaches Sweet', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 0 },
       coles:      { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 2 },
       amazon:     { regularPrice: 5.20, salePrice: 4.25, phaseOffset: 1, packQty: 1, packLabel: '1 × 1kg' },
     }
@@ -2655,7 +2945,8 @@ const RAW_PRODUCTS = [
     id: 'navel-oranges-juicy', name: 'Navel Oranges Juicy', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 1 },
       coles:      { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 3 },
       amazon:     { regularPrice: 3.60, salePrice: 3.82, phaseOffset: 2, packQty: 1, packLabel: '1 × 1kg' },
     }
@@ -2664,7 +2955,8 @@ const RAW_PRODUCTS = [
     id: 'imperial-mandarins-bag', name: 'Imperial Mandarins Bag', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 3 },
       coles:      { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 0 },
       amazon:     { regularPrice: 4.40, salePrice: 3.40, phaseOffset: 4, packQty: 1, packLabel: '1 × 1kg' },
     }
@@ -2673,7 +2965,8 @@ const RAW_PRODUCTS = [
     id: 'lemons-fresh-bunch', name: 'Lemons Fresh Bunch', size: '500g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 3.80, salePrice: 3.80, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.80, salePrice: 3.80, phaseOffset: 2 },
       coles:      { regularPrice: 3.80, salePrice: 3.80, phaseOffset: 4 },
       amazon:     { regularPrice: 3.04, salePrice: 3.23, phaseOffset: 3, packQty: 1, packLabel: '1 × 500g' },
     }
@@ -2682,7 +2975,8 @@ const RAW_PRODUCTS = [
     id: 'limes-fresh-bag', name: 'Limes Fresh Bag', size: '500g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 2 },
       coles:      { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 4 },
       amazon:     { regularPrice: 3.60, salePrice: 3.82, phaseOffset: 3, packQty: 1, packLabel: '1 × 500g' },
     }
@@ -2691,7 +2985,8 @@ const RAW_PRODUCTS = [
     id: 'blueberries-fresh-tub', name: 'Blueberries Fresh Tub', size: '125g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 1 },
       coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 3 },
       amazon:     { regularPrice: 4.40, salePrice: 2.98, phaseOffset: 2, packQty: 1, packLabel: '1 × 125g' },
     }
@@ -2700,7 +2995,8 @@ const RAW_PRODUCTS = [
     id: 'raspberries-fresh-punnet', name: 'Raspberries Fresh Punnet', size: '125g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 1 },
       coles:      { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 3 },
       amazon:     { regularPrice: 4.80, salePrice: 3.40, phaseOffset: 2, packQty: 1, packLabel: '1 × 125g' },
     }
@@ -2709,7 +3005,8 @@ const RAW_PRODUCTS = [
     id: 'fresh-ginger-root', name: 'Fresh Ginger Root', size: '150g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 2 },
       coles:      { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 4 },
       amazon:     { regularPrice: 3.60, salePrice: 3.82, phaseOffset: 3, packQty: 1, packLabel: '1 × 150g' },
     }
@@ -2718,7 +3015,8 @@ const RAW_PRODUCTS = [
     id: 'garlic-cloves-bag', name: 'Garlic Cloves Bag', size: '300g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 2 },
       amazon:     { regularPrice: 2.80, salePrice: 2.98, phaseOffset: 1, packQty: 1, packLabel: '1 × 300g' },
     }
@@ -2727,7 +3025,8 @@ const RAW_PRODUCTS = [
     id: 'butternut-pumpkin-whole', name: 'Butternut Pumpkin Whole', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 0 },
       coles:      { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 2 },
       amazon:     { regularPrice: 3.20, salePrice: 2.55, phaseOffset: 1, packQty: 1, packLabel: '1 × Each' },
     }
@@ -2736,7 +3035,8 @@ const RAW_PRODUCTS = [
     id: 'green-zucchini-fresh', name: 'Green Zucchini Fresh', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 3 },
       coles:      { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 5 },
       amazon:     { regularPrice: 4.40, salePrice: 4.67, phaseOffset: 4, packQty: 1, packLabel: '1 × 1kg' },
     }
@@ -2745,7 +3045,8 @@ const RAW_PRODUCTS = [
     id: 'button-mushrooms-cup', name: 'Button Mushrooms Cup', size: '200g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 0 },
       coles:      { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 2 },
       amazon:     { regularPrice: 3.20, salePrice: 2.55, phaseOffset: 1, packQty: 1, packLabel: '1 × 200g' },
     }
@@ -2754,7 +3055,8 @@ const RAW_PRODUCTS = [
     id: 'fresh-beetroot-bunch', name: 'Fresh Beetroot Bunch', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 2 },
       coles:      { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 4 },
       amazon:     { regularPrice: 2.80, salePrice: 2.98, phaseOffset: 3, packQty: 1, packLabel: '1 × Each' },
     }
@@ -2763,7 +3065,8 @@ const RAW_PRODUCTS = [
     id: 'lebanese-cucumbers', name: 'Lebanese Cucumbers', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 4.80, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 4.80, phaseOffset: 2 },
       coles:      { regularPrice: 4.80, salePrice: 4.80, phaseOffset: 4 },
       amazon:     null,
     }
@@ -2772,7 +3075,8 @@ const RAW_PRODUCTS = [
     id: 'roma-tomatoes-fresh', name: 'Roma Tomatoes Fresh', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 5.80, salePrice: 5.80, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.80, salePrice: 5.80, phaseOffset: 4 },
       coles:      { regularPrice: 5.80, salePrice: 5.80, phaseOffset: 6 },
       amazon:     null,
     }
@@ -2781,7 +3085,8 @@ const RAW_PRODUCTS = [
     id: 'red-onions-loose', name: 'Red Onions Loose', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 2 },
       coles:      { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 4 },
       amazon:     null,
     }
@@ -2790,7 +3095,8 @@ const RAW_PRODUCTS = [
     id: 'rump-steak-grassfed', name: 'Rump Steak Grassfed', size: '500g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 16.00, salePrice: 16.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 16.00, salePrice: 16.00, phaseOffset: 0 },
       coles:      { regularPrice: 16.00, salePrice: 16.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2799,7 +3105,8 @@ const RAW_PRODUCTS = [
     id: 'ribeye-steak-premium', name: 'Ribeye Steak Premium', size: '400g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 3 },
       coles:      { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 5 },
       amazon:     null,
     }
@@ -2808,7 +3115,8 @@ const RAW_PRODUCTS = [
     id: 'free-range-chicken-breast', name: 'Free Range Chicken Breast', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 16.50, salePrice: 16.50, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 16.50, salePrice: 16.50, phaseOffset: 4 },
       coles:      { regularPrice: 16.50, salePrice: 16.50, phaseOffset: 6 },
       amazon:     null,
     }
@@ -2817,7 +3125,8 @@ const RAW_PRODUCTS = [
     id: 'chicken-wings-bulk', name: 'Chicken Wings Bulk', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 6.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 6.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.50, salePrice: 6.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2826,7 +3135,8 @@ const RAW_PRODUCTS = [
     id: 'pork-chops-loin-bone-in', name: 'Pork Chops Loin bone-in', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 15.00, salePrice: 15.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 15.00, salePrice: 15.00, phaseOffset: 3 },
       coles:      { regularPrice: 15.00, salePrice: 15.00, phaseOffset: 5 },
       amazon:     null,
     }
@@ -2835,7 +3145,8 @@ const RAW_PRODUCTS = [
     id: 'lamb-chops-loin', name: 'Lamb Chops Loin', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 24.00, salePrice: 24.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 24.00, salePrice: 24.00, phaseOffset: 0 },
       coles:      { regularPrice: 24.00, salePrice: 24.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2844,7 +3155,8 @@ const RAW_PRODUCTS = [
     id: 'tasmanian-salmon-fillets', name: 'Tasmanian Salmon Fillets', size: '400g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 18.50, salePrice: 18.50, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 18.50, salePrice: 18.50, phaseOffset: 4 },
       coles:      { regularPrice: 18.50, salePrice: 18.50, phaseOffset: 6 },
       amazon:     null,
     }
@@ -2853,7 +3165,8 @@ const RAW_PRODUCTS = [
     id: 'cooked-tiger-prawns-fresh', name: 'Cooked Tiger Prawns Fresh', size: '500g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 2 },
       coles:      { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 4 },
       amazon:     { regularPrice: 17.60, salePrice: 18.70, phaseOffset: 3, packQty: 1, packLabel: '1 × 500g' },
     }
@@ -2862,7 +3175,8 @@ const RAW_PRODUCTS = [
     id: 'smoked-streaky-bacon', name: 'Smoked Streaky Bacon', size: '250g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 4 },
       coles:      { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2871,7 +3185,8 @@ const RAW_PRODUCTS = [
     id: 'beef-mince-premium-5-fat', name: 'Beef Mince Premium 5% Fat', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 19.00, salePrice: 19.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 19.00, salePrice: 19.00, phaseOffset: 2 },
       coles:      { regularPrice: 19.00, salePrice: 19.00, phaseOffset: 4 },
       amazon:     null,
     }
@@ -2880,7 +3195,8 @@ const RAW_PRODUCTS = [
     id: 'pork-beef-sausages-thin', name: 'Pork & Beef Sausages Thin', size: '1.5kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 11.50, salePrice: 11.50, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 11.50, salePrice: 11.50, phaseOffset: 4 },
       coles:      { regularPrice: 11.50, salePrice: 11.50, phaseOffset: 6 },
       amazon:     null,
     }
@@ -2889,7 +3205,8 @@ const RAW_PRODUCTS = [
     id: 'salted-butter-block', name: 'Salted Butter Block', size: '250g', brand: 'Devondale',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 1 },
       coles:      { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 3 },
       amazon:     { regularPrice: 3.84, salePrice: 3.23, phaseOffset: 2, packQty: 1, packLabel: '1 × 250g' },
     }
@@ -2898,7 +3215,8 @@ const RAW_PRODUCTS = [
     id: 'unsalted-butter-block', name: 'Unsalted Butter Block', size: '250g', brand: 'Devondale',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 2 },
       amazon:     { regularPrice: 3.84, salePrice: 3.23, phaseOffset: 1, packQty: 1, packLabel: '1 × 250g' },
     }
@@ -2907,7 +3225,8 @@ const RAW_PRODUCTS = [
     id: 'cheddar-cheese-block-tasty', name: 'Cheddar Cheese Block Tasty', size: '500g', brand: 'Bega',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 7.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.50, salePrice: 7.50, phaseOffset: 0 },
       coles:      { regularPrice: 9.50, salePrice: 7.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2916,7 +3235,8 @@ const RAW_PRODUCTS = [
     id: 'grated-parmesan-cheese', name: 'Grated Parmesan Cheese', size: '125g', brand: 'Perfect Italiano',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 1 },
       coles:      { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 3 },
       amazon:     null,
     }
@@ -2925,7 +3245,8 @@ const RAW_PRODUCTS = [
     id: 'shredded-mozzarella-cheese', name: 'Shredded Mozzarella Cheese', size: '250g', brand: 'Perfect Italiano',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 2 },
       coles:      { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 4 },
       amazon:     null,
     }
@@ -2934,7 +3255,8 @@ const RAW_PRODUCTS = [
     id: 'greek-style-yogurt-natural', name: 'Greek Style Yogurt Natural', size: '1kg', brand: 'Chobani',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 0 },
       coles:      { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2943,7 +3265,8 @@ const RAW_PRODUCTS = [
     id: 'light-sour-cream-tub', name: 'Light Sour Cream Tub', size: '250g', brand: 'Bulli',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.20, salePrice: 2.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.20, salePrice: 2.50, phaseOffset: 1 },
       coles:      { regularPrice: 3.20, salePrice: 2.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -2952,7 +3275,8 @@ const RAW_PRODUCTS = [
     id: 'original-cream-cheese-tub', name: 'Original Cream Cheese Tub', size: '250g', brand: 'Philadelphia',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.30, salePrice: 4.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.30, salePrice: 4.00, phaseOffset: 0 },
       coles:      { regularPrice: 5.30, salePrice: 4.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -2961,7 +3285,8 @@ const RAW_PRODUCTS = [
     id: 'almond-milk-unsweetened', name: 'Almond Milk Unsweetened', size: '1L', brand: 'Sanitarium',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.80, salePrice: 2.80, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.80, salePrice: 2.80, phaseOffset: 3 },
       coles:      { regularPrice: 3.80, salePrice: 2.80, phaseOffset: 1 },
       amazon:     null,
     }
@@ -2970,7 +3295,8 @@ const RAW_PRODUCTS = [
     id: 'soy-milk-original-active', name: 'Soy Milk Original Active', size: '1L', brand: 'Sanitarium',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 2 },
       coles:      { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 4 },
       amazon:     null,
     }
@@ -2979,7 +3305,8 @@ const RAW_PRODUCTS = [
     id: 'sourdough-loaf-fresh', name: 'Sourdough Loaf Fresh', size: 'Each', brand: 'WW',
     category: 'bakery', emoji: '🥖', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 6.50, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 6.50, phaseOffset: 3 },
       coles:      { regularPrice: 6.50, salePrice: 6.50, phaseOffset: 5 },
       amazon:     { regularPrice: 5.20, salePrice: 5.52, phaseOffset: 4, packQty: 1, packLabel: '1 × Each' },
     }
@@ -2988,7 +3315,8 @@ const RAW_PRODUCTS = [
     id: 'wholemeal-sliced-bread', name: 'Wholemeal Sliced Bread', size: '700g', brand: 'Tip Top',
     category: 'bakery', emoji: '🥖', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.20, salePrice: 3.20, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.20, salePrice: 3.20, phaseOffset: 2 },
       coles:      { regularPrice: 4.20, salePrice: 3.20, phaseOffset: 4 },
       amazon:     null,
     }
@@ -2997,7 +3325,8 @@ const RAW_PRODUCTS = [
     id: 'white-sliced-bread-toast', name: 'White Sliced Bread Toast', size: '700g', brand: 'Tip Top',
     category: 'bakery', emoji: '🥖', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.20, salePrice: 3.20, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.20, salePrice: 3.20, phaseOffset: 1 },
       coles:      { regularPrice: 4.20, salePrice: 3.20, phaseOffset: 3 },
       amazon:     null,
     }
@@ -3006,7 +3335,8 @@ const RAW_PRODUCTS = [
     id: 'golden-crumpets-toast-6pk', name: 'Golden Crumpets Toast 6pk', size: '6 Pack', brand: 'Golden',
     category: 'bakery', emoji: '🥖', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 2 },
       coles:      { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
       amazon:     null,
     }
@@ -3015,7 +3345,8 @@ const RAW_PRODUCTS = [
     id: 'english-muffins-original', name: 'English Muffins Original', size: '6 Pack', brand: 'Tip Top',
     category: 'bakery', emoji: '🥖', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.00, salePrice: 3.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.00, salePrice: 3.50, phaseOffset: 2 },
       coles:      { regularPrice: 5.00, salePrice: 3.50, phaseOffset: 4 },
       amazon:     null,
     }
@@ -3024,7 +3355,8 @@ const RAW_PRODUCTS = [
     id: 'soft-tortilla-wraps-large', name: 'Soft Tortilla Wraps Large', size: '8 Pack', brand: 'Mission',
     category: 'bakery', emoji: '🥖', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 1 },
       coles:      { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 3 },
       amazon:     { regularPrice: 4.40, salePrice: 3.40, phaseOffset: 2, packQty: 1, packLabel: '1 × 8 Pack' },
     }
@@ -3033,7 +3365,8 @@ const RAW_PRODUCTS = [
     id: 'frozen-baby-peas-bag', name: 'Frozen Baby Peas Bag', size: '1kg', brand: 'Birds Eye',
     category: 'frozen', emoji: '🍕', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 4.20, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 4.20, phaseOffset: 2 },
       coles:      { regularPrice: 5.50, salePrice: 4.20, phaseOffset: 4 },
       amazon:     { regularPrice: 4.40, salePrice: 3.57, phaseOffset: 3, packQty: 1, packLabel: '1 × 1kg' },
     }
@@ -3042,7 +3375,8 @@ const RAW_PRODUCTS = [
     id: 'frozen-super-sweet-corn', name: 'Frozen Super Sweet Corn', size: '500g', brand: 'Birds Eye',
     category: 'frozen', emoji: '🍕', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.80, salePrice: 2.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.80, salePrice: 2.80, phaseOffset: 0 },
       coles:      { regularPrice: 3.80, salePrice: 2.80, phaseOffset: 2 },
       amazon:     { regularPrice: 3.04, salePrice: 2.38, phaseOffset: 1, packQty: 1, packLabel: '1 × 500g' },
     }
@@ -3051,7 +3385,8 @@ const RAW_PRODUCTS = [
     id: 'classic-vanilla-ice-cream', name: 'Classic Vanilla Ice Cream', size: '2L', brand: 'Streets Blue Ribbon',
     category: 'frozen', emoji: '🍕', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.00, salePrice: 6.50, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.00, salePrice: 6.50, phaseOffset: 4 },
       coles:      { regularPrice: 9.00, salePrice: 6.50, phaseOffset: 1 },
       amazon:     null,
     }
@@ -3060,7 +3395,8 @@ const RAW_PRODUCTS = [
     id: 'deep-pan-hawaiian-pizza', name: 'Deep Pan Hawaiian Pizza', size: '400g', brand: 'McCain',
     category: 'frozen', emoji: '🍕', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 1 },
       coles:      { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 3 },
       amazon:     { regularPrice: 6.00, salePrice: 4.67, phaseOffset: 2, packQty: 1, packLabel: '1 × 400g' },
     }
@@ -3069,7 +3405,8 @@ const RAW_PRODUCTS = [
     id: 'frozen-mixed-berries-bag', name: 'Frozen Mixed Berries Bag', size: '300g', brand: 'Creative Gourmet',
     category: 'frozen', emoji: '🍕', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.80, salePrice: 4.50, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.80, salePrice: 4.50, phaseOffset: 4 },
       coles:      { regularPrice: 5.80, salePrice: 4.50, phaseOffset: 2 },
       amazon:     { regularPrice: 4.64, salePrice: 3.82, phaseOffset: 1, packQty: 1, packLabel: '1 × 300g' },
     }
@@ -3078,7 +3415,8 @@ const RAW_PRODUCTS = [
     id: 'party-meat-pies-12pk', name: 'Party Meat Pies 12pk', size: '12 Pack', brand: 'FourNTwenty',
     category: 'frozen', emoji: '🍕', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 7.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.50, salePrice: 7.00, phaseOffset: 1 },
       coles:      { regularPrice: 9.50, salePrice: 7.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -3087,7 +3425,8 @@ const RAW_PRODUCTS = [
     id: 'party-sausage-rolls-12pk', name: 'Party Sausage Rolls 12pk', size: '12 Pack', brand: 'FourNTwenty',
     category: 'frozen', emoji: '🍕', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 7.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.50, salePrice: 7.00, phaseOffset: 1 },
       coles:      { regularPrice: 9.50, salePrice: 7.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -3096,7 +3435,8 @@ const RAW_PRODUCTS = [
     id: 'laundry-powder-sensitive', name: 'Laundry Powder Sensitive', size: '2kg', brand: 'Omo',
     category: 'household', emoji: '🧼', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 22.00, salePrice: 11.00, phaseOffset: 3 },
+      chemist_warehouse: { regularPrice: 20.24, salePrice: 13.16, phaseOffset: 1 },
+woolworths: { regularPrice: 22.00, salePrice: 11.00, phaseOffset: 3 },
       coles:      { regularPrice: 22.00, salePrice: 11.00, phaseOffset: 5 },
       amazon:     { regularPrice: 17.60, salePrice: 9.35, phaseOffset: 4, packQty: 1, packLabel: '1 × 2kg' },
     }
@@ -3105,7 +3445,8 @@ const RAW_PRODUCTS = [
     id: 'fabric-softener-lavender', name: 'Fabric Softener Lavender', size: '1L', brand: 'Fluffy',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 3 },
+      chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
+woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 3 },
       coles:      { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 0 },
       amazon:     { regularPrice: 6.80, salePrice: 4.67, phaseOffset: 4, packQty: 1, packLabel: '1 × 1L' },
     }
@@ -3114,7 +3455,8 @@ const RAW_PRODUCTS = [
     id: 'dishwashing-liquid-lemon', name: 'Dishwashing Liquid Lemon', size: '400ml', brand: 'Morning Fresh',
     category: 'household', emoji: '🧼', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
+woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 2 },
       coles:      { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 0 },
       amazon:     { regularPrice: 4.40, salePrice: 3.23, phaseOffset: 3, packQty: 1, packLabel: '1 × 400ml' },
     }
@@ -3123,7 +3465,8 @@ const RAW_PRODUCTS = [
     id: 'glass-cleaner-spray', name: 'Glass Cleaner Spray', size: '500ml', brand: 'Windex',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 4 },
+      chemist_warehouse: { regularPrice: 5.34, salePrice: 3.47, phaseOffset: 1 },
+woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 4 },
       coles:      { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 1 },
       amazon:     { regularPrice: 4.64, salePrice: 3.40, phaseOffset: 0, packQty: 1, packLabel: '1 × 500ml' },
     }
@@ -3132,7 +3475,8 @@ const RAW_PRODUCTS = [
     id: 'multi-purpose-spray-citrus', name: 'Multi Purpose Spray Citrus', size: '500ml', brand: 'Dettol',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 3 },
       amazon:     { regularPrice: 5.20, salePrice: 3.82, phaseOffset: 2, packQty: 1, packLabel: '1 × 500ml' },
     }
@@ -3141,7 +3485,8 @@ const RAW_PRODUCTS = [
     id: 'sponge-scrubbers-4pk', name: 'Sponge Scrubbers 4pk', size: '4 Pack', brand: 'Chux',
     category: 'household', emoji: '🧼', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
+woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 2 },
       coles:      { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 0 },
       amazon:     { regularPrice: 3.60, salePrice: 2.98, phaseOffset: 3, packQty: 1, packLabel: '1 × 4 Pack' },
     }
@@ -3150,7 +3495,8 @@ const RAW_PRODUCTS = [
     id: 'medium-garbage-bags-30pk', name: 'Medium Garbage Bags 30pk', size: '30 Pack', brand: 'Glad',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.52, salePrice: 3.59, phaseOffset: 1 },
+woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
       amazon:     { regularPrice: 4.80, salePrice: 3.82, phaseOffset: 1, packQty: 1, packLabel: '1 × 30 Pack' },
     }
@@ -3159,7 +3505,8 @@ const RAW_PRODUCTS = [
     id: 'aluminium-foil-roll', name: 'Aluminium Foil Roll', size: '20m', brand: 'Glad',
     category: 'household', emoji: '🧼', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 4.42, salePrice: 2.87, phaseOffset: 1 },
+woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 1 },
       coles:      { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 3 },
       amazon:     { regularPrice: 3.84, salePrice: 3.23, phaseOffset: 2, packQty: 1, packLabel: '1 × 20m' },
     }
@@ -3168,7 +3515,8 @@ const RAW_PRODUCTS = [
     id: 'cling-wrap-plastic-roll', name: 'Cling Wrap Plastic Roll', size: '30m', brand: 'Glad',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
+woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 2 },
       amazon:     { regularPrice: 3.60, salePrice: 2.98, phaseOffset: 1, packQty: 1, packLabel: '1 × 30m' },
     }
@@ -3177,7 +3525,8 @@ const RAW_PRODUCTS = [
     id: 'refreshing-body-wash-gel', name: 'Refreshing Body Wash Gel', size: '500ml', brand: 'Palmolive',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 4 },
       amazon:     { regularPrice: 5.20, salePrice: 3.82, phaseOffset: 3, packQty: 1, packLabel: '1 × 500ml' },
     }
@@ -3186,7 +3535,8 @@ const RAW_PRODUCTS = [
     id: 'anti-dandruff-shampoo', name: 'Anti Dandruff Shampoo', size: '350ml', brand: 'Head & Shoulders',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 3 },
+      chemist_warehouse: { regularPrice: 8.74, salePrice: 5.68, phaseOffset: 1 },
+woolworths: { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 3 },
       coles:      { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 0 },
       amazon:     null,
     }
@@ -3195,7 +3545,8 @@ const RAW_PRODUCTS = [
     id: 'smooth-care-conditioner', name: 'Smooth Care Conditioner', size: '350ml', brand: 'Pantene',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
+woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 2 },
       coles:      { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 0 },
       amazon:     { regularPrice: 6.80, salePrice: 5.10, phaseOffset: 3, packQty: 1, packLabel: '1 × 350ml' },
     }
@@ -3204,7 +3555,8 @@ const RAW_PRODUCTS = [
     id: 'antibacterial-hand-wash', name: 'Antibacterial Hand Wash', size: '250ml', brand: 'Dettol',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 3.68, salePrice: 2.39, phaseOffset: 1 },
+woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
       coles:      { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 2 },
       amazon:     { regularPrice: 3.20, salePrice: 2.38, phaseOffset: 1, packQty: 1, packLabel: '1 × 250ml' },
     }
@@ -3213,7 +3565,8 @@ const RAW_PRODUCTS = [
     id: 'deodorant-spray-men-sport', name: 'Deodorant Spray Men Sport', size: '250ml', brand: 'Rexona',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
+woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 1 },
       coles:      { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 3 },
       amazon:     { regularPrice: 6.80, salePrice: 5.10, phaseOffset: 2, packQty: 1, packLabel: '1 × 250ml' },
     }
@@ -3222,7 +3575,8 @@ const RAW_PRODUCTS = [
     id: 'roll-on-deodorant-women', name: 'Roll-on Deodorant Women', size: '50ml', brand: 'Nivea',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 4 },
+      chemist_warehouse: { regularPrice: 4.42, salePrice: 2.87, phaseOffset: 1 },
+woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 4 },
       coles:      { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 2 },
       amazon:     { regularPrice: 3.84, salePrice: 2.98, phaseOffset: 1, packQty: 1, packLabel: '1 × 50ml' },
     }
@@ -3231,7 +3585,8 @@ const RAW_PRODUCTS = [
     id: 'mach-3-razor-blades-4pk', name: 'Mach 3 Razor Blades 4pk', size: '4 Pack', brand: 'Gillette',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 18.00, salePrice: 14.00, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 16.56, salePrice: 10.76, phaseOffset: 1 },
+woolworths: { regularPrice: 18.00, salePrice: 14.00, phaseOffset: 2 },
       coles:      { regularPrice: 18.00, salePrice: 14.00, phaseOffset: 4 },
       amazon:     { regularPrice: 14.40, salePrice: 11.90, phaseOffset: 3, packQty: 1, packLabel: '1 × 4 Pack' },
     }
@@ -3240,7 +3595,8 @@ const RAW_PRODUCTS = [
     id: 'ultra-dry-nappies-size-3', name: 'Ultra Dry Nappies Size 3', size: '44 Pack', brand: 'Huggies',
     category: 'baby', emoji: '👶', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 18.50, salePrice: 14.50, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 17.02, salePrice: 11.06, phaseOffset: 1 },
+woolworths: { regularPrice: 18.50, salePrice: 14.50, phaseOffset: 1 },
       coles:      { regularPrice: 18.50, salePrice: 14.50, phaseOffset: 3 },
       amazon:     { regularPrice: 14.80, salePrice: 12.32, phaseOffset: 2, packQty: 1, packLabel: '1 × 44 Pack' },
     }
@@ -3249,7 +3605,8 @@ const RAW_PRODUCTS = [
     id: 'ultra-dry-nappies-size-4', name: 'Ultra Dry Nappies Size 4', size: '40 Pack', brand: 'Huggies',
     category: 'baby', emoji: '👶', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 18.50, salePrice: 14.50, phaseOffset: 3 },
+      chemist_warehouse: { regularPrice: 17.02, salePrice: 11.06, phaseOffset: 1 },
+woolworths: { regularPrice: 18.50, salePrice: 14.50, phaseOffset: 3 },
       coles:      { regularPrice: 18.50, salePrice: 14.50, phaseOffset: 0 },
       amazon:     { regularPrice: 14.80, salePrice: 12.32, phaseOffset: 4, packQty: 1, packLabel: '1 × 40 Pack' },
     }
@@ -3258,7 +3615,8 @@ const RAW_PRODUCTS = [
     id: 'baby-gold-formula-stage-2', name: 'Baby Gold Formula Stage 2', size: '900g', brand: 'Karicare',
     category: 'baby', emoji: '👶', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 24.00, salePrice: 20.00, phaseOffset: 3 },
+      chemist_warehouse: { regularPrice: 22.08, salePrice: 14.35, phaseOffset: 1 },
+woolworths: { regularPrice: 24.00, salePrice: 20.00, phaseOffset: 3 },
       coles:      { regularPrice: 24.00, salePrice: 20.00, phaseOffset: 5 },
       amazon:     { regularPrice: 19.20, salePrice: 17.00, phaseOffset: 4, packQty: 1, packLabel: '1 × 900g' },
     }
@@ -3267,7 +3625,8 @@ const RAW_PRODUCTS = [
     id: 'organic-baby-food-pouch', name: 'Organic Baby Food Pouch', size: '120g', brand: 'Raffertys Garden',
     category: 'baby', emoji: '👶', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 3 },
+      chemist_warehouse: { regularPrice: 2.58, salePrice: 1.68, phaseOffset: 1 },
+woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 3 },
       coles:      { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 1 },
       amazon:     { regularPrice: 2.24, salePrice: 1.70, phaseOffset: 0, packQty: 1, packLabel: '1 × 120g' },
     }
@@ -3276,7 +3635,8 @@ const RAW_PRODUCTS = [
     id: 'tear-free-baby-shampoo', name: 'Tear Free Baby Shampoo', size: '200ml', brand: 'Johnsons',
     category: 'baby', emoji: '👶', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
+woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 1 },
       coles:      { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -3285,7 +3645,8 @@ const RAW_PRODUCTS = [
     id: 'dog-food-beef-can', name: 'Dog Food Beef Can', size: '700g', brand: 'Pedigree',
     category: 'pet', emoji: '🐾', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 2 },
       coles:      { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 0 },
       amazon:     null,
     }
@@ -3294,7 +3655,8 @@ const RAW_PRODUCTS = [
     id: 'cat-treats-chicken-bites', name: 'Cat Treats Chicken Bites', size: '50g', brand: 'Dine',
     category: 'pet', emoji: '🐾', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 1 },
       coles:      { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -3303,7 +3665,8 @@ const RAW_PRODUCTS = [
     id: 'cat-litter-crystals-odour', name: 'Cat Litter Crystals Odour', size: '4kg', brand: 'Catsan',
     category: 'pet', emoji: '🐾', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 18.00, salePrice: 14.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 18.00, salePrice: 14.00, phaseOffset: 1 },
       coles:      { regularPrice: 18.00, salePrice: 14.00, phaseOffset: 3 },
       amazon:     { regularPrice: 14.40, salePrice: 11.90, phaseOffset: 2, packQty: 1, packLabel: '1 × 4kg' },
     }
@@ -3312,7 +3675,8 @@ const RAW_PRODUCTS = [
     id: 'vitamin-c-effervescent', name: 'Vitamin C Effervescent', size: '30 Pack', brand: 'Cenovis',
     category: 'health', emoji: '💊', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 4 },
+      chemist_warehouse: { regularPrice: 10.12, salePrice: 6.58, phaseOffset: 1 },
+woolworths: { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 4 },
       coles:      { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 1 },
       amazon:     { regularPrice: 105.60, salePrice: 76.50, phaseOffset: 0, packQty: 12, packLabel: '12 × 30 Pack' },
     }
@@ -3321,7 +3685,8 @@ const RAW_PRODUCTS = [
     id: 'multivitamins-50plus-60pk', name: 'Multivitamins 50+ 60pk', size: '60 Pack', brand: 'Centrum',
     category: 'health', emoji: '💊', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 24.00, salePrice: 16.00, phaseOffset: 4 },
+      chemist_warehouse: { regularPrice: 22.08, salePrice: 14.35, phaseOffset: 1 },
+woolworths: { regularPrice: 24.00, salePrice: 16.00, phaseOffset: 4 },
       coles:      { regularPrice: 24.00, salePrice: 16.00, phaseOffset: 0 },
       amazon:     { regularPrice: 230.40, salePrice: 163.20, phaseOffset: 5, packQty: 12, packLabel: '12 × 60 Pack' },
     }
@@ -3330,7 +3695,8 @@ const RAW_PRODUCTS = [
     id: 'cough-lozenges-honey-lemon', name: 'Cough Lozenges Honey Lemon', size: '16 Pack', brand: 'Strepsils',
     category: 'health', emoji: '💊', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
+woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 2 },
       coles:      { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 4 },
       amazon:     { regularPrice: 81.60, salePrice: 61.20, phaseOffset: 3, packQty: 12, packLabel: '12 × 16 Pack' },
     }
@@ -3339,7 +3705,8 @@ const RAW_PRODUCTS = [
     id: 'elastic-plastic-bandages', name: 'Elastic Plastic Bandages', size: '25 Pack', brand: 'Band-Aid',
     category: 'health', emoji: '💊', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 4 },
+      chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
+woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 4 },
       coles:      { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 2 },
       amazon:     { regularPrice: 43.20, salePrice: 35.70, phaseOffset: 1, packQty: 12, packLabel: '12 × 25 Pack' },
     }
@@ -3348,7 +3715,8 @@ const RAW_PRODUCTS = [
     id: 'plain-flour-premium', name: 'Plain Flour Premium', size: '2kg', brand: 'White Wings',
     category: 'baking', emoji: '🧁', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 3 },
       coles:      { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
       amazon:     { regularPrice: 3.84, salePrice: 2.98, phaseOffset: 4, packQty: 1, packLabel: '1 × 2kg' },
     }
@@ -3357,7 +3725,8 @@ const RAW_PRODUCTS = [
     id: 'brown-sugar-soft-cane', name: 'Brown Sugar Soft Cane', size: '1kg', brand: 'CSR',
     category: 'baking', emoji: '🧁', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 4 },
       coles:      { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 6 },
       amazon:     { regularPrice: 3.60, salePrice: 3.82, phaseOffset: 5, packQty: 1, packLabel: '1 × 1kg' },
     }
@@ -3366,7 +3735,8 @@ const RAW_PRODUCTS = [
     id: 'icing-sugar-mixture', name: 'Icing Sugar Mixture', size: '500g', brand: 'CSR',
     category: 'baking', emoji: '🧁', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 3.20, salePrice: 3.20, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.20, salePrice: 3.20, phaseOffset: 3 },
       coles:      { regularPrice: 3.20, salePrice: 3.20, phaseOffset: 5 },
       amazon:     { regularPrice: 2.56, salePrice: 2.72, phaseOffset: 4, packQty: 1, packLabel: '1 × 500g' },
     }
@@ -3375,7 +3745,8 @@ const RAW_PRODUCTS = [
     id: 'baking-powder-tin', name: 'Baking Powder Tin', size: '125g', brand: 'McKenzies',
     category: 'baking', emoji: '🧁', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 2 },
       coles:      { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 0 },
       amazon:     { regularPrice: 2.24, salePrice: 1.87, phaseOffset: 3, packQty: 1, packLabel: '1 × 125g' },
     }
@@ -3384,7 +3755,8 @@ const RAW_PRODUCTS = [
     id: 'pure-vanilla-extract', name: 'Pure Vanilla Extract', size: '50ml', brand: 'Queen',
     category: 'baking', emoji: '🧁', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 1 },
       coles:      { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 3 },
       amazon:     { regularPrice: 6.80, salePrice: 5.52, phaseOffset: 2, packQty: 1, packLabel: '1 × 50ml' },
     }
@@ -3393,7 +3765,8 @@ const RAW_PRODUCTS = [
     id: 'dry-yeast-sachets-5pk-val1', name: 'Dry Yeast Sachets 5pk Val1', size: '5 Pack', brand: 'Lowan',
     category: 'baking', emoji: '🧁', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 1 },
       coles:      { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 3 },
       amazon:     { regularPrice: 3.20, salePrice: 2.55, phaseOffset: 2, packQty: 1, packLabel: '1 × 5 Pack' },
     }
@@ -3402,7 +3775,8 @@ const RAW_PRODUCTS = [
     id: 'basmati-rice-premium-val1', name: 'Basmati Rice Premium Val1', size: '2kg', brand: 'SunRice',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.00, salePrice: 5.50, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 8.00, salePrice: 5.50, phaseOffset: 4 },
       coles:      { regularPrice: 8.00, salePrice: 5.50, phaseOffset: 1 },
       amazon:     { regularPrice: 76.80, salePrice: 56.10, phaseOffset: 0, packQty: 12, packLabel: '12 × 2kg' },
     }
@@ -3411,7 +3785,8 @@ const RAW_PRODUCTS = [
     id: 'jasmine-rice-fragrant-val1', name: 'Jasmine Rice Fragrant Val1', size: '5kg', brand: 'SunRice',
     category: 'pantry', emoji: '🥫', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 18.00, salePrice: 10.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 18.00, salePrice: 10.00, phaseOffset: 3 },
       coles:      { regularPrice: 18.00, salePrice: 10.00, phaseOffset: 5 },
       amazon:     { regularPrice: 172.80, salePrice: 102.00, phaseOffset: 4, packQty: 12, packLabel: '12 × 5kg' },
     }
@@ -3420,7 +3795,8 @@ const RAW_PRODUCTS = [
     id: 'extra-virgin-olive-oil-val1', name: 'Extra Virgin Olive Oil Val1', size: '750ml', brand: 'Cobram Estate',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 0 },
       coles:      { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 2 },
       amazon:     { regularPrice: 153.60, salePrice: 122.40, phaseOffset: 1, packQty: 12, packLabel: '12 × 750ml' },
     }
@@ -3429,7 +3805,8 @@ const RAW_PRODUCTS = [
     id: 'pure-canola-cooking-oil-val1', name: 'Pure Canola Cooking Oil Val1', size: '1L', brand: 'WW',
     category: 'pantry', emoji: '🥫', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 0 },
       coles:      { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 2 },
       amazon:     { regularPrice: 52.80, salePrice: 56.10, phaseOffset: 1, packQty: 12, packLabel: '12 × 1L' },
     }
@@ -3438,7 +3815,8 @@ const RAW_PRODUCTS = [
     id: 'soy-sauce-gluten-free-val1', name: 'Soy Sauce Gluten Free Val1', size: '250ml', brand: 'Kikkoman',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 2 },
       amazon:     { regularPrice: 43.20, salePrice: 35.70, phaseOffset: 1, packQty: 12, packLabel: '12 × 250ml' },
     }
@@ -3447,7 +3825,8 @@ const RAW_PRODUCTS = [
     id: 'tomato-paste-squeeze-val1', name: 'Tomato Paste Squeeze Val1', size: '500g', brand: 'Leggos',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 1 },
       coles:      { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -3456,7 +3835,8 @@ const RAW_PRODUCTS = [
     id: 'canned-sweet-corn-kernels-val1', name: 'Canned Sweet Corn Kernels Val1', size: '420g', brand: 'Edgell',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 2.00, salePrice: 1.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.00, salePrice: 1.50, phaseOffset: 1 },
       coles:      { regularPrice: 2.00, salePrice: 1.50, phaseOffset: 3 },
       amazon:     { regularPrice: 19.20, salePrice: 15.30, phaseOffset: 2, packQty: 12, packLabel: '12 × 420g' },
     }
@@ -3465,7 +3845,8 @@ const RAW_PRODUCTS = [
     id: 'chunky-tuna-in-olive-oil-val1', name: 'Chunky Tuna in Olive Oil Val1', size: '95g', brand: 'John West',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 3 },
       coles:      { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 1 },
       amazon:     { regularPrice: 26.88, salePrice: 18.36, phaseOffset: 0, packQty: 12, packLabel: '12 × 95g' },
     }
@@ -3474,7 +3855,8 @@ const RAW_PRODUCTS = [
     id: 'tuna-tempters-springwater-val1', name: 'Tuna Tempters Springwater Val1', size: '95g', brand: 'Sirena',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 4 },
       coles:      { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 1 },
       amazon:     { regularPrice: 28.80, salePrice: 20.40, phaseOffset: 0, packQty: 12, packLabel: '12 × 95g' },
     }
@@ -3483,7 +3865,8 @@ const RAW_PRODUCTS = [
     id: 'crunchy-peanut-butter-val1', name: 'Crunchy Peanut Butter Val1', size: '375g', brand: 'Bega',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
       coles:      { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 2 },
       amazon:     { regularPrice: 55.68, salePrice: 40.80, phaseOffset: 1, packQty: 12, packLabel: '12 × 375g' },
     }
@@ -3492,7 +3875,8 @@ const RAW_PRODUCTS = [
     id: 'smooth-peanut-butter-jar-val1', name: 'Smooth Peanut Butter Jar Val1', size: '375g', brand: 'Bega',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 3 },
       coles:      { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
       amazon:     { regularPrice: 55.68, salePrice: 40.80, phaseOffset: 4, packQty: 12, packLabel: '12 × 375g' },
     }
@@ -3501,7 +3885,8 @@ const RAW_PRODUCTS = [
     id: 'strawberry-jam-spread-val1', name: 'Strawberry Jam Spread Val1', size: '480g', brand: 'IXL',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 3 },
       coles:      { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 1 },
       amazon:     null,
     }
@@ -3510,7 +3895,8 @@ const RAW_PRODUCTS = [
     id: 'pure-honey-squeeze-bottle-val1', name: 'Pure Honey Squeeze Bottle Val1', size: '340g', brand: 'Capilano',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 4 },
       coles:      { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 1 },
       amazon:     { regularPrice: 62.40, salePrice: 51.00, phaseOffset: 0, packQty: 12, packLabel: '12 × 340g' },
     }
@@ -3519,7 +3905,8 @@ const RAW_PRODUCTS = [
     id: 'whole-egg-mayonnaise-jar-val1', name: 'Whole Egg Mayonnaise Jar Val1', size: '380g', brand: 'Praise',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 3 },
       coles:      { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 1 },
       amazon:     { regularPrice: 52.80, salePrice: 38.76, phaseOffset: 0, packQty: 12, packLabel: '12 × 380g' },
     }
@@ -3528,7 +3915,8 @@ const RAW_PRODUCTS = [
     id: 'traditional-tomato-pasta-sauce-val1', name: 'Traditional Tomato Pasta Sauce Val1', size: '500g', brand: 'Dolmio',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 3.80, salePrice: 2.50, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.80, salePrice: 2.50, phaseOffset: 4 },
       coles:      { regularPrice: 3.80, salePrice: 2.50, phaseOffset: 1 },
       amazon:     null,
     }
@@ -3537,7 +3925,8 @@ const RAW_PRODUCTS = [
     id: 'spaghetti-pasta-no-5-val1', name: 'Spaghetti Pasta No 5 Val1', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 2 },
       coles:      { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 4 },
       amazon:     { regularPrice: 26.88, salePrice: 20.40, phaseOffset: 3, packQty: 12, packLabel: '12 × 500g' },
     }
@@ -3546,7 +3935,8 @@ const RAW_PRODUCTS = [
     id: 'penne-rigate-pasta-val1', name: 'Penne Rigate Pasta Val1', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 4 },
       coles:      { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 1 },
       amazon:     { regularPrice: 26.88, salePrice: 20.40, phaseOffset: 0, packQty: 12, packLabel: '12 × 500g' },
     }
@@ -3555,7 +3945,8 @@ const RAW_PRODUCTS = [
     id: 'canned-chickpeas-drained-val1', name: 'Canned Chickpeas drained Val1', size: '400g', brand: 'Annalisa',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 0 },
       coles:      { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 2 },
       amazon:     { regularPrice: 17.28, salePrice: 13.26, phaseOffset: 1, packQty: 12, packLabel: '12 × 400g' },
     }
@@ -3564,7 +3955,8 @@ const RAW_PRODUCTS = [
     id: 'canned-brown-lentils-val1', name: 'Canned Brown Lentils Val1', size: '400g', brand: 'Annalisa',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 0 },
       coles:      { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 2 },
       amazon:     { regularPrice: 17.28, salePrice: 13.26, phaseOffset: 1, packQty: 12, packLabel: '12 × 400g' },
     }
@@ -3573,7 +3965,8 @@ const RAW_PRODUCTS = [
     id: 'table-salt-fine-iodised-val1', name: 'Table Salt Fine iodised Val1', size: '500g', brand: 'Saxons',
     category: 'pantry', emoji: '🥫', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 2.20, salePrice: 2.20, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.20, salePrice: 2.20, phaseOffset: 4 },
       coles:      { regularPrice: 2.20, salePrice: 2.20, phaseOffset: 6 },
       amazon:     { regularPrice: 21.12, salePrice: 22.44, phaseOffset: 5, packQty: 12, packLabel: '12 × 500g' },
     }
@@ -3582,7 +3975,8 @@ const RAW_PRODUCTS = [
     id: 'black-pepper-grinder-val1', name: 'Black Pepper Grinder Val1', size: '50g', brand: 'MasterFoods',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 2 },
       coles:      { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 4 },
       amazon:     { regularPrice: 43.20, salePrice: 35.70, phaseOffset: 3, packQty: 12, packLabel: '12 × 50g' },
     }
@@ -3591,7 +3985,8 @@ const RAW_PRODUCTS = [
     id: 'dijon-mustard-jar-val1', name: 'Dijon Mustard Jar Val1', size: '200g', brand: 'Maille',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 2 },
       coles:      { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 4 },
       amazon:     { regularPrice: 46.08, salePrice: 38.76, phaseOffset: 3, packQty: 12, packLabel: '12 × 200g' },
     }
@@ -3600,7 +3995,8 @@ const RAW_PRODUCTS = [
     id: 'tomato-ketchup-bottle-val1', name: 'Tomato Ketchup Bottle Val1', size: '500ml', brand: 'Heinz',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
       coles:      { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -3609,7 +4005,8 @@ const RAW_PRODUCTS = [
     id: 'barbecue-sauce-squeeze-val1', name: 'Barbecue Sauce Squeeze Val1', size: '500ml', brand: 'MasterFoods',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.20, salePrice: 3.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.20, salePrice: 3.00, phaseOffset: 2 },
       coles:      { regularPrice: 4.20, salePrice: 3.00, phaseOffset: 4 },
       amazon:     { regularPrice: 40.32, salePrice: 30.60, phaseOffset: 3, packQty: 12, packLabel: '12 × 500ml' },
     }
@@ -3618,7 +4015,8 @@ const RAW_PRODUCTS = [
     id: 'sweet-chilli-sauce-val1', name: 'Sweet Chilli Sauce Val1', size: '250ml', brand: 'Fountain',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 3 },
       coles:      { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 1 },
       amazon:     { regularPrice: 33.60, salePrice: 25.50, phaseOffset: 0, packQty: 12, packLabel: '12 × 250ml' },
     }
@@ -3627,7 +4025,8 @@ const RAW_PRODUCTS = [
     id: 'baked-beans-in-tomato-sauce-val1', name: 'Baked Beans in Tomato Sauce Val1', size: '300g', brand: 'Heinz',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.20, salePrice: 1.60, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.20, salePrice: 1.60, phaseOffset: 1 },
       coles:      { regularPrice: 2.20, salePrice: 1.60, phaseOffset: 3 },
       amazon:     null,
     }
@@ -3636,7 +4035,8 @@ const RAW_PRODUCTS = [
     id: 'packham-pears-fresh-val1', name: 'Packham Pears Fresh Val1', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 4.80, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 4.80, phaseOffset: 3 },
       coles:      { regularPrice: 4.80, salePrice: 4.80, phaseOffset: 5 },
       amazon:     null,
     }
@@ -3645,7 +4045,8 @@ const RAW_PRODUCTS = [
     id: 'yellow-peaches-sweet-val1', name: 'Yellow Peaches Sweet Val1', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 0 },
       coles:      { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 2 },
       amazon:     { regularPrice: 5.20, salePrice: 4.25, phaseOffset: 1, packQty: 1, packLabel: '1 × 1kg' },
     }
@@ -3654,7 +4055,8 @@ const RAW_PRODUCTS = [
     id: 'navel-oranges-juicy-val1', name: 'Navel Oranges Juicy Val1', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 2 },
       coles:      { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 4 },
       amazon:     { regularPrice: 3.60, salePrice: 3.82, phaseOffset: 3, packQty: 1, packLabel: '1 × 1kg' },
     }
@@ -3663,7 +4065,8 @@ const RAW_PRODUCTS = [
     id: 'imperial-mandarins-bag-val1', name: 'Imperial Mandarins Bag Val1', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 4 },
       coles:      { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 1 },
       amazon:     { regularPrice: 4.40, salePrice: 3.40, phaseOffset: 0, packQty: 1, packLabel: '1 × 1kg' },
     }
@@ -3672,7 +4075,8 @@ const RAW_PRODUCTS = [
     id: 'lemons-fresh-bunch-val1', name: 'Lemons Fresh Bunch Val1', size: '500g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 3.80, salePrice: 3.80, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.80, salePrice: 3.80, phaseOffset: 1 },
       coles:      { regularPrice: 3.80, salePrice: 3.80, phaseOffset: 3 },
       amazon:     { regularPrice: 3.04, salePrice: 3.23, phaseOffset: 2, packQty: 1, packLabel: '1 × 500g' },
     }
@@ -3681,7 +4085,8 @@ const RAW_PRODUCTS = [
     id: 'limes-fresh-bag-val1', name: 'Limes Fresh Bag Val1', size: '500g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 4 },
       coles:      { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 6 },
       amazon:     { regularPrice: 3.60, salePrice: 3.82, phaseOffset: 5, packQty: 1, packLabel: '1 × 500g' },
     }
@@ -3690,7 +4095,8 @@ const RAW_PRODUCTS = [
     id: 'blueberries-fresh-tub-val1', name: 'Blueberries Fresh Tub Val1', size: '125g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 2 },
       amazon:     { regularPrice: 4.40, salePrice: 2.98, phaseOffset: 1, packQty: 1, packLabel: '1 × 125g' },
     }
@@ -3699,7 +4105,8 @@ const RAW_PRODUCTS = [
     id: 'raspberries-fresh-punnet-val1', name: 'Raspberries Fresh Punnet Val1', size: '125g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 2 },
       coles:      { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 4 },
       amazon:     { regularPrice: 4.80, salePrice: 3.40, phaseOffset: 3, packQty: 1, packLabel: '1 × 125g' },
     }
@@ -3708,7 +4115,8 @@ const RAW_PRODUCTS = [
     id: 'fresh-ginger-root-val1', name: 'Fresh Ginger Root Val1', size: '150g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 4 },
       coles:      { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 6 },
       amazon:     { regularPrice: 3.60, salePrice: 3.82, phaseOffset: 5, packQty: 1, packLabel: '1 × 150g' },
     }
@@ -3717,7 +4125,8 @@ const RAW_PRODUCTS = [
     id: 'garlic-cloves-bag-val1', name: 'Garlic Cloves Bag Val1', size: '300g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 4 },
       coles:      { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 6 },
       amazon:     { regularPrice: 2.80, salePrice: 2.98, phaseOffset: 5, packQty: 1, packLabel: '1 × 300g' },
     }
@@ -3726,7 +4135,8 @@ const RAW_PRODUCTS = [
     id: 'butternut-pumpkin-whole-val1', name: 'Butternut Pumpkin Whole Val1', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 1 },
       coles:      { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 3 },
       amazon:     { regularPrice: 3.20, salePrice: 2.55, phaseOffset: 2, packQty: 1, packLabel: '1 × Each' },
     }
@@ -3735,7 +4145,8 @@ const RAW_PRODUCTS = [
     id: 'green-zucchini-fresh-val1', name: 'Green Zucchini Fresh Val1', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 1 },
       coles:      { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 3 },
       amazon:     { regularPrice: 4.40, salePrice: 4.67, phaseOffset: 2, packQty: 1, packLabel: '1 × 1kg' },
     }
@@ -3744,7 +4155,8 @@ const RAW_PRODUCTS = [
     id: 'button-mushrooms-cup-val1', name: 'Button Mushrooms Cup Val1', size: '200g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 2 },
       coles:      { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 0 },
       amazon:     { regularPrice: 3.20, salePrice: 2.55, phaseOffset: 3, packQty: 1, packLabel: '1 × 200g' },
     }
@@ -3753,7 +4165,8 @@ const RAW_PRODUCTS = [
     id: 'fresh-beetroot-bunch-val1', name: 'Fresh Beetroot Bunch Val1', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 1 },
       coles:      { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 3 },
       amazon:     { regularPrice: 2.80, salePrice: 2.98, phaseOffset: 2, packQty: 1, packLabel: '1 × Each' },
     }
@@ -3762,7 +4175,8 @@ const RAW_PRODUCTS = [
     id: 'lebanese-cucumbers-val1', name: 'Lebanese Cucumbers Val1', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 4.80, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 4.80, phaseOffset: 4 },
       coles:      { regularPrice: 4.80, salePrice: 4.80, phaseOffset: 6 },
       amazon:     null,
     }
@@ -3771,7 +4185,8 @@ const RAW_PRODUCTS = [
     id: 'roma-tomatoes-fresh-val1', name: 'Roma Tomatoes Fresh Val1', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 5.80, salePrice: 5.80, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.80, salePrice: 5.80, phaseOffset: 4 },
       coles:      { regularPrice: 5.80, salePrice: 5.80, phaseOffset: 6 },
       amazon:     null,
     }
@@ -3780,7 +4195,8 @@ const RAW_PRODUCTS = [
     id: 'red-onions-loose-val1', name: 'Red Onions Loose Val1', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -3789,7 +4205,8 @@ const RAW_PRODUCTS = [
     id: 'rump-steak-grassfed-val1', name: 'Rump Steak Grassfed Val1', size: '500g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 16.00, salePrice: 16.00, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 16.00, salePrice: 16.00, phaseOffset: 4 },
       coles:      { regularPrice: 16.00, salePrice: 16.00, phaseOffset: 6 },
       amazon:     null,
     }
@@ -3798,7 +4215,8 @@ const RAW_PRODUCTS = [
     id: 'ribeye-steak-premium-val1', name: 'Ribeye Steak Premium Val1', size: '400g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 2 },
       coles:      { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 4 },
       amazon:     null,
     }
@@ -3807,7 +4225,8 @@ const RAW_PRODUCTS = [
     id: 'free-range-chicken-breast-val1', name: 'Free Range Chicken Breast Val1', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 16.50, salePrice: 16.50, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 16.50, salePrice: 16.50, phaseOffset: 3 },
       coles:      { regularPrice: 16.50, salePrice: 16.50, phaseOffset: 5 },
       amazon:     null,
     }
@@ -3816,7 +4235,8 @@ const RAW_PRODUCTS = [
     id: 'chicken-wings-bulk-val1', name: 'Chicken Wings Bulk Val1', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 6.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 6.50, phaseOffset: 0 },
       coles:      { regularPrice: 6.50, salePrice: 6.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -3825,7 +4245,8 @@ const RAW_PRODUCTS = [
     id: 'pork-chops-loin-bone-in-val1', name: 'Pork Chops Loin bone-in Val1', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 15.00, salePrice: 15.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 15.00, salePrice: 15.00, phaseOffset: 0 },
       coles:      { regularPrice: 15.00, salePrice: 15.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -3834,7 +4255,8 @@ const RAW_PRODUCTS = [
     id: 'lamb-chops-loin-val1', name: 'Lamb Chops Loin Val1', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 24.00, salePrice: 24.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 24.00, salePrice: 24.00, phaseOffset: 2 },
       coles:      { regularPrice: 24.00, salePrice: 24.00, phaseOffset: 4 },
       amazon:     null,
     }
@@ -3843,7 +4265,8 @@ const RAW_PRODUCTS = [
     id: 'tasmanian-salmon-fillets-val1', name: 'Tasmanian Salmon Fillets Val1', size: '400g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 18.50, salePrice: 18.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 18.50, salePrice: 18.50, phaseOffset: 2 },
       coles:      { regularPrice: 18.50, salePrice: 18.50, phaseOffset: 4 },
       amazon:     null,
     }
@@ -3852,7 +4275,8 @@ const RAW_PRODUCTS = [
     id: 'cooked-tiger-prawns-fresh-val1', name: 'Cooked Tiger Prawns Fresh Val1', size: '500g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 1 },
       coles:      { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 3 },
       amazon:     { regularPrice: 17.60, salePrice: 18.70, phaseOffset: 2, packQty: 1, packLabel: '1 × 500g' },
     }
@@ -3861,7 +4285,8 @@ const RAW_PRODUCTS = [
     id: 'smoked-streaky-bacon-val1', name: 'Smoked Streaky Bacon Val1', size: '250g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 0 },
       coles:      { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 2 },
       amazon:     null,
     }
@@ -3870,7 +4295,8 @@ const RAW_PRODUCTS = [
     id: 'beef-mince-premium-5-fat-val1', name: 'Beef Mince Premium 5% Fat Val1', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 19.00, salePrice: 19.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 19.00, salePrice: 19.00, phaseOffset: 1 },
       coles:      { regularPrice: 19.00, salePrice: 19.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -3879,7 +4305,8 @@ const RAW_PRODUCTS = [
     id: 'pork-beef-sausages-thin-val1', name: 'Pork & Beef Sausages Thin Val1', size: '1.5kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 11.50, salePrice: 11.50, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 11.50, salePrice: 11.50, phaseOffset: 4 },
       coles:      { regularPrice: 11.50, salePrice: 11.50, phaseOffset: 6 },
       amazon:     null,
     }
@@ -3888,7 +4315,8 @@ const RAW_PRODUCTS = [
     id: 'salted-butter-block-val1', name: 'Salted Butter Block Val1', size: '250g', brand: 'Devondale',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 2 },
       amazon:     { regularPrice: 3.84, salePrice: 3.23, phaseOffset: 1, packQty: 1, packLabel: '1 × 250g' },
     }
@@ -3897,7 +4325,8 @@ const RAW_PRODUCTS = [
     id: 'unsalted-butter-block-val1', name: 'Unsalted Butter Block Val1', size: '250g', brand: 'Devondale',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 2 },
       amazon:     { regularPrice: 3.84, salePrice: 3.23, phaseOffset: 1, packQty: 1, packLabel: '1 × 250g' },
     }
@@ -3906,7 +4335,8 @@ const RAW_PRODUCTS = [
     id: 'cheddar-cheese-block-tasty-val1', name: 'Cheddar Cheese Block Tasty Val1', size: '500g', brand: 'Bega',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 7.50, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.50, salePrice: 7.50, phaseOffset: 3 },
       coles:      { regularPrice: 9.50, salePrice: 7.50, phaseOffset: 0 },
       amazon:     null,
     }
@@ -3915,7 +4345,8 @@ const RAW_PRODUCTS = [
     id: 'grated-parmesan-cheese-val1', name: 'Grated Parmesan Cheese Val1', size: '125g', brand: 'Perfect Italiano',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -3924,7 +4355,8 @@ const RAW_PRODUCTS = [
     id: 'shredded-mozzarella-cheese-val1', name: 'Shredded Mozzarella Cheese Val1', size: '250g', brand: 'Perfect Italiano',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 4 },
       coles:      { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 1 },
       amazon:     null,
     }
@@ -3933,7 +4365,8 @@ const RAW_PRODUCTS = [
     id: 'greek-style-yogurt-natural-val1', name: 'Greek Style Yogurt Natural Val1', size: '1kg', brand: 'Chobani',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 1 },
       coles:      { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -3942,7 +4375,8 @@ const RAW_PRODUCTS = [
     id: 'light-sour-cream-tub-val1', name: 'Light Sour Cream Tub Val1', size: '250g', brand: 'Bulli',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.20, salePrice: 2.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.20, salePrice: 2.50, phaseOffset: 1 },
       coles:      { regularPrice: 3.20, salePrice: 2.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -3951,7 +4385,8 @@ const RAW_PRODUCTS = [
     id: 'original-cream-cheese-tub-val1', name: 'Original Cream Cheese Tub Val1', size: '250g', brand: 'Philadelphia',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.30, salePrice: 4.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.30, salePrice: 4.00, phaseOffset: 3 },
       coles:      { regularPrice: 5.30, salePrice: 4.00, phaseOffset: 0 },
       amazon:     null,
     }
@@ -3960,7 +4395,8 @@ const RAW_PRODUCTS = [
     id: 'almond-milk-unsweetened-val1', name: 'Almond Milk Unsweetened Val1', size: '1L', brand: 'Sanitarium',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.80, salePrice: 2.80, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.80, salePrice: 2.80, phaseOffset: 4 },
       coles:      { regularPrice: 3.80, salePrice: 2.80, phaseOffset: 2 },
       amazon:     null,
     }
@@ -3969,7 +4405,8 @@ const RAW_PRODUCTS = [
     id: 'soy-milk-original-active-val1', name: 'Soy Milk Original Active Val1', size: '1L', brand: 'Sanitarium',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 1 },
       coles:      { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -3978,7 +4415,8 @@ const RAW_PRODUCTS = [
     id: 'sourdough-loaf-fresh-val1', name: 'Sourdough Loaf Fresh Val1', size: 'Each', brand: 'WW',
     category: 'bakery', emoji: '🥖', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 6.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 6.50, phaseOffset: 2 },
       coles:      { regularPrice: 6.50, salePrice: 6.50, phaseOffset: 4 },
       amazon:     { regularPrice: 5.20, salePrice: 5.52, phaseOffset: 3, packQty: 1, packLabel: '1 × Each' },
     }
@@ -3987,7 +4425,8 @@ const RAW_PRODUCTS = [
     id: 'wholemeal-sliced-bread-val1', name: 'Wholemeal Sliced Bread Val1', size: '700g', brand: 'Tip Top',
     category: 'bakery', emoji: '🥖', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.20, salePrice: 3.20, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.20, salePrice: 3.20, phaseOffset: 4 },
       coles:      { regularPrice: 4.20, salePrice: 3.20, phaseOffset: 1 },
       amazon:     null,
     }
@@ -3996,7 +4435,8 @@ const RAW_PRODUCTS = [
     id: 'white-sliced-bread-toast-val1', name: 'White Sliced Bread Toast Val1', size: '700g', brand: 'Tip Top',
     category: 'bakery', emoji: '🥖', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.20, salePrice: 3.20, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.20, salePrice: 3.20, phaseOffset: 4 },
       coles:      { regularPrice: 4.20, salePrice: 3.20, phaseOffset: 1 },
       amazon:     null,
     }
@@ -4005,7 +4445,8 @@ const RAW_PRODUCTS = [
     id: 'golden-crumpets-toast-6pk-val1', name: 'Golden Crumpets Toast 6pk Val1', size: '6 Pack', brand: 'Golden',
     category: 'bakery', emoji: '🥖', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 3 },
       coles:      { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 1 },
       amazon:     null,
     }
@@ -4014,7 +4455,8 @@ const RAW_PRODUCTS = [
     id: 'english-muffins-original-val1', name: 'English Muffins Original Val1', size: '6 Pack', brand: 'Tip Top',
     category: 'bakery', emoji: '🥖', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.00, salePrice: 3.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.00, salePrice: 3.50, phaseOffset: 1 },
       coles:      { regularPrice: 5.00, salePrice: 3.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -4023,7 +4465,8 @@ const RAW_PRODUCTS = [
     id: 'soft-tortilla-wraps-large-val1', name: 'Soft Tortilla Wraps Large Val1', size: '8 Pack', brand: 'Mission',
     category: 'bakery', emoji: '🥖', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 4 },
       coles:      { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 2 },
       amazon:     { regularPrice: 4.40, salePrice: 3.40, phaseOffset: 1, packQty: 1, packLabel: '1 × 8 Pack' },
     }
@@ -4032,7 +4475,8 @@ const RAW_PRODUCTS = [
     id: 'frozen-baby-peas-bag-val1', name: 'Frozen Baby Peas Bag Val1', size: '1kg', brand: 'Birds Eye',
     category: 'frozen', emoji: '🍕', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 4.20, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 4.20, phaseOffset: 1 },
       coles:      { regularPrice: 5.50, salePrice: 4.20, phaseOffset: 3 },
       amazon:     { regularPrice: 4.40, salePrice: 3.57, phaseOffset: 2, packQty: 1, packLabel: '1 × 1kg' },
     }
@@ -4041,7 +4485,8 @@ const RAW_PRODUCTS = [
     id: 'frozen-super-sweet-corn-val1', name: 'Frozen Super Sweet Corn Val1', size: '500g', brand: 'Birds Eye',
     category: 'frozen', emoji: '🍕', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.80, salePrice: 2.80, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.80, salePrice: 2.80, phaseOffset: 2 },
       coles:      { regularPrice: 3.80, salePrice: 2.80, phaseOffset: 0 },
       amazon:     { regularPrice: 3.04, salePrice: 2.38, phaseOffset: 3, packQty: 1, packLabel: '1 × 500g' },
     }
@@ -4050,7 +4495,8 @@ const RAW_PRODUCTS = [
     id: 'classic-vanilla-ice-cream-val1', name: 'Classic Vanilla Ice Cream Val1', size: '2L', brand: 'Streets Blue Ribbon',
     category: 'frozen', emoji: '🍕', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.00, salePrice: 6.50, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.00, salePrice: 6.50, phaseOffset: 3 },
       coles:      { regularPrice: 9.00, salePrice: 6.50, phaseOffset: 0 },
       amazon:     null,
     }
@@ -4059,7 +4505,8 @@ const RAW_PRODUCTS = [
     id: 'deep-pan-hawaiian-pizza-val1', name: 'Deep Pan Hawaiian Pizza Val1', size: '400g', brand: 'McCain',
     category: 'frozen', emoji: '🍕', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 2 },
       coles:      { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 4 },
       amazon:     { regularPrice: 6.00, salePrice: 4.67, phaseOffset: 3, packQty: 1, packLabel: '1 × 400g' },
     }
@@ -4068,7 +4515,8 @@ const RAW_PRODUCTS = [
     id: 'frozen-mixed-berries-bag-val1', name: 'Frozen Mixed Berries Bag Val1', size: '300g', brand: 'Creative Gourmet',
     category: 'frozen', emoji: '🍕', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.80, salePrice: 4.50, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.80, salePrice: 4.50, phaseOffset: 3 },
       coles:      { regularPrice: 5.80, salePrice: 4.50, phaseOffset: 1 },
       amazon:     { regularPrice: 4.64, salePrice: 3.82, phaseOffset: 0, packQty: 1, packLabel: '1 × 300g' },
     }
@@ -4077,7 +4525,8 @@ const RAW_PRODUCTS = [
     id: 'party-meat-pies-12pk-val1', name: 'Party Meat Pies 12pk Val1', size: '12 Pack', brand: 'FourNTwenty',
     category: 'frozen', emoji: '🍕', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 7.00, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.50, salePrice: 7.00, phaseOffset: 4 },
       coles:      { regularPrice: 9.50, salePrice: 7.00, phaseOffset: 0 },
       amazon:     null,
     }
@@ -4086,7 +4535,8 @@ const RAW_PRODUCTS = [
     id: 'party-sausage-rolls-12pk-val1', name: 'Party Sausage Rolls 12pk Val1', size: '12 Pack', brand: 'FourNTwenty',
     category: 'frozen', emoji: '🍕', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 7.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 9.50, salePrice: 7.00, phaseOffset: 3 },
       coles:      { regularPrice: 9.50, salePrice: 7.00, phaseOffset: 5 },
       amazon:     null,
     }
@@ -4095,7 +4545,8 @@ const RAW_PRODUCTS = [
     id: 'laundry-powder-sensitive-val1', name: 'Laundry Powder Sensitive Val1', size: '2kg', brand: 'Omo',
     category: 'household', emoji: '🧼', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 22.00, salePrice: 11.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 20.24, salePrice: 13.16, phaseOffset: 1 },
+woolworths: { regularPrice: 22.00, salePrice: 11.00, phaseOffset: 0 },
       coles:      { regularPrice: 22.00, salePrice: 11.00, phaseOffset: 2 },
       amazon:     { regularPrice: 17.60, salePrice: 9.35, phaseOffset: 1, packQty: 1, packLabel: '1 × 2kg' },
     }
@@ -4104,7 +4555,8 @@ const RAW_PRODUCTS = [
     id: 'fabric-softener-lavender-val1', name: 'Fabric Softener Lavender Val1', size: '1L', brand: 'Fluffy',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
+woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 1 },
       coles:      { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 3 },
       amazon:     { regularPrice: 6.80, salePrice: 4.67, phaseOffset: 2, packQty: 1, packLabel: '1 × 1L' },
     }
@@ -4113,7 +4565,8 @@ const RAW_PRODUCTS = [
     id: 'dishwashing-liquid-lemon-val1', name: 'Dishwashing Liquid Lemon Val1', size: '400ml', brand: 'Morning Fresh',
     category: 'household', emoji: '🧼', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
+woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 1 },
       coles:      { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 3 },
       amazon:     { regularPrice: 4.40, salePrice: 3.23, phaseOffset: 2, packQty: 1, packLabel: '1 × 400ml' },
     }
@@ -4122,7 +4575,8 @@ const RAW_PRODUCTS = [
     id: 'glass-cleaner-spray-val1', name: 'Glass Cleaner Spray Val1', size: '500ml', brand: 'Windex',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 5.34, salePrice: 3.47, phaseOffset: 1 },
+woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
       coles:      { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 2 },
       amazon:     { regularPrice: 4.64, salePrice: 3.40, phaseOffset: 1, packQty: 1, packLabel: '1 × 500ml' },
     }
@@ -4131,7 +4585,8 @@ const RAW_PRODUCTS = [
     id: 'multi-purpose-spray-citrus-val1', name: 'Multi Purpose Spray Citrus Val1', size: '500ml', brand: 'Dettol',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 4 },
       amazon:     { regularPrice: 5.20, salePrice: 3.82, phaseOffset: 3, packQty: 1, packLabel: '1 × 500ml' },
     }
@@ -4140,7 +4595,8 @@ const RAW_PRODUCTS = [
     id: 'sponge-scrubbers-4pk-val1', name: 'Sponge Scrubbers 4pk Val1', size: '4 Pack', brand: 'Chux',
     category: 'household', emoji: '🧼', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
+woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 2 },
       amazon:     { regularPrice: 3.60, salePrice: 2.98, phaseOffset: 1, packQty: 1, packLabel: '1 × 4 Pack' },
     }
@@ -4149,7 +4605,8 @@ const RAW_PRODUCTS = [
     id: 'medium-garbage-bags-30pk-val1', name: 'Medium Garbage Bags 30pk Val1', size: '30 Pack', brand: 'Glad',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 4 },
+      chemist_warehouse: { regularPrice: 5.52, salePrice: 3.59, phaseOffset: 1 },
+woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 4 },
       coles:      { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 1 },
       amazon:     { regularPrice: 4.80, salePrice: 3.82, phaseOffset: 0, packQty: 1, packLabel: '1 × 30 Pack' },
     }
@@ -4158,7 +4615,8 @@ const RAW_PRODUCTS = [
     id: 'aluminium-foil-roll-val1', name: 'Aluminium Foil Roll Val1', size: '20m', brand: 'Glad',
     category: 'household', emoji: '🧼', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 4 },
+      chemist_warehouse: { regularPrice: 4.42, salePrice: 2.87, phaseOffset: 1 },
+woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 4 },
       coles:      { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 2 },
       amazon:     { regularPrice: 3.84, salePrice: 3.23, phaseOffset: 1, packQty: 1, packLabel: '1 × 20m' },
     }
@@ -4167,7 +4625,8 @@ const RAW_PRODUCTS = [
     id: 'cling-wrap-plastic-roll-val1', name: 'Cling Wrap Plastic Roll Val1', size: '30m', brand: 'Glad',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
+woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 1 },
       coles:      { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 3 },
       amazon:     { regularPrice: 3.60, salePrice: 2.98, phaseOffset: 2, packQty: 1, packLabel: '1 × 30m' },
     }
@@ -4176,7 +4635,8 @@ const RAW_PRODUCTS = [
     id: 'refreshing-body-wash-gel-val1', name: 'Refreshing Body Wash Gel Val1', size: '500ml', brand: 'Palmolive',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 4 },
+      chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
+woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 4 },
       coles:      { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
       amazon:     { regularPrice: 5.20, salePrice: 3.82, phaseOffset: 0, packQty: 1, packLabel: '1 × 500ml' },
     }
@@ -4185,7 +4645,8 @@ const RAW_PRODUCTS = [
     id: 'anti-dandruff-shampoo-val1', name: 'Anti Dandruff Shampoo Val1', size: '350ml', brand: 'Head & Shoulders',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 8.74, salePrice: 5.68, phaseOffset: 1 },
+woolworths: { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 1 },
       coles:      { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -4194,7 +4655,8 @@ const RAW_PRODUCTS = [
     id: 'smooth-care-conditioner-val1', name: 'Smooth Care Conditioner Val1', size: '350ml', brand: 'Pantene',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
+woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 0 },
       coles:      { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 2 },
       amazon:     { regularPrice: 6.80, salePrice: 5.10, phaseOffset: 1, packQty: 1, packLabel: '1 × 350ml' },
     }
@@ -4203,7 +4665,8 @@ const RAW_PRODUCTS = [
     id: 'antibacterial-hand-wash-val1', name: 'Antibacterial Hand Wash Val1', size: '250ml', brand: 'Dettol',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 3.68, salePrice: 2.39, phaseOffset: 1 },
+woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
       coles:      { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 2 },
       amazon:     { regularPrice: 3.20, salePrice: 2.38, phaseOffset: 1, packQty: 1, packLabel: '1 × 250ml' },
     }
@@ -4212,7 +4675,8 @@ const RAW_PRODUCTS = [
     id: 'deodorant-spray-men-sport-val1', name: 'Deodorant Spray Men Sport Val1', size: '250ml', brand: 'Rexona',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
+woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 0 },
       coles:      { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 2 },
       amazon:     { regularPrice: 6.80, salePrice: 5.10, phaseOffset: 1, packQty: 1, packLabel: '1 × 250ml' },
     }
@@ -4221,7 +4685,8 @@ const RAW_PRODUCTS = [
     id: 'roll-on-deodorant-women-val1', name: 'Roll-on Deodorant Women Val1', size: '50ml', brand: 'Nivea',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 4.42, salePrice: 2.87, phaseOffset: 1 },
+woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 1 },
       coles:      { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 3 },
       amazon:     { regularPrice: 3.84, salePrice: 2.98, phaseOffset: 2, packQty: 1, packLabel: '1 × 50ml' },
     }
@@ -4230,7 +4695,8 @@ const RAW_PRODUCTS = [
     id: 'mach-3-razor-blades-4pk-val1', name: 'Mach 3 Razor Blades 4pk Val1', size: '4 Pack', brand: 'Gillette',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 18.00, salePrice: 14.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 16.56, salePrice: 10.76, phaseOffset: 1 },
+woolworths: { regularPrice: 18.00, salePrice: 14.00, phaseOffset: 0 },
       coles:      { regularPrice: 18.00, salePrice: 14.00, phaseOffset: 2 },
       amazon:     { regularPrice: 14.40, salePrice: 11.90, phaseOffset: 1, packQty: 1, packLabel: '1 × 4 Pack' },
     }
@@ -4239,7 +4705,8 @@ const RAW_PRODUCTS = [
     id: 'ultra-dry-nappies-size-3-val1', name: 'Ultra Dry Nappies Size 3 Val1', size: '44 Pack', brand: 'Huggies',
     category: 'baby', emoji: '👶', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 18.50, salePrice: 14.50, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 17.02, salePrice: 11.06, phaseOffset: 1 },
+woolworths: { regularPrice: 18.50, salePrice: 14.50, phaseOffset: 0 },
       coles:      { regularPrice: 18.50, salePrice: 14.50, phaseOffset: 2 },
       amazon:     { regularPrice: 14.80, salePrice: 12.32, phaseOffset: 1, packQty: 1, packLabel: '1 × 44 Pack' },
     }
@@ -4248,7 +4715,8 @@ const RAW_PRODUCTS = [
     id: 'ultra-dry-nappies-size-4-val1', name: 'Ultra Dry Nappies Size 4 Val1', size: '40 Pack', brand: 'Huggies',
     category: 'baby', emoji: '👶', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 18.50, salePrice: 14.50, phaseOffset: 2 },
+      chemist_warehouse: { regularPrice: 17.02, salePrice: 11.06, phaseOffset: 1 },
+woolworths: { regularPrice: 18.50, salePrice: 14.50, phaseOffset: 2 },
       coles:      { regularPrice: 18.50, salePrice: 14.50, phaseOffset: 4 },
       amazon:     { regularPrice: 14.80, salePrice: 12.32, phaseOffset: 3, packQty: 1, packLabel: '1 × 40 Pack' },
     }
@@ -4257,7 +4725,8 @@ const RAW_PRODUCTS = [
     id: 'baby-gold-formula-stage-2-val1', name: 'Baby Gold Formula Stage 2 Val1', size: '900g', brand: 'Karicare',
     category: 'baby', emoji: '👶', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 24.00, salePrice: 20.00, phaseOffset: 0 },
+      chemist_warehouse: { regularPrice: 22.08, salePrice: 14.35, phaseOffset: 1 },
+woolworths: { regularPrice: 24.00, salePrice: 20.00, phaseOffset: 0 },
       coles:      { regularPrice: 24.00, salePrice: 20.00, phaseOffset: 2 },
       amazon:     { regularPrice: 19.20, salePrice: 17.00, phaseOffset: 1, packQty: 1, packLabel: '1 × 900g' },
     }
@@ -4266,7 +4735,8 @@ const RAW_PRODUCTS = [
     id: 'organic-baby-food-pouch-val1', name: 'Organic Baby Food Pouch Val1', size: '120g', brand: 'Raffertys Garden',
     category: 'baby', emoji: '👶', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 4 },
+      chemist_warehouse: { regularPrice: 2.58, salePrice: 1.68, phaseOffset: 1 },
+woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 4 },
       coles:      { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 2 },
       amazon:     { regularPrice: 2.24, salePrice: 1.70, phaseOffset: 1, packQty: 1, packLabel: '1 × 120g' },
     }
@@ -4275,7 +4745,8 @@ const RAW_PRODUCTS = [
     id: 'tear-free-baby-shampoo-val1', name: 'Tear Free Baby Shampoo Val1', size: '200ml', brand: 'Johnsons',
     category: 'baby', emoji: '👶', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
+woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 1 },
       coles:      { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 3 },
       amazon:     null,
     }
@@ -4284,7 +4755,8 @@ const RAW_PRODUCTS = [
     id: 'dog-food-beef-can-val1', name: 'Dog Food Beef Can Val1', size: '700g', brand: 'Pedigree',
     category: 'pet', emoji: '🐾', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 2 },
       coles:      { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 0 },
       amazon:     null,
     }
@@ -4293,7 +4765,8 @@ const RAW_PRODUCTS = [
     id: 'cat-treats-chicken-bites-val1', name: 'Cat Treats Chicken Bites Val1', size: '50g', brand: 'Dine',
     category: 'pet', emoji: '🐾', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 3 },
       coles:      { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 1 },
       amazon:     null,
     }
@@ -4302,7 +4775,8 @@ const RAW_PRODUCTS = [
     id: 'cat-litter-crystals-odour-val1', name: 'Cat Litter Crystals Odour Val1', size: '4kg', brand: 'Catsan',
     category: 'pet', emoji: '🐾', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 18.00, salePrice: 14.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 18.00, salePrice: 14.00, phaseOffset: 1 },
       coles:      { regularPrice: 18.00, salePrice: 14.00, phaseOffset: 3 },
       amazon:     { regularPrice: 14.40, salePrice: 11.90, phaseOffset: 2, packQty: 1, packLabel: '1 × 4kg' },
     }
@@ -4311,7 +4785,8 @@ const RAW_PRODUCTS = [
     id: 'vitamin-c-effervescent-val1', name: 'Vitamin C Effervescent Val1', size: '30 Pack', brand: 'Cenovis',
     category: 'health', emoji: '💊', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 4 },
+      chemist_warehouse: { regularPrice: 10.12, salePrice: 6.58, phaseOffset: 1 },
+woolworths: { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 4 },
       coles:      { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 1 },
       amazon:     { regularPrice: 105.60, salePrice: 76.50, phaseOffset: 0, packQty: 12, packLabel: '12 × 30 Pack' },
     }
@@ -4320,7 +4795,8 @@ const RAW_PRODUCTS = [
     id: 'multivitamins-50plus-60pk-val1', name: 'Multivitamins 50+ 60pk Val1', size: '60 Pack', brand: 'Centrum',
     category: 'health', emoji: '💊', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 24.00, salePrice: 16.00, phaseOffset: 1 },
+      chemist_warehouse: { regularPrice: 22.08, salePrice: 14.35, phaseOffset: 1 },
+woolworths: { regularPrice: 24.00, salePrice: 16.00, phaseOffset: 1 },
       coles:      { regularPrice: 24.00, salePrice: 16.00, phaseOffset: 3 },
       amazon:     { regularPrice: 230.40, salePrice: 163.20, phaseOffset: 2, packQty: 12, packLabel: '12 × 60 Pack' },
     }
@@ -4329,7 +4805,8 @@ const RAW_PRODUCTS = [
     id: 'cough-lozenges-honey-lemon-val1', name: 'Cough Lozenges Honey Lemon Val1', size: '16 Pack', brand: 'Strepsils',
     category: 'health', emoji: '💊', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 4 },
+      chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
+woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 4 },
       coles:      { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 1 },
       amazon:     { regularPrice: 81.60, salePrice: 61.20, phaseOffset: 0, packQty: 12, packLabel: '12 × 16 Pack' },
     }
@@ -4338,7 +4815,8 @@ const RAW_PRODUCTS = [
     id: 'elastic-plastic-bandages-val1', name: 'Elastic Plastic Bandages Val1', size: '25 Pack', brand: 'Band-Aid',
     category: 'health', emoji: '💊', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 4 },
+      chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
+woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 4 },
       coles:      { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 2 },
       amazon:     { regularPrice: 43.20, salePrice: 35.70, phaseOffset: 1, packQty: 12, packLabel: '12 × 25 Pack' },
     }
@@ -4347,7 +4825,8 @@ const RAW_PRODUCTS = [
     id: 'plain-flour-premium-val1', name: 'Plain Flour Premium Val1', size: '2kg', brand: 'White Wings',
     category: 'baking', emoji: '🧁', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 3 },
       coles:      { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
       amazon:     { regularPrice: 3.84, salePrice: 2.98, phaseOffset: 4, packQty: 1, packLabel: '1 × 2kg' },
     }
@@ -4356,7 +4835,8 @@ const RAW_PRODUCTS = [
     id: 'brown-sugar-soft-cane-val1', name: 'Brown Sugar Soft Cane Val1', size: '1kg', brand: 'CSR',
     category: 'baking', emoji: '🧁', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 1 },
       coles:      { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 3 },
       amazon:     { regularPrice: 3.60, salePrice: 3.82, phaseOffset: 2, packQty: 1, packLabel: '1 × 1kg' },
     }
@@ -4365,7 +4845,8 @@ const RAW_PRODUCTS = [
     id: 'icing-sugar-mixture-val1', name: 'Icing Sugar Mixture Val1', size: '500g', brand: 'CSR',
     category: 'baking', emoji: '🧁', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 3.20, salePrice: 3.20, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.20, salePrice: 3.20, phaseOffset: 3 },
       coles:      { regularPrice: 3.20, salePrice: 3.20, phaseOffset: 5 },
       amazon:     { regularPrice: 2.56, salePrice: 2.72, phaseOffset: 4, packQty: 1, packLabel: '1 × 500g' },
     }
@@ -4374,7 +4855,8 @@ const RAW_PRODUCTS = [
     id: 'baking-powder-tin-val1', name: 'Baking Powder Tin Val1', size: '125g', brand: 'McKenzies',
     category: 'baking', emoji: '🧁', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 3 },
       coles:      { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 1 },
       amazon:     { regularPrice: 2.24, salePrice: 1.87, phaseOffset: 0, packQty: 1, packLabel: '1 × 125g' },
     }
@@ -4383,7 +4865,8 @@ const RAW_PRODUCTS = [
     id: 'pure-vanilla-extract-val1', name: 'Pure Vanilla Extract Val1', size: '50ml', brand: 'Queen',
     category: 'baking', emoji: '🧁', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 1 },
       coles:      { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 3 },
       amazon:     { regularPrice: 6.80, salePrice: 5.52, phaseOffset: 2, packQty: 1, packLabel: '1 × 50ml' },
     }
@@ -4392,7 +4875,8 @@ const RAW_PRODUCTS = [
     id: 'dry-yeast-sachets-5pk-val2', name: 'Dry Yeast Sachets 5pk Val2', size: '5 Pack', brand: 'Lowan',
     category: 'baking', emoji: '🧁', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 0 },
       coles:      { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 2 },
       amazon:     { regularPrice: 3.20, salePrice: 2.55, phaseOffset: 1, packQty: 1, packLabel: '1 × 5 Pack' },
     }
@@ -4401,7 +4885,8 @@ const RAW_PRODUCTS = [
     id: 'basmati-rice-premium-val2', name: 'Basmati Rice Premium Val2', size: '2kg', brand: 'SunRice',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 8.00, salePrice: 5.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 8.00, salePrice: 5.50, phaseOffset: 0 },
       coles:      { regularPrice: 8.00, salePrice: 5.50, phaseOffset: 2 },
       amazon:     { regularPrice: 76.80, salePrice: 56.10, phaseOffset: 1, packQty: 12, packLabel: '12 × 2kg' },
     }
@@ -4410,7 +4895,8 @@ const RAW_PRODUCTS = [
     id: 'jasmine-rice-fragrant-val2', name: 'Jasmine Rice Fragrant Val2', size: '5kg', brand: 'SunRice',
     category: 'pantry', emoji: '🥫', cycleWeeks: 6,
     stores: {
-      woolworths: { regularPrice: 18.00, salePrice: 10.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 18.00, salePrice: 10.00, phaseOffset: 3 },
       coles:      { regularPrice: 18.00, salePrice: 10.00, phaseOffset: 5 },
       amazon:     { regularPrice: 172.80, salePrice: 102.00, phaseOffset: 4, packQty: 12, packLabel: '12 × 5kg' },
     }
@@ -4419,7 +4905,8 @@ const RAW_PRODUCTS = [
     id: 'extra-virgin-olive-oil-val2', name: 'Extra Virgin Olive Oil Val2', size: '750ml', brand: 'Cobram Estate',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 2 },
       coles:      { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 0 },
       amazon:     { regularPrice: 153.60, salePrice: 122.40, phaseOffset: 3, packQty: 12, packLabel: '12 × 750ml' },
     }
@@ -4428,7 +4915,8 @@ const RAW_PRODUCTS = [
     id: 'pure-canola-cooking-oil-val2', name: 'Pure Canola Cooking Oil Val2', size: '1L', brand: 'WW',
     category: 'pantry', emoji: '🥫', cycleWeeks: 99,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 3 },
       coles:      { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 5 },
       amazon:     { regularPrice: 52.80, salePrice: 56.10, phaseOffset: 4, packQty: 12, packLabel: '12 × 1L' },
     }
@@ -4437,7 +4925,8 @@ const RAW_PRODUCTS = [
     id: 'soy-sauce-gluten-free-val2', name: 'Soy Sauce Gluten Free Val2', size: '250ml', brand: 'Kikkoman',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 3 },
       coles:      { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 0 },
       amazon:     { regularPrice: 43.20, salePrice: 35.70, phaseOffset: 4, packQty: 12, packLabel: '12 × 250ml' },
     }
@@ -4446,7 +4935,8 @@ const RAW_PRODUCTS = [
     id: 'tomato-paste-squeeze-val2', name: 'Tomato Paste Squeeze Val2', size: '500g', brand: 'Leggos',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 3 },
       coles:      { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 1 },
       amazon:     null,
     }
@@ -4455,7 +4945,8 @@ const RAW_PRODUCTS = [
     id: 'canned-sweet-corn-kernels-val2', name: 'Canned Sweet Corn Kernels Val2', size: '420g', brand: 'Edgell',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 2.00, salePrice: 1.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.00, salePrice: 1.50, phaseOffset: 0 },
       coles:      { regularPrice: 2.00, salePrice: 1.50, phaseOffset: 2 },
       amazon:     { regularPrice: 19.20, salePrice: 15.30, phaseOffset: 1, packQty: 12, packLabel: '12 × 420g' },
     }
@@ -4464,7 +4955,8 @@ const RAW_PRODUCTS = [
     id: 'chunky-tuna-in-olive-oil-val2', name: 'Chunky Tuna in Olive Oil Val2', size: '95g', brand: 'John West',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 0 },
       coles:      { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 2 },
       amazon:     { regularPrice: 26.88, salePrice: 18.36, phaseOffset: 1, packQty: 12, packLabel: '12 × 95g' },
     }
@@ -4473,7 +4965,8 @@ const RAW_PRODUCTS = [
     id: 'tuna-tempters-springwater-val2', name: 'Tuna Tempters Springwater Val2', size: '95g', brand: 'Sirena',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 0 },
       coles:      { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 2 },
       amazon:     { regularPrice: 28.80, salePrice: 20.40, phaseOffset: 1, packQty: 12, packLabel: '12 × 95g' },
     }
@@ -4482,7 +4975,8 @@ const RAW_PRODUCTS = [
     id: 'crunchy-peanut-butter-val2', name: 'Crunchy Peanut Butter Val2', size: '375g', brand: 'Bega',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 3 },
       coles:      { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
       amazon:     { regularPrice: 55.68, salePrice: 40.80, phaseOffset: 4, packQty: 12, packLabel: '12 × 375g' },
     }
@@ -4491,7 +4985,8 @@ const RAW_PRODUCTS = [
     id: 'smooth-peanut-butter-jar-val2', name: 'Smooth Peanut Butter Jar Val2', size: '375g', brand: 'Bega',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 2 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 2 },
       coles:      { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 4 },
       amazon:     { regularPrice: 55.68, salePrice: 40.80, phaseOffset: 3, packQty: 12, packLabel: '12 × 375g' },
     }
@@ -4500,7 +4995,8 @@ const RAW_PRODUCTS = [
     id: 'strawberry-jam-spread-val2', name: 'Strawberry Jam Spread Val2', size: '480g', brand: 'IXL',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
       coles:      { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 2 },
       amazon:     null,
     }
@@ -4509,7 +5005,8 @@ const RAW_PRODUCTS = [
     id: 'pure-honey-squeeze-bottle-val2', name: 'Pure Honey Squeeze Bottle Val2', size: '340g', brand: 'Capilano',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 1 },
       coles:      { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 3 },
       amazon:     { regularPrice: 62.40, salePrice: 51.00, phaseOffset: 2, packQty: 12, packLabel: '12 × 340g' },
     }
@@ -4518,7 +5015,8 @@ const RAW_PRODUCTS = [
     id: 'whole-egg-mayonnaise-jar-val2', name: 'Whole Egg Mayonnaise Jar Val2', size: '380g', brand: 'Praise',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
-      woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 1 },
       coles:      { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 3 },
       amazon:     { regularPrice: 52.80, salePrice: 38.76, phaseOffset: 2, packQty: 12, packLabel: '12 × 380g' },
     }
@@ -4527,7 +5025,8 @@ const RAW_PRODUCTS = [
     id: 'traditional-tomato-pasta-sauce-val2', name: 'Traditional Tomato Pasta Sauce Val2', size: '500g', brand: 'Dolmio',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 3.80, salePrice: 2.50, phaseOffset: 1 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 3.80, salePrice: 2.50, phaseOffset: 1 },
       coles:      { regularPrice: 3.80, salePrice: 2.50, phaseOffset: 3 },
       amazon:     null,
     }
@@ -4536,7 +5035,8 @@ const RAW_PRODUCTS = [
     id: 'spaghetti-pasta-no-5-val2', name: 'Spaghetti Pasta No 5 Val2', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 4 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 4 },
       coles:      { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 1 },
       amazon:     { regularPrice: 26.88, salePrice: 20.40, phaseOffset: 0, packQty: 12, packLabel: '12 × 500g' },
     }
@@ -4545,7 +5045,8 @@ const RAW_PRODUCTS = [
     id: 'penne-rigate-pasta-val2', name: 'Penne Rigate Pasta Val2', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
-      woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 3 },
+      chemist_warehouse: null,
+woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 3 },
       coles:      { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 0 },
       amazon:     { regularPrice: 26.88, salePrice: 20.40, phaseOffset: 4, packQty: 12, packLabel: '12 × 500g' },
     }
@@ -5496,10 +5997,11 @@ function processSupabaseData(dbProducts, dbSnapshots) {
     const rawMatch = rawMap.get(p.id);
     const rawProcessed = rawMatch ? processProducts([rawMatch])[0] : null;
 
-    const stores = { woolworths: null, coles: null, amazon: null };
+    const stores = {};
+    for (const key of Object.keys(STORES)) { stores[key] = null; }
     const pSnapshots = (dbSnapshots || []).filter(s => s.product_id === p.id);
 
-    for (const storeId of ['woolworths', 'coles', 'amazon']) {
+    for (const storeId of Object.keys(STORES)) {
       const sSnaps = pSnapshots
         .filter(s => s.store_id === storeId)
         .sort((a, b) => a.week_start.localeCompare(b.week_start));

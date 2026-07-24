@@ -27,6 +27,8 @@
   --co-bg:       rgba(226,0,26,0.1);
   --am:          #ff9900;
   --am-bg:       rgba(255,153,0,0.1);
+  --cw:          #e30613;
+  --cw-bg:       rgba(227,6,19,0.1);
 
   --sale:        #22c55e;
   --sale-bg:     rgba(34,197,94,0.12);
@@ -145,6 +147,7 @@ img { display: block; max-width: 100%; }
 .ww-pill { background: var(--ww-bg); color: var(--ww); border-color: rgba(0,169,79,0.25); }
 .co-pill { background: var(--co-bg); color: var(--co); border-color: rgba(226,0,26,0.25); }
 .am-pill { background: var(--am-bg); color: var(--am); border-color: rgba(255,153,0,0.25); }
+.cw-pill { background: var(--cw-bg); color: var(--cw); border-color: rgba(227,6,19,0.25); }
 
 /* =====================================================
    HERO
@@ -408,6 +411,7 @@ img { display: block; max-width: 100%; }
 .dot-ww { background: var(--ww); }
 .dot-co { background: var(--co); }
 .dot-am { background: var(--am); }
+.dot-cw { background: var(--cw); }
 
 .store-name-text { font-size: 12px; font-weight: 600; color: var(--text-2); }
 

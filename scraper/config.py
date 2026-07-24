@@ -38,3001 +38,4001 @@ TRACKED_ITEMS = [
         'woolworths_term': 'coca-cola classic',
         'coles_term':      'coca-cola classic',
         'amazon_asin':     'B07D89LCQ7',
-    },
+            'cw_term': 'coca-cola classic',
+    }
+,
     {
         'id': 'pepsi-max-125l',
         'woolworths_term': 'pepsi max cola no sugar',
         'coles_term':      'pepsi max cola no sugar',
         'amazon_asin':     'B07XCWG89V',
-    },
+            'cw_term': 'pepsi max cola no sugar',
+    }
+,
     {
         'id': 'sprite-125l',
         'woolworths_term': 'sprite lemonade',
         'coles_term':      'sprite lemonade',
         'amazon_asin':     'B0B5P1H8D1',
-    },
+            'cw_term': 'sprite lemonade',
+    }
+,
     {
         'id': 'solo-125l',
         'woolworths_term': 'solo original lemon',
         'coles_term':      'solo original lemon',
         'amazon_asin':     'B07D89LCQK',
-    },
+            'cw_term': 'solo original lemon',
+    }
+,
     {
         'id': 'mt-franklin-600ml',
         'woolworths_term': 'mount franklin sparkling',
         'coles_term':      'mount franklin sparkling',
         'amazon_asin':     'B0C57Y4FB7',
-    },
+            'cw_term': 'mount franklin sparkling',
+    }
+,
     {
         'id': 'red-bull-4pk',
         'woolworths_term': 'red bull energy drink',
         'coles_term':      'red bull energy drink',
         'amazon_asin':     'B07GYNDP31',
-    },
+            'cw_term': 'red bull energy drink',
+    }
+,
     {
         'id': 'v-energy-drink-500ml',
         'woolworths_term': 'v green energy can',
         'coles_term':      'v green energy can',
         'amazon_asin':     'B07GYNDP31',
-    },
+            'cw_term': 'v green energy can',
+    }
+,
     {
         'id': 'lipton-ice-tea-peach-15l',
         'woolworths_term': 'lipton ice tea peach',
         'coles_term':      'lipton ice tea peach',
         'amazon_asin':     'B0CNQQ67L3',
-    },
+            'cw_term': 'lipton ice tea peach',
+    }
+,
     {
         'id': 'fanta-orange-125l',
         'woolworths_term': 'fanta orange',
         'coles_term':      'fanta orange',
         'amazon_asin':     'B07GYNDP31',
-    },
+            'cw_term': 'fanta orange',
+    }
+,
     {
         'id': 'schweppes-lemonade-11l',
         'woolworths_term': 'schweppes lemonade',
         'coles_term':      'schweppes lemonade',
         'amazon_asin':     'B07D89LCQK',
-    },
+            'cw_term': 'schweppes lemonade',
+    }
+,
     {
         'id': 'kirks-pasito-10pk',
         'woolworths_term': 'kirks pasito cans',
         'coles_term':      'kirks pasito cans',
         'amazon_asin':     'B0C53F7VFV',
-    },
+            'cw_term': 'kirks pasito cans',
+    }
+,
     {
         'id': 'gatorade-blue-bolt-1l',
         'woolworths_term': 'gatorade blue bolt',
         'coles_term':      'gatorade blue bolt',
         'amazon_asin':     'B07GYNDP31',
-    },
+            'cw_term': 'gatorade blue bolt',
+    }
+,
     {
         'id': 'powerade-berry-ice-600ml',
         'woolworths_term': 'powerade berry ice',
         'coles_term':      'powerade berry ice',
         'amazon_asin':     'B07GYNDP31',
-    },
+            'cw_term': 'powerade berry ice',
+    }
+,
     {
         'id': 'bundaberg-ginger-beer-4pk',
         'woolworths_term': 'bundaberg ginger beer',
         'coles_term':      'bundaberg ginger beer',
         'amazon_asin':     'B085G66MW8',
-    },
+            'cw_term': 'bundaberg ginger beer',
+    }
+,
     {
         'id': 'coke-zero-30pk',
         'woolworths_term': 'coca-cola zero sugar cans',
         'coles_term':      'coca-cola zero sugar cans',
         'amazon_asin':     'B07D89LCQK',
-    },
+            'cw_term': 'coca-cola zero sugar cans',
+    }
+,
     {
         'id': 'skittles-original-160g',
         'woolworths_term': 'skittles original fruit',
         'coles_term':      'skittles original fruit',
         'amazon_asin':     'B08C636GFT',
-    },
+            'cw_term': 'skittles original fruit',
+    }
+,
     {
         'id': 'allens-snakes-220g',
         'woolworths_term': 'allens snakes alive',
         'coles_term':      'allens snakes alive',
         'amazon_asin':     'B0031ZPHFO',
-    },
+            'cw_term': 'allens snakes alive',
+    }
+,
     {
         'id': 'mentos-fruit-roll',
         'woolworths_term': 'mentos fruit roll',
         'coles_term':      'mentos fruit roll',
         'amazon_asin':     'B07XDHCXDS',
-    },
+            'cw_term': 'mentos fruit roll',
+    }
+,
     {
         'id': 'allens-party-mix-190g',
         'woolworths_term': 'allens party mix',
         'coles_term':      'allens party mix',
         'amazon_asin':     'B085BJ3G2C',
-    },
+            'cw_term': 'allens party mix',
+    }
+,
     {
         'id': 'starburst-snakes-170g',
         'woolworths_term': 'starburst sour snakes',
         'coles_term':      'starburst sour snakes',
         'amazon_asin':     'B07LCF9DGG',
-    },
+            'cw_term': 'starburst sour snakes',
+    }
+,
     {
         'id': 'haribo-goldbears-150g',
         'woolworths_term': 'haribo goldbears',
         'coles_term':      'haribo goldbears',
         'amazon_asin':     'B007JTC9JA',
-    },
+            'cw_term': 'haribo goldbears',
+    }
+,
     {
         'id': 'chupa-chups-10pk',
         'woolworths_term': 'chupa chups lollipops',
         'coles_term':      'chupa chups lollipops',
         'amazon_asin':     'B0FBXCJTRG',
-    },
+            'cw_term': 'chupa chups lollipops',
+    }
+,
     {
         'id': 'natural-confectionery-snakes-260g',
         'woolworths_term': 'tncc snakes',
         'coles_term':      'tncc snakes',
         'amazon_asin':     'B0CVH3TX7K',
-    },
+            'cw_term': 'tncc snakes',
+    }
+,
     {
         'id': 'pascall-marshmallows-280g',
         'woolworths_term': 'pascall vanilla marshmallows',
         'coles_term':      'pascall vanilla marshmallows',
         'amazon_asin':     'B01C5GCGKS',
-    },
+            'cw_term': 'pascall vanilla marshmallows',
+    }
+,
     {
         'id': 'red-skins-allen-220g',
         'woolworths_term': 'allens red ripperz',
         'coles_term':      'allens red ripperz',
         'amazon_asin':     'B092SKX8YK',
-    },
+            'cw_term': 'allens red ripperz',
+    }
+,
     {
         'id': 'werthers-original-140g',
         'woolworths_term': 'werthers original butter candies',
         'coles_term':      'werthers original butter candies',
         'amazon_asin':     'B003R7K4XG',
-    },
+            'cw_term': 'werthers original butter candies',
+    }
+,
     {
         'id': 'eclipse-mints-peppermint-40g',
         'woolworths_term': 'eclipse mints peppermint',
         'coles_term':      'eclipse mints peppermint',
         'amazon_asin':     'B07WC48F7T',
-    },
+            'cw_term': 'eclipse mints peppermint',
+    }
+,
     {
         'id': 'mentos-mint-rolls-4pk',
         'woolworths_term': 'mentos mint rolls',
         'coles_term':      'mentos mint rolls',
         'amazon_asin':     'B0FF9H7RGX',
-    },
+            'cw_term': 'mentos mint rolls',
+    }
+,
     {
         'id': 'tictac-freshmint-24g',
         'woolworths_term': 'tic tac fresh mint',
         'coles_term':      'tic tac fresh mint',
         'amazon_asin':     'B0B9BRZCVB',
-    },
+            'cw_term': 'tic tac fresh mint',
+    }
+,
     {
         'id': 'sour-patch-kids-190g',
         'woolworths_term': 'sour patch kids',
         'coles_term':      'sour patch kids',
         'amazon_asin':     'B000JEGQ9G',
-    },
+            'cw_term': 'sour patch kids',
+    }
+,
     {
         'id': 'cadbury-dairy-milk-180g',
         'woolworths_term': 'cadbury dairy milk block',
         'coles_term':      'cadbury dairy milk block',
         'amazon_asin':     'B0B1QV3H5Q',
-    },
+            'cw_term': 'cadbury dairy milk block',
+    }
+,
     {
         'id': 'cadbury-favourites-500g',
         'woolworths_term': 'cadbury favourites box',
         'coles_term':      'cadbury favourites box',
         'amazon_asin':     'B00QDFBWG2',
-    },
+            'cw_term': 'cadbury favourites box',
+    }
+,
     {
         'id': 'kitkat-chunky-4pk',
         'woolworths_term': 'kit kat chunky pack',
         'coles_term':      'kit kat chunky pack',
         'amazon_asin':     'B0FPD5VLBZ',
-    },
+            'cw_term': 'kit kat chunky pack',
+    }
+,
     {
         'id': 'lindt-excellence-85g',
         'woolworths_term': 'lindt excellence 70% dark',
         'coles_term':      'lindt excellence 70% dark',
         'amazon_asin':     'B0DP4YWG86',
-    },
+            'cw_term': 'lindt excellence 70% dark',
+    }
+,
     {
         'id': 'snickers-4pk',
         'woolworths_term': 'snickers multipack',
         'coles_term':      'snickers multipack',
         'amazon_asin':     'B0DHKKSVM6',
-    },
+            'cw_term': 'snickers multipack',
+    }
+,
     {
         'id': 'arnotts-tim-tam-200g',
         'woolworths_term': 'arnotts tim tam original',
         'coles_term':      'arnotts tim tam original',
         'amazon_asin':     'B078RPQ4JJ',
-    },
+            'cw_term': 'arnotts tim tam original',
+    }
+,
     {
         'id': 'maltesers-400g',
         'woolworths_term': 'maltesers chocolate bucket',
         'coles_term':      'maltesers chocolate bucket',
         'amazon_asin':     'B07WY6Q773',
-    },
+            'cw_term': 'maltesers chocolate bucket',
+    }
+,
     {
         'id': 'mms-milk-chocolate-180g',
         'woolworths_term': 'mms milk chocolate bag',
         'coles_term':      'mms milk chocolate bag',
         'amazon_asin':     None,
-    },
+            'cw_term': 'mms milk chocolate bag',
+    }
+,
     {
         'id': 'pods-snickers-160g',
         'woolworths_term': 'pods snickers chocolate',
         'coles_term':      'pods snickers chocolate',
         'amazon_asin':     'B09B7RWZPX',
-    },
+            'cw_term': 'pods snickers chocolate',
+    }
+,
     {
         'id': 'mars-bar-53g',
         'woolworths_term': 'mars bar single',
         'coles_term':      'mars bar single',
         'amazon_asin':     'B0DHKKSVM6',
-    },
+            'cw_term': 'mars bar single',
+    }
+,
     {
         'id': 'cherry-ripe-double-dipped-block',
         'woolworths_term': 'cadbury cherry ripe block',
         'coles_term':      'cadbury cherry ripe block',
         'amazon_asin':     'B0DHKKSVM6',
-    },
+            'cw_term': 'cadbury cherry ripe block',
+    }
+,
     {
         'id': 'toblerone-milk-360g',
         'woolworths_term': 'toblerone milk chocolate',
         'coles_term':      'toblerone milk chocolate',
         'amazon_asin':     None,
-    },
+            'cw_term': 'toblerone milk chocolate',
+    }
+,
     {
         'id': 'ferrero-rocher-16pk',
         'woolworths_term': 'ferrero rocher gift box',
         'coles_term':      'ferrero rocher gift box',
         'amazon_asin':     'B0DKP7TP1Y',
-    },
+            'cw_term': 'ferrero rocher gift box',
+    }
+,
     {
         'id': 'twirl-cadbury-5pk',
         'woolworths_term': 'cadbury twirl multipack',
         'coles_term':      'cadbury twirl multipack',
         'amazon_asin':     'B0DHKKSVM6',
-    },
+            'cw_term': 'cadbury twirl multipack',
+    }
+,
     {
         'id': 'picnic-bar-4pk',
         'woolworths_term': 'cadbury picnic multipack',
         'coles_term':      'cadbury picnic multipack',
         'amazon_asin':     'B0FPD5VLBZ',
-    },
+            'cw_term': 'cadbury picnic multipack',
+    }
+,
     {
         'id': 'pringles-original-134g',
         'woolworths_term': 'pringles original',
         'coles_term':      'pringles original',
         'amazon_asin':     'B07GJVV3YM',
-    },
+            'cw_term': 'pringles original',
+    }
+,
     {
         'id': 'smiths-crinkle-150g',
         'woolworths_term': 'smiths crinkle cut potato',
         'coles_term':      'smiths crinkle cut potato',
         'amazon_asin':     None,
-    },
+            'cw_term': 'smiths crinkle cut potato',
+    }
+,
     {
         'id': 'kettle-sea-salt-150g',
         'woolworths_term': 'kettle sea salt chips',
         'coles_term':      'kettle sea salt chips',
         'amazon_asin':     'B0D52TDBPG',
-    },
+            'cw_term': 'kettle sea salt chips',
+    }
+,
     {
         'id': 'doritos-cheese-170g',
         'woolworths_term': 'doritos cheese supreme',
         'coles_term':      'doritos cheese supreme',
         'amazon_asin':     None,
-    },
+            'cw_term': 'doritos cheese supreme',
+    }
+,
     {
         'id': 'thins-original-175g',
         'woolworths_term': 'thins chips light  tangy',
         'coles_term':      'thins chips light  tangy',
         'amazon_asin':     None,
-    },
+            'cw_term': 'thins chips light  tangy',
+    }
+,
     {
         'id': 'twisties-cheese-90g',
         'woolworths_term': 'twisties cheese',
         'coles_term':      'twisties cheese',
         'amazon_asin':     None,
-    },
+            'cw_term': 'twisties cheese',
+    }
+,
     {
         'id': 'red-rock-deli-sea-salt-165g',
         'woolworths_term': 'red rock deli sea salt',
         'coles_term':      'red rock deli sea salt',
         'amazon_asin':     None,
-    },
+            'cw_term': 'red rock deli sea salt',
+    }
+,
     {
         'id': 'cheezels-cheese-box-125g',
         'woolworths_term': 'cheezels cheese snacks box',
         'coles_term':      'cheezels cheese snacks box',
         'amazon_asin':     None,
-    },
+            'cw_term': 'cheezels cheese snacks box',
+    }
+,
     {
         'id': 'shapes-bbq-arnotts-175g',
         'woolworths_term': 'arnotts shapes bbq',
         'coles_term':      'arnotts shapes bbq',
         'amazon_asin':     None,
-    },
+            'cw_term': 'arnotts shapes bbq',
+    }
+,
     {
         'id': 'grainwaves-sour-cream-170g',
         'woolworths_term': 'grainwaves sour cream  chives',
         'coles_term':      'grainwaves sour cream  chives',
         'amazon_asin':     None,
-    },
+            'cw_term': 'grainwaves sour cream  chives',
+    }
+,
     {
         'id': 'smiths-thinly-cut-175g',
         'woolworths_term': 'smiths thinly cut sour cream',
         'coles_term':      'smiths thinly cut sour cream',
         'amazon_asin':     None,
-    },
+            'cw_term': 'smiths thinly cut sour cream',
+    }
+,
     {
         'id': 'cc-tasty-cheese-175g',
         'woolworths_term': 'ccs tasty cheese corn chips',
         'coles_term':      'ccs tasty cheese corn chips',
         'amazon_asin':     None,
-    },
+            'cw_term': 'ccs tasty cheese corn chips',
+    }
+,
     {
         'id': 'red-rock-honey-soy-165g',
         'woolworths_term': 'red rock deli honey soy chicken',
         'coles_term':      'red rock deli honey soy chicken',
         'amazon_asin':     None,
-    },
+            'cw_term': 'red rock deli honey soy chicken',
+    }
+,
     {
         'id': 'vege-chips-natural-100g',
         'woolworths_term': 'vege chips natural flavor',
         'coles_term':      'vege chips natural flavor',
         'amazon_asin':     None,
-    },
+            'cw_term': 'vege chips natural flavor',
+    }
+,
     {
         'id': 'infuzions-vege-straws-110g',
         'woolworths_term': 'infuzions veggie straws sour cream',
         'coles_term':      'infuzions veggie straws sour cream',
         'amazon_asin':     None,
-    },
+            'cw_term': 'infuzions veggie straws sour cream',
+    }
+,
     {
         'id': 'magnum-classic-4pk',
         'woolworths_term': 'magnum classic chocolate sticks',
         'coles_term':      'magnum classic chocolate sticks',
         'amazon_asin':     None,
-    },
+            'cw_term': 'magnum classic chocolate sticks',
+    }
+,
     {
         'id': 'ben-jerrys-458ml',
         'woolworths_term': 'ben  jerry half baked tub',
         'coles_term':      'ben  jerry half baked tub',
         'amazon_asin':     None,
-    },
+            'cw_term': 'ben  jerry half baked tub',
+    }
+,
     {
         'id': 'streets-blue-ribbon-2l',
         'woolworths_term': 'streets blue ribbon vanilla',
         'coles_term':      'streets blue ribbon vanilla',
         'amazon_asin':     None,
-    },
+            'cw_term': 'streets blue ribbon vanilla',
+    }
+,
     {
         'id': 'connoisseur-vanilla-1l',
         'woolworths_term': 'connoisseur classic vanilla',
         'coles_term':      'connoisseur classic vanilla',
         'amazon_asin':     None,
-    },
+            'cw_term': 'connoisseur classic vanilla',
+    }
+,
     {
         'id': 'bull-creamy-classics-2l',
         'woolworths_term': 'bulla creamy classics vanilla',
         'coles_term':      'bulla creamy classics vanilla',
         'amazon_asin':     None,
-    },
+            'cw_term': 'bulla creamy classics vanilla',
+    }
+,
     {
         'id': 'peters-original-vanilla-4l',
         'woolworths_term': 'peters original vanilla tub',
         'coles_term':      'peters original vanilla tub',
         'amazon_asin':     None,
-    },
+            'cw_term': 'peters original vanilla tub',
+    }
+,
     {
         'id': 'drumstick-vanilla-4pk',
         'woolworths_term': 'peters drumstick vanilla cone',
         'coles_term':      'peters drumstick vanilla cone',
         'amazon_asin':     None,
-    },
+            'cw_term': 'peters drumstick vanilla cone',
+    }
+,
     {
         'id': 'maxibon-original-4pk',
         'woolworths_term': 'peters maxibon vanilla sticks',
         'coles_term':      'peters maxibon vanilla sticks',
         'amazon_asin':     None,
-    },
+            'cw_term': 'peters maxibon vanilla sticks',
+    }
+,
     {
         'id': 'cornetto-classic-4pk',
         'woolworths_term': 'streets cornetto chocolate cone',
         'coles_term':      'streets cornetto chocolate cone',
         'amazon_asin':     None,
-    },
+            'cw_term': 'streets cornetto chocolate cone',
+    }
+,
     {
         'id': 'weis-mango-bar-4pk',
         'woolworths_term': 'weis mango ice cream bars',
         'coles_term':      'weis mango ice cream bars',
         'amazon_asin':     None,
-    },
+            'cw_term': 'weis mango ice cream bars',
+    }
+,
     {
         'id': 'golden-gaytime-4pk',
         'woolworths_term': 'streets golden gaytime sticks',
         'coles_term':      'streets golden gaytime sticks',
         'amazon_asin':     None,
-    },
+            'cw_term': 'streets golden gaytime sticks',
+    }
+,
     {
         'id': 'paddle-pop-rainbow-8pk',
         'woolworths_term': 'streets paddle pop rainbow',
         'coles_term':      'streets paddle pop rainbow',
         'amazon_asin':     None,
-    },
+            'cw_term': 'streets paddle pop rainbow',
+    }
+,
     {
         'id': 'hagan-dazs-macadamia-460ml',
         'woolworths_term': 'haagen-dazs macadamia nut',
         'coles_term':      'haagen-dazs macadamia nut',
         'amazon_asin':     None,
-    },
+            'cw_term': 'haagen-dazs macadamia nut',
+    }
+,
     {
         'id': 'streets-splices-pine-lime-8pk',
         'woolworths_term': 'streets splice pine lime',
         'coles_term':      'streets splice pine lime',
         'amazon_asin':     None,
-    },
+            'cw_term': 'streets splice pine lime',
+    }
+,
     {
         'id': 'monaco-bar-ice-cream-4pk',
         'woolworths_term': 'peters monaco bar ice cream sandwich',
         'coles_term':      'peters monaco bar ice cream sandwich',
         'amazon_asin':     None,
-    },
+            'cw_term': 'peters monaco bar ice cream sandwich',
+    }
+,
     {
         'id': 'woolworths-milk-2l',
         'woolworths_term': 'ww full cream milk',
         'coles_term':      'ww full cream milk',
         'amazon_asin':     None,
-    },
+            'cw_term': 'ww full cream milk',
+    }
+,
     {
         'id': 'tip-top-bread-700g',
         'woolworths_term': 'tip top bread toast slices',
         'coles_term':      'tip top bread toast slices',
         'amazon_asin':     None,
-    },
+            'cw_term': 'tip top bread toast slices',
+    }
+,
     {
         'id': 'western-star-butter-500g',
         'woolworths_term': 'western star butter salted block',
         'coles_term':      'western star butter salted block',
         'amazon_asin':     None,
-    },
+            'cw_term': 'western star butter salted block',
+    }
+,
     {
         'id': 'nescafe-blend-43-150g',
         'woolworths_term': 'nescafe blend 43 instant coffee',
         'coles_term':      'nescafe blend 43 instant coffee',
         'amazon_asin':     None,
-    },
+            'cw_term': 'nescafe blend 43 instant coffee',
+    }
+,
     {
         'id': 'weetbix-1.2kg',
         'woolworths_term': 'sanitarium weet-bix',
         'coles_term':      'sanitarium weet-bix',
         'amazon_asin':     None,
-    },
+            'cw_term': 'sanitarium weet-bix',
+    }
+,
     {
         'id': 'quilton-toilet-paper-18pk',
         'woolworths_term': 'quilton toilet paper 3ply',
         'coles_term':      'quilton toilet paper 3ply',
         'amazon_asin':     None,
-    },
+            'cw_term': 'quilton toilet paper 3ply',
+    }
+,
     {
         'id': 'dairy-farmers-milk-3l',
         'woolworths_term': 'dairy farmers full cream milk',
         'coles_term':      'dairy farmers full cream milk',
         'amazon_asin':     None,
-    },
+            'cw_term': 'dairy farmers full cream milk',
+    }
+,
     {
         'id': 'wonder-white-bread-700g',
         'woolworths_term': 'wonder white sliced bread sandwich',
         'coles_term':      'wonder white sliced bread sandwich',
         'amazon_asin':     None,
-    },
+            'cw_term': 'wonder white sliced bread sandwich',
+    }
+,
     {
         'id': 'devondale-butter-500g',
         'woolworths_term': 'devondale salted butter block',
         'coles_term':      'devondale salted butter block',
         'amazon_asin':     None,
-    },
+            'cw_term': 'devondale salted butter block',
+    }
+,
     {
         'id': 'dilmah-tea-bags-100pk',
         'woolworths_term': 'dilmah premium tea bags',
         'coles_term':      'dilmah premium tea bags',
         'amazon_asin':     None,
-    },
+            'cw_term': 'dilmah premium tea bags',
+    }
+,
     {
         'id': 'lipton-tea-bags-100pk',
         'woolworths_term': 'lipton quality black tea bags',
         'coles_term':      'lipton quality black tea bags',
         'amazon_asin':     None,
-    },
+            'cw_term': 'lipton quality black tea bags',
+    }
+,
     {
         'id': 'moccona-medium-roast-200g',
         'woolworths_term': 'moccona classic medium coffee jar',
         'coles_term':      'moccona classic medium coffee jar',
         'amazon_asin':     None,
-    },
+            'cw_term': 'moccona classic medium coffee jar',
+    }
+,
     {
         'id': 'uncle-tobys-rolled-oats-1kg',
         'woolworths_term': 'uncle tobys rolled oats bag',
         'coles_term':      'uncle tobys rolled oats bag',
         'amazon_asin':     None,
-    },
+            'cw_term': 'uncle tobys rolled oats bag',
+    }
+,
     {
         'id': 'sorbent-toilet-paper-24pk',
         'woolworths_term': 'sorbent toilet paper silky white',
         'coles_term':      'sorbent toilet paper silky white',
         'amazon_asin':     None,
-    },
+            'cw_term': 'sorbent toilet paper silky white',
+    }
+,
     {
         'id': 'coles-milk-2l',
         'woolworths_term': 'coles full cream milk',
         'coles_term':      'coles full cream milk',
         'amazon_asin':     None,
-    },
+            'cw_term': 'coles full cream milk',
+    }
+,
     {
         'id': 'san-remo-pasta-500g',
         'woolworths_term': 'san remo spaghetti pasta',
         'coles_term':      'san remo spaghetti pasta',
         'amazon_asin':     None,
-    },
+            'cw_term': 'san remo spaghetti pasta',
+    }
+,
     {
         'id': 'sunrice-jasmine-rice-5kg',
         'woolworths_term': 'sunrice jasmine rice bag',
         'coles_term':      'sunrice jasmine rice bag',
         'amazon_asin':     None,
-    },
+            'cw_term': 'sunrice jasmine rice bag',
+    }
+,
     {
         'id': 'cobram-estate-olive-oil-750ml',
         'woolworths_term': 'cobram estate ev olive oil',
         'coles_term':      'cobram estate ev olive oil',
         'amazon_asin':     None,
-    },
+            'cw_term': 'cobram estate ev olive oil',
+    }
+,
     {
         'id': 'john-west-tuna-95g',
         'woolworths_term': 'john west tuna tempters olive oil',
         'coles_term':      'john west tuna tempters olive oil',
         'amazon_asin':     None,
-    },
+            'cw_term': 'john west tuna tempters olive oil',
+    }
+,
     {
         'id': 'leggos-tomato-paste-500g',
         'woolworths_term': 'leggos tomato paste tub',
         'coles_term':      'leggos tomato paste tub',
         'amazon_asin':     None,
-    },
+            'cw_term': 'leggos tomato paste tub',
+    }
+,
     {
         'id': 'bega-peanut-butter-375g',
         'woolworths_term': 'bega peanut butter crunchy',
         'coles_term':      'bega peanut butter crunchy',
         'amazon_asin':     None,
-    },
+            'cw_term': 'bega peanut butter crunchy',
+    }
+,
     {
         'id': 'vegemite-220g',
         'woolworths_term': 'vegemite yeast extract jar',
         'coles_term':      'vegemite yeast extract jar',
         'amazon_asin':     None,
-    },
+            'cw_term': 'vegemite yeast extract jar',
+    }
+,
     {
         'id': 'spaghetti-pasta-san-remo-fettuccine',
         'woolworths_term': 'san remo fettuccine pasta no 34',
         'coles_term':      'san remo fettuccine pasta no 34',
         'amazon_asin':     None,
-    },
+            'cw_term': 'san remo fettuccine pasta no 34',
+    }
+,
     {
         'id': 'heinz-baked-beans-3pk',
         'woolworths_term': 'heinz baked beans english recipe',
         'coles_term':      'heinz baked beans english recipe',
         'amazon_asin':     None,
-    },
+            'cw_term': 'heinz baked beans english recipe',
+    }
+,
     {
         'id': 'campbells-tomato-soup-400g',
         'woolworths_term': 'campbells condensed tomato soup',
         'coles_term':      'campbells condensed tomato soup',
         'amazon_asin':     None,
-    },
+            'cw_term': 'campbells condensed tomato soup',
+    }
+,
     {
         'id': 'glen-20-disinfectant-spray-300g',
         'woolworths_term': 'glen 20 disinfectant lavender',
         'coles_term':      'glen 20 disinfectant lavender',
         'amazon_asin':     None,
-    },
+            'cw_term': 'glen 20 disinfectant lavender',
+    }
+,
     {
         'id': 'heinz-tomato-ketchup-500ml',
         'woolworths_term': 'heinz tomato ketchup squeeze',
         'coles_term':      'heinz tomato ketchup squeeze',
         'amazon_asin':     None,
-    },
+            'cw_term': 'heinz tomato ketchup squeeze',
+    }
+,
     {
         'id': 'masterfoods-tomato-sauce-500ml',
         'woolworths_term': 'masterfoods tomato sauce squeeze',
         'coles_term':      'masterfoods tomato sauce squeeze',
         'amazon_asin':     None,
-    },
+            'cw_term': 'masterfoods tomato sauce squeeze',
+    }
+,
     {
         'id': 'spam-luncheon-meat-340g',
         'woolworths_term': 'spam luncheon meat can',
         'coles_term':      'spam luncheon meat can',
         'amazon_asin':     None,
-    },
+            'cw_term': 'spam luncheon meat can',
+    }
+,
     {
         'id': 'spc-sliced-peaches-410g',
         'woolworths_term': 'spc sliced peaches in juice',
         'coles_term':      'spc sliced peaches in juice',
         'amazon_asin':     None,
-    },
+            'cw_term': 'spc sliced peaches in juice',
+    }
+,
     {
         'id': 'cavendish-bananas-1kg',
         'woolworths_term': 'cavendish bananas fresh',
         'coles_term':      'cavendish bananas fresh',
         'amazon_asin':     None,
-    },
+            'cw_term': 'cavendish bananas fresh',
+    }
+,
     {
         'id': 'pink-lady-apples-1kg',
         'woolworths_term': 'pink lady apples pack',
         'coles_term':      'pink lady apples pack',
         'amazon_asin':     None,
-    },
+            'cw_term': 'pink lady apples pack',
+    }
+,
     {
         'id': 'carrots-1kg',
         'woolworths_term': 'carrots orange bag',
         'coles_term':      'carrots orange bag',
         'amazon_asin':     None,
-    },
+            'cw_term': 'carrots orange bag',
+    }
+,
     {
         'id': 'avocado-hass-each',
         'woolworths_term': 'hass avocado single',
         'coles_term':      'hass avocado single',
         'amazon_asin':     None,
-    },
+            'cw_term': 'hass avocado single',
+    }
+,
     {
         'id': 'brown-onions-1kg',
         'woolworths_term': 'brown onions fresh bag',
         'coles_term':      'brown onions fresh bag',
         'amazon_asin':     None,
-    },
+            'cw_term': 'brown onions fresh bag',
+    }
+,
     {
         'id': 'potatoes-brushed-2kg',
         'woolworths_term': 'brushed potatoes bag',
         'coles_term':      'brushed potatoes bag',
         'amazon_asin':     None,
-    },
+            'cw_term': 'brushed potatoes bag',
+    }
+,
     {
         'id': 'broccoli-fresh-each',
         'woolworths_term': 'broccoli premium head',
         'coles_term':      'broccoli premium head',
         'amazon_asin':     None,
-    },
+            'cw_term': 'broccoli premium head',
+    }
+,
     {
         'id': 'red-seedless-grapes-500g',
         'woolworths_term': 'red seedless grapes punnet',
         'coles_term':      'red seedless grapes punnet',
         'amazon_asin':     None,
-    },
+            'cw_term': 'red seedless grapes punnet',
+    }
+,
     {
         'id': 'navel-oranges-1kg',
         'woolworths_term': 'navel oranges bag',
         'coles_term':      'navel oranges bag',
         'amazon_asin':     None,
-    },
+            'cw_term': 'navel oranges bag',
+    }
+,
     {
         'id': 'punnet-strawberries-250g',
         'woolworths_term': 'strawberries sweet punnet',
         'coles_term':      'strawberries sweet punnet',
         'amazon_asin':     None,
-    },
+            'cw_term': 'strawberries sweet punnet',
+    }
+,
     {
         'id': 'cherry-tomatoes-250g',
         'woolworths_term': 'cherry tomatoes punnet',
         'coles_term':      'cherry tomatoes punnet',
         'amazon_asin':     None,
-    },
+            'cw_term': 'cherry tomatoes punnet',
+    }
+,
     {
         'id': 'baby-spinach-leaves-120g',
         'woolworths_term': 'baby spinach leaves tub',
         'coles_term':      'baby spinach leaves tub',
         'amazon_asin':     None,
-    },
+            'cw_term': 'baby spinach leaves tub',
+    }
+,
     {
         'id': 'iceberg-lettuce-each',
         'woolworths_term': 'iceberg lettuce head',
         'coles_term':      'iceberg lettuce head',
         'amazon_asin':     None,
-    },
+            'cw_term': 'iceberg lettuce head',
+    }
+,
     {
         'id': 'continental-cucumber-each',
         'woolworths_term': 'continental cucumber fresh',
         'coles_term':      'continental cucumber fresh',
         'amazon_asin':     None,
-    },
+            'cw_term': 'continental cucumber fresh',
+    }
+,
     {
         'id': 'red-capsicum-each',
         'woolworths_term': 'red capsicum fresh single',
         'coles_term':      'red capsicum fresh single',
         'amazon_asin':     None,
-    },
+            'cw_term': 'red capsicum fresh single',
+    }
+,
     {
         'id': 'bega-cheese-block-500g',
         'woolworths_term': 'bega tasty cheese block',
         'coles_term':      'bega tasty cheese block',
         'amazon_asin':     None,
-    },
+            'cw_term': 'bega tasty cheese block',
+    }
+,
     {
         'id': 'yoplait-vanilla-yogurt-1kg',
         'woolworths_term': 'yoplait vanilla yogurt tub',
         'coles_term':      'yoplait vanilla yogurt tub',
         'amazon_asin':     None,
-    },
+            'cw_term': 'yoplait vanilla yogurt tub',
+    }
+,
     {
         'id': 'chobani-greek-yogurt-170g',
         'woolworths_term': 'chobani greek yogurt blueberry',
         'coles_term':      'chobani greek yogurt blueberry',
         'amazon_asin':     None,
-    },
+            'cw_term': 'chobani greek yogurt blueberry',
+    }
+,
     {
         'id': 'coon-tasty-cheese-block-500g',
         'woolworths_term': 'cheer tasty cheese block',
         'coles_term':      'cheer tasty cheese block',
         'amazon_asin':     None,
-    },
+            'cw_term': 'cheer tasty cheese block',
+    }
+,
     {
         'id': 'philadelphia-cream-cheese-250g',
         'woolworths_term': 'philadelphia cream cheese spread',
         'coles_term':      'philadelphia cream cheese spread',
         'amazon_asin':     None,
-    },
+            'cw_term': 'philadelphia cream cheese spread',
+    }
+,
     {
         'id': 'dairy-farmers-sour-cream-300g',
         'woolworths_term': 'dairy farmers sour cream tub',
         'coles_term':      'dairy farmers sour cream tub',
         'amazon_asin':     None,
-    },
+            'cw_term': 'dairy farmers sour cream tub',
+    }
+,
     {
         'id': 'perfect-italian-mozzarella-250g',
         'woolworths_term': 'perfect italian mozzarella grated',
         'coles_term':      'perfect italian mozzarella grated',
         'amazon_asin':     None,
-    },
+            'cw_term': 'perfect italian mozzarella grated',
+    }
+,
     {
         'id': 'mainland-tasty-cheese-slices-250g',
         'woolworths_term': 'mainland tasty slices 10pk',
         'coles_term':      'mainland tasty slices 10pk',
         'amazon_asin':     None,
-    },
+            'cw_term': 'mainland tasty slices 10pk',
+    }
+,
     {
         'id': 'flora-proactiv-margarine-250g',
         'woolworths_term': 'flora proactiv margarine spread',
         'coles_term':      'flora proactiv margarine spread',
         'amazon_asin':     None,
-    },
+            'cw_term': 'flora proactiv margarine spread',
+    }
+,
     {
         'id': 'giel-thickened-cream-600ml',
         'woolworths_term': 'bulla thickened cream bottle',
         'coles_term':      'bulla thickened cream bottle',
         'amazon_asin':     None,
-    },
+            'cw_term': 'bulla thickened cream bottle',
+    }
+,
     {
         'id': 'danone-activia-yogurt-4pk',
         'woolworths_term': 'danone activia probiotics yogurt',
         'coles_term':      'danone activia probiotics yogurt',
         'amazon_asin':     None,
-    },
+            'cw_term': 'danone activia probiotics yogurt',
+    }
+,
     {
         'id': 'chobani-yogurt-pouch-140g',
         'woolworths_term': 'chobani greek yogurt pouch strawberry',
         'coles_term':      'chobani greek yogurt pouch strawberry',
         'amazon_asin':     None,
-    },
+            'cw_term': 'chobani greek yogurt pouch strawberry',
+    }
+,
     {
         'id': 'yakult-fermented-milk-5pk',
         'woolworths_term': 'yakult fermented milk drink',
         'coles_term':      'yakult fermented milk drink',
         'amazon_asin':     None,
-    },
+            'cw_term': 'yakult fermented milk drink',
+    }
+,
     {
         'id': 'woolworths-feta-cheese-200g',
         'woolworths_term': 'woolworths danish feta cheese',
         'coles_term':      'woolworths danish feta cheese',
         'amazon_asin':     None,
-    },
+            'cw_term': 'woolworths danish feta cheese',
+    }
+,
     {
         'id': 'castello-creamy-blue-cheese-150g',
         'woolworths_term': 'castello double cream blue cheese',
         'coles_term':      'castello double cream blue cheese',
         'amazon_asin':     None,
-    },
+            'cw_term': 'castello double cream blue cheese',
+    }
+,
     {
         'id': 'cold-power-laundry-liquid-2l',
         'woolworths_term': 'cold power laundry liquid sensitive',
         'coles_term':      'cold power laundry liquid sensitive',
         'amazon_asin':     None,
-    },
+            'cw_term': 'cold power laundry liquid sensitive',
+    }
+,
     {
         'id': 'fairy-dishwasher-tablets-44pk',
         'woolworths_term': 'fairy dishwasher tablets plus',
         'coles_term':      'fairy dishwasher tablets plus',
         'amazon_asin':     None,
-    },
+            'cw_term': 'fairy dishwasher tablets plus',
+    }
+,
     {
         'id': 'dettol-liquid-handwash-refill-500ml',
         'woolworths_term': 'dettol handwash liquid refill',
         'coles_term':      'dettol handwash liquid refill',
         'amazon_asin':     None,
-    },
+            'cw_term': 'dettol handwash liquid refill',
+    }
+,
     {
         'id': 'finish-dishwasher-rinse-aid-500ml',
         'woolworths_term': 'finish rinse aid jet dry',
         'coles_term':      'finish rinse aid jet dry',
         'amazon_asin':     'B0866669JX',
-    },
+            'cw_term': 'finish rinse aid jet dry',
+    }
+,
     {
         'id': 'morning-fresh-dish-liquid-400ml',
         'woolworths_term': 'morning fresh lemon dishwashing',
         'coles_term':      'morning fresh lemon dishwashing',
         'amazon_asin':     None,
-    },
+            'cw_term': 'morning fresh lemon dishwashing',
+    }
+,
     {
         'id': 'harpic-active-fresh-toilet-cleaner-700ml',
         'woolworths_term': 'harpic toilet cleaner gel marine',
         'coles_term':      'harpic toilet cleaner gel marine',
         'amazon_asin':     None,
-    },
+            'cw_term': 'harpic toilet cleaner gel marine',
+    }
+,
     {
         'id': 'pine-o-cleen-disinfectant-wipes-120pk',
         'woolworths_term': 'pine o cleen disinfectant wipes lemon',
         'coles_term':      'pine o cleen disinfectant wipes lemon',
         'amazon_asin':     None,
-    },
+            'cw_term': 'pine o cleen disinfectant wipes lemon',
+    }
+,
     {
         'id': 'ajax-spray-wipe-glass-cleaner-500ml',
         'woolworths_term': 'ajax spray n wipe glass cleaner',
         'coles_term':      'ajax spray n wipe glass cleaner',
         'amazon_asin':     None,
-    },
+            'cw_term': 'ajax spray n wipe glass cleaner',
+    }
+,
     {
         'id': 'palmolive-dish-liquid-original-750ml',
         'woolworths_term': 'palmolive ultra dishwashing liquid',
         'coles_term':      'palmolive ultra dishwashing liquid',
         'amazon_asin':     None,
-    },
+            'cw_term': 'palmolive ultra dishwashing liquid',
+    }
+,
     {
         'id': 'earth-choice-dish-liquid-1l',
         'woolworths_term': 'earth choice lemon dishwashing liquid',
         'coles_term':      'earth choice lemon dishwashing liquid',
         'amazon_asin':     None,
-    },
+            'cw_term': 'earth choice lemon dishwashing liquid',
+    }
+,
     {
         'id': 'vanish-napisan-oxipromote-3kg',
         'woolworths_term': 'vanish napisan oxi action powder',
         'coles_term':      'vanish napisan oxi action powder',
         'amazon_asin':     None,
-    },
+            'cw_term': 'vanish napisan oxi action powder',
+    }
+,
     {
         'id': 'dynamo-laundry-liquid-2l',
         'woolworths_term': 'dynamo professional laundry liquid',
         'coles_term':      'dynamo professional laundry liquid',
         'amazon_asin':     None,
-    },
+            'cw_term': 'dynamo professional laundry liquid',
+    }
+,
     {
         'id': 'comfort-fabric-softener-900ml',
         'woolworths_term': 'comfort fabric conditioner pure',
         'coles_term':      'comfort fabric conditioner pure',
         'amazon_asin':     None,
-    },
+            'cw_term': 'comfort fabric conditioner pure',
+    }
+,
     {
         'id': 'duck-toilet-fresh-disc-starter',
         'woolworths_term': 'toilet duck fresh discs lime',
         'coles_term':      'toilet duck fresh discs lime',
         'amazon_asin':     None,
-    },
+            'cw_term': 'toilet duck fresh discs lime',
+    }
+,
     {
         'id': 'chux-superwipes-10pk',
         'woolworths_term': 'chux superwipes roll cloths',
         'coles_term':      'chux superwipes roll cloths',
         'amazon_asin':     None,
-    },
+            'cw_term': 'chux superwipes roll cloths',
+    }
+,
     {
         'id': 'wonder-white-bread-sliced-700g',
         'woolworths_term': 'wonder white sliced toast bread',
         'coles_term':      'wonder white sliced toast bread',
         'amazon_asin':     None,
-    },
+            'cw_term': 'wonder white sliced toast bread',
+    }
+,
     {
         'id': 'helgas-rye-bread-680g',
         'woolworths_term': 'helgas traditional rye slices',
         'coles_term':      'helgas traditional rye slices',
         'amazon_asin':     None,
-    },
+            'cw_term': 'helgas traditional rye slices',
+    }
+,
     {
         'id': 'abbotts-sourdough-bread-loaf',
         'woolworths_term': 'abbotts bakery sourdough loaf',
         'coles_term':      'abbotts bakery sourdough loaf',
         'amazon_asin':     None,
-    },
+            'cw_term': 'abbotts bakery sourdough loaf',
+    }
+,
     {
         'id': 'coles-croissants-3pk',
         'woolworths_term': 'coles bakery croissants',
         'coles_term':      'coles bakery croissants',
         'amazon_asin':     None,
-    },
+            'cw_term': 'coles bakery croissants',
+    }
+,
     {
         'id': 'woolworths-muffins-choc-chip-4pk',
         'woolworths_term': 'ww choc chip muffins 4pk',
         'coles_term':      'ww choc chip muffins 4pk',
         'amazon_asin':     None,
-    },
+            'cw_term': 'ww choc chip muffins 4pk',
+    }
+,
     {
         'id': 'helgas-wholemeal-bread-680g',
         'woolworths_term': 'helgas traditional wholemeal loaf',
         'coles_term':      'helgas traditional wholemeal loaf',
         'amazon_asin':     None,
-    },
+            'cw_term': 'helgas traditional wholemeal loaf',
+    }
+,
     {
         'id': 'mission-tortillas-large-8pk',
         'woolworths_term': 'mission original tortillas large',
         'coles_term':      'mission original tortillas large',
         'amazon_asin':     None,
-    },
+            'cw_term': 'mission original tortillas large',
+    }
+,
     {
         'id': 'tiptop-english-muffins-6pk',
         'woolworths_term': 'tip top english muffins original',
         'coles_term':      'tip top english muffins original',
         'amazon_asin':     None,
-    },
+            'cw_term': 'tip top english muffins original',
+    }
+,
     {
         'id': 'woolworths-crumpets-6pk',
         'woolworths_term': 'woolworths crumpets original',
         'coles_term':      'woolworths crumpets original',
         'amazon_asin':     None,
-    },
+            'cw_term': 'woolworths crumpets original',
+    }
+,
     {
         'id': 'tiptop-raisin-toast-bread-520g',
         'woolworths_term': 'tip top cafe raisin toast bread',
         'coles_term':      'tip top cafe raisin toast bread',
         'amazon_asin':     None,
-    },
+            'cw_term': 'tip top cafe raisin toast bread',
+    }
+,
     {
         'id': 'mission-pita-bread-pocket-5pk',
         'woolworths_term': 'mission white pita bread pocket',
         'coles_term':      'mission white pita bread pocket',
         'amazon_asin':     None,
-    },
+            'cw_term': 'mission white pita bread pocket',
+    }
+,
     {
         'id': 'coles-chocolate-cookies-12pk',
         'woolworths_term': 'coles chocolate chip cookies bakery',
         'coles_term':      'coles chocolate chip cookies bakery',
         'amazon_asin':     None,
-    },
+            'cw_term': 'coles chocolate chip cookies bakery',
+    }
+,
     {
         'id': 'kelloggs-nutrigrain-500g',
         'woolworths_term': 'kelloggs nutri-grain cereal',
         'coles_term':      'kelloggs nutri-grain cereal',
         'amazon_asin':     None,
-    },
+            'cw_term': 'kelloggs nutri-grain cereal',
+    }
+,
     {
         'id': 'kelloggs-corn-flakes-380g',
         'woolworths_term': 'kelloggs corn flakes box',
         'coles_term':      'kelloggs corn flakes box',
         'amazon_asin':     None,
-    },
+            'cw_term': 'kelloggs corn flakes box',
+    }
+,
     {
         'id': 'sanitarium-weetbix-1kg',
         'woolworths_term': 'sanitarium weet-bix cereal box',
         'coles_term':      'sanitarium weet-bix cereal box',
         'amazon_asin':     None,
-    },
+            'cw_term': 'sanitarium weet-bix cereal box',
+    }
+,
     {
         'id': 'uncle-tobys-plus-sports-cereal',
         'woolworths_term': 'uncle tobys plus sports protein',
         'coles_term':      'uncle tobys plus sports protein',
         'amazon_asin':     None,
-    },
+            'cw_term': 'uncle tobys plus sports protein',
+    }
+,
     {
         'id': 'kelloggs-coco-pops-375g',
         'woolworths_term': 'kelloggs coco pops cereal chocolate',
         'coles_term':      'kelloggs coco pops cereal chocolate',
         'amazon_asin':     None,
-    },
+            'cw_term': 'kelloggs coco pops cereal chocolate',
+    }
+,
     {
         'id': 'kelloggs-sultana-bran-420g',
         'woolworths_term': 'kelloggs sultana bran cereal box',
         'coles_term':      'kelloggs sultana bran cereal box',
         'amazon_asin':     None,
-    },
+            'cw_term': 'kelloggs sultana bran cereal box',
+    }
+,
     {
         'id': 'uncle-tobys-oat-quick-sachets',
         'woolworths_term': 'uncle tobys quick sachets creamy honey',
         'coles_term':      'uncle tobys quick sachets creamy honey',
         'amazon_asin':     None,
-    },
+            'cw_term': 'uncle tobys quick sachets creamy honey',
+    }
+,
     {
         'id': 'carman-muesli-golden-oat-500g',
         'woolworths_term': 'carmans golden oat crunchy muesli',
         'coles_term':      'carmans golden oat crunchy muesli',
         'amazon_asin':     None,
-    },
+            'cw_term': 'carmans golden oat crunchy muesli',
+    }
+,
     {
         'id': 'kelloggs-froot-loops-285g',
         'woolworths_term': 'kelloggs froot loops colored cereal',
         'coles_term':      'kelloggs froot loops colored cereal',
         'amazon_asin':     None,
-    },
+            'cw_term': 'kelloggs froot loops colored cereal',
+    }
+,
     {
         'id': 'sanitarium-upandgo-choc-6pk',
         'woolworths_term': 'sanitarium up  go liquid breakfast choc',
         'coles_term':      'sanitarium up  go liquid breakfast choc',
         'amazon_asin':     None,
-    },
+            'cw_term': 'sanitarium up  go liquid breakfast choc',
+    }
+,
     {
         'id': 'carman-muesli-bars-classic-6pk',
         'woolworths_term': 'carmans classic fruit  nut bars',
         'coles_term':      'carmans classic fruit  nut bars',
         'amazon_asin':     None,
-    },
+            'cw_term': 'carmans classic fruit  nut bars',
+    }
+,
     {
         'id': 'weetbix-bites-wild-berry-500g',
         'woolworths_term': 'sanitarium weet-bix bites wild berry',
         'coles_term':      'sanitarium weet-bix bites wild berry',
         'amazon_asin':     None,
-    },
+            'cw_term': 'sanitarium weet-bix bites wild berry',
+    }
+,
     {
         'id': 'beef-mince-regular-1kg',
         'woolworths_term': 'ww beef mince 3 star',
         'coles_term':      'ww beef mince 3 star',
         'amazon_asin':     None,
-    },
+            'cw_term': 'ww beef mince 3 star',
+    }
+,
     {
         'id': 'chicken-breast-fillets-1kg',
         'woolworths_term': 'ww chicken breast fillets skinless',
         'coles_term':      'ww chicken breast fillets skinless',
         'amazon_asin':     None,
-    },
+            'cw_term': 'ww chicken breast fillets skinless',
+    }
+,
     {
         'id': 'lamb-shoulder-chops-1kg',
         'woolworths_term': 'ww lamb shoulder chops fresh',
         'coles_term':      'ww lamb shoulder chops fresh',
         'amazon_asin':     None,
-    },
+            'cw_term': 'ww lamb shoulder chops fresh',
+    }
+,
     {
         'id': 'pork-loin-chops-1kg',
         'woolworths_term': 'coles pork loin chops boneless',
         'coles_term':      'coles pork loin chops boneless',
         'amazon_asin':     None,
-    },
+            'cw_term': 'coles pork loin chops boneless',
+    }
+,
     {
         'id': 'salmon-fillets-skin-on-4pk',
         'woolworths_term': 'tassal salmon fillets skin on',
         'coles_term':      'tassal salmon fillets skin on',
         'amazon_asin':     None,
-    },
+            'cw_term': 'tassal salmon fillets skin on',
+    }
+,
     {
         'id': 'coles-beef-rump-steak-500g',
         'woolworths_term': 'coles beef rump steak fresh',
         'coles_term':      'coles beef rump steak fresh',
         'amazon_asin':     None,
-    },
+            'cw_term': 'coles beef rump steak fresh',
+    }
+,
     {
         'id': 'dondale-bacon-rashers-500g',
         'woolworths_term': 'don bacon short rashers pack',
         'coles_term':      'don bacon short rashers pack',
         'amazon_asin':     None,
-    },
+            'cw_term': 'don bacon short rashers pack',
+    }
+,
     {
         'id': 'primas-frankfurts-skinless-1kg',
         'woolworths_term': 'primo skinless frankfurts tub',
         'coles_term':      'primo skinless frankfurts tub',
         'amazon_asin':     None,
-    },
+            'cw_term': 'primo skinless frankfurts tub',
+    }
+,
     {
         'id': 'primo-sliced-ham-value-pack',
         'woolworths_term': 'primo english ham sliced value pack',
         'coles_term':      'primo english ham sliced value pack',
         'amazon_asin':     None,
-    },
+            'cw_term': 'primo english ham sliced value pack',
+    }
+,
     {
         'id': 'safcol-premium-salmon-100g',
         'woolworths_term': 'safcol salmon in springwater',
         'coles_term':      'safcol salmon in springwater',
         'amazon_asin':     None,
-    },
+            'cw_term': 'safcol salmon in springwater',
+    }
+,
     {
         'id': 'primo-chorizo-sausage-375g',
         'woolworths_term': 'primo chorizo twin pack',
         'coles_term':      'primo chorizo twin pack',
         'amazon_asin':     None,
-    },
+            'cw_term': 'primo chorizo twin pack',
+    }
+,
     {
         'id': 'woolworths-beef-sausages-18pk',
         'woolworths_term': 'ww thin beef sausages value pack',
         'coles_term':      'ww thin beef sausages value pack',
         'amazon_asin':     None,
-    },
+            'cw_term': 'ww thin beef sausages value pack',
+    }
+,
     {
         'id': 'mccain-frozen-chips-1kg',
         'woolworths_term': 'mccain frozen chips straight cut',
         'coles_term':      'mccain frozen chips straight cut',
         'amazon_asin':     None,
-    },
+            'cw_term': 'mccain frozen chips straight cut',
+    }
+,
     {
         'id': 'birds-eye-fish-fingers-375g',
         'woolworths_term': 'birds eye fish fingers 15pk',
         'coles_term':      'birds eye fish fingers 15pk',
         'amazon_asin':     None,
-    },
+            'cw_term': 'birds eye fish fingers 15pk',
+    }
+,
     {
         'id': 'mccain-frozen-pizza-bbq-400g',
         'woolworths_term': 'mccain frozen pizza bbq chicken',
         'coles_term':      'mccain frozen pizza bbq chicken',
         'amazon_asin':     None,
-    },
+            'cw_term': 'mccain frozen pizza bbq chicken',
+    }
+,
     {
         'id': 'nannas-frozen-apple-pie-600g',
         'woolworths_term': 'nannas frozen family apple pie',
         'coles_term':      'nannas frozen family apple pie',
         'amazon_asin':     None,
-    },
+            'cw_term': 'nannas frozen family apple pie',
+    }
+,
     {
         'id': 'patties-party-pies-12pk',
         'woolworths_term': 'patties party beef pies 12pk',
         'coles_term':      'patties party beef pies 12pk',
         'amazon_asin':     None,
-    },
+            'cw_term': 'patties party beef pies 12pk',
+    }
+,
     {
         'id': 'four-twenty-meat-pies-4pk',
         'woolworths_term': 'four n twenty meat pies pack',
         'coles_term':      'four n twenty meat pies pack',
         'amazon_asin':     None,
-    },
+            'cw_term': 'four n twenty meat pies pack',
+    }
+,
     {
         'id': 'diana-chan-pork-dumplings',
         'woolworths_term': 'diana chan pork  chive dumplings',
         'coles_term':      'diana chan pork  chive dumplings',
         'amazon_asin':     None,
-    },
+            'cw_term': 'diana chan pork  chive dumplings',
+    }
+,
     {
         'id': 'steer-frozen-vegetables-peas-1kg',
         'woolworths_term': 'birds eye frozen garden peas',
         'coles_term':      'birds eye frozen garden peas',
         'amazon_asin':     None,
-    },
+            'cw_term': 'birds eye frozen garden peas',
+    }
+,
     {
         'id': 'sara-lee-french-vanilla-cheesecake',
         'woolworths_term': 'sara lee french vanilla cheesecake',
         'coles_term':      'sara lee french vanilla cheesecake',
         'amazon_asin':     None,
-    },
+            'cw_term': 'sara lee french vanilla cheesecake',
+    }
+,
     {
         'id': 'mccain-frozen-lasagne-400g',
         'woolworths_term': 'mccain frozen lasagne meal',
         'coles_term':      'mccain frozen lasagne meal',
         'amazon_asin':     None,
-    },
+            'cw_term': 'mccain frozen lasagne meal',
+    }
+,
     {
         'id': 'patties-sausage-rolls-12pk',
         'woolworths_term': 'patties party sausage rolls 12pk',
         'coles_term':      'patties party sausage rolls 12pk',
         'amazon_asin':     None,
-    },
+            'cw_term': 'patties party sausage rolls 12pk',
+    }
+,
     {
         'id': 'steers-garlic-bread-twin-pack',
         'woolworths_term': 'la famiglia garlic bread twin pack',
         'coles_term':      'la famiglia garlic bread twin pack',
         'amazon_asin':     None,
-    },
+            'cw_term': 'la famiglia garlic bread twin pack',
+    }
+,
     {
         'id': 'colgate-toothpaste-total-115g',
         'woolworths_term': 'colgate total clean mint toothpaste',
         'coles_term':      'colgate total clean mint toothpaste',
         'amazon_asin':     None,
-    },
+            'cw_term': 'colgate total clean mint toothpaste',
+    }
+,
     {
         'id': 'palmolive-shampoo-milk-honey-350ml',
         'woolworths_term': 'palmolive shampoo milk  honey',
         'coles_term':      'palmolive shampoo milk  honey',
         'amazon_asin':     None,
-    },
+            'cw_term': 'palmolive shampoo milk  honey',
+    }
+,
     {
         'id': 'rexona-men-sport-deodorant-250ml',
         'woolworths_term': 'rexona men sport deodorant aerosol',
         'coles_term':      'rexona men sport deodorant aerosol',
         'amazon_asin':     None,
-    },
+            'cw_term': 'rexona men sport deodorant aerosol',
+    }
+,
     {
         'id': 'radox-shower-gel-lemon-500ml',
         'woolworths_term': 'radox shower gel lemon  tea tree',
         'coles_term':      'radox shower gel lemon  tea tree',
         'amazon_asin':     None,
-    },
+            'cw_term': 'radox shower gel lemon  tea tree',
+    }
+,
     {
         'id': 'colgate-plax-mouthwash-mint-500ml',
         'woolworths_term': 'colgate plax freshmint mouthwash',
         'coles_term':      'colgate plax freshmint mouthwash',
         'amazon_asin':     None,
-    },
+            'cw_term': 'colgate plax freshmint mouthwash',
+    }
+,
     {
         'id': 'head-shoulders-clean-shampoo-400ml',
         'woolworths_term': 'head  shoulders clean shampoo',
         'coles_term':      'head  shoulders clean shampoo',
         'amazon_asin':     None,
-    },
+            'cw_term': 'head  shoulders clean shampoo',
+    }
+,
     {
         'id': 'pantene-conditioner-smooth-350ml',
         'woolworths_term': 'pantene conditioner daily moisture',
         'coles_term':      'pantene conditioner daily moisture',
         'amazon_asin':     None,
-    },
+            'cw_term': 'pantene conditioner daily moisture',
+    }
+,
     {
         'id': 'palmolive-soap-bars-milk-honey-4pk',
         'woolworths_term': 'palmolive soap bars moisture care',
         'coles_term':      'palmolive soap bars moisture care',
         'amazon_asin':     None,
-    },
+            'cw_term': 'palmolive soap bars moisture care',
+    }
+,
     {
         'id': 'dove-body-wash-beauty-cream-1l',
         'woolworths_term': 'dove body wash beauty nourishing',
         'coles_term':      'dove body wash beauty nourishing',
         'amazon_asin':     None,
-    },
+            'cw_term': 'dove body wash beauty nourishing',
+    }
+,
     {
         'id': 'gillette-mach3-razor-blades-4pk',
         'woolworths_term': 'gillette mach3 razor blades refills',
         'coles_term':      'gillette mach3 razor blades refills',
         'amazon_asin':     None,
-    },
+            'cw_term': 'gillette mach3 razor blades refills',
+    }
+,
     {
         'id': 'lynx-africa-body-spray-155ml',
         'woolworths_term': 'lynx africa men body spray',
         'coles_term':      'lynx africa men body spray',
         'amazon_asin':     None,
-    },
+            'cw_term': 'lynx africa men body spray',
+    }
+,
     {
         'id': 'listerine-freshburst-mouthwash-250ml',
         'woolworths_term': 'listerine freshburst mouthwash',
         'coles_term':      'listerine freshburst mouthwash',
         'amazon_asin':     None,
-    },
+            'cw_term': 'listerine freshburst mouthwash',
+    }
+,
     {
         'id': 'huggies-nappies-size-4-60pk',
         'woolworths_term': 'huggies ultra dry nappies size 4',
         'coles_term':      'huggies ultra dry nappies size 4',
         'amazon_asin':     None,
-    },
+            'cw_term': 'huggies ultra dry nappies size 4',
+    }
+,
     {
         'id': 'johnsons-baby-wipes-fragrance-free-80pk',
         'woolworths_term': 'johnsons baby wipes fragrance free',
         'coles_term':      'johnsons baby wipes fragrance free',
         'amazon_asin':     None,
-    },
+            'cw_term': 'johnsons baby wipes fragrance free',
+    }
+,
     {
         'id': 'baby-love-nappies-size-3-50pk',
         'woolworths_term': 'babylove cosifit nappies size 3',
         'coles_term':      'babylove cosifit nappies size 3',
         'amazon_asin':     None,
-    },
+            'cw_term': 'babylove cosifit nappies size 3',
+    }
+,
     {
         'id': 'curash-baby-wipes-soap-free-80pk',
         'woolworths_term': 'curash baby wipes soap free',
         'coles_term':      'curash baby wipes soap free',
         'amazon_asin':     None,
-    },
+            'cw_term': 'curash baby wipes soap free',
+    }
+,
     {
         'id': 'farex-baby-rice-cereal-125g',
         'woolworths_term': 'farex baby cereal rice',
         'coles_term':      'farex baby cereal rice',
         'amazon_asin':     None,
-    },
+            'cw_term': 'farex baby cereal rice',
+    }
+,
     {
         'id': 'sudocrem-baby-healing-cream-125g',
         'woolworths_term': 'sudocrem nappy recovery cream',
         'coles_term':      'sudocrem nappy recovery cream',
         'amazon_asin':     None,
-    },
+            'cw_term': 'sudocrem nappy recovery cream',
+    }
+,
     {
         'id': 'karicare-toddler-milk-stage-3-900g',
         'woolworths_term': 'karicare toddler milk stage 3 formula',
         'coles_term':      'karicare toddler milk stage 3 formula',
         'amazon_asin':     None,
-    },
+            'cw_term': 'karicare toddler milk stage 3 formula',
+    }
+,
     {
         'id': 'bellamys-organic-apple-cinnamon-120g',
         'woolworths_term': 'bellamys organic apple cinnamon puree',
         'coles_term':      'bellamys organic apple cinnamon puree',
         'amazon_asin':     None,
-    },
+            'cw_term': 'bellamys organic apple cinnamon puree',
+    }
+,
     {
         'id': 'raffertys-garden-banana-pear-120g',
         'woolworths_term': 'raffertys garden custard banana pear',
         'coles_term':      'raffertys garden custard banana pear',
         'amazon_asin':     None,
-    },
+            'cw_term': 'raffertys garden custard banana pear',
+    }
+,
     {
         'id': 'baby-balm-johnson-100ml',
         'woolworths_term': 'johnsons baby moisturizing balm',
         'coles_term':      'johnsons baby moisturizing balm',
         'amazon_asin':     None,
-    },
+            'cw_term': 'johnsons baby moisturizing balm',
+    }
+,
     {
         'id': 'pedigree-dog-food-beef-12kg-bag',
         'woolworths_term': 'pedigree dry dog food beef bag',
         'coles_term':      'pedigree dry dog food beef bag',
         'amazon_asin':     None,
-    },
+            'cw_term': 'pedigree dry dog food beef bag',
+    }
+,
     {
         'id': 'dine-cat-food-tuna-pouch-85g',
         'woolworths_term': 'dine daily wet cat food tuna',
         'coles_term':      'dine daily wet cat food tuna',
         'amazon_asin':     None,
-    },
+            'cw_term': 'dine daily wet cat food tuna',
+    }
+,
     {
         'id': 'supercoat-dog-food-chicken-26kg',
         'woolworths_term': 'purina supercoat adult dry dog food',
         'coles_term':      'purina supercoat adult dry dog food',
         'amazon_asin':     None,
-    },
+            'cw_term': 'purina supercoat adult dry dog food',
+    }
+,
     {
         'id': 'optimum-dry-cat-food-chicken-800g',
         'woolworths_term': 'optimum adult dry cat food chicken',
         'coles_term':      'optimum adult dry cat food chicken',
         'amazon_asin':     None,
-    },
+            'cw_term': 'optimum adult dry cat food chicken',
+    }
+,
     {
         'id': 'my-dog-beef-poultry-meat-400g',
         'woolworths_term': 'my dog wet dog food beef cans',
         'coles_term':      'my dog wet dog food beef cans',
         'amazon_asin':     None,
-    },
+            'cw_term': 'my dog wet dog food beef cans',
+    }
+,
     {
         'id': 'whiskas-cat-food-poultry-12pk',
         'woolworths_term': 'whiskas wet cat food gravy pouches',
         'coles_term':      'whiskas wet cat food gravy pouches',
         'amazon_asin':     None,
-    },
+            'cw_term': 'whiskas wet cat food gravy pouches',
+    }
+,
     {
         'id': 'schmackos-dog-treats-beef-strap',
         'woolworths_term': 'schmackos strapz dog treats beef',
         'coles_term':      'schmackos strapz dog treats beef',
         'amazon_asin':     None,
-    },
+            'cw_term': 'schmackos strapz dog treats beef',
+    }
+,
     {
         'id': 'fancies-cat-treat-puree-4pk',
         'woolworths_term': 'fancy feast puree kiss treats',
         'coles_term':      'fancy feast puree kiss treats',
         'amazon_asin':     None,
-    },
+            'cw_term': 'fancy feast puree kiss treats',
+    }
+,
     {
         'id': 'tux-dog-biscuits-value-pack-1kg',
         'woolworths_term': 'purina lucky dog bones biscuits',
         'coles_term':      'purina lucky dog bones biscuits',
         'amazon_asin':     None,
-    },
+            'cw_term': 'purina lucky dog bones biscuits',
+    }
+,
     {
         'id': 'friskies-cat-dry-food-15kg-box',
         'woolworths_term': 'purina friskies seafood sensations',
         'coles_term':      'purina friskies seafood sensations',
         'amazon_asin':     None,
+            'cw_term': 'purina friskies seafood sensations',
     }
+
 ,
     {
         'id': 'panadol-rapid-20pk',
         'woolworths_term': 'panadol rapid caplets',
         'coles_term':      'panadol rapid caplets',
         'amazon_asin':     None,
-    },
+            'cw_term': 'panadol rapid caplets',
+    }
+,
     {
         'id': 'nurofen-24pk',
         'woolworths_term': 'nurofen ibuprofen 200mg',
         'coles_term':      'nurofen ibuprofen 200mg',
         'amazon_asin':     None,
-    },
+            'cw_term': 'nurofen ibuprofen 200mg',
+    }
+,
     {
         'id': 'musashi-protein-bar-choc',
         'woolworths_term': 'musashi high protein bar chocolate',
         'coles_term':      'musashi high protein bar chocolate',
         'amazon_asin':     None,
-    },
+            'cw_term': 'musashi high protein bar chocolate',
+    }
+,
     {
         'id': 'natures-own-fish-oil',
         'woolworths_term': 'natures own fish oil 1000mg',
         'coles_term':      'natures own fish oil 1000mg',
         'amazon_asin':     None,
-    },
+            'cw_term': 'natures own fish oil 1000mg',
+    }
+,
     {
         'id': 'berocca-performance-orange',
         'woolworths_term': 'berocca performance effervescent orange',
         'coles_term':      'berocca performance effervescent orange',
         'amazon_asin':     None,
-    },
+            'cw_term': 'berocca performance effervescent orange',
+    }
+,
     {
         'id': 'white-wings-flour-sr-2kg',
         'woolworths_term': 'white wings self raising flour',
         'coles_term':      'white wings self raising flour',
         'amazon_asin':     None,
-    },
+            'cw_term': 'white wings self raising flour',
+    }
+,
     {
         'id': 'csr-white-sugar-1kg',
         'woolworths_term': 'csr white sugar pure cane',
         'coles_term':      'csr white sugar pure cane',
         'amazon_asin':     None,
-    },
+            'cw_term': 'csr white sugar pure cane',
+    }
+,
     {
         'id': 'queen-maple-syrup-375ml',
         'woolworths_term': 'queen maple active syrup',
         'coles_term':      'queen maple active syrup',
         'amazon_asin':     None,
-    },
+            'cw_term': 'queen maple active syrup',
+    }
+,
     {
         'id': 'cadbury-baking-chocolate-180g',
         'woolworths_term': 'cadbury baking milk chocolate block',
         'coles_term':      'cadbury baking milk chocolate block',
         'amazon_asin':     None,
-    },
+            'cw_term': 'cadbury baking milk chocolate block',
+    }
+,
     {
         'id': 'sunrice-medium-rice-5kg',
         'woolworths_term': 'sunrice medium grain rice bag',
         'coles_term':      'sunrice medium grain rice bag',
         'amazon_asin':     None,
-    },
+            'cw_term': 'sunrice medium grain rice bag',
+    }
+,
     {
         'id': 'heinz-spaghetti-canned-420g',
         'woolworths_term': 'heinz spaghetti in tomato sauce',
         'coles_term':      'heinz spaghetti in tomato sauce',
         'amazon_asin':     None,
-    },
+            'cw_term': 'heinz spaghetti in tomato sauce',
+    }
+,
     {
         'id': 'spc-spaghetti-3pk',
         'woolworths_term': 'spc spaghetti rich tomato can',
         'coles_term':      'spc spaghetti rich tomato can',
         'amazon_asin':     None,
-    },
+            'cw_term': 'spc spaghetti rich tomato can',
+    }
+,
     {
         'id': 'kelloggs-lcm-coco-bars',
         'woolworths_term': 'kelloggs lcms coco pops snack bars',
         'coles_term':      'kelloggs lcms coco pops snack bars',
         'amazon_asin':     None,
-    },
+            'cw_term': 'kelloggs lcms coco pops snack bars',
+    }
+,
     {
         'id': 'uncle-tobys-muesli-bars-choc',
         'woolworths_term': 'uncle tobys chewy bars choc chip',
         'coles_term':      'uncle tobys chewy bars choc chip',
         'amazon_asin':     'B0D52TDBPG',
-    },
+            'cw_term': 'uncle tobys chewy bars choc chip',
+    }
+,
     {
         'id': 'pauls-double-choc-custard',
         'woolworths_term': 'pauls double choc custard tub',
         'coles_term':      'pauls double choc custard tub',
         'amazon_asin':     None,
-    },
+            'cw_term': 'pauls double choc custard tub',
+    }
+,
     {
         'id': 'kraft-singles-cheese-30pk',
         'woolworths_term': 'kraft singles cheese slices',
         'coles_term':      'kraft singles cheese slices',
         'amazon_asin':     None,
-    },
+            'cw_term': 'kraft singles cheese slices',
+    }
+,
     {
         'id': 'chicken-thigh-fillets-1kg',
         'woolworths_term': 'ww chicken thigh fillets boneless',
         'coles_term':      'ww chicken thigh fillets boneless',
         'amazon_asin':     None,
-    },
+            'cw_term': 'ww chicken thigh fillets boneless',
+    }
+,
     {
         'id': 'pork-belly-slices-500g',
         'woolworths_term': 'ww pork belly slices fresh',
         'coles_term':      'ww pork belly slices fresh',
         'amazon_asin':     None,
-    },
+            'cw_term': 'ww pork belly slices fresh',
+    }
+,
     {
         'id': 'mccain-pub-chips-1kg',
         'woolworths_term': 'mccain pub size frozen chips',
         'coles_term':      'mccain pub size frozen chips',
         'amazon_asin':     'B0D52TDBPG',
-    },
+            'cw_term': 'mccain pub size frozen chips',
+    }
+,
     {
         'id': 'birds-eye-fish-cakes-300g',
         'woolworths_term': 'birds eye frozen fish cakes',
         'coles_term':      'birds eye frozen fish cakes',
         'amazon_asin':     'B01EBXE43U',
-    },
+            'cw_term': 'birds eye frozen fish cakes',
+    }
+,
     {
         'id': 'celery-bunch-each',
         'woolworths_term': 'celery bunch fresh premium',
         'coles_term':      'celery bunch fresh premium',
         'amazon_asin':     None,
-    },
+            'cw_term': 'celery bunch fresh premium',
+    }
+,
     {
         'id': 'sweet-potatoes-1kg',
         'woolworths_term': 'sweet potatoes gold fresh',
         'coles_term':      'sweet potatoes gold fresh',
         'amazon_asin':     None,
-    },
+            'cw_term': 'sweet potatoes gold fresh',
+    }
+,
     {
         'id': 'colgate-toothbrush-3pk',
         'woolworths_term': 'colgate zig zag toothbrush medium',
         'coles_term':      'colgate zig zag toothbrush medium',
         'amazon_asin':     'B0BVT7GYLJ',
-    },
+            'cw_term': 'colgate zig zag toothbrush medium',
+    }
+,
     {
         'id': 'sensodyne-toothpaste-110g',
         'woolworths_term': 'sensodyne daily care toothpaste',
         'coles_term':      'sensodyne daily care toothpaste',
         'amazon_asin':     'B0BX837V23',
-    },
+            'cw_term': 'sensodyne daily care toothpaste',
+    }
+,
     {
         'id': 'dettol-bar-soap-4pk',
         'woolworths_term': 'dettol anti-bacterial soap bars',
         'coles_term':      'dettol anti-bacterial soap bars',
         'amazon_asin':     'B0DJ1ZL1SX',
-    },
+            'cw_term': 'dettol anti-bacterial soap bars',
+    }
+,
     {
         'id': 'fairy-platinum-dishwasher-60pk',
         'woolworths_term': 'fairy platinum plus dishwasher tabs',
         'coles_term':      'fairy platinum plus dishwasher tabs',
         'amazon_asin':     'B0D7X27YGW',
-    },
+            'cw_term': 'fairy platinum plus dishwasher tabs',
+    }
+,
     {
         'id': 'ajax-eco-wipe-multi-purpose',
         'woolworths_term': 'ajax multi purpose wipes lemon',
         'coles_term':      'ajax multi purpose wipes lemon',
         'amazon_asin':     'B085CM5G7D',
-    },
+            'cw_term': 'ajax multi purpose wipes lemon',
+    }
+,
     {
         'id': 'duck-toilet-gel-750ml',
         'woolworths_term': 'duck deep action toilet gel pine',
         'coles_term':      'duck deep action toilet gel pine',
         'amazon_asin':     'B0BXLWDH32',
-    },
+            'cw_term': 'duck deep action toilet gel pine',
+    }
+,
     {
         'id': 'harpic-fresh-power-toilet-block',
         'woolworths_term': 'harpic fresh power toilet block',
         'coles_term':      'harpic fresh power toilet block',
         'amazon_asin':     'B09J7M359K',
-    },
+            'cw_term': 'harpic fresh power toilet block',
+    }
+,
     {
         'id': 'supercoat-cat-food-15kg',
         'woolworths_term': 'supercoat dry cat food chicken',
         'coles_term':      'supercoat dry cat food chicken',
         'amazon_asin':     None,
-    },
+            'cw_term': 'supercoat dry cat food chicken',
+    }
+,
     {
         'id': 'my-dog-gourmet-beef-100g',
         'woolworths_term': 'my dog gourmet beef tray',
         'coles_term':      'my dog gourmet beef tray',
         'amazon_asin':     None,
+            'cw_term': 'my dog gourmet beef tray',
     }
+
 ,
     {
         'id': 'basmati-rice-premium',
         'woolworths_term': 'basmati rice premium',
         'coles_term':      'basmati rice premium',
         'amazon_asin':     'B0I1LR3PE2',
-    },
+            'cw_term': 'basmati rice premium',
+    }
+,
     {
         'id': 'jasmine-rice-fragrant',
         'woolworths_term': 'jasmine rice fragrant',
         'coles_term':      'jasmine rice fragrant',
         'amazon_asin':     'B09GD8AFPK',
-    },
+            'cw_term': 'jasmine rice fragrant',
+    }
+,
     {
         'id': 'extra-virgin-olive-oil',
         'woolworths_term': 'extra virgin olive oil',
         'coles_term':      'extra virgin olive oil',
         'amazon_asin':     'B0054NZDKY',
-    },
+            'cw_term': 'extra virgin olive oil',
+    }
+,
     {
         'id': 'pure-canola-cooking-oil',
         'woolworths_term': 'pure canola cooking oil',
         'coles_term':      'pure canola cooking oil',
         'amazon_asin':     'B0AYQ3S195',
-    },
+            'cw_term': 'pure canola cooking oil',
+    }
+,
     {
         'id': 'soy-sauce-gluten-free',
         'woolworths_term': 'soy sauce gluten free',
         'coles_term':      'soy sauce gluten free',
         'amazon_asin':     'B0JMSND8DU',
-    },
+            'cw_term': 'soy sauce gluten free',
+    }
+,
     {
         'id': 'tomato-paste-squeeze',
         'woolworths_term': 'tomato paste squeeze',
         'coles_term':      'tomato paste squeeze',
         'amazon_asin':     None,
-    },
+            'cw_term': 'tomato paste squeeze',
+    }
+,
     {
         'id': 'canned-sweet-corn-kernels',
         'woolworths_term': 'canned sweet corn kernels',
         'coles_term':      'canned sweet corn kernels',
         'amazon_asin':     'B0DD467KD6',
-    },
+            'cw_term': 'canned sweet corn kernels',
+    }
+,
     {
         'id': 'chunky-tuna-in-olive-oil',
         'woolworths_term': 'chunky tuna in olive oil',
         'coles_term':      'chunky tuna in olive oil',
         'amazon_asin':     'B0FLEEPZHP',
-    },
+            'cw_term': 'chunky tuna in olive oil',
+    }
+,
     {
         'id': 'tuna-tempters-springwater',
         'woolworths_term': 'tuna tempters springwater',
         'coles_term':      'tuna tempters springwater',
         'amazon_asin':     'B0CF07UQNU',
-    },
+            'cw_term': 'tuna tempters springwater',
+    }
+,
     {
         'id': 'crunchy-peanut-butter',
         'woolworths_term': 'crunchy peanut butter',
         'coles_term':      'crunchy peanut butter',
         'amazon_asin':     'B0PQZIT3UE',
-    },
+            'cw_term': 'crunchy peanut butter',
+    }
+,
     {
         'id': 'smooth-peanut-butter-jar',
         'woolworths_term': 'smooth peanut butter jar',
         'coles_term':      'smooth peanut butter jar',
         'amazon_asin':     'B0A3GE8N6Q',
-    },
+            'cw_term': 'smooth peanut butter jar',
+    }
+,
     {
         'id': 'strawberry-jam-spread',
         'woolworths_term': 'strawberry jam spread',
         'coles_term':      'strawberry jam spread',
         'amazon_asin':     None,
-    },
+            'cw_term': 'strawberry jam spread',
+    }
+,
     {
         'id': 'pure-honey-squeeze-bottle',
         'woolworths_term': 'pure honey squeeze bottle',
         'coles_term':      'pure honey squeeze bottle',
         'amazon_asin':     'B0IWEPXSK2',
-    },
+            'cw_term': 'pure honey squeeze bottle',
+    }
+,
     {
         'id': 'whole-egg-mayonnaise-jar',
         'woolworths_term': 'whole egg mayonnaise jar',
         'coles_term':      'whole egg mayonnaise jar',
         'amazon_asin':     'B08T7A9TGI',
-    },
+            'cw_term': 'whole egg mayonnaise jar',
+    }
+,
     {
         'id': 'traditional-tomato-pasta-sauce',
         'woolworths_term': 'traditional tomato pasta sauce',
         'coles_term':      'traditional tomato pasta sauce',
         'amazon_asin':     None,
-    },
+            'cw_term': 'traditional tomato pasta sauce',
+    }
+,
     {
         'id': 'spaghetti-pasta-no-5',
         'woolworths_term': 'spaghetti pasta no 5',
         'coles_term':      'spaghetti pasta no 5',
         'amazon_asin':     'B0QHG9JRSN',
-    },
+            'cw_term': 'spaghetti pasta no 5',
+    }
+,
     {
         'id': 'penne-rigate-pasta',
         'woolworths_term': 'penne rigate pasta',
         'coles_term':      'penne rigate pasta',
         'amazon_asin':     'B0VNQ65QDF',
-    },
+            'cw_term': 'penne rigate pasta',
+    }
+,
     {
         'id': 'canned-chickpeas-drained',
         'woolworths_term': 'canned chickpeas drained',
         'coles_term':      'canned chickpeas drained',
         'amazon_asin':     'B01RCAVIQK',
-    },
+            'cw_term': 'canned chickpeas drained',
+    }
+,
     {
         'id': 'canned-brown-lentils',
         'woolworths_term': 'canned brown lentils',
         'coles_term':      'canned brown lentils',
         'amazon_asin':     'B02919AHEJ',
-    },
+            'cw_term': 'canned brown lentils',
+    }
+,
     {
         'id': 'table-salt-fine-iodised',
         'woolworths_term': 'table salt fine iodised',
         'coles_term':      'table salt fine iodised',
         'amazon_asin':     'B08CX9J1IC',
-    },
+            'cw_term': 'table salt fine iodised',
+    }
+,
     {
         'id': 'black-pepper-grinder',
         'woolworths_term': 'black pepper grinder',
         'coles_term':      'black pepper grinder',
         'amazon_asin':     'B0TXCWNPGW',
-    },
+            'cw_term': 'black pepper grinder',
+    }
+,
     {
         'id': 'dijon-mustard-jar',
         'woolworths_term': 'dijon mustard jar',
         'coles_term':      'dijon mustard jar',
         'amazon_asin':     'B090JPKL0B',
-    },
+            'cw_term': 'dijon mustard jar',
+    }
+,
     {
         'id': 'tomato-ketchup-bottle',
         'woolworths_term': 'tomato ketchup bottle',
         'coles_term':      'tomato ketchup bottle',
         'amazon_asin':     None,
-    },
+            'cw_term': 'tomato ketchup bottle',
+    }
+,
     {
         'id': 'barbecue-sauce-squeeze',
         'woolworths_term': 'barbecue sauce squeeze',
         'coles_term':      'barbecue sauce squeeze',
         'amazon_asin':     'B0LV0PRKGY',
-    },
+            'cw_term': 'barbecue sauce squeeze',
+    }
+,
     {
         'id': 'sweet-chilli-sauce',
         'woolworths_term': 'sweet chilli sauce',
         'coles_term':      'sweet chilli sauce',
         'amazon_asin':     'B0C4OM3WTO',
-    },
+            'cw_term': 'sweet chilli sauce',
+    }
+,
     {
         'id': 'baked-beans-in-tomato-sauce',
         'woolworths_term': 'baked beans in tomato sauce',
         'coles_term':      'baked beans in tomato sauce',
         'amazon_asin':     None,
-    },
+            'cw_term': 'baked beans in tomato sauce',
+    }
+,
     {
         'id': 'packham-pears-fresh',
         'woolworths_term': 'packham pears fresh',
         'coles_term':      'packham pears fresh',
         'amazon_asin':     None,
-    },
+            'cw_term': 'packham pears fresh',
+    }
+,
     {
         'id': 'yellow-peaches-sweet',
         'woolworths_term': 'yellow peaches sweet',
         'coles_term':      'yellow peaches sweet',
         'amazon_asin':     'B0OBMZVRER',
-    },
+            'cw_term': 'yellow peaches sweet',
+    }
+,
     {
         'id': 'navel-oranges-juicy',
         'woolworths_term': 'navel oranges juicy',
         'coles_term':      'navel oranges juicy',
         'amazon_asin':     'B0W6Z8VBHQ',
-    },
+            'cw_term': 'navel oranges juicy',
+    }
+,
     {
         'id': 'imperial-mandarins-bag',
         'woolworths_term': 'imperial mandarins bag',
         'coles_term':      'imperial mandarins bag',
         'amazon_asin':     'B0LQCG1WU1',
-    },
+            'cw_term': 'imperial mandarins bag',
+    }
+,
     {
         'id': 'lemons-fresh-bunch',
         'woolworths_term': 'lemons fresh bunch',
         'coles_term':      'lemons fresh bunch',
         'amazon_asin':     'B06HYMQC1A',
-    },
+            'cw_term': 'lemons fresh bunch',
+    }
+,
     {
         'id': 'limes-fresh-bag',
         'woolworths_term': 'limes fresh bag',
         'coles_term':      'limes fresh bag',
         'amazon_asin':     'B078MX1EVU',
-    },
+            'cw_term': 'limes fresh bag',
+    }
+,
     {
         'id': 'blueberries-fresh-tub',
         'woolworths_term': 'blueberries fresh tub',
         'coles_term':      'blueberries fresh tub',
         'amazon_asin':     'B0HT6T0UZS',
-    },
+            'cw_term': 'blueberries fresh tub',
+    }
+,
     {
         'id': 'raspberries-fresh-punnet',
         'woolworths_term': 'raspberries fresh punnet',
         'coles_term':      'raspberries fresh punnet',
         'amazon_asin':     'B09IM0YLTZ',
-    },
+            'cw_term': 'raspberries fresh punnet',
+    }
+,
     {
         'id': 'fresh-ginger-root',
         'woolworths_term': 'fresh ginger root',
         'coles_term':      'fresh ginger root',
         'amazon_asin':     'B09ATSN1U3',
-    },
+            'cw_term': 'fresh ginger root',
+    }
+,
     {
         'id': 'garlic-cloves-bag',
         'woolworths_term': 'garlic cloves bag',
         'coles_term':      'garlic cloves bag',
         'amazon_asin':     'B022N64KFS',
-    },
+            'cw_term': 'garlic cloves bag',
+    }
+,
     {
         'id': 'butternut-pumpkin-whole',
         'woolworths_term': 'butternut pumpkin whole',
         'coles_term':      'butternut pumpkin whole',
         'amazon_asin':     'B06VFPTOMJ',
-    },
+            'cw_term': 'butternut pumpkin whole',
+    }
+,
     {
         'id': 'green-zucchini-fresh',
         'woolworths_term': 'green zucchini fresh',
         'coles_term':      'green zucchini fresh',
         'amazon_asin':     'B0BCP4E30M',
-    },
+            'cw_term': 'green zucchini fresh',
+    }
+,
     {
         'id': 'button-mushrooms-cup',
         'woolworths_term': 'button mushrooms cup',
         'coles_term':      'button mushrooms cup',
         'amazon_asin':     'B0Y5ZPJAG1',
-    },
+            'cw_term': 'button mushrooms cup',
+    }
+,
     {
         'id': 'fresh-beetroot-bunch',
         'woolworths_term': 'fresh beetroot bunch',
         'coles_term':      'fresh beetroot bunch',
         'amazon_asin':     'B0OL73D9PH',
-    },
+            'cw_term': 'fresh beetroot bunch',
+    }
+,
     {
         'id': 'lebanese-cucumbers',
         'woolworths_term': 'lebanese cucumbers',
         'coles_term':      'lebanese cucumbers',
         'amazon_asin':     None,
-    },
+            'cw_term': 'lebanese cucumbers',
+    }
+,
     {
         'id': 'roma-tomatoes-fresh',
         'woolworths_term': 'roma tomatoes fresh',
         'coles_term':      'roma tomatoes fresh',
         'amazon_asin':     None,
-    },
+            'cw_term': 'roma tomatoes fresh',
+    }
+,
     {
         'id': 'red-onions-loose',
         'woolworths_term': 'red onions loose',
         'coles_term':      'red onions loose',
         'amazon_asin':     None,
-    },
+            'cw_term': 'red onions loose',
+    }
+,
     {
         'id': 'rump-steak-grassfed',
         'woolworths_term': 'rump steak grassfed',
         'coles_term':      'rump steak grassfed',
         'amazon_asin':     None,
-    },
+            'cw_term': 'rump steak grassfed',
+    }
+,
     {
         'id': 'ribeye-steak-premium',
         'woolworths_term': 'ribeye steak premium',
         'coles_term':      'ribeye steak premium',
         'amazon_asin':     None,
-    },
+            'cw_term': 'ribeye steak premium',
+    }
+,
     {
         'id': 'free-range-chicken-breast',
         'woolworths_term': 'free range chicken breast',
         'coles_term':      'free range chicken breast',
         'amazon_asin':     None,
-    },
+            'cw_term': 'free range chicken breast',
+    }
+,
     {
         'id': 'chicken-wings-bulk',
         'woolworths_term': 'chicken wings bulk',
         'coles_term':      'chicken wings bulk',
         'amazon_asin':     None,
-    },
+            'cw_term': 'chicken wings bulk',
+    }
+,
     {
         'id': 'pork-chops-loin-bone-in',
         'woolworths_term': 'pork chops loin bone-in',
         'coles_term':      'pork chops loin bone-in',
         'amazon_asin':     None,
-    },
+            'cw_term': 'pork chops loin bone-in',
+    }
+,
     {
         'id': 'lamb-chops-loin',
         'woolworths_term': 'lamb chops loin',
         'coles_term':      'lamb chops loin',
         'amazon_asin':     None,
-    },
+            'cw_term': 'lamb chops loin',
+    }
+,
     {
         'id': 'tasmanian-salmon-fillets',
         'woolworths_term': 'tasmanian salmon fillets',
         'coles_term':      'tasmanian salmon fillets',
         'amazon_asin':     None,
-    },
+            'cw_term': 'tasmanian salmon fillets',
+    }
+,
     {
         'id': 'cooked-tiger-prawns-fresh',
         'woolworths_term': 'cooked tiger prawns fresh',
         'coles_term':      'cooked tiger prawns fresh',
         'amazon_asin':     'B03I379U26',
-    },
+            'cw_term': 'cooked tiger prawns fresh',
+    }
+,
     {
         'id': 'smoked-streaky-bacon',
         'woolworths_term': 'smoked streaky bacon',
         'coles_term':      'smoked streaky bacon',
         'amazon_asin':     None,
-    },
+            'cw_term': 'smoked streaky bacon',
+    }
+,
     {
         'id': 'beef-mince-premium-5-fat',
         'woolworths_term': 'beef mince premium 5% fat',
         'coles_term':      'beef mince premium 5% fat',
         'amazon_asin':     None,
-    },
+            'cw_term': 'beef mince premium 5% fat',
+    }
+,
     {
         'id': 'pork-beef-sausages-thin',
         'woolworths_term': 'pork  beef sausages thin',
         'coles_term':      'pork  beef sausages thin',
         'amazon_asin':     None,
-    },
+            'cw_term': 'pork  beef sausages thin',
+    }
+,
     {
         'id': 'salted-butter-block',
         'woolworths_term': 'salted butter block',
         'coles_term':      'salted butter block',
         'amazon_asin':     'B0192K42QP',
-    },
+            'cw_term': 'salted butter block',
+    }
+,
     {
         'id': 'unsalted-butter-block',
         'woolworths_term': 'unsalted butter block',
         'coles_term':      'unsalted butter block',
         'amazon_asin':     'B0R75PR2ES',
-    },
+            'cw_term': 'unsalted butter block',
+    }
+,
     {
         'id': 'cheddar-cheese-block-tasty',
         'woolworths_term': 'cheddar cheese block tasty',
         'coles_term':      'cheddar cheese block tasty',
         'amazon_asin':     None,
-    },
+            'cw_term': 'cheddar cheese block tasty',
+    }
+,
     {
         'id': 'grated-parmesan-cheese',
         'woolworths_term': 'grated parmesan cheese',
         'coles_term':      'grated parmesan cheese',
         'amazon_asin':     None,
-    },
+            'cw_term': 'grated parmesan cheese',
+    }
+,
     {
         'id': 'shredded-mozzarella-cheese',
         'woolworths_term': 'shredded mozzarella cheese',
         'coles_term':      'shredded mozzarella cheese',
         'amazon_asin':     None,
-    },
+            'cw_term': 'shredded mozzarella cheese',
+    }
+,
     {
         'id': 'greek-style-yogurt-natural',
         'woolworths_term': 'greek style yogurt natural',
         'coles_term':      'greek style yogurt natural',
         'amazon_asin':     None,
-    },
+            'cw_term': 'greek style yogurt natural',
+    }
+,
     {
         'id': 'light-sour-cream-tub',
         'woolworths_term': 'light sour cream tub',
         'coles_term':      'light sour cream tub',
         'amazon_asin':     None,
-    },
+            'cw_term': 'light sour cream tub',
+    }
+,
     {
         'id': 'original-cream-cheese-tub',
         'woolworths_term': 'original cream cheese tub',
         'coles_term':      'original cream cheese tub',
         'amazon_asin':     None,
-    },
+            'cw_term': 'original cream cheese tub',
+    }
+,
     {
         'id': 'almond-milk-unsweetened',
         'woolworths_term': 'almond milk unsweetened',
         'coles_term':      'almond milk unsweetened',
         'amazon_asin':     None,
-    },
+            'cw_term': 'almond milk unsweetened',
+    }
+,
     {
         'id': 'soy-milk-original-active',
         'woolworths_term': 'soy milk original active',
         'coles_term':      'soy milk original active',
         'amazon_asin':     None,
-    },
+            'cw_term': 'soy milk original active',
+    }
+,
     {
         'id': 'sourdough-loaf-fresh',
         'woolworths_term': 'sourdough loaf fresh',
         'coles_term':      'sourdough loaf fresh',
         'amazon_asin':     'B0PRVU8FIJ',
-    },
+            'cw_term': 'sourdough loaf fresh',
+    }
+,
     {
         'id': 'wholemeal-sliced-bread',
         'woolworths_term': 'wholemeal sliced bread',
         'coles_term':      'wholemeal sliced bread',
         'amazon_asin':     None,
-    },
+            'cw_term': 'wholemeal sliced bread',
+    }
+,
     {
         'id': 'white-sliced-bread-toast',
         'woolworths_term': 'white sliced bread toast',
         'coles_term':      'white sliced bread toast',
         'amazon_asin':     None,
-    },
+            'cw_term': 'white sliced bread toast',
+    }
+,
     {
         'id': 'golden-crumpets-toast-6pk',
         'woolworths_term': 'golden crumpets toast 6pk',
         'coles_term':      'golden crumpets toast 6pk',
         'amazon_asin':     None,
-    },
+            'cw_term': 'golden crumpets toast 6pk',
+    }
+,
     {
         'id': 'english-muffins-original',
         'woolworths_term': 'english muffins original',
         'coles_term':      'english muffins original',
         'amazon_asin':     None,
-    },
+            'cw_term': 'english muffins original',
+    }
+,
     {
         'id': 'soft-tortilla-wraps-large',
         'woolworths_term': 'soft tortilla wraps large',
         'coles_term':      'soft tortilla wraps large',
         'amazon_asin':     'B0OYJNE00V',
-    },
+            'cw_term': 'soft tortilla wraps large',
+    }
+,
     {
         'id': 'frozen-baby-peas-bag',
         'woolworths_term': 'frozen baby peas bag',
         'coles_term':      'frozen baby peas bag',
         'amazon_asin':     'B0830DN0YB',
-    },
+            'cw_term': 'frozen baby peas bag',
+    }
+,
     {
         'id': 'frozen-super-sweet-corn',
         'woolworths_term': 'frozen super sweet corn',
         'coles_term':      'frozen super sweet corn',
         'amazon_asin':     'B0Y4AWTY08',
-    },
+            'cw_term': 'frozen super sweet corn',
+    }
+,
     {
         'id': 'classic-vanilla-ice-cream',
         'woolworths_term': 'classic vanilla ice cream',
         'coles_term':      'classic vanilla ice cream',
         'amazon_asin':     None,
-    },
+            'cw_term': 'classic vanilla ice cream',
+    }
+,
     {
         'id': 'deep-pan-hawaiian-pizza',
         'woolworths_term': 'deep pan hawaiian pizza',
         'coles_term':      'deep pan hawaiian pizza',
         'amazon_asin':     'B08O5OR15B',
-    },
+            'cw_term': 'deep pan hawaiian pizza',
+    }
+,
     {
         'id': 'frozen-mixed-berries-bag',
         'woolworths_term': 'frozen mixed berries bag',
         'coles_term':      'frozen mixed berries bag',
         'amazon_asin':     'B0YVZK3I8B',
-    },
+            'cw_term': 'frozen mixed berries bag',
+    }
+,
     {
         'id': 'party-meat-pies-12pk',
         'woolworths_term': 'party meat pies 12pk',
         'coles_term':      'party meat pies 12pk',
         'amazon_asin':     None,
-    },
+            'cw_term': 'party meat pies 12pk',
+    }
+,
     {
         'id': 'party-sausage-rolls-12pk',
         'woolworths_term': 'party sausage rolls 12pk',
         'coles_term':      'party sausage rolls 12pk',
         'amazon_asin':     None,
-    },
+            'cw_term': 'party sausage rolls 12pk',
+    }
+,
     {
         'id': 'laundry-powder-sensitive',
         'woolworths_term': 'laundry powder sensitive',
         'coles_term':      'laundry powder sensitive',
         'amazon_asin':     'B0ZBF1I3LD',
-    },
+            'cw_term': 'laundry powder sensitive',
+    }
+,
     {
         'id': 'fabric-softener-lavender',
         'woolworths_term': 'fabric softener lavender',
         'coles_term':      'fabric softener lavender',
         'amazon_asin':     'B0QYUN3UVY',
-    },
+            'cw_term': 'fabric softener lavender',
+    }
+,
     {
         'id': 'dishwashing-liquid-lemon',
         'woolworths_term': 'dishwashing liquid lemon',
         'coles_term':      'dishwashing liquid lemon',
         'amazon_asin':     'B0R0QF4B8D',
-    },
+            'cw_term': 'dishwashing liquid lemon',
+    }
+,
     {
         'id': 'glass-cleaner-spray',
         'woolworths_term': 'glass cleaner spray',
         'coles_term':      'glass cleaner spray',
         'amazon_asin':     'B0WOECBPMB',
-    },
+            'cw_term': 'glass cleaner spray',
+    }
+,
     {
         'id': 'multi-purpose-spray-citrus',
         'woolworths_term': 'multi purpose spray citrus',
         'coles_term':      'multi purpose spray citrus',
         'amazon_asin':     'B0JPI4HN3Q',
-    },
+            'cw_term': 'multi purpose spray citrus',
+    }
+,
     {
         'id': 'sponge-scrubbers-4pk',
         'woolworths_term': 'sponge scrubbers 4pk',
         'coles_term':      'sponge scrubbers 4pk',
         'amazon_asin':     'B0XKHKTGBT',
-    },
+            'cw_term': 'sponge scrubbers 4pk',
+    }
+,
     {
         'id': 'medium-garbage-bags-30pk',
         'woolworths_term': 'medium garbage bags 30pk',
         'coles_term':      'medium garbage bags 30pk',
         'amazon_asin':     'B0YZMEPGTH',
-    },
+            'cw_term': 'medium garbage bags 30pk',
+    }
+,
     {
         'id': 'aluminium-foil-roll',
         'woolworths_term': 'aluminium foil roll',
         'coles_term':      'aluminium foil roll',
         'amazon_asin':     'B0CW81XE6V',
-    },
+            'cw_term': 'aluminium foil roll',
+    }
+,
     {
         'id': 'cling-wrap-plastic-roll',
         'woolworths_term': 'cling wrap plastic roll',
         'coles_term':      'cling wrap plastic roll',
         'amazon_asin':     'B0A05G1X3J',
-    },
+            'cw_term': 'cling wrap plastic roll',
+    }
+,
     {
         'id': 'refreshing-body-wash-gel',
         'woolworths_term': 'refreshing body wash gel',
         'coles_term':      'refreshing body wash gel',
         'amazon_asin':     'B01L7R8431',
-    },
+            'cw_term': 'refreshing body wash gel',
+    }
+,
     {
         'id': 'anti-dandruff-shampoo',
         'woolworths_term': 'anti dandruff shampoo',
         'coles_term':      'anti dandruff shampoo',
         'amazon_asin':     None,
-    },
+            'cw_term': 'anti dandruff shampoo',
+    }
+,
     {
         'id': 'smooth-care-conditioner',
         'woolworths_term': 'smooth care conditioner',
         'coles_term':      'smooth care conditioner',
         'amazon_asin':     'B0RUPFR2P3',
-    },
+            'cw_term': 'smooth care conditioner',
+    }
+,
     {
         'id': 'antibacterial-hand-wash',
         'woolworths_term': 'antibacterial hand wash',
         'coles_term':      'antibacterial hand wash',
         'amazon_asin':     'B0YVB5UL5N',
-    },
+            'cw_term': 'antibacterial hand wash',
+    }
+,
     {
         'id': 'deodorant-spray-men-sport',
         'woolworths_term': 'deodorant spray men sport',
         'coles_term':      'deodorant spray men sport',
         'amazon_asin':     'B0WQVRR9A7',
-    },
+            'cw_term': 'deodorant spray men sport',
+    }
+,
     {
         'id': 'roll-on-deodorant-women',
         'woolworths_term': 'roll-on deodorant women',
         'coles_term':      'roll-on deodorant women',
         'amazon_asin':     'B0MFP059P4',
-    },
+            'cw_term': 'roll-on deodorant women',
+    }
+,
     {
         'id': 'mach-3-razor-blades-4pk',
         'woolworths_term': 'mach 3 razor blades 4pk',
         'coles_term':      'mach 3 razor blades 4pk',
         'amazon_asin':     'B052BFSOZP',
-    },
+            'cw_term': 'mach 3 razor blades 4pk',
+    }
+,
     {
         'id': 'ultra-dry-nappies-size-3',
         'woolworths_term': 'ultra dry nappies size 3',
         'coles_term':      'ultra dry nappies size 3',
         'amazon_asin':     'B0TX497W19',
-    },
+            'cw_term': 'ultra dry nappies size 3',
+    }
+,
     {
         'id': 'ultra-dry-nappies-size-4',
         'woolworths_term': 'ultra dry nappies size 4',
         'coles_term':      'ultra dry nappies size 4',
         'amazon_asin':     'B0VW3RTQOH',
-    },
+            'cw_term': 'ultra dry nappies size 4',
+    }
+,
     {
         'id': 'baby-gold-formula-stage-2',
         'woolworths_term': 'baby gold formula stage 2',
         'coles_term':      'baby gold formula stage 2',
         'amazon_asin':     'B0MUH8LMN4',
-    },
+            'cw_term': 'baby gold formula stage 2',
+    }
+,
     {
         'id': 'organic-baby-food-pouch',
         'woolworths_term': 'organic baby food pouch',
         'coles_term':      'organic baby food pouch',
         'amazon_asin':     'B0R7SGMSOX',
-    },
+            'cw_term': 'organic baby food pouch',
+    }
+,
     {
         'id': 'tear-free-baby-shampoo',
         'woolworths_term': 'tear free baby shampoo',
         'coles_term':      'tear free baby shampoo',
         'amazon_asin':     None,
-    },
+            'cw_term': 'tear free baby shampoo',
+    }
+,
     {
         'id': 'dog-food-beef-can',
         'woolworths_term': 'dog food beef can',
         'coles_term':      'dog food beef can',
         'amazon_asin':     None,
-    },
+            'cw_term': 'dog food beef can',
+    }
+,
     {
         'id': 'cat-treats-chicken-bites',
         'woolworths_term': 'cat treats chicken bites',
         'coles_term':      'cat treats chicken bites',
         'amazon_asin':     None,
-    },
+            'cw_term': 'cat treats chicken bites',
+    }
+,
     {
         'id': 'cat-litter-crystals-odour',
         'woolworths_term': 'cat litter crystals odour',
         'coles_term':      'cat litter crystals odour',
         'amazon_asin':     'B0LTA8IRCD',
-    },
+            'cw_term': 'cat litter crystals odour',
+    }
+,
     {
         'id': 'vitamin-c-effervescent',
         'woolworths_term': 'vitamin c effervescent',
         'coles_term':      'vitamin c effervescent',
         'amazon_asin':     'B09SI5GAS4',
-    },
+            'cw_term': 'vitamin c effervescent',
+    }
+,
     {
         'id': 'multivitamins-50plus-60pk',
         'woolworths_term': 'multivitamins 50+ 60pk',
         'coles_term':      'multivitamins 50+ 60pk',
         'amazon_asin':     'B042VLDQ4H',
-    },
+            'cw_term': 'multivitamins 50+ 60pk',
+    }
+,
     {
         'id': 'cough-lozenges-honey-lemon',
         'woolworths_term': 'cough lozenges honey lemon',
         'coles_term':      'cough lozenges honey lemon',
         'amazon_asin':     'B0EZ5EDJJT',
-    },
+            'cw_term': 'cough lozenges honey lemon',
+    }
+,
     {
         'id': 'elastic-plastic-bandages',
         'woolworths_term': 'elastic plastic bandages',
         'coles_term':      'elastic plastic bandages',
         'amazon_asin':     'B0FPH90O7Y',
-    },
+            'cw_term': 'elastic plastic bandages',
+    }
+,
     {
         'id': 'plain-flour-premium',
         'woolworths_term': 'plain flour premium',
         'coles_term':      'plain flour premium',
         'amazon_asin':     'B022T1TDGN',
-    },
+            'cw_term': 'plain flour premium',
+    }
+,
     {
         'id': 'brown-sugar-soft-cane',
         'woolworths_term': 'brown sugar soft cane',
         'coles_term':      'brown sugar soft cane',
         'amazon_asin':     'B0NQFKPL9E',
-    },
+            'cw_term': 'brown sugar soft cane',
+    }
+,
     {
         'id': 'icing-sugar-mixture',
         'woolworths_term': 'icing sugar mixture',
         'coles_term':      'icing sugar mixture',
         'amazon_asin':     'B0KA024SCO',
-    },
+            'cw_term': 'icing sugar mixture',
+    }
+,
     {
         'id': 'baking-powder-tin',
         'woolworths_term': 'baking powder tin',
         'coles_term':      'baking powder tin',
         'amazon_asin':     'B0SS3EOQM1',
-    },
+            'cw_term': 'baking powder tin',
+    }
+,
     {
         'id': 'pure-vanilla-extract',
         'woolworths_term': 'pure vanilla extract',
         'coles_term':      'pure vanilla extract',
         'amazon_asin':     'B0H8OJRJED',
-    },
+            'cw_term': 'pure vanilla extract',
+    }
+,
     {
         'id': 'dry-yeast-sachets-5pk-val1',
         'woolworths_term': 'dry yeast sachets 5pk val1',
         'coles_term':      'dry yeast sachets 5pk val1',
         'amazon_asin':     'B0KTS2H3TZ',
-    },
+            'cw_term': 'dry yeast sachets 5pk val1',
+    }
+,
     {
         'id': 'basmati-rice-premium-val1',
         'woolworths_term': 'basmati rice premium val1',
         'coles_term':      'basmati rice premium val1',
         'amazon_asin':     'B0R6852FC1',
-    },
+            'cw_term': 'basmati rice premium val1',
+    }
+,
     {
         'id': 'jasmine-rice-fragrant-val1',
         'woolworths_term': 'jasmine rice fragrant val1',
         'coles_term':      'jasmine rice fragrant val1',
         'amazon_asin':     'B0UQBFOBRC',
-    },
+            'cw_term': 'jasmine rice fragrant val1',
+    }
+,
     {
         'id': 'extra-virgin-olive-oil-val1',
         'woolworths_term': 'extra virgin olive oil val1',
         'coles_term':      'extra virgin olive oil val1',
         'amazon_asin':     'B0L472RL15',
-    },
+            'cw_term': 'extra virgin olive oil val1',
+    }
+,
     {
         'id': 'pure-canola-cooking-oil-val1',
         'woolworths_term': 'pure canola cooking oil val1',
         'coles_term':      'pure canola cooking oil val1',
         'amazon_asin':     'B0F4W0VUGK',
-    },
+            'cw_term': 'pure canola cooking oil val1',
+    }
+,
     {
         'id': 'soy-sauce-gluten-free-val1',
         'woolworths_term': 'soy sauce gluten free val1',
         'coles_term':      'soy sauce gluten free val1',
         'amazon_asin':     'B0V05SZ9C3',
-    },
+            'cw_term': 'soy sauce gluten free val1',
+    }
+,
     {
         'id': 'tomato-paste-squeeze-val1',
         'woolworths_term': 'tomato paste squeeze val1',
         'coles_term':      'tomato paste squeeze val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'tomato paste squeeze val1',
+    }
+,
     {
         'id': 'canned-sweet-corn-kernels-val1',
         'woolworths_term': 'canned sweet corn kernels val1',
         'coles_term':      'canned sweet corn kernels val1',
         'amazon_asin':     'B0FUQUHZ6A',
-    },
+            'cw_term': 'canned sweet corn kernels val1',
+    }
+,
     {
         'id': 'chunky-tuna-in-olive-oil-val1',
         'woolworths_term': 'chunky tuna in olive oil val1',
         'coles_term':      'chunky tuna in olive oil val1',
         'amazon_asin':     'B0830DM7X5',
-    },
+            'cw_term': 'chunky tuna in olive oil val1',
+    }
+,
     {
         'id': 'tuna-tempters-springwater-val1',
         'woolworths_term': 'tuna tempters springwater val1',
         'coles_term':      'tuna tempters springwater val1',
         'amazon_asin':     'B02DNR9IS2',
-    },
+            'cw_term': 'tuna tempters springwater val1',
+    }
+,
     {
         'id': 'crunchy-peanut-butter-val1',
         'woolworths_term': 'crunchy peanut butter val1',
         'coles_term':      'crunchy peanut butter val1',
         'amazon_asin':     'B05HBPKT9A',
-    },
+            'cw_term': 'crunchy peanut butter val1',
+    }
+,
     {
         'id': 'smooth-peanut-butter-jar-val1',
         'woolworths_term': 'smooth peanut butter jar val1',
         'coles_term':      'smooth peanut butter jar val1',
         'amazon_asin':     'B090FOH3HJ',
-    },
+            'cw_term': 'smooth peanut butter jar val1',
+    }
+,
     {
         'id': 'strawberry-jam-spread-val1',
         'woolworths_term': 'strawberry jam spread val1',
         'coles_term':      'strawberry jam spread val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'strawberry jam spread val1',
+    }
+,
     {
         'id': 'pure-honey-squeeze-bottle-val1',
         'woolworths_term': 'pure honey squeeze bottle val1',
         'coles_term':      'pure honey squeeze bottle val1',
         'amazon_asin':     'B05S6R044P',
-    },
+            'cw_term': 'pure honey squeeze bottle val1',
+    }
+,
     {
         'id': 'whole-egg-mayonnaise-jar-val1',
         'woolworths_term': 'whole egg mayonnaise jar val1',
         'coles_term':      'whole egg mayonnaise jar val1',
         'amazon_asin':     'B039JYM6IE',
-    },
+            'cw_term': 'whole egg mayonnaise jar val1',
+    }
+,
     {
         'id': 'traditional-tomato-pasta-sauce-val1',
         'woolworths_term': 'traditional tomato pasta sauce val1',
         'coles_term':      'traditional tomato pasta sauce val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'traditional tomato pasta sauce val1',
+    }
+,
     {
         'id': 'spaghetti-pasta-no-5-val1',
         'woolworths_term': 'spaghetti pasta no 5 val1',
         'coles_term':      'spaghetti pasta no 5 val1',
         'amazon_asin':     'B0R0V6RAST',
-    },
+            'cw_term': 'spaghetti pasta no 5 val1',
+    }
+,
     {
         'id': 'penne-rigate-pasta-val1',
         'woolworths_term': 'penne rigate pasta val1',
         'coles_term':      'penne rigate pasta val1',
         'amazon_asin':     'B05J284WV9',
-    },
+            'cw_term': 'penne rigate pasta val1',
+    }
+,
     {
         'id': 'canned-chickpeas-drained-val1',
         'woolworths_term': 'canned chickpeas drained val1',
         'coles_term':      'canned chickpeas drained val1',
         'amazon_asin':     'B08Y3UMPYO',
-    },
+            'cw_term': 'canned chickpeas drained val1',
+    }
+,
     {
         'id': 'canned-brown-lentils-val1',
         'woolworths_term': 'canned brown lentils val1',
         'coles_term':      'canned brown lentils val1',
         'amazon_asin':     'B00CU4YYJ5',
-    },
+            'cw_term': 'canned brown lentils val1',
+    }
+,
     {
         'id': 'table-salt-fine-iodised-val1',
         'woolworths_term': 'table salt fine iodised val1',
         'coles_term':      'table salt fine iodised val1',
         'amazon_asin':     'B0CI6VG2G7',
-    },
+            'cw_term': 'table salt fine iodised val1',
+    }
+,
     {
         'id': 'black-pepper-grinder-val1',
         'woolworths_term': 'black pepper grinder val1',
         'coles_term':      'black pepper grinder val1',
         'amazon_asin':     'B03AJ0JE4Q',
-    },
+            'cw_term': 'black pepper grinder val1',
+    }
+,
     {
         'id': 'dijon-mustard-jar-val1',
         'woolworths_term': 'dijon mustard jar val1',
         'coles_term':      'dijon mustard jar val1',
         'amazon_asin':     'B0VZFV8YU5',
-    },
+            'cw_term': 'dijon mustard jar val1',
+    }
+,
     {
         'id': 'tomato-ketchup-bottle-val1',
         'woolworths_term': 'tomato ketchup bottle val1',
         'coles_term':      'tomato ketchup bottle val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'tomato ketchup bottle val1',
+    }
+,
     {
         'id': 'barbecue-sauce-squeeze-val1',
         'woolworths_term': 'barbecue sauce squeeze val1',
         'coles_term':      'barbecue sauce squeeze val1',
         'amazon_asin':     'B08CEPSOF1',
-    },
+            'cw_term': 'barbecue sauce squeeze val1',
+    }
+,
     {
         'id': 'sweet-chilli-sauce-val1',
         'woolworths_term': 'sweet chilli sauce val1',
         'coles_term':      'sweet chilli sauce val1',
         'amazon_asin':     'B0GG2KTBCU',
-    },
+            'cw_term': 'sweet chilli sauce val1',
+    }
+,
     {
         'id': 'baked-beans-in-tomato-sauce-val1',
         'woolworths_term': 'baked beans in tomato sauce val1',
         'coles_term':      'baked beans in tomato sauce val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'baked beans in tomato sauce val1',
+    }
+,
     {
         'id': 'packham-pears-fresh-val1',
         'woolworths_term': 'packham pears fresh val1',
         'coles_term':      'packham pears fresh val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'packham pears fresh val1',
+    }
+,
     {
         'id': 'yellow-peaches-sweet-val1',
         'woolworths_term': 'yellow peaches sweet val1',
         'coles_term':      'yellow peaches sweet val1',
         'amazon_asin':     'B0DSWX1JP7',
-    },
+            'cw_term': 'yellow peaches sweet val1',
+    }
+,
     {
         'id': 'navel-oranges-juicy-val1',
         'woolworths_term': 'navel oranges juicy val1',
         'coles_term':      'navel oranges juicy val1',
         'amazon_asin':     'B00LKLFYP5',
-    },
+            'cw_term': 'navel oranges juicy val1',
+    }
+,
     {
         'id': 'imperial-mandarins-bag-val1',
         'woolworths_term': 'imperial mandarins bag val1',
         'coles_term':      'imperial mandarins bag val1',
         'amazon_asin':     'B0JO3Q3QA3',
-    },
+            'cw_term': 'imperial mandarins bag val1',
+    }
+,
     {
         'id': 'lemons-fresh-bunch-val1',
         'woolworths_term': 'lemons fresh bunch val1',
         'coles_term':      'lemons fresh bunch val1',
         'amazon_asin':     'B0S8KE2WT1',
-    },
+            'cw_term': 'lemons fresh bunch val1',
+    }
+,
     {
         'id': 'limes-fresh-bag-val1',
         'woolworths_term': 'limes fresh bag val1',
         'coles_term':      'limes fresh bag val1',
         'amazon_asin':     'B0Q3TMY4GP',
-    },
+            'cw_term': 'limes fresh bag val1',
+    }
+,
     {
         'id': 'blueberries-fresh-tub-val1',
         'woolworths_term': 'blueberries fresh tub val1',
         'coles_term':      'blueberries fresh tub val1',
         'amazon_asin':     'B0YWSSBZRA',
-    },
+            'cw_term': 'blueberries fresh tub val1',
+    }
+,
     {
         'id': 'raspberries-fresh-punnet-val1',
         'woolworths_term': 'raspberries fresh punnet val1',
         'coles_term':      'raspberries fresh punnet val1',
         'amazon_asin':     'B0D5SOWOMQ',
-    },
+            'cw_term': 'raspberries fresh punnet val1',
+    }
+,
     {
         'id': 'fresh-ginger-root-val1',
         'woolworths_term': 'fresh ginger root val1',
         'coles_term':      'fresh ginger root val1',
         'amazon_asin':     'B0IGCT2CXI',
-    },
+            'cw_term': 'fresh ginger root val1',
+    }
+,
     {
         'id': 'garlic-cloves-bag-val1',
         'woolworths_term': 'garlic cloves bag val1',
         'coles_term':      'garlic cloves bag val1',
         'amazon_asin':     'B0FSU0LMI8',
-    },
+            'cw_term': 'garlic cloves bag val1',
+    }
+,
     {
         'id': 'butternut-pumpkin-whole-val1',
         'woolworths_term': 'butternut pumpkin whole val1',
         'coles_term':      'butternut pumpkin whole val1',
         'amazon_asin':     'B0X76RKQ4S',
-    },
+            'cw_term': 'butternut pumpkin whole val1',
+    }
+,
     {
         'id': 'green-zucchini-fresh-val1',
         'woolworths_term': 'green zucchini fresh val1',
         'coles_term':      'green zucchini fresh val1',
         'amazon_asin':     'B0VH3EJOZ9',
-    },
+            'cw_term': 'green zucchini fresh val1',
+    }
+,
     {
         'id': 'button-mushrooms-cup-val1',
         'woolworths_term': 'button mushrooms cup val1',
         'coles_term':      'button mushrooms cup val1',
         'amazon_asin':     'B0XFZAQ8H3',
-    },
+            'cw_term': 'button mushrooms cup val1',
+    }
+,
     {
         'id': 'fresh-beetroot-bunch-val1',
         'woolworths_term': 'fresh beetroot bunch val1',
         'coles_term':      'fresh beetroot bunch val1',
         'amazon_asin':     'B0XQYXGO4B',
-    },
+            'cw_term': 'fresh beetroot bunch val1',
+    }
+,
     {
         'id': 'lebanese-cucumbers-val1',
         'woolworths_term': 'lebanese cucumbers val1',
         'coles_term':      'lebanese cucumbers val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'lebanese cucumbers val1',
+    }
+,
     {
         'id': 'roma-tomatoes-fresh-val1',
         'woolworths_term': 'roma tomatoes fresh val1',
         'coles_term':      'roma tomatoes fresh val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'roma tomatoes fresh val1',
+    }
+,
     {
         'id': 'red-onions-loose-val1',
         'woolworths_term': 'red onions loose val1',
         'coles_term':      'red onions loose val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'red onions loose val1',
+    }
+,
     {
         'id': 'rump-steak-grassfed-val1',
         'woolworths_term': 'rump steak grassfed val1',
         'coles_term':      'rump steak grassfed val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'rump steak grassfed val1',
+    }
+,
     {
         'id': 'ribeye-steak-premium-val1',
         'woolworths_term': 'ribeye steak premium val1',
         'coles_term':      'ribeye steak premium val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'ribeye steak premium val1',
+    }
+,
     {
         'id': 'free-range-chicken-breast-val1',
         'woolworths_term': 'free range chicken breast val1',
         'coles_term':      'free range chicken breast val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'free range chicken breast val1',
+    }
+,
     {
         'id': 'chicken-wings-bulk-val1',
         'woolworths_term': 'chicken wings bulk val1',
         'coles_term':      'chicken wings bulk val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'chicken wings bulk val1',
+    }
+,
     {
         'id': 'pork-chops-loin-bone-in-val1',
         'woolworths_term': 'pork chops loin bone-in val1',
         'coles_term':      'pork chops loin bone-in val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'pork chops loin bone-in val1',
+    }
+,
     {
         'id': 'lamb-chops-loin-val1',
         'woolworths_term': 'lamb chops loin val1',
         'coles_term':      'lamb chops loin val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'lamb chops loin val1',
+    }
+,
     {
         'id': 'tasmanian-salmon-fillets-val1',
         'woolworths_term': 'tasmanian salmon fillets val1',
         'coles_term':      'tasmanian salmon fillets val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'tasmanian salmon fillets val1',
+    }
+,
     {
         'id': 'cooked-tiger-prawns-fresh-val1',
         'woolworths_term': 'cooked tiger prawns fresh val1',
         'coles_term':      'cooked tiger prawns fresh val1',
         'amazon_asin':     'B09UOE3T0H',
-    },
+            'cw_term': 'cooked tiger prawns fresh val1',
+    }
+,
     {
         'id': 'smoked-streaky-bacon-val1',
         'woolworths_term': 'smoked streaky bacon val1',
         'coles_term':      'smoked streaky bacon val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'smoked streaky bacon val1',
+    }
+,
     {
         'id': 'beef-mince-premium-5-fat-val1',
         'woolworths_term': 'beef mince premium 5% fat val1',
         'coles_term':      'beef mince premium 5% fat val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'beef mince premium 5% fat val1',
+    }
+,
     {
         'id': 'pork-beef-sausages-thin-val1',
         'woolworths_term': 'pork  beef sausages thin val1',
         'coles_term':      'pork  beef sausages thin val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'pork  beef sausages thin val1',
+    }
+,
     {
         'id': 'salted-butter-block-val1',
         'woolworths_term': 'salted butter block val1',
         'coles_term':      'salted butter block val1',
         'amazon_asin':     'B0ICCT5HGP',
-    },
+            'cw_term': 'salted butter block val1',
+    }
+,
     {
         'id': 'unsalted-butter-block-val1',
         'woolworths_term': 'unsalted butter block val1',
         'coles_term':      'unsalted butter block val1',
         'amazon_asin':     'B08IY3X80J',
-    },
+            'cw_term': 'unsalted butter block val1',
+    }
+,
     {
         'id': 'cheddar-cheese-block-tasty-val1',
         'woolworths_term': 'cheddar cheese block tasty val1',
         'coles_term':      'cheddar cheese block tasty val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'cheddar cheese block tasty val1',
+    }
+,
     {
         'id': 'grated-parmesan-cheese-val1',
         'woolworths_term': 'grated parmesan cheese val1',
         'coles_term':      'grated parmesan cheese val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'grated parmesan cheese val1',
+    }
+,
     {
         'id': 'shredded-mozzarella-cheese-val1',
         'woolworths_term': 'shredded mozzarella cheese val1',
         'coles_term':      'shredded mozzarella cheese val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'shredded mozzarella cheese val1',
+    }
+,
     {
         'id': 'greek-style-yogurt-natural-val1',
         'woolworths_term': 'greek style yogurt natural val1',
         'coles_term':      'greek style yogurt natural val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'greek style yogurt natural val1',
+    }
+,
     {
         'id': 'light-sour-cream-tub-val1',
         'woolworths_term': 'light sour cream tub val1',
         'coles_term':      'light sour cream tub val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'light sour cream tub val1',
+    }
+,
     {
         'id': 'original-cream-cheese-tub-val1',
         'woolworths_term': 'original cream cheese tub val1',
         'coles_term':      'original cream cheese tub val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'original cream cheese tub val1',
+    }
+,
     {
         'id': 'almond-milk-unsweetened-val1',
         'woolworths_term': 'almond milk unsweetened val1',
         'coles_term':      'almond milk unsweetened val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'almond milk unsweetened val1',
+    }
+,
     {
         'id': 'soy-milk-original-active-val1',
         'woolworths_term': 'soy milk original active val1',
         'coles_term':      'soy milk original active val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'soy milk original active val1',
+    }
+,
     {
         'id': 'sourdough-loaf-fresh-val1',
         'woolworths_term': 'sourdough loaf fresh val1',
         'coles_term':      'sourdough loaf fresh val1',
         'amazon_asin':     'B00G50RCXN',
-    },
+            'cw_term': 'sourdough loaf fresh val1',
+    }
+,
     {
         'id': 'wholemeal-sliced-bread-val1',
         'woolworths_term': 'wholemeal sliced bread val1',
         'coles_term':      'wholemeal sliced bread val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'wholemeal sliced bread val1',
+    }
+,
     {
         'id': 'white-sliced-bread-toast-val1',
         'woolworths_term': 'white sliced bread toast val1',
         'coles_term':      'white sliced bread toast val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'white sliced bread toast val1',
+    }
+,
     {
         'id': 'golden-crumpets-toast-6pk-val1',
         'woolworths_term': 'golden crumpets toast 6pk val1',
         'coles_term':      'golden crumpets toast 6pk val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'golden crumpets toast 6pk val1',
+    }
+,
     {
         'id': 'english-muffins-original-val1',
         'woolworths_term': 'english muffins original val1',
         'coles_term':      'english muffins original val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'english muffins original val1',
+    }
+,
     {
         'id': 'soft-tortilla-wraps-large-val1',
         'woolworths_term': 'soft tortilla wraps large val1',
         'coles_term':      'soft tortilla wraps large val1',
         'amazon_asin':     'B022PXGX8W',
-    },
+            'cw_term': 'soft tortilla wraps large val1',
+    }
+,
     {
         'id': 'frozen-baby-peas-bag-val1',
         'woolworths_term': 'frozen baby peas bag val1',
         'coles_term':      'frozen baby peas bag val1',
         'amazon_asin':     'B0DZRMH3FN',
-    },
+            'cw_term': 'frozen baby peas bag val1',
+    }
+,
     {
         'id': 'frozen-super-sweet-corn-val1',
         'woolworths_term': 'frozen super sweet corn val1',
         'coles_term':      'frozen super sweet corn val1',
         'amazon_asin':     'B0BDVPINE9',
-    },
+            'cw_term': 'frozen super sweet corn val1',
+    }
+,
     {
         'id': 'classic-vanilla-ice-cream-val1',
         'woolworths_term': 'classic vanilla ice cream val1',
         'coles_term':      'classic vanilla ice cream val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'classic vanilla ice cream val1',
+    }
+,
     {
         'id': 'deep-pan-hawaiian-pizza-val1',
         'woolworths_term': 'deep pan hawaiian pizza val1',
         'coles_term':      'deep pan hawaiian pizza val1',
         'amazon_asin':     'B0NNOVJARJ',
-    },
+            'cw_term': 'deep pan hawaiian pizza val1',
+    }
+,
     {
         'id': 'frozen-mixed-berries-bag-val1',
         'woolworths_term': 'frozen mixed berries bag val1',
         'coles_term':      'frozen mixed berries bag val1',
         'amazon_asin':     'B0I8QLHBIA',
-    },
+            'cw_term': 'frozen mixed berries bag val1',
+    }
+,
     {
         'id': 'party-meat-pies-12pk-val1',
         'woolworths_term': 'party meat pies 12pk val1',
         'coles_term':      'party meat pies 12pk val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'party meat pies 12pk val1',
+    }
+,
     {
         'id': 'party-sausage-rolls-12pk-val1',
         'woolworths_term': 'party sausage rolls 12pk val1',
         'coles_term':      'party sausage rolls 12pk val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'party sausage rolls 12pk val1',
+    }
+,
     {
         'id': 'laundry-powder-sensitive-val1',
         'woolworths_term': 'laundry powder sensitive val1',
         'coles_term':      'laundry powder sensitive val1',
         'amazon_asin':     'B0WPUBLQDI',
-    },
+            'cw_term': 'laundry powder sensitive val1',
+    }
+,
     {
         'id': 'fabric-softener-lavender-val1',
         'woolworths_term': 'fabric softener lavender val1',
         'coles_term':      'fabric softener lavender val1',
         'amazon_asin':     'B007HE42X6',
-    },
+            'cw_term': 'fabric softener lavender val1',
+    }
+,
     {
         'id': 'dishwashing-liquid-lemon-val1',
         'woolworths_term': 'dishwashing liquid lemon val1',
         'coles_term':      'dishwashing liquid lemon val1',
         'amazon_asin':     'B0G26OC7T3',
-    },
+            'cw_term': 'dishwashing liquid lemon val1',
+    }
+,
     {
         'id': 'glass-cleaner-spray-val1',
         'woolworths_term': 'glass cleaner spray val1',
         'coles_term':      'glass cleaner spray val1',
         'amazon_asin':     'B0BD4Z1G52',
-    },
+            'cw_term': 'glass cleaner spray val1',
+    }
+,
     {
         'id': 'multi-purpose-spray-citrus-val1',
         'woolworths_term': 'multi purpose spray citrus val1',
         'coles_term':      'multi purpose spray citrus val1',
         'amazon_asin':     'B0EFUJEIR9',
-    },
+            'cw_term': 'multi purpose spray citrus val1',
+    }
+,
     {
         'id': 'sponge-scrubbers-4pk-val1',
         'woolworths_term': 'sponge scrubbers 4pk val1',
         'coles_term':      'sponge scrubbers 4pk val1',
         'amazon_asin':     'B0UY7S361G',
-    },
+            'cw_term': 'sponge scrubbers 4pk val1',
+    }
+,
     {
         'id': 'medium-garbage-bags-30pk-val1',
         'woolworths_term': 'medium garbage bags 30pk val1',
         'coles_term':      'medium garbage bags 30pk val1',
         'amazon_asin':     'B0H9N12O0V',
-    },
+            'cw_term': 'medium garbage bags 30pk val1',
+    }
+,
     {
         'id': 'aluminium-foil-roll-val1',
         'woolworths_term': 'aluminium foil roll val1',
         'coles_term':      'aluminium foil roll val1',
         'amazon_asin':     'B03Z0GU1UQ',
-    },
+            'cw_term': 'aluminium foil roll val1',
+    }
+,
     {
         'id': 'cling-wrap-plastic-roll-val1',
         'woolworths_term': 'cling wrap plastic roll val1',
         'coles_term':      'cling wrap plastic roll val1',
         'amazon_asin':     'B0XJ4EFFF1',
-    },
+            'cw_term': 'cling wrap plastic roll val1',
+    }
+,
     {
         'id': 'refreshing-body-wash-gel-val1',
         'woolworths_term': 'refreshing body wash gel val1',
         'coles_term':      'refreshing body wash gel val1',
         'amazon_asin':     'B0GXI9D99V',
-    },
+            'cw_term': 'refreshing body wash gel val1',
+    }
+,
     {
         'id': 'anti-dandruff-shampoo-val1',
         'woolworths_term': 'anti dandruff shampoo val1',
         'coles_term':      'anti dandruff shampoo val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'anti dandruff shampoo val1',
+    }
+,
     {
         'id': 'smooth-care-conditioner-val1',
         'woolworths_term': 'smooth care conditioner val1',
         'coles_term':      'smooth care conditioner val1',
         'amazon_asin':     'B0H0W1DSTW',
-    },
+            'cw_term': 'smooth care conditioner val1',
+    }
+,
     {
         'id': 'antibacterial-hand-wash-val1',
         'woolworths_term': 'antibacterial hand wash val1',
         'coles_term':      'antibacterial hand wash val1',
         'amazon_asin':     'B0G6NJ4OGW',
-    },
+            'cw_term': 'antibacterial hand wash val1',
+    }
+,
     {
         'id': 'deodorant-spray-men-sport-val1',
         'woolworths_term': 'deodorant spray men sport val1',
         'coles_term':      'deodorant spray men sport val1',
         'amazon_asin':     'B09XHRO199',
-    },
+            'cw_term': 'deodorant spray men sport val1',
+    }
+,
     {
         'id': 'roll-on-deodorant-women-val1',
         'woolworths_term': 'roll-on deodorant women val1',
         'coles_term':      'roll-on deodorant women val1',
         'amazon_asin':     'B0BRBLRTVW',
-    },
+            'cw_term': 'roll-on deodorant women val1',
+    }
+,
     {
         'id': 'mach-3-razor-blades-4pk-val1',
         'woolworths_term': 'mach 3 razor blades 4pk val1',
         'coles_term':      'mach 3 razor blades 4pk val1',
         'amazon_asin':     'B0ALJZEJBF',
-    },
+            'cw_term': 'mach 3 razor blades 4pk val1',
+    }
+,
     {
         'id': 'ultra-dry-nappies-size-3-val1',
         'woolworths_term': 'ultra dry nappies size 3 val1',
         'coles_term':      'ultra dry nappies size 3 val1',
         'amazon_asin':     'B07NY03VKX',
-    },
+            'cw_term': 'ultra dry nappies size 3 val1',
+    }
+,
     {
         'id': 'ultra-dry-nappies-size-4-val1',
         'woolworths_term': 'ultra dry nappies size 4 val1',
         'coles_term':      'ultra dry nappies size 4 val1',
         'amazon_asin':     'B0TUFDJKDF',
-    },
+            'cw_term': 'ultra dry nappies size 4 val1',
+    }
+,
     {
         'id': 'baby-gold-formula-stage-2-val1',
         'woolworths_term': 'baby gold formula stage 2 val1',
         'coles_term':      'baby gold formula stage 2 val1',
         'amazon_asin':     'B0R21520RN',
-    },
+            'cw_term': 'baby gold formula stage 2 val1',
+    }
+,
     {
         'id': 'organic-baby-food-pouch-val1',
         'woolworths_term': 'organic baby food pouch val1',
         'coles_term':      'organic baby food pouch val1',
         'amazon_asin':     'B06HW1HS57',
-    },
+            'cw_term': 'organic baby food pouch val1',
+    }
+,
     {
         'id': 'tear-free-baby-shampoo-val1',
         'woolworths_term': 'tear free baby shampoo val1',
         'coles_term':      'tear free baby shampoo val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'tear free baby shampoo val1',
+    }
+,
     {
         'id': 'dog-food-beef-can-val1',
         'woolworths_term': 'dog food beef can val1',
         'coles_term':      'dog food beef can val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'dog food beef can val1',
+    }
+,
     {
         'id': 'cat-treats-chicken-bites-val1',
         'woolworths_term': 'cat treats chicken bites val1',
         'coles_term':      'cat treats chicken bites val1',
         'amazon_asin':     None,
-    },
+            'cw_term': 'cat treats chicken bites val1',
+    }
+,
     {
         'id': 'cat-litter-crystals-odour-val1',
         'woolworths_term': 'cat litter crystals odour val1',
         'coles_term':      'cat litter crystals odour val1',
         'amazon_asin':     'B0TCOZDANT',
-    },
+            'cw_term': 'cat litter crystals odour val1',
+    }
+,
     {
         'id': 'vitamin-c-effervescent-val1',
         'woolworths_term': 'vitamin c effervescent val1',
         'coles_term':      'vitamin c effervescent val1',
         'amazon_asin':     'B0NIQSUHA5',
-    },
+            'cw_term': 'vitamin c effervescent val1',
+    }
+,
     {
         'id': 'multivitamins-50plus-60pk-val1',
         'woolworths_term': 'multivitamins 50+ 60pk val1',
         'coles_term':      'multivitamins 50+ 60pk val1',
         'amazon_asin':     'B01LIY8O69',
-    },
+            'cw_term': 'multivitamins 50+ 60pk val1',
+    }
+,
     {
         'id': 'cough-lozenges-honey-lemon-val1',
         'woolworths_term': 'cough lozenges honey lemon val1',
         'coles_term':      'cough lozenges honey lemon val1',
         'amazon_asin':     'B0WEZC1B3E',
-    },
+            'cw_term': 'cough lozenges honey lemon val1',
+    }
+,
     {
         'id': 'elastic-plastic-bandages-val1',
         'woolworths_term': 'elastic plastic bandages val1',
         'coles_term':      'elastic plastic bandages val1',
         'amazon_asin':     'B0U1Z0SHZB',
-    },
+            'cw_term': 'elastic plastic bandages val1',
+    }
+,
     {
         'id': 'plain-flour-premium-val1',
         'woolworths_term': 'plain flour premium val1',
         'coles_term':      'plain flour premium val1',
         'amazon_asin':     'B0UK3XF1GP',
-    },
+            'cw_term': 'plain flour premium val1',
+    }
+,
     {
         'id': 'brown-sugar-soft-cane-val1',
         'woolworths_term': 'brown sugar soft cane val1',
         'coles_term':      'brown sugar soft cane val1',
         'amazon_asin':     'B01Z7FZTVO',
-    },
+            'cw_term': 'brown sugar soft cane val1',
+    }
+,
     {
         'id': 'icing-sugar-mixture-val1',
         'woolworths_term': 'icing sugar mixture val1',
         'coles_term':      'icing sugar mixture val1',
         'amazon_asin':     'B0VKE6H76M',
-    },
+            'cw_term': 'icing sugar mixture val1',
+    }
+,
     {
         'id': 'baking-powder-tin-val1',
         'woolworths_term': 'baking powder tin val1',
         'coles_term':      'baking powder tin val1',
         'amazon_asin':     'B0WWJPGJQM',
-    },
+            'cw_term': 'baking powder tin val1',
+    }
+,
     {
         'id': 'pure-vanilla-extract-val1',
         'woolworths_term': 'pure vanilla extract val1',
         'coles_term':      'pure vanilla extract val1',
         'amazon_asin':     'B0LJEL532U',
-    },
+            'cw_term': 'pure vanilla extract val1',
+    }
+,
     {
         'id': 'dry-yeast-sachets-5pk-val2',
         'woolworths_term': 'dry yeast sachets 5pk val2',
         'coles_term':      'dry yeast sachets 5pk val2',
         'amazon_asin':     'B0UJ2E42TR',
-    },
+            'cw_term': 'dry yeast sachets 5pk val2',
+    }
+,
     {
         'id': 'basmati-rice-premium-val2',
         'woolworths_term': 'basmati rice premium val2',
         'coles_term':      'basmati rice premium val2',
         'amazon_asin':     'B0DW6ET32C',
-    },
+            'cw_term': 'basmati rice premium val2',
+    }
+,
     {
         'id': 'jasmine-rice-fragrant-val2',
         'woolworths_term': 'jasmine rice fragrant val2',
         'coles_term':      'jasmine rice fragrant val2',
         'amazon_asin':     'B0DXSEF6Y3',
-    },
+            'cw_term': 'jasmine rice fragrant val2',
+    }
+,
     {
         'id': 'extra-virgin-olive-oil-val2',
         'woolworths_term': 'extra virgin olive oil val2',
         'coles_term':      'extra virgin olive oil val2',
         'amazon_asin':     'B09C2MU46J',
-    },
+            'cw_term': 'extra virgin olive oil val2',
+    }
+,
     {
         'id': 'pure-canola-cooking-oil-val2',
         'woolworths_term': 'pure canola cooking oil val2',
         'coles_term':      'pure canola cooking oil val2',
         'amazon_asin':     'B0D2GVF6LC',
-    },
+            'cw_term': 'pure canola cooking oil val2',
+    }
+,
     {
         'id': 'soy-sauce-gluten-free-val2',
         'woolworths_term': 'soy sauce gluten free val2',
         'coles_term':      'soy sauce gluten free val2',
         'amazon_asin':     'B0P2277KXX',
-    },
+            'cw_term': 'soy sauce gluten free val2',
+    }
+,
     {
         'id': 'tomato-paste-squeeze-val2',
         'woolworths_term': 'tomato paste squeeze val2',
         'coles_term':      'tomato paste squeeze val2',
         'amazon_asin':     None,
-    },
+            'cw_term': 'tomato paste squeeze val2',
+    }
+,
     {
         'id': 'canned-sweet-corn-kernels-val2',
         'woolworths_term': 'canned sweet corn kernels val2',
         'coles_term':      'canned sweet corn kernels val2',
         'amazon_asin':     'B0SY0VDVEV',
-    },
+            'cw_term': 'canned sweet corn kernels val2',
+    }
+,
     {
         'id': 'chunky-tuna-in-olive-oil-val2',
         'woolworths_term': 'chunky tuna in olive oil val2',
         'coles_term':      'chunky tuna in olive oil val2',
         'amazon_asin':     'B0G9YSQJVF',
-    },
+            'cw_term': 'chunky tuna in olive oil val2',
+    }
+,
     {
         'id': 'tuna-tempters-springwater-val2',
         'woolworths_term': 'tuna tempters springwater val2',
         'coles_term':      'tuna tempters springwater val2',
         'amazon_asin':     'B0JWTZIFT9',
-    },
+            'cw_term': 'tuna tempters springwater val2',
+    }
+,
     {
         'id': 'crunchy-peanut-butter-val2',
         'woolworths_term': 'crunchy peanut butter val2',
         'coles_term':      'crunchy peanut butter val2',
         'amazon_asin':     'B0YVI7F16X',
-    },
+            'cw_term': 'crunchy peanut butter val2',
+    }
+,
     {
         'id': 'smooth-peanut-butter-jar-val2',
         'woolworths_term': 'smooth peanut butter jar val2',
         'coles_term':      'smooth peanut butter jar val2',
         'amazon_asin':     'B0BXTLNV5M',
-    },
+            'cw_term': 'smooth peanut butter jar val2',
+    }
+,
     {
         'id': 'strawberry-jam-spread-val2',
         'woolworths_term': 'strawberry jam spread val2',
         'coles_term':      'strawberry jam spread val2',
         'amazon_asin':     None,
-    },
+            'cw_term': 'strawberry jam spread val2',
+    }
+,
     {
         'id': 'pure-honey-squeeze-bottle-val2',
         'woolworths_term': 'pure honey squeeze bottle val2',
         'coles_term':      'pure honey squeeze bottle val2',
         'amazon_asin':     'B0OIJESG68',
-    },
+            'cw_term': 'pure honey squeeze bottle val2',
+    }
+,
     {
         'id': 'whole-egg-mayonnaise-jar-val2',
         'woolworths_term': 'whole egg mayonnaise jar val2',
         'coles_term':      'whole egg mayonnaise jar val2',
         'amazon_asin':     'B07CVIYJKL',
-    },
+            'cw_term': 'whole egg mayonnaise jar val2',
+    }
+,
     {
         'id': 'traditional-tomato-pasta-sauce-val2',
         'woolworths_term': 'traditional tomato pasta sauce val2',
         'coles_term':      'traditional tomato pasta sauce val2',
         'amazon_asin':     None,
-    },
+            'cw_term': 'traditional tomato pasta sauce val2',
+    }
+,
     {
         'id': 'spaghetti-pasta-no-5-val2',
         'woolworths_term': 'spaghetti pasta no 5 val2',
         'coles_term':      'spaghetti pasta no 5 val2',
         'amazon_asin':     'B0K2C0XP2S',
-    },
+            'cw_term': 'spaghetti pasta no 5 val2',
+    }
+,
     {
         'id': 'penne-rigate-pasta-val2',
         'woolworths_term': 'penne rigate pasta val2',
         'coles_term':      'penne rigate pasta val2',
         'amazon_asin':     'B02O8PT4MX',
+            'cw_term': 'penne rigate pasta val2',
     }
+
 ]

@@ -16,7 +16,7 @@ from datetime import datetime
 import config
 import db
 import alerts
-from scrapers import woolworths, coles, amazon_au
+from scrapers import woolworths, coles, amazon_au, chemist_warehouse
 
 # ── Logging setup ────────────────────────────────────
 logging.basicConfig(
@@ -38,7 +38,7 @@ def scrape_and_save(client, item: dict) -> dict:
     product_id = item['id']
     logger.info(f'━━━ {product_id} ━━━')
 
-    results = {'woolworths': None, 'coles': None, 'amazon': None}
+    results = {'woolworths': None, 'coles': None, 'amazon': None, 'chemist_warehouse': None}
 
     # ── Woolworths ──
     if item.get('woolworths_term'):
@@ -86,8 +86,6 @@ def scrape_and_save(client, item: dict) -> dict:
 
     # ── Amazon AU ──
     asin = item.get('amazon_asin')
-    # Read pack_qty from config's store data (we store it in config for Amazon items)
-    # For simplicity, pack_qty is defined inline here based on product id
     pack_qty = PACK_QTYS.get(product_id, 1)
 
     if asin:
@@ -113,6 +111,28 @@ def scrape_and_save(client, item: dict) -> dict:
             results['amazon'] = True
         else:
             results['amazon'] = False
+
+    # ── Chemist Warehouse ──
+    if item.get('cw_term'):
+        if not config.MOCK_MODE:
+            result = chemist_warehouse.search_product(item['cw_term'], timeout=config.REQUEST_TIMEOUT)
+            time.sleep(config.REQUEST_DELAY)
+        else:
+            result = {'price': 14.99, 'regular_price': 19.99, 'on_sale': True, 'discount_pct': 25, 'name': 'MOCK'}
+
+        if result:
+            db.upsert_price_snapshot(
+                client,
+                product_id=product_id,
+                store_id='chemist_warehouse',
+                price=result['price'],
+                regular_price=result.get('regular_price'),
+                on_sale=result.get('on_sale', False),
+                discount_pct=result.get('discount_pct'),
+            )
+            results['chemist_warehouse'] = True
+        else:
+            results['chemist_warehouse'] = False
 
     return results
 
@@ -159,7 +179,7 @@ def main():
     else:
         client = db.get_client()
 
-    failed_stores = {'woolworths': [], 'coles': [], 'amazon': []}
+    failed_stores = {'woolworths': [], 'coles': [], 'amazon': [], 'chemist_warehouse': []}
     success_count = 0
     error_count   = 0
 
