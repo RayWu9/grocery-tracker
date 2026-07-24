@@ -5450,11 +5450,6 @@ async function fetchDbData(client) {
     throw new Error(`Failed to fetch products: ${productsResponse.error.message}`);
   }
 
-  // Query snapshots (last 26 weeks)
-  const cutoffDate = new Date();
-  cutoffDate.setDate(cutoffDate.getDate() - 26 * 7);
-  const cutoffStr = cutoffDate.toISOString().split('T')[0];
-
   let snapshots = [];
   let start = 0;
   const batchSize = 10000;
@@ -5464,14 +5459,14 @@ async function fetchDbData(client) {
     const snapshotsResponse = await client
       .from('price_snapshots')
       .select('*')
-      .gte('week_start', cutoffStr)
+      .order('week_start', { ascending: false })
       .range(start, start + batchSize - 1);
 
     if (snapshotsResponse.error) {
       throw new Error(`Failed to fetch price snapshots: ${snapshotsResponse.error.message}`);
     }
 
-    const data = snapshotsResponse.data;
+    const data = snapshotsResponse.data || [];
     snapshots = snapshots.concat(data);
 
     if (data.length < batchSize) {
@@ -5488,16 +5483,26 @@ async function fetchDbData(client) {
 }
 
 function processSupabaseData(dbProducts, dbSnapshots) {
+  const rawMap = new Map((typeof RAW_PRODUCTS !== 'undefined' ? RAW_PRODUCTS : []).map(r => [r.id, r]));
+
   return dbProducts.map((p, idx) => {
+    const rawMatch = rawMap.get(p.id);
+    const rawProcessed = rawMatch ? processProducts([rawMatch])[0] : null;
+
     const stores = { woolworths: null, coles: null, amazon: null };
-    const pSnapshots = dbSnapshots.filter(s => s.product_id === p.id);
+    const pSnapshots = (dbSnapshots || []).filter(s => s.product_id === p.id);
 
     for (const storeId of ['woolworths', 'coles', 'amazon']) {
       const sSnaps = pSnapshots
         .filter(s => s.store_id === storeId)
         .sort((a, b) => a.week_start.localeCompare(b.week_start));
 
-      if (sSnaps.length === 0) continue;
+      if (sSnaps.length === 0) {
+        if (rawProcessed && rawProcessed.stores && rawProcessed.stores[storeId]) {
+          stores[storeId] = rawProcessed.stores[storeId];
+        }
+        continue;
+      }
 
       const history = sSnaps.map(snap => {
         const dateObj = new Date(snap.week_start);
@@ -5542,15 +5547,15 @@ function processSupabaseData(dbProducts, dbSnapshots) {
       .filter(([, s]) => s)
       .map(([key, s]) => ({ key, price: s.currentUnitPrice ?? s.currentPrice }));
 
-    const minPrice  = Math.min(...comparePrices.map(c => c.price));
-    const bestStore = comparePrices.find(c => c.price === minPrice)?.key ?? null;
+    const minPrice  = comparePrices.length > 0 ? Math.min(...comparePrices.map(c => c.price)) : (rawProcessed?.lowestPrice || 0);
+    const bestStore = comparePrices.find(c => c.price === minPrice)?.key ?? (rawProcessed?.bestStore || null);
 
     const anyOnSale = Object.values(stores).some(s => s?.onSale);
 
     const nextSaleList = Object.values(stores)
       .filter(s => s?.nextSale)
       .sort((a, b) => a.nextSale.daysUntil - b.nextSale.daysUntil);
-    const earliestNextSale = nextSaleList[0]?.nextSale ?? null;
+    const earliestNextSale = nextSaleList[0]?.nextSale ?? (rawProcessed?.earliestNextSale || null);
 
     return {
       id:          p.id,
@@ -5558,8 +5563,8 @@ function processSupabaseData(dbProducts, dbSnapshots) {
       size:        p.size,
       brand:       p.brand,
       category:    p.category,
-      emoji:       p.emoji || '🛒',
-      cycleWeeks:  p.cycle_weeks || 4,
+      emoji:       p.emoji || rawProcessed?.emoji || '🛒',
+      cycleWeeks:  p.cycle_weeks || rawProcessed?.cycleWeeks || 4,
       stores,
       bestStore,
       lowestPrice:     minPrice,
@@ -5654,49 +5659,38 @@ function setupSettingsUI() {
     const url = urlInput.value.trim();
     const key = keyInput.value.trim();
 
-    statusBox.textContent = 'Testing connection...';
-    statusBox.className = 'status-msg-box info';
-    statusBox.style.display = 'block';
+    if (!url || !key) {
+      statusBox.textContent = 'Please enter both Supabase URL and Service Role / Anon Key.';
+      statusBox.className = 'status-msg-box error';
+      statusBox.style.display = 'block';
+      return;
+    }
 
     try {
-      const tempClient = window.supabase.createClient(url, key);
-      
-      // Test query: try to fetch a single store row to verify read access
-      const testQuery = await tempClient.from('stores').select('id').limit(1);
-      
-      if (testQuery.error) {
-        throw new Error(testQuery.error.message);
+      statusBox.textContent = 'Testing connection...';
+      statusBox.className = 'status-msg-box info';
+      statusBox.style.display = 'block';
+
+      const testClient = initSupabase(url, key);
+      const dbData = await fetchDbData(testClient);
+
+      if (!dbData.products || dbData.products.length === 0) {
+        throw new Error('Database connected, but no products were found.');
       }
 
-      // Success: Save credentials and load live data
       saveCredentials(url, key);
-      supabaseClient = tempClient;
-      
-      statusBox.textContent = 'Connection successful! Loading data...';
+      supabaseClient = testClient;
+
+      // Update cache
+      await DBCache.set('products', dbData.products);
+      await DBCache.set('snapshots', dbData.snapshots);
+      await DBCache.set('cache_timestamp', Date.now());
+
+      products = processSupabaseData(dbData.products, dbData.snapshots);
+      updateSourceBadge('Supabase', 'connected');
+
+      statusBox.textContent = `Success! Connected to database (${dbData.products.length} products).`;
       statusBox.className = 'status-msg-box success';
-
-      const dbData = await fetchDbData(supabaseClient);
-      
-      // Save to cache
-      try {
-        await DBCache.set('products', dbData.products);
-        await DBCache.set('snapshots', dbData.snapshots);
-        await DBCache.set('cache_timestamp', Date.now());
-      } catch (cacheErr) {}
-
-      if (dbData.products && dbData.products.length > 0) {
-        products = processSupabaseData(dbData.products, dbData.snapshots);
-        updateSourceBadge('Supabase', 'connected');
-
-        // Update stats dates from actual latest week_start
-        if (dbData.snapshots.length > 0) {
-          const dates = dbData.snapshots.map(s => s.week_start);
-          const maxDate = new Date(dates.reduce((a, b) => a > b ? a : b));
-          document.getElementById('statDate').textContent = formatDateLabel(maxDate) + ' ' + maxDate.getFullYear();
-        }
-      } else {
-        throw new Error('Database contains no products.');
-      }
 
       renderStats();
       renderGrid();
@@ -5805,7 +5799,7 @@ async function init() {
       if (cachedTime && (Date.now() - cachedTime) < twelveHours) {
         const cachedProducts = await DBCache.get('products');
         const cachedSnapshots = await DBCache.get('snapshots');
-        if (cachedProducts && cachedSnapshots && cachedSnapshots.length > 5000) {
+        if (cachedProducts && cachedSnapshots && cachedSnapshots.length > 50) {
           dbData = { products: cachedProducts, snapshots: cachedSnapshots };
           console.log('Loaded database catalog and snapshots from client IndexedDB cache.');
         }
