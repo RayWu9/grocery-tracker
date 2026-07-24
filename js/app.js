@@ -4713,7 +4713,7 @@ function getVisibleProducts() {
       return p.anyOnSale || maxPct >= 20 || state.favorites.includes(p.id);
     });
   } else if (state.category === 'rare-sales') {
-    list = list.filter(p => p.cycleWeeks >= 6 || !p.anyOnSale || (p.earliestNextSale && p.earliestNextSale.daysUntil > 30));
+    list = list.filter(p => p.cycleWeeks >= 6);
   } else if (state.category !== 'all') {
     list = list.filter(p => p.category === state.category);
   }
@@ -4807,7 +4807,7 @@ function getVisibleProducts() {
 
 function renderStats() {
   const onSaleCount = products.filter(p => p.anyOnSale).length;
-  const rareCount   = products.filter(p => p.cycleWeeks >= 6 || !p.anyOnSale || (p.earliestNextSale && p.earliestNextSale.daysUntil > 30)).length;
+  const rareCount   = products.filter(p => p.cycleWeeks >= 6).length;
   document.getElementById('statItems').textContent = products.length;
   document.getElementById('statSale').textContent  = onSaleCount;
   const rareEl = document.getElementById('statRare');
@@ -4923,7 +4923,14 @@ function cardHTML(p, idx) {
   const favClass = isFav ? 'active' : '';
   const favStar = isFav ? '★' : '☆';
 
-  const badgeHTML = p.anyOnSale ? '<span class="sale-badge">On Sale</span>' : (p.cycleWeeks >= 6 ? `<span class="rare-sale-badge">${p.cycleWeeks}wk Cycle</span>` : '<span class="rare-sale-badge">Rare Sale</span>');
+  let badgeHTML = '';
+  if (p.anyOnSale) {
+    badgeHTML = '<span class="sale-badge">On Sale</span>';
+  } else if (p.cycleWeeks >= 8) {
+    badgeHTML = `<span class="rare-sale-badge">${p.cycleWeeks}wk Cycle</span>`;
+  } else if (p.cycleWeeks >= 6) {
+    badgeHTML = '<span class="rare-sale-badge">Rare Sale</span>';
+  }
 
   return `
     <article class="product-card ${p.anyOnSale ? 'on-sale' : ''}"
