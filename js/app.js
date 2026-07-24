@@ -4707,6 +4707,11 @@ function getVisibleProducts() {
 
   if (state.category === 'favorites') {
     list = list.filter(p => state.favorites.includes(p.id));
+  } else if (state.category === 'featured') {
+    list = list.filter(p => {
+      const maxPct = Math.max(...Object.values(p.stores).filter(Boolean).map(s => s.discountPct || 0), 0);
+      return p.anyOnSale || maxPct >= 20 || state.favorites.includes(p.id);
+    });
   } else if (state.category !== 'all') {
     list = list.filter(p => p.category === state.category);
   }
@@ -4740,17 +4745,40 @@ function getVisibleProducts() {
       }
       return p.lowestPrice;
     };
+
+    const getMaxDiscountPct = (p) => {
+      if (state.store !== 'all' && p.stores[state.store]) {
+        return p.stores[state.store].discountPct || 0;
+      }
+      return Math.max(...Object.values(p.stores).filter(Boolean).map(s => s.discountPct || 0), 0);
+    };
+
+    const getMaxDiscountDollar = (p) => {
+      const getSavings = (s) => {
+        if (!s || !s.onSale) return 0;
+        return Math.max(0, (s.regularPrice || 0) - (s.salePrice || 0));
+      };
+      if (state.store !== 'all' && p.stores[state.store]) {
+        return getSavings(p.stores[state.store]);
+      }
+      return Math.max(...Object.values(p.stores).filter(Boolean).map(getSavings), 0);
+    };
+
     switch (state.sort) {
       case 'price-asc':  return getPrice(a) - getPrice(b);
       case 'price-desc': return getPrice(b) - getPrice(a);
-      case 'discount':   {
-        const getDiscount = (p) => {
-          if (state.store !== 'all' && p.stores[state.store]) {
-            return p.stores[state.store].discountPct;
-          }
-          return Math.max(...Object.values(p.stores).filter(Boolean).map(s => s.discountPct));
+      case 'discount':
+      case 'discount-pct': return getMaxDiscountPct(b) - getMaxDiscountPct(a);
+      case 'discount-dollar': return getMaxDiscountDollar(b) - getMaxDiscountDollar(a);
+      case 'featured': {
+        const getScore = (p) => {
+          let score = 0;
+          if (state.favorites.includes(p.id)) score += 200;
+          if (p.anyOnSale) score += 100;
+          score += getMaxDiscountPct(p);
+          return score;
         };
-        return getDiscount(b) - getDiscount(a);
+        return getScore(b) - getScore(a);
       }
       case 'next-sale':  {
         const getNextSaleDays = (p) => {
@@ -4808,7 +4836,7 @@ function renderGrid() {
   }
 
   empty.hidden = true;
-  const cat = state.category !== 'all' ? (state.category === 'favorites' ? 'Watchlist' : CATEGORIES[state.category]?.label) : null;
+  const cat = state.category !== 'all' ? (state.category === 'favorites' ? 'Watchlist' : (state.category === 'featured' ? 'Featured Deals' : CATEGORIES[state.category]?.label)) : null;
   const storeLabel = state.store !== 'all' ? (state.store === 'amazon' ? 'Amazon AU' : state.store.charAt(0).toUpperCase() + state.store.slice(1)) : null;
   info.textContent = `Showing ${visible.length} item${visible.length !== 1 ? 's' : ''}${cat ? ' in ' + cat : ''}${storeLabel ? ' available at ' + storeLabel : ''}`;
 

@@ -104,10 +104,12 @@
             <option value="amazon">Filter: Amazon AU</option>
           </select>
           <select id="sortSelect" class="sort-select" aria-label="Sort products">
+            <option value="featured">Sort: Featured Deals 🔥</option>
             <option value="name">Sort: A → Z</option>
             <option value="price-asc">Sort: Price Low → High</option>
             <option value="price-desc">Sort: Price High → Low</option>
-            <option value="discount">Sort: Biggest Discount</option>
+            <option value="discount-pct">Sort: Biggest % Discount (% Off)</option>
+            <option value="discount-dollar">Sort: Biggest $ Savings ($ Off)</option>
             <option value="next-sale">Sort: Sale Soonest</option>
           </select>
           <label class="sale-toggle-wrap" for="saleToggle" title="Show only items currently on sale at any store">
@@ -120,6 +122,7 @@
 
       <!-- Category filter tabs -->
       <nav class="cat-nav" aria-label="Filter by category">
+        <button class="cat-btn" data-cat="featured" id="cat-featured">🔥 Featured Deals</button>
         <button class="cat-btn" data-cat="favorites" id="cat-favorites">⭐ Watchlist</button>
         <button class="cat-btn active" data-cat="all" id="cat-all">All</button>
         <button class="cat-btn" data-cat="soft-drinks" id="cat-soft-drinks">🥤 Drinks</button>
