@@ -10,10 +10,10 @@
 // =====================================================
 
 const STORES = {
-  woolworths:         { name: 'Woolworths',         short: 'WW', dotClass: 'dot-ww', color: '#00a94f', textColor: '#00a94f' },
-  coles:              { name: 'Coles',              short: 'CO', dotClass: 'dot-co', color: '#e2001a', textColor: '#e2001a' },
-  amazon:             { name: 'Amazon AU',          short: 'AM', dotClass: 'dot-am', color: '#ff9900', textColor: '#ff9900' },
-  chemist_warehouse:  { name: 'Chemist Warehouse',  short: 'CW', dotClass: 'dot-cw', color: '#e30613', textColor: '#e30613' },
+  woolworths:         { name: 'Woolworths',         short: 'WW', dotClass: 'dot-ww', color: '#00c85e', textColor: '#00c85e' },
+  coles:              { name: 'Coles',              short: 'CO', dotClass: 'dot-co', color: '#ff3b4e', textColor: '#ff3b4e' },
+  amazon:             { name: 'Amazon AU',          short: 'AM', dotClass: 'dot-am', color: '#ffaa22', textColor: '#ffaa22' },
+  chemist_warehouse:  { name: 'Chemist Warehouse',  short: 'CW', dotClass: 'dot-cw', color: '#ffe033', textColor: '#ffe033' },
 };
 
 const CATEGORIES = {
