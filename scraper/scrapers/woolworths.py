@@ -105,6 +105,9 @@ def _parse_response(data: dict, search_term: str) -> dict | None:
     name          = product.get('Name', '')
     description   = product.get('Description', '')
 
+    image_url     = product.get('MediumImageURI') or product.get('LargeImageURI')
+    sku           = str(product.get('Stockcode') or product.get('Barcode') or '')
+
     if price is None:
         logger.warning(f'[Woolworths] No price for "{search_term}" (found: {name})')
         return None
@@ -125,4 +128,6 @@ def _parse_response(data: dict, search_term: str) -> dict | None:
         'discount_pct':  discount_pct,
         'name':          name,
         'description':   description,
+        'image_url':     image_url,
+        'sku':           sku,
     }

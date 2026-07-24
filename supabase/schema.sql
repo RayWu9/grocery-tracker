@@ -27,6 +27,8 @@ INSERT INTO stores (id, name, url, color) VALUES
 -- ── Products ─────────────────────────────────────────
 CREATE TABLE products (
   id            TEXT PRIMARY KEY,          -- e.g. 'coca-cola-125l'
+  sku           TEXT,                      -- barcode / GTIN / EAN
+  image_url     TEXT,                      -- product photo URL
   name          TEXT NOT NULL,
   brand         TEXT,
   size          TEXT,

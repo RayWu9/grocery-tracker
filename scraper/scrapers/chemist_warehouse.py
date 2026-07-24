@@ -91,6 +91,12 @@ def _parse_html_response(html: str, search_term: str) -> dict | None:
         discount_pct = round((1 - price / rrp) * 100) if is_on_sale and rrp > price else None
         name = name_match.group(1).strip() if name_match else search_term
 
+        img_match = re.search(r'class="product-image"[^>]*src="([^"]+)"', html, re.IGNORECASE)
+        sku_match = re.search(r'data-productid="([0-9]+)"', html, re.IGNORECASE)
+
+        image_url = img_match.group(1) if img_match else None
+        sku = sku_match.group(1) if sku_match else None
+
         logger.info(
             f'[Chemist Warehouse] "{name}" → ${price:.2f}'
             + (f' (was ${rrp:.2f}, -{discount_pct}%)' if is_on_sale else ' (regular)')
@@ -103,6 +109,8 @@ def _parse_html_response(html: str, search_term: str) -> dict | None:
             'discount_pct':  discount_pct,
             'name':          name,
             'description':   name,
+            'image_url':     image_url,
+            'sku':           sku,
         }
     except Exception as e:
         logger.error(f'[Chemist Warehouse] Error parsing response for "{search_term}": {e}')

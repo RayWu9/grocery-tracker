@@ -50,7 +50,7 @@ const TODAY = new Date(2026, 6, 4); // July 4 2026
 
 const RAW_PRODUCTS = [
   {
-    id: 'coca-cola-125l', name: 'Coca-Cola Classic', size: '1.25L', brand: 'Coca-Cola',
+    id: 'coca-cola-125l', sku: '9301445677957', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101171.jpg', name: 'Coca-Cola Classic', size: '1.25L', brand: 'Coca-Cola',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -60,7 +60,7 @@ woolworths: { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 0 },
     }
   },
   {
-    id: 'pepsi-max-125l', name: 'Pepsi Max Cola No Sugar', size: '1.25L', brand: 'PepsiCo',
+    id: 'pepsi-max-125l', sku: '9301507406307', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101221.jpg', name: 'Pepsi Max Cola No Sugar', size: '1.25L', brand: 'PepsiCo',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -70,7 +70,7 @@ woolworths: { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 1 },
     }
   },
   {
-    id: 'sprite-125l', name: 'Sprite Lemonade', size: '1.25L', brand: 'Coca-Cola',
+    id: 'sprite-125l', sku: '9301195060856', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/100968.jpg', name: 'Sprite Lemonade', size: '1.25L', brand: 'Coca-Cola',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -80,7 +80,7 @@ woolworths: { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 2 },
     }
   },
   {
-    id: 'solo-125l', name: 'Solo Original Lemon', size: '1.25L', brand: 'Asahi',
+    id: 'solo-125l', sku: '9300925925250', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/100750.jpg', name: 'Solo Original Lemon', size: '1.25L', brand: 'Asahi',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -90,7 +90,7 @@ woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'mt-franklin-600ml', name: 'Mount Franklin Sparkling', size: '600ml', brand: 'Coca-Cola',
+    id: 'mt-franklin-600ml', sku: '9301895060345', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101535.jpg', name: 'Mount Franklin Sparkling', size: '600ml', brand: 'Coca-Cola',
     category: 'soft-drinks', emoji: '💧', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -100,7 +100,7 @@ woolworths: { regularPrice: 3.50, salePrice: 2.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'red-bull-4pk', name: 'Red Bull Energy Drink', size: '4 x 250ml', brand: 'Red Bull',
+    id: 'red-bull-4pk', sku: '9301366665669', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101107.jpg', name: 'Red Bull Energy Drink', size: '4 x 250ml', brand: 'Red Bull',
     category: 'soft-drinks', emoji: '⚡', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -110,7 +110,7 @@ woolworths: { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'v-energy-drink-500ml', name: 'V Green Energy Can', size: '500ml', brand: 'V Energy',
+    id: 'v-energy-drink-500ml', sku: '9302228393435', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101805.jpg', name: 'V Green Energy Can', size: '500ml', brand: 'V Energy',
     category: 'soft-drinks', emoji: '🟢', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -120,7 +120,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'lipton-ice-tea-peach-15l', name: 'Lipton Ice Tea Peach', size: '1.5L', brand: 'Lipton',
+    id: 'lipton-ice-tea-peach-15l', sku: '9302696294328', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102184.jpg', name: 'Lipton Ice Tea Peach', size: '1.5L', brand: 'Lipton',
     category: 'soft-drinks', emoji: '🍹', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -130,7 +130,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'fanta-orange-125l', name: 'Fanta Orange', size: '1.25L', brand: 'Coca-Cola',
+    id: 'fanta-orange-125l', sku: '9301861727036', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101508.jpg', name: 'Fanta Orange', size: '1.25L', brand: 'Coca-Cola',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -140,7 +140,7 @@ woolworths: { regularPrice: 3.30, salePrice: 2.10, phaseOffset: 2 },
     }
   },
   {
-    id: 'schweppes-lemonade-11l', name: 'Schweppes Lemonade', size: '1.1L', brand: 'Schweppes',
+    id: 'schweppes-lemonade-11l', sku: '9302606170937', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102111.jpg', name: 'Schweppes Lemonade', size: '1.1L', brand: 'Schweppes',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -150,7 +150,7 @@ woolworths: { regularPrice: 3.00, salePrice: 1.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'kirks-pasito-10pk', name: 'Kirks Pasito Cans', size: '10 x 375ml', brand: 'Kirks',
+    id: 'kirks-pasito-10pk', sku: '9301987652870', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101610.jpg', name: 'Kirks Pasito Cans', size: '10 x 375ml', brand: 'Kirks',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -160,7 +160,7 @@ woolworths: { regularPrice: 10.50, salePrice: 6.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'gatorade-blue-bolt-1l', name: 'Gatorade Blue Bolt', size: '1L', brand: 'Gatorade',
+    id: 'gatorade-blue-bolt-1l', sku: '9302454319196', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101988.jpg', name: 'Gatorade Blue Bolt', size: '1L', brand: 'Gatorade',
     category: 'soft-drinks', emoji: '🏃', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -170,7 +170,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'powerade-berry-ice-600ml', name: 'Powerade Berry Ice', size: '600ml', brand: 'Powerade',
+    id: 'powerade-berry-ice-600ml', sku: '9302728393070', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102210.jpg', name: 'Powerade Berry Ice', size: '600ml', brand: 'Powerade',
     category: 'soft-drinks', emoji: '🏃', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -180,7 +180,7 @@ woolworths: { regularPrice: 3.80, salePrice: 2.40, phaseOffset: 2 },
     }
   },
   {
-    id: 'bundaberg-ginger-beer-4pk', name: 'Bundaberg Ginger Beer', size: '4 x 375ml', brand: 'Bundaberg',
+    id: 'bundaberg-ginger-beer-4pk', sku: '9302955553398', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102394.jpg', name: 'Bundaberg Ginger Beer', size: '4 x 375ml', brand: 'Bundaberg',
     category: 'soft-drinks', emoji: '🍺', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -190,7 +190,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'coke-zero-30pk', name: 'Coca-Cola Zero Sugar Cans', size: '30 x 375ml', brand: 'Coca-Cola',
+    id: 'coke-zero-30pk', sku: '9301572838358', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101274.jpg', name: 'Coca-Cola Zero Sugar Cans', size: '30 x 375ml', brand: 'Coca-Cola',
     category: 'soft-drinks', emoji: '🥤', cycleWeeks: 8,
     stores: {
       chemist_warehouse: null,
@@ -200,7 +200,7 @@ woolworths: { regularPrice: 39.00, salePrice: 26.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'skittles-original-160g', name: 'Skittles Original Fruit', size: '160g', brand: 'Mars',
+    id: 'skittles-original-160g', sku: '9302567899360', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102080.jpg', name: 'Skittles Original Fruit', size: '160g', brand: 'Mars',
     category: 'confectionery', emoji: '🌈', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -210,7 +210,7 @@ woolworths: { regularPrice: 4.00, salePrice: 2.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'allens-snakes-220g', name: 'Allens Snakes Alive', size: '220g', brand: 'Allens',
+    id: 'allens-snakes-220g', sku: '9302006171375', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101625.jpg', name: 'Allens Snakes Alive', size: '220g', brand: 'Allens',
     category: 'confectionery', emoji: '🐍', cycleWeeks: 7,
     stores: {
       chemist_warehouse: null,
@@ -220,7 +220,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'mentos-fruit-roll', name: 'Mentos Fruit Roll', size: '8 x 38g', brand: 'Mentos',
+    id: 'mentos-fruit-roll', sku: '9302156788549', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101747.jpg', name: 'Mentos Fruit Roll', size: '8 x 38g', brand: 'Mentos',
     category: 'confectionery', emoji: '🍬', cycleWeeks: 8,
     stores: {
       chemist_warehouse: null,
@@ -230,7 +230,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'allens-party-mix-190g', name: 'Allens Party Mix', size: '190g', brand: 'Allens',
+    id: 'allens-party-mix-190g', sku: '9302376541475', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101925.jpg', name: 'Allens Party Mix', size: '190g', brand: 'Allens',
     category: 'confectionery', emoji: '🍬', cycleWeeks: 7,
     stores: {
       chemist_warehouse: null,
@@ -240,7 +240,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'starburst-snakes-170g', name: 'Starburst Sour Snakes', size: '170g', brand: 'Starburst',
+    id: 'starburst-snakes-170g', sku: '9302459257464', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101992.jpg', name: 'Starburst Sour Snakes', size: '170g', brand: 'Starburst',
     category: 'confectionery', emoji: '🐍', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -250,7 +250,7 @@ woolworths: { regularPrice: 4.00, salePrice: 2.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'haribo-goldbears-150g', name: 'Haribo Goldbears', size: '150g', brand: 'Haribo',
+    id: 'haribo-goldbears-150g', sku: '9302369134073', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101919.jpg', name: 'Haribo Goldbears', size: '150g', brand: 'Haribo',
     category: 'confectionery', emoji: '🧸', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -260,7 +260,7 @@ woolworths: { regularPrice: 3.80, salePrice: 2.40, phaseOffset: 0 },
     }
   },
   {
-    id: 'chupa-chups-10pk', name: 'Chupa Chups Lollipops', size: '10 Pack', brand: 'Chupa Chups',
+    id: 'chupa-chups-10pk', sku: '9301829628294', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101482.jpg', name: 'Chupa Chups Lollipops', size: '10 Pack', brand: 'Chupa Chups',
     category: 'confectionery', emoji: '🍭', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -270,7 +270,7 @@ woolworths: { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 2 },
     }
   },
   {
-    id: 'natural-confectionery-snakes-260g', name: 'TNCC Snakes', size: '260g', brand: 'TNCC',
+    id: 'natural-confectionery-snakes-260g', sku: '9303943206998', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103194.jpg', name: 'TNCC Snakes', size: '260g', brand: 'TNCC',
     category: 'confectionery', emoji: '🐍', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -280,7 +280,7 @@ woolworths: { regularPrice: 5.00, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'pascall-marshmallows-280g', name: 'Pascall Vanilla Marshmallows', size: '280g', brand: 'Pascall',
+    id: 'pascall-marshmallows-280g', sku: '9302949380563', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102389.jpg', name: 'Pascall Vanilla Marshmallows', size: '280g', brand: 'Pascall',
     category: 'confectionery', emoji: '🍥', cycleWeeks: 7,
     stores: {
       chemist_warehouse: null,
@@ -290,7 +290,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'red-skins-allen-220g', name: 'Allens Red Ripperz', size: '220g', brand: 'Allens',
+    id: 'red-skins-allen-220g', sku: '9302193825559', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101777.jpg', name: 'Allens Red Ripperz', size: '220g', brand: 'Allens',
     category: 'confectionery', emoji: '🍬', cycleWeeks: 7,
     stores: {
       chemist_warehouse: null,
@@ -300,7 +300,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'werthers-original-140g', name: 'Werthers Original Butter Candies', size: '140g', brand: 'Werthers',
+    id: 'werthers-original-140g', sku: '9302566664793', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102079.jpg', name: 'Werthers Original Butter Candies', size: '140g', brand: 'Werthers',
     category: 'confectionery', emoji: '🍬', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -310,7 +310,7 @@ woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'eclipse-mints-peppermint-40g', name: 'Eclipse Mints Peppermint', size: '40g', brand: 'Eclipse',
+    id: 'eclipse-mints-peppermint-40g', sku: '9303365429642', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102726.jpg', name: 'Eclipse Mints Peppermint', size: '40g', brand: 'Eclipse',
     category: 'confectionery', emoji: '🍃', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -320,7 +320,7 @@ woolworths: { regularPrice: 3.50, salePrice: 2.20, phaseOffset: 1 },
     }
   },
   {
-    id: 'mentos-mint-rolls-4pk', name: 'Mentos Mint Rolls', size: '4 x 37.5g', brand: 'Mentos',
+    id: 'mentos-mint-rolls-4pk', sku: '9302548146288', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102064.jpg', name: 'Mentos Mint Rolls', size: '4 x 37.5g', brand: 'Mentos',
     category: 'confectionery', emoji: '🍬', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -330,7 +330,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.20, phaseOffset: 0 },
     }
   },
   {
-    id: 'tictac-freshmint-24g', name: 'Tic Tac Fresh Mint', size: '24g', brand: 'Tic Tac',
+    id: 'tictac-freshmint-24g', sku: '9302349381001', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101903.jpg', name: 'Tic Tac Fresh Mint', size: '24g', brand: 'Tic Tac',
     category: 'confectionery', emoji: '🍬', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -340,7 +340,7 @@ woolworths: { regularPrice: 2.00, salePrice: 1.40, phaseOffset: 0 },
     }
   },
   {
-    id: 'sour-patch-kids-190g', name: 'Sour Patch Kids', size: '190g', brand: 'Sour Patch',
+    id: 'sour-patch-kids-190g', sku: '9302227158868', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101804.jpg', name: 'Sour Patch Kids', size: '190g', brand: 'Sour Patch',
     category: 'confectionery', emoji: '👾', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -350,7 +350,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'cadbury-dairy-milk-180g', name: 'Cadbury Dairy Milk Block', size: '180g', brand: 'Cadbury',
+    id: 'cadbury-dairy-milk-180g', sku: '9302596294401', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102103.jpg', name: 'Cadbury Dairy Milk Block', size: '180g', brand: 'Cadbury',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -360,7 +360,7 @@ woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'cadbury-favourites-500g', name: 'Cadbury Favourites Box', size: '500g', brand: 'Cadbury',
+    id: 'cadbury-favourites-500g', sku: '9302696294328', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102184.jpg', name: 'Cadbury Favourites Box', size: '500g', brand: 'Cadbury',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 8,
     stores: {
       chemist_warehouse: null,
@@ -370,7 +370,7 @@ woolworths: { regularPrice: 16.00, salePrice: 8.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'kitkat-chunky-4pk', name: 'Kit Kat Chunky Pack', size: '4 Pack', brand: 'Nestle',
+    id: 'kitkat-chunky-4pk', sku: '9302058023189', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101667.jpg', name: 'Kit Kat Chunky Pack', size: '4 Pack', brand: 'Nestle',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -380,7 +380,7 @@ woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'lindt-excellence-85g', name: 'Lindt Excellence 70% Dark', size: '85g', brand: 'Lindt',
+    id: 'lindt-excellence-85g', sku: '9302332097063', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101889.jpg', name: 'Lindt Excellence 70% Dark', size: '85g', brand: 'Lindt',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 7,
     stores: {
       chemist_warehouse: null,
@@ -390,7 +390,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'snickers-4pk', name: 'Snickers Multipack', size: '4 Pack', brand: 'Mars',
+    id: 'snickers-4pk', sku: '9301459258194', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101182.jpg', name: 'Snickers Multipack', size: '4 Pack', brand: 'Mars',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -400,7 +400,7 @@ woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'arnotts-tim-tam-200g', name: 'Arnotts Tim Tam Original', size: '200g', brand: 'Arnotts',
+    id: 'arnotts-tim-tam-200g', sku: '9302240739105', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101815.jpg', name: 'Arnotts Tim Tam Original', size: '200g', brand: 'Arnotts',
     category: 'chocolate', emoji: '🍪', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -410,7 +410,7 @@ woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'maltesers-400g', name: 'Maltesers Chocolate Bucket', size: '400g', brand: 'Maltesers',
+    id: 'maltesers-400g', sku: '9301570369224', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101272.jpg', name: 'Maltesers Chocolate Bucket', size: '400g', brand: 'Maltesers',
     category: 'chocolate', emoji: '🔴', cycleWeeks: 8,
     stores: {
       chemist_warehouse: null,
@@ -420,7 +420,7 @@ woolworths: { regularPrice: 12.00, salePrice: 7.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'mms-milk-chocolate-180g', name: 'M&Ms Milk Chocolate Bag', size: '180g', brand: 'M&Ms',
+    id: 'mms-milk-chocolate-180g', sku: '9302591356133', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102099.jpg', name: 'M&Ms Milk Chocolate Bag', size: '180g', brand: 'M&Ms',
     category: 'chocolate', emoji: '🟤', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -430,7 +430,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'pods-snickers-160g', name: 'Pods Snickers Chocolate', size: '160g', brand: 'Mars',
+    id: 'pods-snickers-160g', sku: '9302034566416', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101648.jpg', name: 'Pods Snickers Chocolate', size: '160g', brand: 'Mars',
     category: 'chocolate', emoji: '🍪', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -440,7 +440,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'mars-bar-53g', name: 'Mars Bar Single', size: '53g', brand: 'Mars',
+    id: 'mars-bar-53g', sku: '9301285184247', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101041.jpg', name: 'Mars Bar Single', size: '53g', brand: 'Mars',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -450,7 +450,7 @@ woolworths: { regularPrice: 2.50, salePrice: 1.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'cherry-ripe-double-dipped-block', name: 'Cadbury Cherry Ripe Block', size: '180g', brand: 'Cadbury',
+    id: 'cherry-ripe-double-dipped-block', sku: '9303769133051', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103053.jpg', name: 'Cadbury Cherry Ripe Block', size: '180g', brand: 'Cadbury',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -460,7 +460,7 @@ woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'toblerone-milk-360g', name: 'Toblerone Milk Chocolate', size: '360g', brand: 'Toblerone',
+    id: 'toblerone-milk-360g', sku: '9302154319415', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101745.jpg', name: 'Toblerone Milk Chocolate', size: '360g', brand: 'Toblerone',
     category: 'chocolate', emoji: '🔺', cycleWeeks: 8,
     stores: {
       chemist_warehouse: null,
@@ -470,7 +470,7 @@ woolworths: { regularPrice: 12.00, salePrice: 7.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'ferrero-rocher-16pk', name: 'Ferrero Rocher Gift Box', size: '16 Pack', brand: 'Ferrero',
+    id: 'ferrero-rocher-16pk', sku: '9302237035404', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101812.jpg', name: 'Ferrero Rocher Gift Box', size: '16 Pack', brand: 'Ferrero',
     category: 'chocolate', emoji: '🟡', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -480,7 +480,7 @@ woolworths: { regularPrice: 15.00, salePrice: 10.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'twirl-cadbury-5pk', name: 'Cadbury Twirl Multipack', size: '5 Pack', brand: 'Cadbury',
+    id: 'twirl-cadbury-5pk', sku: '9302061726890', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101670.jpg', name: 'Cadbury Twirl Multipack', size: '5 Pack', brand: 'Cadbury',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -490,7 +490,7 @@ woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'picnic-bar-4pk', name: 'Cadbury Picnic Multipack', size: '4 Pack', brand: 'Cadbury',
+    id: 'picnic-bar-4pk', sku: '9301604937100', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101300.jpg', name: 'Cadbury Picnic Multipack', size: '4 Pack', brand: 'Cadbury',
     category: 'chocolate', emoji: '🍫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -500,7 +500,7 @@ woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'pringles-original-134g', name: 'Pringles Original', size: '134g', brand: 'Pringles',
+    id: 'pringles-original-134g', sku: '9302550615422', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102066.jpg', name: 'Pringles Original', size: '134g', brand: 'Pringles',
     category: 'chips', emoji: '🥔', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -510,7 +510,7 @@ woolworths: { regularPrice: 5.00, salePrice: 3.20, phaseOffset: 0 },
     }
   },
   {
-    id: 'smiths-crinkle-150g', name: 'Smiths Crinkle Cut Potato', size: '150g', brand: 'Smiths',
+    id: 'smiths-crinkle-150g', sku: '9302161726817', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101751.jpg', name: 'Smiths Crinkle Cut Potato', size: '150g', brand: 'Smiths',
     category: 'chips', emoji: '🥔', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -520,7 +520,7 @@ woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 2 },
     }
   },
   {
-    id: 'kettle-sea-salt-150g', name: 'Kettle Sea Salt Chips', size: '150g', brand: 'Kettle',
+    id: 'kettle-sea-salt-150g', sku: '9302204936662', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101786.jpg', name: 'Kettle Sea Salt Chips', size: '150g', brand: 'Kettle',
     category: 'chips', emoji: '🥔', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -530,7 +530,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'doritos-cheese-170g', name: 'Doritos Cheese Supreme', size: '170g', brand: 'Doritos',
+    id: 'doritos-cheese-170g', sku: '9302145677446', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101738.jpg', name: 'Doritos Cheese Supreme', size: '170g', brand: 'Doritos',
     category: 'chips', emoji: '🍿', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -540,7 +540,7 @@ woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 0 },
     }
   },
   {
-    id: 'thins-original-175g', name: 'Thins Chips Light & Tangy', size: '175g', brand: 'Thins',
+    id: 'thins-original-175g', sku: '9302164195951', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101753.jpg', name: 'Thins Chips Light & Tangy', size: '175g', brand: 'Thins',
     category: 'chips', emoji: '🥔', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -550,7 +550,7 @@ woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 1 },
     }
   },
   {
-    id: 'twisties-cheese-90g', name: 'Twisties Cheese', size: '90g', brand: 'Twisties',
+    id: 'twisties-cheese-90g', sku: '9302235800837', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101811.jpg', name: 'Twisties Cheese', size: '90g', brand: 'Twisties',
     category: 'chips', emoji: '🧀', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -560,7 +560,7 @@ woolworths: { regularPrice: 2.70, salePrice: 1.80, phaseOffset: 2 },
     }
   },
   {
-    id: 'red-rock-deli-sea-salt-165g', name: 'Red Rock Deli Sea Salt', size: '165g', brand: 'Red Rock Deli',
+    id: 'red-rock-deli-sea-salt-165g', sku: '9302954318831', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102393.jpg', name: 'Red Rock Deli Sea Salt', size: '165g', brand: 'Red Rock Deli',
     category: 'chips', emoji: '🥔', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -570,7 +570,7 @@ woolworths: { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'cheezels-cheese-box-125g', name: 'Cheezels Cheese Snacks Box', size: '125g', brand: 'Cheezels',
+    id: 'cheezels-cheese-box-125g', sku: '9302704936297', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102191.jpg', name: 'Cheezels Cheese Snacks Box', size: '125g', brand: 'Cheezels',
     category: 'chips', emoji: '⭕', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -580,7 +580,7 @@ woolworths: { regularPrice: 3.50, salePrice: 2.20, phaseOffset: 0 },
     }
   },
   {
-    id: 'shapes-bbq-arnotts-175g', name: 'Arnotts Shapes BBQ', size: '175g', brand: 'Arnotts',
+    id: 'shapes-bbq-arnotts-175g', sku: '9302625924009', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102127.jpg', name: 'Arnotts Shapes BBQ', size: '175g', brand: 'Arnotts',
     category: 'chips', emoji: '🍘', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -590,7 +590,7 @@ woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'grainwaves-sour-cream-170g', name: 'Grainwaves Sour Cream & Chives', size: '170g', brand: 'Grainwaves',
+    id: 'grainwaves-sour-cream-170g', sku: '9303019750882', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102446.jpg', name: 'Grainwaves Sour Cream & Chives', size: '170g', brand: 'Grainwaves',
     category: 'chips', emoji: '🌊', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -600,7 +600,7 @@ woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 0 },
     }
   },
   {
-    id: 'smiths-thinly-cut-175g', name: 'Smiths Thinly Cut Sour Cream', size: '175g', brand: 'Smiths',
+    id: 'smiths-thinly-cut-175g', sku: '9302537035185', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102055.jpg', name: 'Smiths Thinly Cut Sour Cream', size: '175g', brand: 'Smiths',
     category: 'chips', emoji: '🥔', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -610,7 +610,7 @@ woolworths: { regularPrice: 4.80, salePrice: 2.40, phaseOffset: 3 },
     }
   },
   {
-    id: 'cc-tasty-cheese-175g', name: 'CCs Tasty Cheese Corn Chips', size: '175g', brand: 'CCs',
+    id: 'cc-tasty-cheese-175g', sku: '9302196294693', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101779.jpg', name: 'CCs Tasty Cheese Corn Chips', size: '175g', brand: 'CCs',
     category: 'chips', emoji: '🍿', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -620,7 +620,7 @@ woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'red-rock-honey-soy-165g', name: 'Red Rock Deli Honey Soy Chicken', size: '165g', brand: 'Red Rock Deli',
+    id: 'red-rock-honey-soy-165g', sku: '9302566664793', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102079.jpg', name: 'Red Rock Deli Honey Soy Chicken', size: '165g', brand: 'Red Rock Deli',
     category: 'chips', emoji: '🍗', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -630,7 +630,7 @@ woolworths: { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'vege-chips-natural-100g', name: 'Vege Chips Natural Flavor', size: '100g', brand: 'Vege Chips',
+    id: 'vege-chips-natural-100g', sku: '9302592590700', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102100.jpg', name: 'Vege Chips Natural Flavor', size: '100g', brand: 'Vege Chips',
     category: 'chips', emoji: '🌿', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -640,7 +640,7 @@ woolworths: { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 1 },
     }
   },
   {
-    id: 'infuzions-vege-straws-110g', name: 'Infuzions Veggie Straws Sour Cream', size: '110g', brand: 'Infuzions',
+    id: 'infuzions-vege-straws-110g', sku: '9303061726160', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102480.jpg', name: 'Infuzions Veggie Straws Sour Cream', size: '110g', brand: 'Infuzions',
     category: 'chips', emoji: '🍟', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -650,7 +650,7 @@ woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'magnum-classic-4pk', name: 'Magnum Classic Chocolate Sticks', size: '4 Pack', brand: 'Streets',
+    id: 'magnum-classic-4pk', sku: '9302153084848', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101744.jpg', name: 'Magnum Classic Chocolate Sticks', size: '4 Pack', brand: 'Streets',
     category: 'ice-cream', emoji: '🍦', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -660,7 +660,7 @@ woolworths: { regularPrice: 10.50, salePrice: 6.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'ben-jerrys-458ml', name: 'Ben & Jerry Half Baked Tub', size: '458ml', brand: 'Ben & Jerry',
+    id: 'ben-jerrys-458ml', sku: '9301787653016', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101448.jpg', name: 'Ben & Jerry Half Baked Tub', size: '458ml', brand: 'Ben & Jerry',
     category: 'ice-cream', emoji: '🍨', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -670,7 +670,7 @@ woolworths: { regularPrice: 13.00, salePrice: 9.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'streets-blue-ribbon-2l', name: 'Streets Blue Ribbon Vanilla', size: '2L', brand: 'Streets',
+    id: 'streets-blue-ribbon-2l', sku: '9302630862277', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102131.jpg', name: 'Streets Blue Ribbon Vanilla', size: '2L', brand: 'Streets',
     category: 'ice-cream', emoji: '🍦', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -680,7 +680,7 @@ woolworths: { regularPrice: 9.00, salePrice: 6.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'connoisseur-vanilla-1l', name: 'Connoisseur Classic Vanilla', size: '1L', brand: 'Connoisseur',
+    id: 'connoisseur-vanilla-1l', sku: '9302713578266', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102198.jpg', name: 'Connoisseur Classic Vanilla', size: '1L', brand: 'Connoisseur',
     category: 'ice-cream', emoji: '🍨', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -690,7 +690,7 @@ woolworths: { regularPrice: 12.00, salePrice: 8.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'bull-creamy-classics-2l', name: 'Bulla Creamy Classics Vanilla', size: '2L', brand: 'Bulla',
+    id: 'bull-creamy-classics-2l', sku: '9302738269606', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102218.jpg', name: 'Bulla Creamy Classics Vanilla', size: '2L', brand: 'Bulla',
     category: 'ice-cream', emoji: '🍨', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -700,7 +700,7 @@ woolworths: { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'peters-original-vanilla-4l', name: 'Peters Original Vanilla Tub', size: '4L', brand: 'Peters',
+    id: 'peters-original-vanilla-4l', sku: '9303148145850', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102550.jpg', name: 'Peters Original Vanilla Tub', size: '4L', brand: 'Peters',
     category: 'ice-cream', emoji: '🍨', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -710,7 +710,7 @@ woolworths: { regularPrice: 10.50, salePrice: 7.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'drumstick-vanilla-4pk', name: 'Peters Drumstick Vanilla Cone', size: '4 Pack', brand: 'Peters',
+    id: 'drumstick-vanilla-4pk', sku: '9302575306762', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102086.jpg', name: 'Peters Drumstick Vanilla Cone', size: '4 Pack', brand: 'Peters',
     category: 'ice-cream', emoji: '🍦', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -720,7 +720,7 @@ woolworths: { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'maxibon-original-4pk', name: 'Peters Maxibon Vanilla Sticks', size: '4 Pack', brand: 'Peters',
+    id: 'maxibon-original-4pk', sku: '9302424689588', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101964.jpg', name: 'Peters Maxibon Vanilla Sticks', size: '4 Pack', brand: 'Peters',
     category: 'ice-cream', emoji: '🥪', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -730,7 +730,7 @@ woolworths: { regularPrice: 10.00, salePrice: 6.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'cornetto-classic-4pk', name: 'Streets Cornetto Chocolate Cone', size: '4 Pack', brand: 'Streets',
+    id: 'cornetto-classic-4pk', sku: '9302440738959', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101977.jpg', name: 'Streets Cornetto Chocolate Cone', size: '4 Pack', brand: 'Streets',
     category: 'ice-cream', emoji: '🍦', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -740,7 +740,7 @@ woolworths: { regularPrice: 9.00, salePrice: 5.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'weis-mango-bar-4pk', name: 'Weis Mango Ice Cream Bars', size: '4 Pack', brand: 'Weis',
+    id: 'weis-mango-bar-4pk', sku: '9302080245395', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101685.jpg', name: 'Weis Mango Ice Cream Bars', size: '4 Pack', brand: 'Weis',
     category: 'ice-cream', emoji: '🥭', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -750,7 +750,7 @@ woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'golden-gaytime-4pk', name: 'Streets Golden Gaytime Sticks', size: '4 Pack', brand: 'Streets',
+    id: 'golden-gaytime-4pk', sku: '9302155553982', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101746.jpg', name: 'Streets Golden Gaytime Sticks', size: '4 Pack', brand: 'Streets',
     category: 'ice-cream', emoji: '🍪', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -760,7 +760,7 @@ woolworths: { regularPrice: 10.50, salePrice: 6.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'paddle-pop-rainbow-8pk', name: 'Streets Paddle Pop Rainbow', size: '8 Pack', brand: 'Streets',
+    id: 'paddle-pop-rainbow-8pk', sku: '9302613578339', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102117.jpg', name: 'Streets Paddle Pop Rainbow', size: '8 Pack', brand: 'Streets',
     category: 'ice-cream', emoji: '🌈', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -770,7 +770,7 @@ woolworths: { regularPrice: 8.50, salePrice: 5.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'hagan-dazs-macadamia-460ml', name: 'Haagen-Dazs Macadamia Nut', size: '460ml', brand: 'Haagen-Dazs',
+    id: 'hagan-dazs-macadamia-460ml', sku: '9302914812687', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102361.jpg', name: 'Haagen-Dazs Macadamia Nut', size: '460ml', brand: 'Haagen-Dazs',
     category: 'ice-cream', emoji: '🍨', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -780,7 +780,7 @@ woolworths: { regularPrice: 13.00, salePrice: 9.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'streets-splices-pine-lime-8pk', name: 'Streets Splice Pine Lime', size: '8 Pack', brand: 'Streets',
+    id: 'streets-splices-pine-lime-8pk', sku: '9303504935713', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102839.jpg', name: 'Streets Splice Pine Lime', size: '8 Pack', brand: 'Streets',
     category: 'ice-cream', emoji: '🍍', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -790,7 +790,7 @@ woolworths: { regularPrice: 8.50, salePrice: 5.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'monaco-bar-ice-cream-4pk', name: 'Peters Monaco Bar Ice Cream Sandwich', size: '4 Pack', brand: 'Peters',
+    id: 'monaco-bar-ice-cream-4pk', sku: '9302743207874', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102222.jpg', name: 'Peters Monaco Bar Ice Cream Sandwich', size: '4 Pack', brand: 'Peters',
     category: 'ice-cream', emoji: '🥪', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -800,7 +800,7 @@ woolworths: { regularPrice: 9.50, salePrice: 6.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'woolworths-milk-2l', name: 'WW Full Cream Milk', size: '2L', brand: 'Woolworths',
+    id: 'woolworths-milk-2l', sku: '9302228393435', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101805.jpg', name: 'WW Full Cream Milk', size: '2L', brand: 'Woolworths',
     category: 'essentials', emoji: '🥛', cycleWeeks: 99,
     stores: {
       chemist_warehouse: { regularPrice: 2.85, salePrice: 1.85, phaseOffset: 1 },
@@ -810,7 +810,7 @@ woolworths: { regularPrice: 3.10, salePrice: 3.10, phaseOffset: 0 },
     }
   },
   {
-    id: 'tip-top-bread-700g', name: 'Tip Top Bread Toast Slices', size: '700g', brand: 'Tip Top',
+    id: 'tip-top-bread-700g', sku: '9301939504757', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101571.jpg', name: 'Tip Top Bread Toast Slices', size: '700g', brand: 'Tip Top',
     category: 'essentials', emoji: '🍞', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
@@ -820,7 +820,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'western-star-butter-500g', name: 'Western Star Butter Salted block', size: '500g', brand: 'Western Star',
+    id: 'western-star-butter-500g', sku: '9302798763389', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102267.jpg', name: 'Western Star Butter Salted block', size: '500g', brand: 'Western Star',
     category: 'essentials', emoji: '🧈', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.52, salePrice: 3.59, phaseOffset: 1 },
@@ -830,7 +830,7 @@ woolworths: { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'nescafe-blend-43-150g', name: 'Nescafe Blend 43 Instant Coffee', size: '150g', brand: 'Nescafe',
+    id: 'nescafe-blend-43-150g', sku: '9302139504611', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101733.jpg', name: 'Nescafe Blend 43 Instant Coffee', size: '150g', brand: 'Nescafe',
     category: 'essentials', emoji: '☕', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 10.12, salePrice: 6.58, phaseOffset: 1 },
@@ -840,7 +840,7 @@ woolworths: { regularPrice: 11.00, salePrice: 7.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'weetbix-1.2kg', name: 'Sanitarium Weet-Bix', size: '1.2kg', brand: 'Sanitarium',
+    id: 'weetbix-1.2kg', sku: '9301432097720', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101160.jpg', name: 'Sanitarium Weet-Bix', size: '1.2kg', brand: 'Sanitarium',
     category: 'essentials', emoji: '🥣', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
@@ -850,7 +850,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'quilton-toilet-paper-18pk', name: 'Quilton Toilet Paper 3ply', size: '18 Pack', brand: 'Quilton',
+    id: 'quilton-toilet-paper-18pk', sku: '9303002466944', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102432.jpg', name: 'Quilton Toilet Paper 3ply', size: '18 Pack', brand: 'Quilton',
     category: 'essentials', emoji: '🧻', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 12.88, salePrice: 8.37, phaseOffset: 1 },
@@ -860,7 +860,7 @@ woolworths: { regularPrice: 14.00, salePrice: 10.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'dairy-farmers-milk-3l', name: 'Dairy Farmers Full Cream Milk', size: '3L', brand: 'Dairy Farmers',
+    id: 'dairy-farmers-milk-3l', sku: '9302483948804', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102012.jpg', name: 'Dairy Farmers Full Cream Milk', size: '3L', brand: 'Dairy Farmers',
     category: 'essentials', emoji: '🥛', cycleWeeks: 99,
     stores: {
       chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
@@ -870,7 +870,7 @@ woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'wonder-white-bread-700g', name: 'Wonder White Sliced Bread Sandwich', size: '700g', brand: 'Wonder White',
+    id: 'wonder-white-bread-700g', sku: '9302591356133', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102099.jpg', name: 'Wonder White Sliced Bread Sandwich', size: '700g', brand: 'Wonder White',
     category: 'essentials', emoji: '🍞', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 4.23, salePrice: 2.75, phaseOffset: 1 },
@@ -880,7 +880,7 @@ woolworths: { regularPrice: 4.60, salePrice: 3.20, phaseOffset: 1 },
     }
   },
   {
-    id: 'devondale-butter-500g', name: 'Devondale Salted Butter Block', size: '500g', brand: 'Devondale',
+    id: 'devondale-butter-500g', sku: '9302407405650', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101950.jpg', name: 'Devondale Salted Butter Block', size: '500g', brand: 'Devondale',
     category: 'essentials', emoji: '🧈', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.52, salePrice: 3.59, phaseOffset: 1 },
@@ -890,7 +890,7 @@ woolworths: { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 1 },
     }
   },
   {
-    id: 'dilmah-tea-bags-100pk', name: 'Dilmah Premium Tea Bags', size: '100 Pack', brand: 'Dilmah',
+    id: 'dilmah-tea-bags-100pk', sku: '9302282714383', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101849.jpg', name: 'Dilmah Premium Tea Bags', size: '100 Pack', brand: 'Dilmah',
     category: 'essentials', emoji: '🍵', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
@@ -900,7 +900,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'lipton-tea-bags-100pk', name: 'Lipton Quality Black Tea Bags', size: '100 Pack', brand: 'Lipton',
+    id: 'lipton-tea-bags-100pk', sku: '9302330862496', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101888.jpg', name: 'Lipton Quality Black Tea Bags', size: '100 Pack', brand: 'Lipton',
     category: 'essentials', emoji: '🍵', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.52, salePrice: 3.59, phaseOffset: 1 },
@@ -910,7 +910,7 @@ woolworths: { regularPrice: 6.00, salePrice: 3.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'moccona-medium-roast-200g', name: 'Moccona Classic Medium Coffee Jar', size: '200g', brand: 'Moccona',
+    id: 'moccona-medium-roast-200g', sku: '9302856788038', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102314.jpg', name: 'Moccona Classic Medium Coffee Jar', size: '200g', brand: 'Moccona',
     category: 'essentials', emoji: '☕', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 18.40, salePrice: 11.96, phaseOffset: 1 },
@@ -920,7 +920,7 @@ woolworths: { regularPrice: 20.00, salePrice: 12.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'uncle-tobys-rolled-oats-1kg', name: 'Uncle Tobys Rolled Oats Bag', size: '1kg', brand: 'Uncle Tobys',
+    id: 'uncle-tobys-rolled-oats-1kg', sku: '9303229627272', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102616.jpg', name: 'Uncle Tobys Rolled Oats Bag', size: '1kg', brand: 'Uncle Tobys',
     category: 'essentials', emoji: '🥣', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
@@ -930,7 +930,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'sorbent-toilet-paper-24pk', name: 'Sorbent Toilet Paper Silky White', size: '24 Pack', brand: 'Sorbent',
+    id: 'sorbent-toilet-paper-24pk', sku: '9302980244738', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102414.jpg', name: 'Sorbent Toilet Paper Silky White', size: '24 Pack', brand: 'Sorbent',
     category: 'essentials', emoji: '🧻', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 16.10, salePrice: 10.47, phaseOffset: 1 },
@@ -940,7 +940,7 @@ woolworths: { regularPrice: 17.50, salePrice: 12.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'coles-milk-2l', name: 'Coles Full Cream Milk', size: '2L', brand: 'Coles',
+    id: 'coles-milk-2l', sku: '9301495060637', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101211.jpg', name: 'Coles Full Cream Milk', size: '2L', brand: 'Coles',
     category: 'essentials', emoji: '🥛', cycleWeeks: 99,
     stores: {
       chemist_warehouse: { regularPrice: 2.85, salePrice: 1.85, phaseOffset: 1 },
@@ -950,7 +950,7 @@ woolworths: { regularPrice: 3.10, salePrice: 3.10, phaseOffset: 0 },
     }
   },
   {
-    id: 'san-remo-pasta-500g', name: 'San Remo Spaghetti Pasta', size: '500g', brand: 'San Remo',
+    id: 'san-remo-pasta-500g', sku: '9302075307127', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101681.jpg', name: 'San Remo Spaghetti Pasta', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🍝', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -960,7 +960,7 @@ woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'sunrice-jasmine-rice-5kg', name: 'SunRice Jasmine Rice Bag', size: '5kg', brand: 'SunRice',
+    id: 'sunrice-jasmine-rice-5kg', sku: '9302865430007', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102321.jpg', name: 'SunRice Jasmine Rice Bag', size: '5kg', brand: 'SunRice',
     category: 'pantry', emoji: '🌾', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -970,7 +970,7 @@ woolworths: { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'cobram-estate-olive-oil-750ml', name: 'Cobram Estate EV Olive Oil', size: '750ml', brand: 'Cobram Estate',
+    id: 'cobram-estate-olive-oil-750ml', sku: '9303325923498', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102694.jpg', name: 'Cobram Estate EV Olive Oil', size: '750ml', brand: 'Cobram Estate',
     category: 'pantry', emoji: '🫒', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -980,7 +980,7 @@ woolworths: { regularPrice: 18.00, salePrice: 12.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'john-west-tuna-95g', name: 'John West Tuna Tempters Olive Oil', size: '95g', brand: 'John West',
+    id: 'john-west-tuna-95g', sku: '9302061726890', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101670.jpg', name: 'John West Tuna Tempters Olive Oil', size: '95g', brand: 'John West',
     category: 'pantry', emoji: '🐟', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -990,7 +990,7 @@ woolworths: { regularPrice: 2.70, salePrice: 1.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'leggos-tomato-paste-500g', name: 'Leggos Tomato Paste Tub', size: '500g', brand: 'Leggos',
+    id: 'leggos-tomato-paste-500g', sku: '9302751849843', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102229.jpg', name: 'Leggos Tomato Paste Tub', size: '500g', brand: 'Leggos',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1000,7 +1000,7 @@ woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'bega-peanut-butter-375g', name: 'Bega Peanut Butter Crunchy', size: '375g', brand: 'Bega',
+    id: 'bega-peanut-butter-375g', sku: '9302606170937', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102111.jpg', name: 'Bega Peanut Butter Crunchy', size: '375g', brand: 'Bega',
     category: 'pantry', emoji: '🥜', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1010,7 +1010,7 @@ woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'vegemite-220g', name: 'Vegemite Yeast Extract Jar', size: '220g', brand: 'Vegemite',
+    id: 'vegemite-220g', sku: '9301419752050', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101150.jpg', name: 'Vegemite Yeast Extract Jar', size: '220g', brand: 'Vegemite',
     category: 'pantry', emoji: '🍞', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1020,7 +1020,7 @@ woolworths: { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 0 },
     }
   },
   {
-    id: 'spaghetti-pasta-san-remo-fettuccine', name: 'San Remo Fettuccine Pasta No 34', size: '500g', brand: 'San Remo',
+    id: 'spaghetti-pasta-san-remo-fettuccine', sku: '9304332095603', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103509.jpg', name: 'San Remo Fettuccine Pasta No 34', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🍝', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1030,7 +1030,7 @@ woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'heinz-baked-beans-3pk', name: 'Heinz Baked Beans English Recipe', size: '3 x 220g', brand: 'Heinz',
+    id: 'heinz-baked-beans-3pk', sku: '9302433331557', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101971.jpg', name: 'Heinz Baked Beans English Recipe', size: '3 x 220g', brand: 'Heinz',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1040,7 +1040,7 @@ woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'campbells-tomato-soup-400g', name: 'Campbells Condensed Tomato Soup', size: '400g', brand: 'Campbells',
+    id: 'campbells-tomato-soup-400g', sku: '9303022220016', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102448.jpg', name: 'Campbells Condensed Tomato Soup', size: '400g', brand: 'Campbells',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1050,7 +1050,7 @@ woolworths: { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'glen-20-disinfectant-spray-300g', name: 'Glen 20 Disinfectant Lavender', size: '300g', brand: 'Glen 20',
+    id: 'glen-20-disinfectant-spray-300g', sku: '9303438269095', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102785.jpg', name: 'Glen 20 Disinfectant Lavender', size: '300g', brand: 'Glen 20',
     category: 'pantry', emoji: '💨', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1060,7 +1060,7 @@ woolworths: { regularPrice: 9.50, salePrice: 5.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'heinz-tomato-ketchup-500ml', name: 'Heinz Tomato Ketchup Squeeze', size: '500ml', brand: 'Heinz',
+    id: 'heinz-tomato-ketchup-500ml', sku: '9303035800253', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102459.jpg', name: 'Heinz Tomato Ketchup Squeeze', size: '500ml', brand: 'Heinz',
     category: 'pantry', emoji: '🍅', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1070,7 +1070,7 @@ woolworths: { regularPrice: 5.20, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'masterfoods-tomato-sauce-500ml', name: 'MasterFoods Tomato Sauce Squeeze', size: '500ml', brand: 'MasterFoods',
+    id: 'masterfoods-tomato-sauce-500ml', sku: '9303556787527', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102881.jpg', name: 'MasterFoods Tomato Sauce Squeeze', size: '500ml', brand: 'MasterFoods',
     category: 'pantry', emoji: '🍅', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1080,7 +1080,7 @@ woolworths: { regularPrice: 4.20, salePrice: 2.80, phaseOffset: 2 },
     }
   },
   {
-    id: 'spam-luncheon-meat-340g', name: 'SPAM Luncheon Meat Can', size: '340g', brand: 'SPAM',
+    id: 'spam-luncheon-meat-340g', sku: '9302598763535', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102105.jpg', name: 'SPAM Luncheon Meat Can', size: '340g', brand: 'SPAM',
     category: 'pantry', emoji: '🥫', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1090,7 +1090,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'spc-sliced-peaches-410g', name: 'SPC Sliced Peaches in Juice', size: '410g', brand: 'SPC',
+    id: 'spc-sliced-peaches-410g', sku: '9302555553690', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102070.jpg', name: 'SPC Sliced Peaches in Juice', size: '410g', brand: 'SPC',
     category: 'pantry', emoji: '🍑', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1100,7 +1100,7 @@ woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'cavendish-bananas-1kg', name: 'Cavendish Bananas Fresh', size: '1kg', brand: 'Fresh',
+    id: 'cavendish-bananas-1kg', sku: '9302496294474', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102022.jpg', name: 'Cavendish Bananas Fresh', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍌', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1110,7 +1110,7 @@ woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'pink-lady-apples-1kg', name: 'Pink Lady Apples Pack', size: '1kg', brand: 'Fresh',
+    id: 'pink-lady-apples-1kg', sku: '9302344442733', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101899.jpg', name: 'Pink Lady Apples Pack', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1120,7 +1120,7 @@ woolworths: { regularPrice: 5.50, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'carrots-1kg', name: 'Carrots Orange Bag', size: '1kg', brand: 'Fresh',
+    id: 'carrots-1kg', sku: '9301320986690', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101070.jpg', name: 'Carrots Orange Bag', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🥕', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1130,7 +1130,7 @@ woolworths: { regularPrice: 2.50, salePrice: 2.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'avocado-hass-each', name: 'Hass Avocado Single', size: 'Each', brand: 'Fresh',
+    id: 'avocado-hass-each', sku: '9302043208385', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101655.jpg', name: 'Hass Avocado Single', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🥑', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1140,7 +1140,7 @@ woolworths: { regularPrice: 2.50, salePrice: 1.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'brown-onions-1kg', name: 'Brown Onions Fresh Bag', size: '1kg', brand: 'Fresh',
+    id: 'brown-onions-1kg', sku: '9301929628221', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101563.jpg', name: 'Brown Onions Fresh Bag', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🧅', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1150,7 +1150,7 @@ woolworths: { regularPrice: 3.00, salePrice: 3.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'potatoes-brushed-2kg', name: 'Brushed Potatoes bag', size: '2kg', brand: 'Fresh',
+    id: 'potatoes-brushed-2kg', sku: '9302441973526', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101978.jpg', name: 'Brushed Potatoes bag', size: '2kg', brand: 'Fresh',
     category: 'produce', emoji: '🥔', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1160,7 +1160,7 @@ woolworths: { regularPrice: 5.00, salePrice: 4.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'broccoli-fresh-each', name: 'Broccoli Premium Head', size: 'Each', brand: 'Fresh',
+    id: 'broccoli-fresh-each', sku: '9302311109424', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101872.jpg', name: 'Broccoli Premium Head', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🥦', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1170,7 +1170,7 @@ woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 1 },
     }
   },
   {
-    id: 'red-seedless-grapes-500g', name: 'Red Seedless Grapes Punnet', size: '500g', brand: 'Fresh',
+    id: 'red-seedless-grapes-500g', sku: '9302716047400', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102200.jpg', name: 'Red Seedless Grapes Punnet', size: '500g', brand: 'Fresh',
     category: 'produce', emoji: '🍇', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1180,7 +1180,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'navel-oranges-1kg', name: 'Navel Oranges Bag', size: '1.5kg', brand: 'Fresh',
+    id: 'navel-oranges-1kg', sku: '9302017282478', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101634.jpg', name: 'Navel Oranges Bag', size: '1.5kg', brand: 'Fresh',
     category: 'produce', emoji: '🍊', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1190,7 +1190,7 @@ woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'punnet-strawberries-250g', name: 'Strawberries Sweet Punnet', size: '250g', brand: 'Fresh',
+    id: 'punnet-strawberries-250g', sku: '9302862960873', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102319.jpg', name: 'Strawberries Sweet Punnet', size: '250g', brand: 'Fresh',
     category: 'produce', emoji: '🍓', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1200,7 +1200,7 @@ woolworths: { regularPrice: 4.50, salePrice: 2.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'cherry-tomatoes-250g', name: 'Cherry Tomatoes Punnet', size: '250g', brand: 'Fresh',
+    id: 'cherry-tomatoes-250g', sku: '9302312343991', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101873.jpg', name: 'Cherry Tomatoes Punnet', size: '250g', brand: 'Fresh',
     category: 'produce', emoji: '🍅', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1210,7 +1210,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'baby-spinach-leaves-120g', name: 'Baby Spinach Leaves Tub', size: '120g', brand: 'Fresh',
+    id: 'baby-spinach-leaves-120g', sku: '9302692590627', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102181.jpg', name: 'Baby Spinach Leaves Tub', size: '120g', brand: 'Fresh',
     category: 'produce', emoji: '🥬', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1220,7 +1220,7 @@ woolworths: { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'iceberg-lettuce-each', name: 'Iceberg Lettuce Head', size: 'Each', brand: 'Fresh',
+    id: 'iceberg-lettuce-each', sku: '9302432096990', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101970.jpg', name: 'Iceberg Lettuce Head', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🥬', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1230,7 +1230,7 @@ woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'continental-cucumber-each', name: 'Continental Cucumber Fresh', size: 'Each', brand: 'Fresh',
+    id: 'continental-cucumber-each', sku: '9303120985376', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102528.jpg', name: 'Continental Cucumber Fresh', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🥒', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1240,7 +1240,7 @@ woolworths: { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'red-capsicum-each', name: 'Red Capsicum Fresh Single', size: 'Each', brand: 'Fresh',
+    id: 'red-capsicum-each', sku: '9302048146653', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101659.jpg', name: 'Red Capsicum Fresh Single', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🫑', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1250,7 +1250,7 @@ woolworths: { regularPrice: 3.50, salePrice: 2.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'bega-cheese-block-500g', name: 'Bega Tasty Cheese Block', size: '500g', brand: 'Bega',
+    id: 'bega-cheese-block-500g', sku: '9302382714310', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101930.jpg', name: 'Bega Tasty Cheese Block', size: '500g', brand: 'Bega',
     category: 'dairy', emoji: '🧀', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1260,7 +1260,7 @@ woolworths: { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'yoplait-vanilla-yogurt-1kg', name: 'Yoplait Vanilla Yogurt Tub', size: '1kg', brand: 'Yoplait',
+    id: 'yoplait-vanilla-yogurt-1kg', sku: '9303196293963', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102589.jpg', name: 'Yoplait Vanilla Yogurt Tub', size: '1kg', brand: 'Yoplait',
     category: 'dairy', emoji: '🍨', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1270,7 +1270,7 @@ woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'chobani-greek-yogurt-170g', name: 'Chobani Greek Yogurt Blueberry', size: '170g', brand: 'Chobani',
+    id: 'chobani-greek-yogurt-170g', sku: '9302866664574', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102322.jpg', name: 'Chobani Greek Yogurt Blueberry', size: '170g', brand: 'Chobani',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1280,7 +1280,7 @@ woolworths: { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'coon-tasty-cheese-block-500g', name: 'Cheer Tasty Cheese Block', size: '500g', brand: 'Cheer',
+    id: 'coon-tasty-cheese-block-500g', sku: '9303175306324', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102572.jpg', name: 'Cheer Tasty Cheese Block', size: '500g', brand: 'Cheer',
     category: 'dairy', emoji: '🧀', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1290,7 +1290,7 @@ woolworths: { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'philadelphia-cream-cheese-250g', name: 'Philadelphia Cream Cheese Spread', size: '250g', brand: 'Philadelphia',
+    id: 'philadelphia-cream-cheese-250g', sku: '9303435799961', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102783.jpg', name: 'Philadelphia Cream Cheese Spread', size: '250g', brand: 'Philadelphia',
     category: 'dairy', emoji: '🧀', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1300,7 +1300,7 @@ woolworths: { regularPrice: 5.20, salePrice: 3.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'dairy-farmers-sour-cream-300g', name: 'Dairy Farmers Sour Cream Tub', size: '300g', brand: 'Dairy Farmers',
+    id: 'dairy-farmers-sour-cream-300g', sku: '9303328392632', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102696.jpg', name: 'Dairy Farmers Sour Cream Tub', size: '300g', brand: 'Dairy Farmers',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1310,7 +1310,7 @@ woolworths: { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'perfect-italian-mozzarella-250g', name: 'Perfect Italian Mozzarella Grated', size: '250g', brand: 'Perfect Italian',
+    id: 'perfect-italian-mozzarella-250g', sku: '9303655552887', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102961.jpg', name: 'Perfect Italian Mozzarella Grated', size: '250g', brand: 'Perfect Italian',
     category: 'dairy', emoji: '🧀', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1320,7 +1320,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'mainland-tasty-cheese-slices-250g', name: 'Mainland Tasty Slices 10pk', size: '250g', brand: 'Mainland',
+    id: 'mainland-tasty-cheese-slices-250g', sku: '9303825923133', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103099.jpg', name: 'Mainland Tasty Slices 10pk', size: '250g', brand: 'Mainland',
     category: 'dairy', emoji: '🧀', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1330,7 +1330,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'flora-proactiv-margarine-250g', name: 'Flora ProActiv Margarine Spread', size: '250g', brand: 'Flora',
+    id: 'flora-proactiv-margarine-250g', sku: '9303386417281', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102743.jpg', name: 'Flora ProActiv Margarine Spread', size: '250g', brand: 'Flora',
     category: 'dairy', emoji: '🧈', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1340,7 +1340,7 @@ woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'giel-thickened-cream-600ml', name: 'Bulla Thickened Cream Bottle', size: '600ml', brand: 'Bulla',
+    id: 'giel-thickened-cream-600ml', sku: '9302940738594', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102382.jpg', name: 'Bulla Thickened Cream Bottle', size: '600ml', brand: 'Bulla',
     category: 'dairy', emoji: '🥛', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1350,7 +1350,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'danone-activia-yogurt-4pk', name: 'Danone Activia Probiotics Yogurt', size: '4 x 125g', brand: 'Danone',
+    id: 'danone-activia-yogurt-4pk', sku: '9303029627418', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102454.jpg', name: 'Danone Activia Probiotics Yogurt', size: '4 x 125g', brand: 'Danone',
     category: 'dairy', emoji: '🥛', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1360,7 +1360,7 @@ woolworths: { regularPrice: 5.20, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'chobani-yogurt-pouch-140g', name: 'Chobani Greek Yogurt Pouch Strawberry', size: '140g', brand: 'Chobani',
+    id: 'chobani-yogurt-pouch-140g', sku: '9302883948512', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102336.jpg', name: 'Chobani Greek Yogurt Pouch Strawberry', size: '140g', brand: 'Chobani',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1370,7 +1370,7 @@ woolworths: { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 1 },
     }
   },
   {
-    id: 'yakult-fermented-milk-5pk', name: 'Yakult Fermented Milk Drink', size: '5 x 65ml', brand: 'Yakult',
+    id: 'yakult-fermented-milk-5pk', sku: '9303032096552', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102456.jpg', name: 'Yakult Fermented Milk Drink', size: '5 x 65ml', brand: 'Yakult',
     category: 'dairy', emoji: '🥛', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1380,7 +1380,7 @@ woolworths: { regularPrice: 4.80, salePrice: 4.20, phaseOffset: 0 },
     }
   },
   {
-    id: 'woolworths-feta-cheese-200g', name: 'Woolworths Danish Feta Cheese', size: '200g', brand: 'Woolworths',
+    id: 'woolworths-feta-cheese-200g', sku: '9303146911283', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102549.jpg', name: 'Woolworths Danish Feta Cheese', size: '200g', brand: 'Woolworths',
     category: 'dairy', emoji: '🧀', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1390,7 +1390,7 @@ woolworths: { regularPrice: 5.00, salePrice: 4.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'castello-creamy-blue-cheese-150g', name: 'Castello Double Cream Blue Cheese', size: '150g', brand: 'Castello',
+    id: 'castello-creamy-blue-cheese-150g', sku: '9303671602258', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102974.jpg', name: 'Castello Double Cream Blue Cheese', size: '150g', brand: 'Castello',
     category: 'dairy', emoji: '🧀', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1400,7 +1400,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'cold-power-laundry-liquid-2l', name: 'Cold Power Laundry Liquid Sensitive', size: '2L', brand: 'Cold Power',
+    id: 'cold-power-laundry-liquid-2l', sku: '9303367898776', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102728.jpg', name: 'Cold Power Laundry Liquid Sensitive', size: '2L', brand: 'Cold Power',
     category: 'household', emoji: '🧼', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 18.40, salePrice: 11.96, phaseOffset: 1 },
@@ -1410,7 +1410,7 @@ woolworths: { regularPrice: 20.00, salePrice: 10.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'fairy-dishwasher-tablets-44pk', name: 'Fairy Dishwasher Tablets Plus', size: '44 Pack', brand: 'Fairy',
+    id: 'fairy-dishwasher-tablets-44pk', sku: '9303483948074', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102822.jpg', name: 'Fairy Dishwasher Tablets Plus', size: '44 Pack', brand: 'Fairy',
     category: 'household', emoji: '🍽️', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 38.64, salePrice: 25.12, phaseOffset: 1 },
@@ -1420,7 +1420,7 @@ woolworths: { regularPrice: 42.00, salePrice: 21.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'dettol-liquid-handwash-refill-500ml', name: 'Dettol Handwash Liquid Refill', size: '500ml', brand: 'Dettol',
+    id: 'dettol-liquid-handwash-refill-500ml', sku: '9304111108110', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103330.jpg', name: 'Dettol Handwash Liquid Refill', size: '500ml', brand: 'Dettol',
     category: 'household', emoji: '🧴', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 6.90, salePrice: 4.49, phaseOffset: 1 },
@@ -1430,7 +1430,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'finish-dishwasher-rinse-aid-500ml', name: 'Finish Rinse Aid Jet Dry', size: '500ml', brand: 'Finish',
+    id: 'finish-dishwasher-rinse-aid-500ml', sku: '9303837034236', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103108.jpg', name: 'Finish Rinse Aid Jet Dry', size: '500ml', brand: 'Finish',
     category: 'household', emoji: '🍽️', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 10.58, salePrice: 6.88, phaseOffset: 1 },
@@ -1440,7 +1440,7 @@ woolworths: { regularPrice: 11.50, salePrice: 7.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'morning-fresh-dish-liquid-400ml', name: 'Morning Fresh Lemon Dishwashing', size: '400ml', brand: 'Morning Fresh',
+    id: 'morning-fresh-dish-liquid-400ml', sku: '9303598762805', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102915.jpg', name: 'Morning Fresh Lemon Dishwashing', size: '400ml', brand: 'Morning Fresh',
     category: 'household', emoji: '🧴', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
@@ -1450,7 +1450,7 @@ woolworths: { regularPrice: 5.50, salePrice: 2.75, phaseOffset: 0 },
     }
   },
   {
-    id: 'harpic-active-fresh-toilet-cleaner-700ml', name: 'Harpic Toilet Cleaner Gel Marine', size: '700ml', brand: 'Harpic',
+    id: 'harpic-active-fresh-toilet-cleaner-700ml', sku: '9304670366961', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103783.jpg', name: 'Harpic Toilet Cleaner Gel Marine', size: '700ml', brand: 'Harpic',
     category: 'household', emoji: '🚽', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.52, salePrice: 3.59, phaseOffset: 1 },
@@ -1460,7 +1460,7 @@ woolworths: { regularPrice: 6.00, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'pine-o-cleen-disinfectant-wipes-120pk', name: 'Pine O Cleen Disinfectant Wipes Lemon', size: '120 Pack', brand: 'Pine O Cleen',
+    id: 'pine-o-cleen-disinfectant-wipes-120pk', sku: '9304292589459', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103477.jpg', name: 'Pine O Cleen Disinfectant Wipes Lemon', size: '120 Pack', brand: 'Pine O Cleen',
     category: 'household', emoji: '🧹', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 10.12, salePrice: 6.58, phaseOffset: 1 },
@@ -1470,7 +1470,7 @@ woolworths: { regularPrice: 11.00, salePrice: 5.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'ajax-spray-wipe-glass-cleaner-500ml', name: 'Ajax Spray n Wipe Glass Cleaner', size: '500ml', brand: 'Ajax',
+    id: 'ajax-spray-wipe-glass-cleaner-500ml', sku: '9304043206925', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103275.jpg', name: 'Ajax Spray n Wipe Glass Cleaner', size: '500ml', brand: 'Ajax',
     category: 'household', emoji: '💨', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
@@ -1480,7 +1480,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'palmolive-dish-liquid-original-750ml', name: 'Palmolive Ultra Dishwashing Liquid', size: '750ml', brand: 'Palmolive',
+    id: 'palmolive-dish-liquid-original-750ml', sku: '9304255552449', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103447.jpg', name: 'Palmolive Ultra Dishwashing Liquid', size: '750ml', brand: 'Palmolive',
     category: 'household', emoji: '🧴', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
@@ -1490,7 +1490,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'earth-choice-dish-liquid-1l', name: 'Earth Choice Lemon Dishwashing Liquid', size: '1L', brand: 'Earth Choice',
+    id: 'earth-choice-dish-liquid-1l', sku: '9303160491520', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102560.jpg', name: 'Earth Choice Lemon Dishwashing Liquid', size: '1L', brand: 'Earth Choice',
     category: 'household', emoji: '🌿', cycleWeeks: 99,
     stores: {
       chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
@@ -1500,7 +1500,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'vanish-napisan-oxipromote-3kg', name: 'Vanish NapiSan Oxi Action Powder', size: '3kg', brand: 'Vanish',
+    id: 'vanish-napisan-oxipromote-3kg', sku: '9303581478867', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102901.jpg', name: 'Vanish NapiSan Oxi Action Powder', size: '3kg', brand: 'Vanish',
     category: 'household', emoji: '🧺', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 23.92, salePrice: 15.55, phaseOffset: 1 },
@@ -1510,7 +1510,7 @@ woolworths: { regularPrice: 26.00, salePrice: 16.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'dynamo-laundry-liquid-2l', name: 'Dynamo Professional Laundry Liquid', size: '2L', brand: 'Dynamo',
+    id: 'dynamo-laundry-liquid-2l', sku: '9302908639852', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102356.jpg', name: 'Dynamo Professional Laundry Liquid', size: '2L', brand: 'Dynamo',
     category: 'household', emoji: '🧼', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 22.08, salePrice: 14.35, phaseOffset: 1 },
@@ -1520,7 +1520,7 @@ woolworths: { regularPrice: 24.00, salePrice: 12.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'comfort-fabric-softener-900ml', name: 'Comfort Fabric Conditioner Pure', size: '900ml', brand: 'Comfort',
+    id: 'comfort-fabric-softener-900ml', sku: '9303397528384', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102752.jpg', name: 'Comfort Fabric Conditioner Pure', size: '900ml', brand: 'Comfort',
     category: 'household', emoji: '🌸', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 8.74, salePrice: 5.68, phaseOffset: 1 },
@@ -1530,7 +1530,7 @@ woolworths: { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'duck-toilet-fresh-disc-starter', name: 'Toilet Duck Fresh Discs Lime', size: '36ml', brand: 'Duck',
+    id: 'duck-toilet-fresh-disc-starter', sku: '9303688886196', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102988.jpg', name: 'Toilet Duck Fresh Discs Lime', size: '36ml', brand: 'Duck',
     category: 'household', emoji: '🚽', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 6.90, salePrice: 4.49, phaseOffset: 1 },
@@ -1540,7 +1540,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'chux-superwipes-10pk', name: 'Chux Superwipes Roll Cloths', size: '10 Pack', brand: 'Chux',
+    id: 'chux-superwipes-10pk', sku: '9302416047619', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101957.jpg', name: 'Chux Superwipes Roll Cloths', size: '10 Pack', brand: 'Chux',
     category: 'household', emoji: '🧹', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
@@ -1550,7 +1550,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'wonder-white-bread-sliced-700g', name: 'Wonder White Sliced Toast Bread', size: '700g', brand: 'Wonder White',
+    id: 'wonder-white-bread-sliced-700g', sku: '9303422219724', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102772.jpg', name: 'Wonder White Sliced Toast Bread', size: '700g', brand: 'Wonder White',
     category: 'bakery', emoji: '🍞', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1560,7 +1560,7 @@ woolworths: { regularPrice: 4.60, salePrice: 3.20, phaseOffset: 0 },
     }
   },
   {
-    id: 'helgas-rye-bread-680g', name: 'Helgas Traditional Rye Slices', size: '680g', brand: 'Helgas',
+    id: 'helgas-rye-bread-680g', sku: '9302308640290', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101870.jpg', name: 'Helgas Traditional Rye Slices', size: '680g', brand: 'Helgas',
     category: 'bakery', emoji: '🍞', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1570,7 +1570,7 @@ woolworths: { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 1 },
     }
   },
   {
-    id: 'abbotts-sourdough-bread-loaf', name: 'Abbotts Bakery Sourdough Loaf', size: '680g', brand: 'Abbotts',
+    id: 'abbotts-sourdough-bread-loaf', sku: '9303464195002', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102806.jpg', name: 'Abbotts Bakery Sourdough Loaf', size: '680g', brand: 'Abbotts',
     category: 'bakery', emoji: '🍞', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1580,7 +1580,7 @@ woolworths: { regularPrice: 5.50, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'coles-croissants-3pk', name: 'Coles Bakery Croissants', size: '3 Pack', brand: 'Coles',
+    id: 'coles-croissants-3pk', sku: '9302458022897', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101991.jpg', name: 'Coles Bakery Croissants', size: '3 Pack', brand: 'Coles',
     category: 'bakery', emoji: '🥐', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1590,7 +1590,7 @@ woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'woolworths-muffins-choc-chip-4pk', name: 'WW Choc Chip Muffins 4pk', size: '4 Pack', brand: 'Woolworths',
+    id: 'woolworths-muffins-choc-chip-4pk', sku: '9303916046524', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103172.jpg', name: 'WW Choc Chip Muffins 4pk', size: '4 Pack', brand: 'Woolworths',
     category: 'bakery', emoji: '🧁', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1600,7 +1600,7 @@ woolworths: { regularPrice: 5.00, salePrice: 5.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'helgas-wholemeal-bread-680g', name: 'Helgas Traditional Wholemeal Loaf', size: '680g', brand: 'Helgas',
+    id: 'helgas-wholemeal-bread-680g', sku: '9303076540964', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102492.jpg', name: 'Helgas Traditional Wholemeal Loaf', size: '680g', brand: 'Helgas',
     category: 'bakery', emoji: '🍞', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1610,7 +1610,7 @@ woolworths: { regularPrice: 5.20, salePrice: 4.20, phaseOffset: 2 },
     }
   },
   {
-    id: 'mission-tortillas-large-8pk', name: 'Mission Original Tortillas Large', size: '8 Pack', brand: 'Mission',
+    id: 'mission-tortillas-large-8pk', sku: '9303324688931', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102693.jpg', name: 'Mission Original Tortillas Large', size: '8 Pack', brand: 'Mission',
     category: 'bakery', emoji: '🌯', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1620,7 +1620,7 @@ woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'tiptop-english-muffins-6pk', name: 'Tip Top English Muffins Original', size: '6 Pack', brand: 'Tip Top',
+    id: 'tiptop-english-muffins-6pk', sku: '9303192590262', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102586.jpg', name: 'Tip Top English Muffins Original', size: '6 Pack', brand: 'Tip Top',
     category: 'bakery', emoji: '🥯', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1630,7 +1630,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'woolworths-crumpets-6pk', name: 'Woolworths Crumpets Original', size: '6 Pack', brand: 'Woolworths',
+    id: 'woolworths-crumpets-6pk', sku: '9302930862058', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102374.jpg', name: 'Woolworths Crumpets Original', size: '6 Pack', brand: 'Woolworths',
     category: 'bakery', emoji: '🥯', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1640,7 +1640,7 @@ woolworths: { regularPrice: 2.50, salePrice: 2.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'tiptop-raisin-toast-bread-520g', name: 'Tip Top Cafe Raisin Toast Bread', size: '520g', brand: 'Tip Top',
+    id: 'tiptop-raisin-toast-bread-520g', sku: '9303477775239', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102817.jpg', name: 'Tip Top Cafe Raisin Toast Bread', size: '520g', brand: 'Tip Top',
     category: 'bakery', emoji: '🍞', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1650,7 +1650,7 @@ woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'mission-pita-bread-pocket-5pk', name: 'Mission White Pita Bread Pocket', size: '5 Pack', brand: 'Mission',
+    id: 'mission-pita-bread-pocket-5pk', sku: '9303466664136', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102808.jpg', name: 'Mission White Pita Bread Pocket', size: '5 Pack', brand: 'Mission',
     category: 'bakery', emoji: '🫓', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1660,7 +1660,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'coles-chocolate-cookies-12pk', name: 'Coles Chocolate Chip Cookies Bakery', size: '12 Pack', brand: 'Coles',
+    id: 'coles-chocolate-cookies-12pk', sku: '9303311108694', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102682.jpg', name: 'Coles Chocolate Chip Cookies Bakery', size: '12 Pack', brand: 'Coles',
     category: 'bakery', emoji: '🍪', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1670,7 +1670,7 @@ woolworths: { regularPrice: 3.00, salePrice: 3.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'kelloggs-nutrigrain-500g', name: 'Kelloggs Nutri-Grain Cereal', size: '500g', brand: 'Kelloggs',
+    id: 'kelloggs-nutrigrain-500g', sku: '9302825923863', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102289.jpg', name: 'Kelloggs Nutri-Grain Cereal', size: '500g', brand: 'Kelloggs',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1680,7 +1680,7 @@ woolworths: { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'kelloggs-corn-flakes-380g', name: 'Kelloggs Corn Flakes Box', size: '380g', brand: 'Kelloggs',
+    id: 'kelloggs-corn-flakes-380g', sku: '9302855553471', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102313.jpg', name: 'Kelloggs Corn Flakes Box', size: '380g', brand: 'Kelloggs',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1690,7 +1690,7 @@ woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'sanitarium-weetbix-1kg', name: 'Sanitarium Weet-Bix Cereal Box', size: '1kg', brand: 'Sanitarium',
+    id: 'sanitarium-weetbix-1kg', sku: '9302708639998', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102194.jpg', name: 'Sanitarium Weet-Bix Cereal Box', size: '1kg', brand: 'Sanitarium',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1700,7 +1700,7 @@ woolworths: { regularPrice: 6.00, salePrice: 5.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'uncle-tobys-plus-sports-cereal', name: 'Uncle Tobys Plus Sports Protein', size: '705g', brand: 'Uncle Tobys',
+    id: 'uncle-tobys-plus-sports-cereal', sku: '9303741972577', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103031.jpg', name: 'Uncle Tobys Plus Sports Protein', size: '705g', brand: 'Uncle Tobys',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1710,7 +1710,7 @@ woolworths: { regularPrice: 9.50, salePrice: 5.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'kelloggs-coco-pops-375g', name: 'Kelloggs Coco Pops Cereal Chocolate', size: '375g', brand: 'Kelloggs',
+    id: 'kelloggs-coco-pops-375g', sku: '9302620985741', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102123.jpg', name: 'Kelloggs Coco Pops Cereal Chocolate', size: '375g', brand: 'Kelloggs',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1720,7 +1720,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'kelloggs-sultana-bran-420g', name: 'Kelloggs Sultana Bran Cereal Box', size: '420g', brand: 'Kelloggs',
+    id: 'kelloggs-sultana-bran-420g', sku: '9302991355841', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102423.jpg', name: 'Kelloggs Sultana Bran Cereal Box', size: '420g', brand: 'Kelloggs',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1730,7 +1730,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'uncle-tobys-oat-quick-sachets', name: 'Uncle Tobys Quick Sachets Creamy Honey', size: '12 Pack', brand: 'Uncle Tobys',
+    id: 'uncle-tobys-oat-quick-sachets', sku: '9303565429496', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102888.jpg', name: 'Uncle Tobys Quick Sachets Creamy Honey', size: '12 Pack', brand: 'Uncle Tobys',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1740,7 +1740,7 @@ woolworths: { regularPrice: 7.00, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'carman-muesli-golden-oat-500g', name: 'Carmans Golden Oat Crunchy Muesli', size: '500g', brand: 'Carmans',
+    id: 'carman-muesli-golden-oat-500g', sku: '9303296293890', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102670.jpg', name: 'Carmans Golden Oat Crunchy Muesli', size: '500g', brand: 'Carmans',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1750,7 +1750,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'kelloggs-froot-loops-285g', name: 'Kelloggs Froot Loops Colored Cereal', size: '285g', brand: 'Kelloggs',
+    id: 'kelloggs-froot-loops-285g', sku: '9302918516388', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102364.jpg', name: 'Kelloggs Froot Loops Colored Cereal', size: '285g', brand: 'Kelloggs',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1760,7 +1760,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'sanitarium-upandgo-choc-6pk', name: 'Sanitarium Up & Go Liquid Breakfast Choc', size: '6 x 250ml', brand: 'Sanitarium',
+    id: 'sanitarium-upandgo-choc-6pk', sku: '9303279009952', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102656.jpg', name: 'Sanitarium Up & Go Liquid Breakfast Choc', size: '6 x 250ml', brand: 'Sanitarium',
     category: 'breakfast', emoji: '🧃', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1770,7 +1770,7 @@ woolworths: { regularPrice: 11.50, salePrice: 7.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'carman-muesli-bars-classic-6pk', name: 'Carmans Classic Fruit & Nut Bars', size: '6 Pack', brand: 'Carmans',
+    id: 'carman-muesli-bars-classic-6pk', sku: '9303575306032', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102896.jpg', name: 'Carmans Classic Fruit & Nut Bars', size: '6 Pack', brand: 'Carmans',
     category: 'breakfast', emoji: '🍫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1780,7 +1780,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'weetbix-bites-wild-berry-500g', name: 'Sanitarium Weet-Bix Bites Wild Berry', size: '500g', brand: 'Sanitarium',
+    id: 'weetbix-bites-wild-berry-500g', sku: '9303341972869', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102707.jpg', name: 'Sanitarium Weet-Bix Bites Wild Berry', size: '500g', brand: 'Sanitarium',
     category: 'breakfast', emoji: '🥣', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1790,7 +1790,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'beef-mince-regular-1kg', name: 'WW Beef Mince 3 Star', size: '1kg', brand: 'Woolworths',
+    id: 'beef-mince-regular-1kg', sku: '9302560491958', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102074.jpg', name: 'WW Beef Mince 3 Star', size: '1kg', brand: 'Woolworths',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1800,7 +1800,7 @@ woolworths: { regularPrice: 13.00, salePrice: 13.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'chicken-breast-fillets-1kg', name: 'WW Chicken Breast Fillets Skinless', size: '1kg', brand: 'Woolworths',
+    id: 'chicken-breast-fillets-1kg', sku: '9303104936005', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102515.jpg', name: 'WW Chicken Breast Fillets Skinless', size: '1kg', brand: 'Woolworths',
     category: 'meat', emoji: '🍗', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1810,7 +1810,7 @@ woolworths: { regularPrice: 11.50, salePrice: 11.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'lamb-shoulder-chops-1kg', name: 'WW Lamb Shoulder Chops Fresh', size: '1kg', brand: 'Woolworths',
+    id: 'lamb-shoulder-chops-1kg', sku: '9302737035039', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102217.jpg', name: 'WW Lamb Shoulder Chops Fresh', size: '1kg', brand: 'Woolworths',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1820,7 +1820,7 @@ woolworths: { regularPrice: 18.00, salePrice: 18.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'pork-loin-chops-1kg', name: 'Coles Pork Loin Chops Boneless', size: '1kg', brand: 'Coles',
+    id: 'pork-loin-chops-1kg', sku: '9302238269971', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101813.jpg', name: 'Coles Pork Loin Chops Boneless', size: '1kg', brand: 'Coles',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1830,7 +1830,7 @@ woolworths: { regularPrice: 16.00, salePrice: 16.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'salmon-fillets-skin-on-4pk', name: 'Tassal Salmon Fillets Skin On', size: '4 Pack 500g', brand: 'Tassal',
+    id: 'salmon-fillets-skin-on-4pk', sku: '9303103701438', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102514.jpg', name: 'Tassal Salmon Fillets Skin On', size: '4 Pack 500g', brand: 'Tassal',
     category: 'meat', emoji: '🐟', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1840,7 +1840,7 @@ woolworths: { regularPrice: 22.00, salePrice: 19.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'coles-beef-rump-steak-500g', name: 'Coles Beef Rump Steak Fresh', size: '500g', brand: 'Coles',
+    id: 'coles-beef-rump-steak-500g', sku: '9302908639852', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102356.jpg', name: 'Coles Beef Rump Steak Fresh', size: '500g', brand: 'Coles',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1850,7 +1850,7 @@ woolworths: { regularPrice: 14.00, salePrice: 14.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'dondale-bacon-rashers-500g', name: 'Don Bacon Short Rashers Pack', size: '500g', brand: 'Don',
+    id: 'dondale-bacon-rashers-500g', sku: '9302949380563', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102389.jpg', name: 'Don Bacon Short Rashers Pack', size: '500g', brand: 'Don',
     category: 'meat', emoji: '🥓', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1860,7 +1860,7 @@ woolworths: { regularPrice: 9.50, salePrice: 7.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'primas-frankfurts-skinless-1kg', name: 'Primo Skinless Frankfurts Tub', size: '1kg', brand: 'Primo',
+    id: 'primas-frankfurts-skinless-1kg', sku: '9303723454072', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103016.jpg', name: 'Primo Skinless Frankfurts Tub', size: '1kg', brand: 'Primo',
     category: 'meat', emoji: '🌭', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1870,7 +1870,7 @@ woolworths: { regularPrice: 11.00, salePrice: 8.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'primo-sliced-ham-value-pack', name: 'Primo English Ham Sliced Value Pack', size: '500g', brand: 'Primo',
+    id: 'primo-sliced-ham-value-pack', sku: '9303240738375', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102625.jpg', name: 'Primo English Ham Sliced Value Pack', size: '500g', brand: 'Primo',
     category: 'meat', emoji: '🥩', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1880,7 +1880,7 @@ woolworths: { regularPrice: 10.00, salePrice: 7.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'safcol-premium-salmon-100g', name: 'Safcol Salmon in Springwater', size: '100g', brand: 'Safcol',
+    id: 'safcol-premium-salmon-100g', sku: '9303002466944', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102432.jpg', name: 'Safcol Salmon in Springwater', size: '100g', brand: 'Safcol',
     category: 'meat', emoji: '🐟', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1890,7 +1890,7 @@ woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'primo-chorizo-sausage-375g', name: 'Primo Chorizo Twin Pack', size: '375g', brand: 'Primo',
+    id: 'primo-chorizo-sausage-375g', sku: '9303035800253', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102459.jpg', name: 'Primo Chorizo Twin Pack', size: '375g', brand: 'Primo',
     category: 'meat', emoji: '🌭', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1900,7 +1900,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'woolworths-beef-sausages-18pk', name: 'WW Thin Beef Sausages Value Pack', size: '1.7kg', brand: 'Woolworths',
+    id: 'woolworths-beef-sausages-18pk', sku: '9303517281383', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102849.jpg', name: 'WW Thin Beef Sausages Value Pack', size: '1.7kg', brand: 'Woolworths',
     category: 'meat', emoji: '🌭', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1910,7 +1910,7 @@ woolworths: { regularPrice: 13.00, salePrice: 13.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'mccain-frozen-chips-1kg', name: 'McCain Frozen Chips Straight Cut', size: '1kg', brand: 'McCain',
+    id: 'mccain-frozen-chips-1kg', sku: '9302725923936', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102208.jpg', name: 'McCain Frozen Chips Straight Cut', size: '1kg', brand: 'McCain',
     category: 'frozen', emoji: '🍟', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1920,7 +1920,7 @@ woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'birds-eye-fish-fingers-375g', name: 'Birds Eye Fish Fingers 15pk', size: '375g', brand: 'Birds Eye',
+    id: 'birds-eye-fish-fingers-375g', sku: '9303053084191', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102473.jpg', name: 'Birds Eye Fish Fingers 15pk', size: '375g', brand: 'Birds Eye',
     category: 'frozen', emoji: '🐟', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1930,7 +1930,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'mccain-frozen-pizza-bbq-400g', name: 'McCain Frozen Pizza BBQ Chicken', size: '400g', brand: 'McCain',
+    id: 'mccain-frozen-pizza-bbq-400g', sku: '9303181479159', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102577.jpg', name: 'McCain Frozen Pizza BBQ Chicken', size: '400g', brand: 'McCain',
     category: 'frozen', emoji: '🍕', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -1940,7 +1940,7 @@ woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'nannas-frozen-apple-pie-600g', name: 'Nannas Frozen Family Apple Pie', size: '600g', brand: 'Nannas',
+    id: 'nannas-frozen-apple-pie-600g', sku: '9303185182860', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102580.jpg', name: 'Nannas Frozen Family Apple Pie', size: '600g', brand: 'Nannas',
     category: 'frozen', emoji: '🥧', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1950,7 +1950,7 @@ woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'patties-party-pies-12pk', name: 'Patties Party Beef Pies 12pk', size: '560g', brand: 'Patties',
+    id: 'patties-party-pies-12pk', sku: '9302725923936', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102208.jpg', name: 'Patties Party Beef Pies 12pk', size: '560g', brand: 'Patties',
     category: 'frozen', emoji: '🥧', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1960,7 +1960,7 @@ woolworths: { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'four-twenty-meat-pies-4pk', name: 'Four N Twenty Meat Pies Pack', size: '700g', brand: 'Four N Twenty',
+    id: 'four-twenty-meat-pies-4pk', sku: '9303004936078', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102434.jpg', name: 'Four N Twenty Meat Pies Pack', size: '700g', brand: 'Four N Twenty',
     category: 'frozen', emoji: '🥧', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -1970,7 +1970,7 @@ woolworths: { regularPrice: 9.00, salePrice: 6.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'diana-chan-pork-dumplings', name: 'Diana Chan Pork & Chive Dumplings', size: '750g', brand: 'Diana Chan',
+    id: 'diana-chan-pork-dumplings', sku: '9303058022459', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102477.jpg', name: 'Diana Chan Pork & Chive Dumplings', size: '750g', brand: 'Diana Chan',
     category: 'frozen', emoji: '🥟', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -1980,7 +1980,7 @@ woolworths: { regularPrice: 15.00, salePrice: 10.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'steer-frozen-vegetables-peas-1kg', name: 'Birds Eye Frozen Garden Peas', size: '1kg', brand: 'Birds Eye',
+    id: 'steer-frozen-vegetables-peas-1kg', sku: '9303862960143', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103129.jpg', name: 'Birds Eye Frozen Garden Peas', size: '1kg', brand: 'Birds Eye',
     category: 'frozen', emoji: '🥦', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -1990,7 +1990,7 @@ woolworths: { regularPrice: 5.20, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'sara-lee-french-vanilla-cheesecake', name: 'Sara Lee French Vanilla Cheesecake', size: '360g', brand: 'Sara Lee',
+    id: 'sara-lee-french-vanilla-cheesecake', sku: '9304087651337', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103311.jpg', name: 'Sara Lee French Vanilla Cheesecake', size: '360g', brand: 'Sara Lee',
     category: 'frozen', emoji: '🍰', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -2000,7 +2000,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'mccain-frozen-lasagne-400g', name: 'McCain Frozen Lasagne Meal', size: '400g', brand: 'McCain',
+    id: 'mccain-frozen-lasagne-400g', sku: '9302958022532', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102396.jpg', name: 'McCain Frozen Lasagne Meal', size: '400g', brand: 'McCain',
     category: 'frozen', emoji: '🍝', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2010,7 +2010,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'patties-sausage-rolls-12pk', name: 'Patties Party Sausage Rolls 12pk', size: '450g', brand: 'Patties',
+    id: 'patties-sausage-rolls-12pk', sku: '9303106170572', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102516.jpg', name: 'Patties Party Sausage Rolls 12pk', size: '450g', brand: 'Patties',
     category: 'frozen', emoji: '🌭', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2020,7 +2020,7 @@ woolworths: { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'steers-garlic-bread-twin-pack', name: 'La Famiglia Garlic Bread Twin Pack', size: '400g', brand: 'La Famiglia',
+    id: 'steers-garlic-bread-twin-pack', sku: '9303509873981', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102843.jpg', name: 'La Famiglia Garlic Bread Twin Pack', size: '400g', brand: 'La Famiglia',
     category: 'frozen', emoji: '🥖', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2030,7 +2030,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'colgate-toothpaste-total-115g', name: 'Colgate Total Clean Mint Toothpaste', size: '115g', brand: 'Colgate',
+    id: 'colgate-toothpaste-total-115g', sku: '9303420985157', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102771.jpg', name: 'Colgate Total Clean Mint Toothpaste', size: '115g', brand: 'Colgate',
     category: 'personal-care', emoji: '🪥', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
@@ -2040,7 +2040,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'palmolive-shampoo-milk-honey-350ml', name: 'Palmolive Shampoo Milk & Honey', size: '350ml', brand: 'Palmolive',
+    id: 'palmolive-shampoo-milk-honey-350ml', sku: '9304016046451', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103253.jpg', name: 'Palmolive Shampoo Milk & Honey', size: '350ml', brand: 'Palmolive',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
@@ -2050,7 +2050,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 1 },
     }
   },
   {
-    id: 'rexona-men-sport-deodorant-250ml', name: 'Rexona Men Sport Deodorant Aerosol', size: '250ml', brand: 'Rexona',
+    id: 'rexona-men-sport-deodorant-250ml', sku: '9303764194783', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103049.jpg', name: 'Rexona Men Sport Deodorant Aerosol', size: '250ml', brand: 'Rexona',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
@@ -2060,7 +2060,7 @@ woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'radox-shower-gel-lemon-500ml', name: 'Radox Shower Gel Lemon & Tea Tree', size: '500ml', brand: 'Radox',
+    id: 'radox-shower-gel-lemon-500ml', sku: '9303213577901', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102603.jpg', name: 'Radox Shower Gel Lemon & Tea Tree', size: '500ml', brand: 'Radox',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
@@ -2070,7 +2070,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'colgate-plax-mouthwash-mint-500ml', name: 'Colgate Plax Freshmint Mouthwash', size: '500ml', brand: 'Colgate',
+    id: 'colgate-plax-mouthwash-mint-500ml', sku: '9303888886050', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103150.jpg', name: 'Colgate Plax Freshmint Mouthwash', size: '500ml', brand: 'Colgate',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 6.90, salePrice: 4.49, phaseOffset: 1 },
@@ -2080,7 +2080,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'head-shoulders-clean-shampoo-400ml', name: 'Head & Shoulders Clean Shampoo', size: '400ml', brand: 'Head & Shoulders',
+    id: 'head-shoulders-clean-shampoo-400ml', sku: '9303958021802', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103206.jpg', name: 'Head & Shoulders Clean Shampoo', size: '400ml', brand: 'Head & Shoulders',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 11.50, salePrice: 7.48, phaseOffset: 1 },
@@ -2090,7 +2090,7 @@ woolworths: { regularPrice: 12.50, salePrice: 8.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'pantene-conditioner-smooth-350ml', name: 'Pantene Conditioner Daily Moisture', size: '350ml', brand: 'Pantene',
+    id: 'pantene-conditioner-smooth-350ml', sku: '9303825923133', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103099.jpg', name: 'Pantene Conditioner Daily Moisture', size: '350ml', brand: 'Pantene',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 8.28, salePrice: 5.38, phaseOffset: 1 },
@@ -2100,7 +2100,7 @@ woolworths: { regularPrice: 9.00, salePrice: 5.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'palmolive-soap-bars-milk-honey-4pk', name: 'Palmolive Soap Bars Moisture Care', size: '4 Pack', brand: 'Palmolive',
+    id: 'palmolive-soap-bars-milk-honey-4pk', sku: '9304074071100', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103300.jpg', name: 'Palmolive Soap Bars Moisture Care', size: '4 Pack', brand: 'Palmolive',
     category: 'personal-care', emoji: '🧼', cycleWeeks: 99,
     stores: {
       chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
@@ -2110,7 +2110,7 @@ woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'dove-body-wash-beauty-cream-1l', name: 'Dove Body Wash Beauty Nourishing', size: '1L', brand: 'Dove',
+    id: 'dove-body-wash-beauty-cream-1l', sku: '9303514812249', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102847.jpg', name: 'Dove Body Wash Beauty Nourishing', size: '1L', brand: 'Dove',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 12.88, salePrice: 8.37, phaseOffset: 1 },
@@ -2120,7 +2120,7 @@ woolworths: { regularPrice: 14.00, salePrice: 9.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'gillette-mach3-razor-blades-4pk', name: 'Gillette Mach3 Razor Blades Refills', size: '4 Pack', brand: 'Gillette',
+    id: 'gillette-mach3-razor-blades-4pk', sku: '9303637034382', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102946.jpg', name: 'Gillette Mach3 Razor Blades Refills', size: '4 Pack', brand: 'Gillette',
     category: 'personal-care', emoji: '🪒', cycleWeeks: 99,
     stores: {
       chemist_warehouse: { regularPrice: 16.56, salePrice: 10.76, phaseOffset: 1 },
@@ -2130,7 +2130,7 @@ woolworths: { regularPrice: 18.00, salePrice: 14.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'lynx-africa-body-spray-155ml', name: 'Lynx Africa Men Body Spray', size: '155ml', brand: 'Lynx',
+    id: 'lynx-africa-body-spray-155ml', sku: '9303227158138', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102614.jpg', name: 'Lynx Africa Men Body Spray', size: '155ml', brand: 'Lynx',
     category: 'personal-care', emoji: '💨', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
@@ -2140,7 +2140,7 @@ woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'listerine-freshburst-mouthwash-250ml', name: 'Listerine Freshburst Mouthwash', size: '250ml', brand: 'Listerine',
+    id: 'listerine-freshburst-mouthwash-250ml', sku: '9304402465922', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103566.jpg', name: 'Listerine Freshburst Mouthwash', size: '250ml', brand: 'Listerine',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
@@ -2150,7 +2150,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'huggies-nappies-size-4-60pk', name: 'Huggies Ultra Dry Nappies Size 4', size: '60 Pack', brand: 'Huggies',
+    id: 'huggies-nappies-size-4-60pk', sku: '9303081479232', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102496.jpg', name: 'Huggies Ultra Dry Nappies Size 4', size: '60 Pack', brand: 'Huggies',
     category: 'baby', emoji: '👶', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 33.12, salePrice: 21.53, phaseOffset: 1 },
@@ -2160,7 +2160,7 @@ woolworths: { regularPrice: 36.00, salePrice: 29.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'johnsons-baby-wipes-fragrance-free-80pk', name: 'Johnsons Baby Wipes Fragrance Free', size: '80 Pack', brand: 'Johnsons',
+    id: 'johnsons-baby-wipes-fragrance-free-80pk', sku: '9304630860817', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103751.jpg', name: 'Johnsons Baby Wipes Fragrance Free', size: '80 Pack', brand: 'Johnsons',
     category: 'baby', emoji: '👶', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
@@ -2170,7 +2170,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.20, phaseOffset: 1 },
     }
   },
   {
-    id: 'baby-love-nappies-size-3-50pk', name: 'BabyLove Cosifit Nappies Size 3', size: '50 Pack', brand: 'BabyLove',
+    id: 'baby-love-nappies-size-3-50pk', sku: '9303262960581', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102643.jpg', name: 'BabyLove Cosifit Nappies Size 3', size: '50 Pack', brand: 'BabyLove',
     category: 'baby', emoji: '👶', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 22.08, salePrice: 14.35, phaseOffset: 1 },
@@ -2180,7 +2180,7 @@ woolworths: { regularPrice: 24.00, salePrice: 19.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'curash-baby-wipes-soap-free-80pk', name: 'Curash Baby Wipes Soap Free', size: '80 Pack', brand: 'Curash',
+    id: 'curash-baby-wipes-soap-free-80pk', sku: '9303719750371', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103013.jpg', name: 'Curash Baby Wipes Soap Free', size: '80 Pack', brand: 'Curash',
     category: 'baby', emoji: '👶', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 4.42, salePrice: 2.87, phaseOffset: 1 },
@@ -2190,7 +2190,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'farex-baby-rice-cereal-125g', name: 'Farex Baby Cereal Rice', size: '125g', brand: 'Farex',
+    id: 'farex-baby-rice-cereal-125g', sku: '9302990121274', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102422.jpg', name: 'Farex Baby Cereal Rice', size: '125g', brand: 'Farex',
     category: 'baby', emoji: '🥣', cycleWeeks: 99,
     stores: {
       chemist_warehouse: { regularPrice: 3.22, salePrice: 2.09, phaseOffset: 1 },
@@ -2200,7 +2200,7 @@ woolworths: { regularPrice: 3.50, salePrice: 2.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'sudocrem-baby-healing-cream-125g', name: 'Sudocrem Nappy Recovery Cream', size: '125g', brand: 'Sudocrem',
+    id: 'sudocrem-baby-healing-cream-125g', sku: '9303658022021', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102963.jpg', name: 'Sudocrem Nappy Recovery Cream', size: '125g', brand: 'Sudocrem',
     category: 'baby', emoji: '🧴', cycleWeeks: 99,
     stores: {
       chemist_warehouse: { regularPrice: 11.04, salePrice: 7.18, phaseOffset: 1 },
@@ -2210,7 +2210,7 @@ woolworths: { regularPrice: 12.00, salePrice: 9.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'karicare-toddler-milk-stage-3-900g', name: 'Karicare Toddler Milk Stage 3 Formula', size: '900g', brand: 'Karicare',
+    id: 'karicare-toddler-milk-stage-3-900g', sku: '9303798762659', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103077.jpg', name: 'Karicare Toddler Milk Stage 3 Formula', size: '900g', brand: 'Karicare',
     category: 'baby', emoji: '🍼', cycleWeeks: 99,
     stores: {
       chemist_warehouse: { regularPrice: 20.24, salePrice: 13.16, phaseOffset: 1 },
@@ -2220,7 +2220,7 @@ woolworths: { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'bellamys-organic-apple-cinnamon-120g', name: 'Bellamys Organic Apple Cinnamon Puree', size: '120g', brand: 'Bellamys',
+    id: 'bellamys-organic-apple-cinnamon-120g', sku: '9304206169769', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103407.jpg', name: 'Bellamys Organic Apple Cinnamon Puree', size: '120g', brand: 'Bellamys',
     category: 'baby', emoji: '🍎', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 2.58, salePrice: 1.68, phaseOffset: 1 },
@@ -2230,7 +2230,7 @@ woolworths: { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 1 },
     }
   },
   {
-    id: 'raffertys-garden-banana-pear-120g', name: 'Raffertys Garden Custard Banana Pear', size: '120g', brand: 'Raffertys',
+    id: 'raffertys-garden-banana-pear-120g', sku: '9303790120690', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103070.jpg', name: 'Raffertys Garden Custard Banana Pear', size: '120g', brand: 'Raffertys',
     category: 'baby', emoji: '🍌', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 2.58, salePrice: 1.68, phaseOffset: 1 },
@@ -2240,7 +2240,7 @@ woolworths: { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 0 },
     }
   },
   {
-    id: 'baby-balm-johnson-100ml', name: 'Johnsons Baby Moisturizing Balm', size: '100ml', brand: 'Johnsons',
+    id: 'baby-balm-johnson-100ml', sku: '9302580245030', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102090.jpg', name: 'Johnsons Baby Moisturizing Balm', size: '100ml', brand: 'Johnsons',
     category: 'baby', emoji: '🧴', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.52, salePrice: 3.59, phaseOffset: 1 },
@@ -2250,7 +2250,7 @@ woolworths: { regularPrice: 6.00, salePrice: 4.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'pedigree-dog-food-beef-12kg-bag', name: 'Pedigree Dry Dog Food Beef Bag', size: '1.2kg', brand: 'Pedigree',
+    id: 'pedigree-dog-food-beef-12kg-bag', sku: '9303467898703', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102809.jpg', name: 'Pedigree Dry Dog Food Beef Bag', size: '1.2kg', brand: 'Pedigree',
     category: 'pet', emoji: '🐶', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -2260,7 +2260,7 @@ woolworths: { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'dine-cat-food-tuna-pouch-85g', name: 'Dine Daily Wet Cat Food Tuna', size: '85g', brand: 'Dine',
+    id: 'dine-cat-food-tuna-pouch-85g', sku: '9303175306324', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102572.jpg', name: 'Dine Daily Wet Cat Food Tuna', size: '85g', brand: 'Dine',
     category: 'pet', emoji: '🐱', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2270,7 +2270,7 @@ woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 1 },
     }
   },
   {
-    id: 'supercoat-dog-food-chicken-26kg', name: 'Purina Supercoat Adult Dry Dog Food', size: '2.6kg', brand: 'Purina',
+    id: 'supercoat-dog-food-chicken-26kg', sku: '9303628392413', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102939.jpg', name: 'Purina Supercoat Adult Dry Dog Food', size: '2.6kg', brand: 'Purina',
     category: 'pet', emoji: '🐶', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -2280,7 +2280,7 @@ woolworths: { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'optimum-dry-cat-food-chicken-800g', name: 'Optimum Adult Dry Cat Food Chicken', size: '800g', brand: 'Optimum',
+    id: 'optimum-dry-cat-food-chicken-800g', sku: '9303771602185', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103055.jpg', name: 'Optimum Adult Dry Cat Food Chicken', size: '800g', brand: 'Optimum',
     category: 'pet', emoji: '🐱', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2290,7 +2290,7 @@ woolworths: { regularPrice: 11.50, salePrice: 8.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'my-dog-beef-poultry-meat-400g', name: 'My Dog Wet Dog Food Beef Cans', size: '400g', brand: 'My Dog',
+    id: 'my-dog-beef-poultry-meat-400g', sku: '9303264195148', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102644.jpg', name: 'My Dog Wet Dog Food Beef Cans', size: '400g', brand: 'My Dog',
     category: 'pet', emoji: '🐶', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2300,7 +2300,7 @@ woolworths: { regularPrice: 3.30, salePrice: 2.40, phaseOffset: 0 },
     }
   },
   {
-    id: 'whiskas-cat-food-poultry-12pk', name: 'Whiskas Wet Cat Food Gravy Pouches', size: '12 Pack', brand: 'Whiskas',
+    id: 'whiskas-cat-food-poultry-12pk', sku: '9303450614765', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102795.jpg', name: 'Whiskas Wet Cat Food Gravy Pouches', size: '12 Pack', brand: 'Whiskas',
     category: 'pet', emoji: '🐱', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2310,7 +2310,7 @@ woolworths: { regularPrice: 10.50, salePrice: 8.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'schmackos-dog-treats-beef-strap', name: 'Schmackos Strapz Dog Treats Beef', size: '200g', brand: 'Schmackos',
+    id: 'schmackos-dog-treats-beef-strap', sku: '9303783947855', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103065.jpg', name: 'Schmackos Strapz Dog Treats Beef', size: '200g', brand: 'Schmackos',
     category: 'pet', emoji: '🍖', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2320,7 +2320,7 @@ woolworths: { regularPrice: 6.80, salePrice: 4.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'fancies-cat-treat-puree-4pk', name: 'Fancy Feast Puree Kiss Treats', size: '4 Pack', brand: 'Fancy Feast',
+    id: 'fancies-cat-treat-puree-4pk', sku: '9303186417427', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102581.jpg', name: 'Fancy Feast Puree Kiss Treats', size: '4 Pack', brand: 'Fancy Feast',
     category: 'pet', emoji: '🐱', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2330,7 +2330,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.20, phaseOffset: 0 },
     }
   },
   {
-    id: 'tux-dog-biscuits-value-pack-1kg', name: 'Purina Lucky Dog Bones Biscuits', size: '1kg', brand: 'Purina',
+    id: 'tux-dog-biscuits-value-pack-1kg', sku: '9303675305959', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102977.jpg', name: 'Purina Lucky Dog Bones Biscuits', size: '1kg', brand: 'Purina',
     category: 'pet', emoji: '🍖', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -2340,7 +2340,7 @@ woolworths: { regularPrice: 7.50, salePrice: 6.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'friskies-cat-dry-food-15kg-box', name: 'Purina Friskies Seafood Sensations', size: '1.5kg', brand: 'Purina',
+    id: 'friskies-cat-dry-food-15kg-box', sku: '9303458022167', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102801.jpg', name: 'Purina Friskies Seafood Sensations', size: '1.5kg', brand: 'Purina',
     category: 'pet', emoji: '🐱', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -2351,7 +2351,7 @@ woolworths: { regularPrice: 10.50, salePrice: 7.50, phaseOffset: 0 },
   }
 ,
   {
-    id: 'panadol-rapid-20pk', name: 'Panadol Rapid Caplets', size: '20 Pack', brand: 'Panadol',
+    id: 'panadol-rapid-20pk', sku: '9302061726890', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101670.jpg', name: 'Panadol Rapid Caplets', size: '20 Pack', brand: 'Panadol',
     category: 'health', emoji: '💊', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
@@ -2361,7 +2361,7 @@ woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'nurofen-24pk', name: 'Nurofen Ibuprofen 200mg', size: '24 Pack', brand: 'Nurofen',
+    id: 'nurofen-24pk', sku: '9301396295277', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101131.jpg', name: 'Nurofen Ibuprofen 200mg', size: '24 Pack', brand: 'Nurofen',
     category: 'health', emoji: '💊', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
@@ -2371,7 +2371,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.80, phaseOffset: 2 },
     }
   },
   {
-    id: 'musashi-protein-bar-choc', name: 'Musashi High Protein Bar Chocolate', size: '60g', brand: 'Musashi',
+    id: 'musashi-protein-bar-choc', sku: '9302948145996', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102388.jpg', name: 'Musashi High Protein Bar Chocolate', size: '60g', brand: 'Musashi',
     category: 'health', emoji: '🍫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
@@ -2381,7 +2381,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'natures-own-fish-oil', name: 'Natures Own Fish Oil 1000mg', size: '200 Pack', brand: 'Natures Own',
+    id: 'natures-own-fish-oil', sku: '9302462961165', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101995.jpg', name: 'Natures Own Fish Oil 1000mg', size: '200 Pack', brand: 'Natures Own',
     category: 'health', emoji: '💊', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 20.24, salePrice: 13.16, phaseOffset: 1 },
@@ -2391,7 +2391,7 @@ woolworths: { regularPrice: 22.00, salePrice: 11.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'berocca-performance-orange', name: 'Berocca Performance Effervescent Orange', size: '30 Pack', brand: 'Berocca',
+    id: 'berocca-performance-orange', sku: '9303228392705', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102615.jpg', name: 'Berocca Performance Effervescent Orange', size: '30 Pack', brand: 'Berocca',
     category: 'health', emoji: '🥤', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 17.02, salePrice: 11.06, phaseOffset: 1 },
@@ -2401,7 +2401,7 @@ woolworths: { regularPrice: 18.50, salePrice: 12.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'white-wings-flour-sr-2kg', name: 'White Wings Self Raising Flour', size: '2kg', brand: 'White Wings',
+    id: 'white-wings-flour-sr-2kg', sku: '9302861726306', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102318.jpg', name: 'White Wings Self Raising Flour', size: '2kg', brand: 'White Wings',
     category: 'baking', emoji: '🧁', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2411,7 +2411,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'csr-white-sugar-1kg', name: 'CSR White Sugar Pure Cane', size: '1kg', brand: 'CSR',
+    id: 'csr-white-sugar-1kg', sku: '9302238269971', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101813.jpg', name: 'CSR White Sugar Pure Cane', size: '1kg', brand: 'CSR',
     category: 'baking', emoji: '🧁', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -2421,7 +2421,7 @@ woolworths: { regularPrice: 2.80, salePrice: 2.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'queen-maple-syrup-375ml', name: 'Queen Maple Active Syrup', size: '375ml', brand: 'Queen',
+    id: 'queen-maple-syrup-375ml', sku: '9302665430153', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102159.jpg', name: 'Queen Maple Active Syrup', size: '375ml', brand: 'Queen',
     category: 'baking', emoji: '🍯', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2431,7 +2431,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'cadbury-baking-chocolate-180g', name: 'Cadbury Baking Milk Chocolate Block', size: '180g', brand: 'Cadbury',
+    id: 'cadbury-baking-chocolate-180g', sku: '9303337034601', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102703.jpg', name: 'Cadbury Baking Milk Chocolate Block', size: '180g', brand: 'Cadbury',
     category: 'baking', emoji: '🍫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2441,7 +2441,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 2 },
     }
   },
   {
-    id: 'sunrice-medium-rice-5kg', name: 'SunRice Medium Grain Rice Bag', size: '5kg', brand: 'SunRice',
+    id: 'sunrice-medium-rice-5kg', sku: '9302739504173', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102219.jpg', name: 'SunRice Medium Grain Rice Bag', size: '5kg', brand: 'SunRice',
     category: 'pantry', emoji: '🌾', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -2451,7 +2451,7 @@ woolworths: { regularPrice: 18.00, salePrice: 9.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'heinz-spaghetti-canned-420g', name: 'Heinz Spaghetti in Tomato Sauce', size: '420g', brand: 'Heinz',
+    id: 'heinz-spaghetti-canned-420g', sku: '9303106170572', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102516.jpg', name: 'Heinz Spaghetti in Tomato Sauce', size: '420g', brand: 'Heinz',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2461,7 +2461,7 @@ woolworths: { regularPrice: 2.50, salePrice: 1.80, phaseOffset: 1 },
     }
   },
   {
-    id: 'spc-spaghetti-3pk', name: 'SPC Spaghetti Rich Tomato Can', size: '3 x 220g', brand: 'SPC',
+    id: 'spc-spaghetti-3pk', sku: '9302043208385', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101655.jpg', name: 'SPC Spaghetti Rich Tomato Can', size: '3 x 220g', brand: 'SPC',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2471,7 +2471,7 @@ woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'kelloggs-lcm-coco-bars', name: 'Kelloggs LCMs Coco Pops Snack Bars', size: '6 Pack', brand: 'Kelloggs',
+    id: 'kelloggs-lcm-coco-bars', sku: '9302655553617', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102151.jpg', name: 'Kelloggs LCMs Coco Pops Snack Bars', size: '6 Pack', brand: 'Kelloggs',
     category: 'pantry', emoji: '🍫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2481,7 +2481,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'uncle-tobys-muesli-bars-choc', name: 'Uncle Tobys Chewy Bars Choc Chip', size: '6 Pack', brand: 'Uncle Tobys',
+    id: 'uncle-tobys-muesli-bars-choc', sku: '9303417281456', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102768.jpg', name: 'Uncle Tobys Chewy Bars Choc Chip', size: '6 Pack', brand: 'Uncle Tobys',
     category: 'pantry', emoji: '🌾', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2491,7 +2491,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'pauls-double-choc-custard', name: 'Pauls Double Choc Custard Tub', size: '1kg', brand: 'Pauls',
+    id: 'pauls-double-choc-custard', sku: '9303074071830', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102490.jpg', name: 'Pauls Double Choc Custard Tub', size: '1kg', brand: 'Pauls',
     category: 'dairy', emoji: '🍮', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2501,7 +2501,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.80, phaseOffset: 1 },
     }
   },
   {
-    id: 'kraft-singles-cheese-30pk', name: 'Kraft Singles Cheese Slices', size: '30 Pack', brand: 'Kraft',
+    id: 'kraft-singles-cheese-30pk', sku: '9302922220089', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102367.jpg', name: 'Kraft Singles Cheese Slices', size: '30 Pack', brand: 'Kraft',
     category: 'dairy', emoji: '🧀', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2511,7 +2511,7 @@ woolworths: { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'chicken-thigh-fillets-1kg', name: 'WW Chicken Thigh Fillets Boneless', size: '1kg', brand: 'Woolworths',
+    id: 'chicken-thigh-fillets-1kg', sku: '9302970368202', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102406.jpg', name: 'WW Chicken Thigh Fillets Boneless', size: '1kg', brand: 'Woolworths',
     category: 'meat', emoji: '🍗', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -2521,7 +2521,7 @@ woolworths: { regularPrice: 14.50, salePrice: 14.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'pork-belly-slices-500g', name: 'WW Pork Belly Slices Fresh', size: '500g', brand: 'Woolworths',
+    id: 'pork-belly-slices-500g', sku: '9302481479670', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102010.jpg', name: 'WW Pork Belly Slices Fresh', size: '500g', brand: 'Woolworths',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -2531,7 +2531,7 @@ woolworths: { regularPrice: 12.00, salePrice: 12.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'mccain-pub-chips-1kg', name: 'McCain Pub Size Frozen Chips', size: '1kg', brand: 'McCain',
+    id: 'mccain-pub-chips-1kg', sku: '9302314813125', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101875.jpg', name: 'McCain Pub Size Frozen Chips', size: '1kg', brand: 'McCain',
     category: 'frozen', emoji: '🍟', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2541,7 +2541,7 @@ woolworths: { regularPrice: 5.80, salePrice: 4.20, phaseOffset: 1 },
     }
   },
   {
-    id: 'birds-eye-fish-cakes-300g', name: 'Birds Eye Frozen Fish Cakes', size: '300g', brand: 'Birds Eye',
+    id: 'birds-eye-fish-cakes-300g', sku: '9302753084410', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102230.jpg', name: 'Birds Eye Frozen Fish Cakes', size: '300g', brand: 'Birds Eye',
     category: 'frozen', emoji: '🐟', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2551,7 +2551,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'celery-bunch-each', name: 'Celery Bunch Fresh Premium', size: 'Each', brand: 'Fresh',
+    id: 'celery-bunch-each', sku: '9302053084921', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101663.jpg', name: 'Celery Bunch Fresh Premium', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🥬', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2561,7 +2561,7 @@ woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'sweet-potatoes-1kg', name: 'Sweet Potatoes Gold Fresh', size: '1kg', brand: 'Fresh',
+    id: 'sweet-potatoes-1kg', sku: '9302197529260', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101780.jpg', name: 'Sweet Potatoes Gold Fresh', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍠', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -2571,7 +2571,7 @@ woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'colgate-toothbrush-3pk', name: 'Colgate Zig Zag Toothbrush Medium', size: '3 Pack', brand: 'Colgate',
+    id: 'colgate-toothbrush-3pk', sku: '9302717281967', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102201.jpg', name: 'Colgate Zig Zag Toothbrush Medium', size: '3 Pack', brand: 'Colgate',
     category: 'personal-care', emoji: '🪥', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 7.36, salePrice: 4.78, phaseOffset: 1 },
@@ -2581,7 +2581,7 @@ woolworths: { regularPrice: 8.00, salePrice: 4.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'sensodyne-toothpaste-110g', name: 'Sensodyne Daily Care Toothpaste', size: '110g', brand: 'Sensodyne',
+    id: 'sensodyne-toothpaste-110g', sku: '9302990121274', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102422.jpg', name: 'Sensodyne Daily Care Toothpaste', size: '110g', brand: 'Sensodyne',
     category: 'personal-care', emoji: '🪥', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
@@ -2591,7 +2591,7 @@ woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'dettol-bar-soap-4pk', name: 'Dettol Anti-Bacterial Soap Bars', size: '4 Pack', brand: 'Dettol',
+    id: 'dettol-bar-soap-4pk', sku: '9302224689734', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101802.jpg', name: 'Dettol Anti-Bacterial Soap Bars', size: '4 Pack', brand: 'Dettol',
     category: 'personal-care', emoji: '🧼', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
@@ -2601,7 +2601,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'fairy-platinum-dishwasher-60pk', name: 'Fairy Platinum Plus Dishwasher Tabs', size: '60 Pack', brand: 'Fairy',
+    id: 'fairy-platinum-dishwasher-60pk', sku: '9303633330681', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102943.jpg', name: 'Fairy Platinum Plus Dishwasher Tabs', size: '60 Pack', brand: 'Fairy',
     category: 'household', emoji: '🍽️', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 47.84, salePrice: 31.10, phaseOffset: 1 },
@@ -2611,7 +2611,7 @@ woolworths: { regularPrice: 52.00, salePrice: 26.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'ajax-eco-wipe-multi-purpose', name: 'Ajax Multi Purpose Wipes Lemon', size: '110 Pack', brand: 'Ajax',
+    id: 'ajax-eco-wipe-multi-purpose', sku: '9303314812395', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102685.jpg', name: 'Ajax Multi Purpose Wipes Lemon', size: '110 Pack', brand: 'Ajax',
     category: 'household', emoji: '🧹', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 9.20, salePrice: 5.98, phaseOffset: 1 },
@@ -2621,7 +2621,7 @@ woolworths: { regularPrice: 10.00, salePrice: 5.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'duck-toilet-gel-750ml', name: 'Duck Deep Action Toilet Gel Pine', size: '750ml', brand: 'Duck',
+    id: 'duck-toilet-gel-750ml', sku: '9302345677300', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101900.jpg', name: 'Duck Deep Action Toilet Gel Pine', size: '750ml', brand: 'Duck',
     category: 'household', emoji: '🚽', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 5.34, salePrice: 3.47, phaseOffset: 1 },
@@ -2631,7 +2631,7 @@ woolworths: { regularPrice: 5.80, salePrice: 3.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'harpic-fresh-power-toilet-block', name: 'Harpic Fresh Power Toilet Block', size: '39g', brand: 'Harpic',
+    id: 'harpic-fresh-power-toilet-block', sku: '9303807404628', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103084.jpg', name: 'Harpic Fresh Power Toilet Block', size: '39g', brand: 'Harpic',
     category: 'household', emoji: '🚽', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
@@ -2641,7 +2641,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'supercoat-cat-food-15kg', name: 'Supercoat Dry Cat Food Chicken', size: '1.5kg', brand: 'Supercoat',
+    id: 'supercoat-cat-food-15kg', sku: '9302672837555', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102165.jpg', name: 'Supercoat Dry Cat Food Chicken', size: '1.5kg', brand: 'Supercoat',
     category: 'pet', emoji: '🐱', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2651,7 +2651,7 @@ woolworths: { regularPrice: 11.00, salePrice: 8.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'my-dog-gourmet-beef-100g', name: 'My Dog Gourmet Beef Tray', size: '100g', brand: 'My Dog',
+    id: 'my-dog-gourmet-beef-100g', sku: '9302648146215', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102145.jpg', name: 'My Dog Gourmet Beef Tray', size: '100g', brand: 'My Dog',
     category: 'pet', emoji: '🐶', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2662,7 +2662,7 @@ woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 1 },
   }
 ,
   {
-    id: 'basmati-rice-premium', name: 'Basmati Rice Premium', size: '2kg', brand: 'SunRice',
+    id: 'basmati-rice-premium', sku: '9302485183371', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102013.jpg', name: 'Basmati Rice Premium', size: '2kg', brand: 'SunRice',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2672,7 +2672,7 @@ woolworths: { regularPrice: 8.00, salePrice: 5.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'jasmine-rice-fragrant', name: 'Jasmine Rice Fragrant', size: '5kg', brand: 'SunRice',
+    id: 'jasmine-rice-fragrant', sku: '9302598763535', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102105.jpg', name: 'Jasmine Rice Fragrant', size: '5kg', brand: 'SunRice',
     category: 'pantry', emoji: '🥫', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -2682,7 +2682,7 @@ woolworths: { regularPrice: 18.00, salePrice: 10.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'extra-virgin-olive-oil', name: 'Extra Virgin Olive Oil', size: '750ml', brand: 'Cobram Estate',
+    id: 'extra-virgin-olive-oil', sku: '9302722220235', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102205.jpg', name: 'Extra Virgin Olive Oil', size: '750ml', brand: 'Cobram Estate',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2692,7 +2692,7 @@ woolworths: { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'pure-canola-cooking-oil', name: 'Pure Canola Cooking Oil', size: '1L', brand: 'WW',
+    id: 'pure-canola-cooking-oil', sku: '9302803701657', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102271.jpg', name: 'Pure Canola Cooking Oil', size: '1L', brand: 'WW',
     category: 'pantry', emoji: '🥫', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -2702,7 +2702,7 @@ woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'soy-sauce-gluten-free', name: 'Soy Sauce Gluten Free', size: '250ml', brand: 'Kikkoman',
+    id: 'soy-sauce-gluten-free', sku: '9302572837628', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102084.jpg', name: 'Soy Sauce Gluten Free', size: '250ml', brand: 'Kikkoman',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2712,7 +2712,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'tomato-paste-squeeze', name: 'Tomato Paste Squeeze', size: '500g', brand: 'Leggos',
+    id: 'tomato-paste-squeeze', sku: '9302544442587', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102061.jpg', name: 'Tomato Paste Squeeze', size: '500g', brand: 'Leggos',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2722,7 +2722,7 @@ woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'canned-sweet-corn-kernels', name: 'Canned Sweet Corn Kernels', size: '420g', brand: 'Edgell',
+    id: 'canned-sweet-corn-kernels', sku: '9303079010098', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102494.jpg', name: 'Canned Sweet Corn Kernels', size: '420g', brand: 'Edgell',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2732,7 +2732,7 @@ woolworths: { regularPrice: 2.00, salePrice: 1.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'chunky-tuna-in-olive-oil', name: 'Chunky Tuna in Olive Oil', size: '95g', brand: 'John West',
+    id: 'chunky-tuna-in-olive-oil', sku: '9302913578120', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102360.jpg', name: 'Chunky Tuna in Olive Oil', size: '95g', brand: 'John West',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2742,7 +2742,7 @@ woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 4 },
     }
   },
   {
-    id: 'tuna-tempters-springwater', name: 'Tuna Tempters Springwater', size: '95g', brand: 'Sirena',
+    id: 'tuna-tempters-springwater', sku: '9303234565540', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102620.jpg', name: 'Tuna Tempters Springwater', size: '95g', brand: 'Sirena',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2752,7 +2752,7 @@ woolworths: { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'crunchy-peanut-butter', name: 'Crunchy Peanut Butter', size: '375g', brand: 'Bega',
+    id: 'crunchy-peanut-butter', sku: '9302677775823', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102169.jpg', name: 'Crunchy Peanut Butter', size: '375g', brand: 'Bega',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2762,7 +2762,7 @@ woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'smooth-peanut-butter-jar', name: 'Smooth Peanut Butter Jar', size: '375g', brand: 'Bega',
+    id: 'smooth-peanut-butter-jar', sku: '9303003701511', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102433.jpg', name: 'Smooth Peanut Butter Jar', size: '375g', brand: 'Bega',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2772,7 +2772,7 @@ woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'strawberry-jam-spread', name: 'Strawberry Jam Spread', size: '480g', brand: 'IXL',
+    id: 'strawberry-jam-spread', sku: '9302654319050', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102150.jpg', name: 'Strawberry Jam Spread', size: '480g', brand: 'IXL',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2782,7 +2782,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'pure-honey-squeeze-bottle', name: 'Pure Honey Squeeze Bottle', size: '340g', brand: 'Capilano',
+    id: 'pure-honey-squeeze-bottle', sku: '9303143207582', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102546.jpg', name: 'Pure Honey Squeeze Bottle', size: '340g', brand: 'Capilano',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2792,7 +2792,7 @@ woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'whole-egg-mayonnaise-jar', name: 'Whole Egg Mayonnaise Jar', size: '380g', brand: 'Praise',
+    id: 'whole-egg-mayonnaise-jar', sku: '9302935800326', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102378.jpg', name: 'Whole Egg Mayonnaise Jar', size: '380g', brand: 'Praise',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2802,7 +2802,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'traditional-tomato-pasta-sauce', name: 'Traditional Tomato Pasta Sauce', size: '500g', brand: 'Dolmio',
+    id: 'traditional-tomato-pasta-sauce', sku: '9303753083680', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103040.jpg', name: 'Traditional Tomato Pasta Sauce', size: '500g', brand: 'Dolmio',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2812,7 +2812,7 @@ woolworths: { regularPrice: 3.80, salePrice: 2.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'spaghetti-pasta-no-5', name: 'Spaghetti Pasta No 5', size: '500g', brand: 'San Remo',
+    id: 'spaghetti-pasta-no-5', sku: '9302364195805', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101915.jpg', name: 'Spaghetti Pasta No 5', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2822,7 +2822,7 @@ woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'penne-rigate-pasta', name: 'Penne Rigate Pasta', size: '500g', brand: 'San Remo',
+    id: 'penne-rigate-pasta', sku: '9302218516899', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101797.jpg', name: 'Penne Rigate Pasta', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2832,7 +2832,7 @@ woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'canned-chickpeas-drained', name: 'Canned Chickpeas drained', size: '400g', brand: 'Annalisa',
+    id: 'canned-chickpeas-drained', sku: '9302929627491', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102373.jpg', name: 'Canned Chickpeas drained', size: '400g', brand: 'Annalisa',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2842,7 +2842,7 @@ woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 4 },
     }
   },
   {
-    id: 'canned-brown-lentils', name: 'Canned Brown Lentils', size: '400g', brand: 'Annalisa',
+    id: 'canned-brown-lentils', sku: '9302496294474', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102022.jpg', name: 'Canned Brown Lentils', size: '400g', brand: 'Annalisa',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2852,7 +2852,7 @@ woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 0 },
     }
   },
   {
-    id: 'table-salt-fine-iodised', name: 'Table Salt Fine iodised', size: '500g', brand: 'Saxons',
+    id: 'table-salt-fine-iodised', sku: '9302772837482', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102246.jpg', name: 'Table Salt Fine iodised', size: '500g', brand: 'Saxons',
     category: 'pantry', emoji: '🥫', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -2862,7 +2862,7 @@ woolworths: { regularPrice: 2.20, salePrice: 2.20, phaseOffset: 4 },
     }
   },
   {
-    id: 'black-pepper-grinder', name: 'Black Pepper Grinder', size: '50g', brand: 'MasterFoods',
+    id: 'black-pepper-grinder', sku: '9302466664866', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101998.jpg', name: 'Black Pepper Grinder', size: '50g', brand: 'MasterFoods',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2872,7 +2872,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'dijon-mustard-jar', name: 'Dijon Mustard Jar', size: '200g', brand: 'Maille',
+    id: 'dijon-mustard-jar', sku: '9302107405869', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101707.jpg', name: 'Dijon Mustard Jar', size: '200g', brand: 'Maille',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2882,7 +2882,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 4 },
     }
   },
   {
-    id: 'tomato-ketchup-bottle', name: 'Tomato Ketchup Bottle', size: '500ml', brand: 'Heinz',
+    id: 'tomato-ketchup-bottle', sku: '9302661726452', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102156.jpg', name: 'Tomato Ketchup Bottle', size: '500ml', brand: 'Heinz',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2892,7 +2892,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'barbecue-sauce-squeeze', name: 'Barbecue Sauce Squeeze', size: '500ml', brand: 'MasterFoods',
+    id: 'barbecue-sauce-squeeze', sku: '9302733331338', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102214.jpg', name: 'Barbecue Sauce Squeeze', size: '500ml', brand: 'MasterFoods',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2902,7 +2902,7 @@ woolworths: { regularPrice: 4.20, salePrice: 3.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'sweet-chilli-sauce', name: 'Sweet Chilli Sauce', size: '250ml', brand: 'Fountain',
+    id: 'sweet-chilli-sauce', sku: '9302222220600', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101800.jpg', name: 'Sweet Chilli Sauce', size: '250ml', brand: 'Fountain',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2912,7 +2912,7 @@ woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'baked-beans-in-tomato-sauce', name: 'Baked Beans in Tomato Sauce', size: '300g', brand: 'Heinz',
+    id: 'baked-beans-in-tomato-sauce', sku: '9303219750736', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102608.jpg', name: 'Baked Beans in Tomato Sauce', size: '300g', brand: 'Heinz',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2922,7 +2922,7 @@ woolworths: { regularPrice: 2.20, salePrice: 1.60, phaseOffset: 4 },
     }
   },
   {
-    id: 'packham-pears-fresh', name: 'Packham Pears Fresh', size: '1kg', brand: 'Fresh',
+    id: 'packham-pears-fresh', sku: '9302333331630', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101890.jpg', name: 'Packham Pears Fresh', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -2932,7 +2932,7 @@ woolworths: { regularPrice: 4.80, salePrice: 4.80, phaseOffset: 2 },
     }
   },
   {
-    id: 'yellow-peaches-sweet', name: 'Yellow Peaches Sweet', size: '1kg', brand: 'Fresh',
+    id: 'yellow-peaches-sweet', sku: '9302517282113', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102039.jpg', name: 'Yellow Peaches Sweet', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2942,7 +2942,7 @@ woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'navel-oranges-juicy', name: 'Navel Oranges Juicy', size: '1kg', brand: 'Fresh',
+    id: 'navel-oranges-juicy', sku: '9302374072341', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101923.jpg', name: 'Navel Oranges Juicy', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -2952,7 +2952,7 @@ woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'imperial-mandarins-bag', name: 'Imperial Mandarins Bag', size: '1kg', brand: 'Fresh',
+    id: 'imperial-mandarins-bag', sku: '9302711109132', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102196.jpg', name: 'Imperial Mandarins Bag', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -2962,7 +2962,7 @@ woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'lemons-fresh-bunch', name: 'Lemons Fresh Bunch', size: '500g', brand: 'Fresh',
+    id: 'lemons-fresh-bunch', sku: '9302232097136', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101808.jpg', name: 'Lemons Fresh Bunch', size: '500g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -2972,7 +2972,7 @@ woolworths: { regularPrice: 3.80, salePrice: 3.80, phaseOffset: 2 },
     }
   },
   {
-    id: 'limes-fresh-bag', name: 'Limes Fresh Bag', size: '500g', brand: 'Fresh',
+    id: 'limes-fresh-bag', sku: '9301804936954', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101462.jpg', name: 'Limes Fresh Bag', size: '500g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -2982,7 +2982,7 @@ woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'blueberries-fresh-tub', name: 'Blueberries Fresh Tub', size: '125g', brand: 'Fresh',
+    id: 'blueberries-fresh-tub', sku: '9302628393143', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102129.jpg', name: 'Blueberries Fresh Tub', size: '125g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -2992,7 +2992,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'raspberries-fresh-punnet', name: 'Raspberries Fresh Punnet', size: '125g', brand: 'Fresh',
+    id: 'raspberries-fresh-punnet', sku: '9303059257026', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102478.jpg', name: 'Raspberries Fresh Punnet', size: '125g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3002,7 +3002,7 @@ woolworths: { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'fresh-ginger-root', name: 'Fresh Ginger Root', size: '150g', brand: 'Fresh',
+    id: 'fresh-ginger-root', sku: '9302116047838', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101714.jpg', name: 'Fresh Ginger Root', size: '150g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3012,7 +3012,7 @@ woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'garlic-cloves-bag', name: 'Garlic Cloves Bag', size: '300g', brand: 'Fresh',
+    id: 'garlic-cloves-bag', sku: '9302056788622', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101666.jpg', name: 'Garlic Cloves Bag', size: '300g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3022,7 +3022,7 @@ woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'butternut-pumpkin-whole', name: 'Butternut Pumpkin Whole', size: 'Each', brand: 'Fresh',
+    id: 'butternut-pumpkin-whole', sku: '9302975306470', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102410.jpg', name: 'Butternut Pumpkin Whole', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3032,7 +3032,7 @@ woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'green-zucchini-fresh', name: 'Green Zucchini Fresh', size: '1kg', brand: 'Fresh',
+    id: 'green-zucchini-fresh', sku: '9302488887072', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102016.jpg', name: 'Green Zucchini Fresh', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3042,7 +3042,7 @@ woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'button-mushrooms-cup', name: 'Button Mushrooms Cup', size: '200g', brand: 'Fresh',
+    id: 'button-mushrooms-cup', sku: '9302581479597', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102091.jpg', name: 'Button Mushrooms Cup', size: '200g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3052,7 +3052,7 @@ woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'fresh-beetroot-bunch', name: 'Fresh Beetroot Bunch', size: 'Each', brand: 'Fresh',
+    id: 'fresh-beetroot-bunch', sku: '9302496294474', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102022.jpg', name: 'Fresh Beetroot Bunch', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3062,7 +3062,7 @@ woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'lebanese-cucumbers', name: 'Lebanese Cucumbers', size: '1kg', brand: 'Fresh',
+    id: 'lebanese-cucumbers', sku: '9302277776115', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101845.jpg', name: 'Lebanese Cucumbers', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3072,7 +3072,7 @@ woolworths: { regularPrice: 4.80, salePrice: 4.80, phaseOffset: 2 },
     }
   },
   {
-    id: 'roma-tomatoes-fresh', name: 'Roma Tomatoes Fresh', size: '1kg', brand: 'Fresh',
+    id: 'roma-tomatoes-fresh', sku: '9302386418011', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101933.jpg', name: 'Roma Tomatoes Fresh', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3082,7 +3082,7 @@ woolworths: { regularPrice: 5.80, salePrice: 5.80, phaseOffset: 4 },
     }
   },
   {
-    id: 'red-onions-loose', name: 'Red Onions Loose', size: '1kg', brand: 'Fresh',
+    id: 'red-onions-loose', sku: '9301991356571', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101613.jpg', name: 'Red Onions Loose', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3092,7 +3092,7 @@ woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'rump-steak-grassfed', name: 'Rump Steak Grassfed', size: '500g', brand: 'WW',
+    id: 'rump-steak-grassfed', sku: '9302376541475', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101925.jpg', name: 'Rump Steak Grassfed', size: '500g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3102,7 +3102,7 @@ woolworths: { regularPrice: 16.00, salePrice: 16.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'ribeye-steak-premium', name: 'Ribeye Steak Premium', size: '400g', brand: 'WW',
+    id: 'ribeye-steak-premium', sku: '9302509874711', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102033.jpg', name: 'Ribeye Steak Premium', size: '400g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3112,7 +3112,7 @@ woolworths: { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'free-range-chicken-breast', name: 'Free Range Chicken Breast', size: '1kg', brand: 'WW',
+    id: 'free-range-chicken-breast', sku: '9303017281748', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102444.jpg', name: 'Free Range Chicken Breast', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3122,7 +3122,7 @@ woolworths: { regularPrice: 16.50, salePrice: 16.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'chicken-wings-bulk', name: 'Chicken Wings Bulk', size: '1kg', brand: 'WW',
+    id: 'chicken-wings-bulk', sku: '9302218516899', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101797.jpg', name: 'Chicken Wings Bulk', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3132,7 +3132,7 @@ woolworths: { regularPrice: 6.50, salePrice: 6.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'pork-chops-loin-bone-in', name: 'Pork Chops Loin bone-in', size: '1kg', brand: 'WW',
+    id: 'pork-chops-loin-bone-in', sku: '9302758022678', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102234.jpg', name: 'Pork Chops Loin bone-in', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3142,7 +3142,7 @@ woolworths: { regularPrice: 15.00, salePrice: 15.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'lamb-chops-loin', name: 'Lamb Chops Loin', size: '1kg', brand: 'WW',
+    id: 'lamb-chops-loin', sku: '9301823455459', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101477.jpg', name: 'Lamb Chops Loin', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3152,7 +3152,7 @@ woolworths: { regularPrice: 24.00, salePrice: 24.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'tasmanian-salmon-fillets', name: 'Tasmanian Salmon Fillets', size: '400g', brand: 'WW',
+    id: 'tasmanian-salmon-fillets', sku: '9303025923717', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102451.jpg', name: 'Tasmanian Salmon Fillets', size: '400g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3162,7 +3162,7 @@ woolworths: { regularPrice: 18.50, salePrice: 18.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'cooked-tiger-prawns-fresh', name: 'Cooked Tiger Prawns Fresh', size: '500g', brand: 'WW',
+    id: 'cooked-tiger-prawns-fresh', sku: '9303093824902', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102506.jpg', name: 'Cooked Tiger Prawns Fresh', size: '500g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3172,7 +3172,7 @@ woolworths: { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'smoked-streaky-bacon', name: 'Smoked Streaky Bacon', size: '250g', brand: 'WW',
+    id: 'smoked-streaky-bacon', sku: '9302492590773', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102019.jpg', name: 'Smoked Streaky Bacon', size: '250g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3182,7 +3182,7 @@ woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'beef-mince-premium-5-fat', name: 'Beef Mince Premium 5% Fat', size: '1kg', brand: 'WW',
+    id: 'beef-mince-premium-5-fat', sku: '9302766664647', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102241.jpg', name: 'Beef Mince Premium 5% Fat', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3192,7 +3192,7 @@ woolworths: { regularPrice: 19.00, salePrice: 19.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'pork-beef-sausages-thin', name: 'Pork & Beef Sausages Thin', size: '1.5kg', brand: 'WW',
+    id: 'pork-beef-sausages-thin', sku: '9302809874492', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102276.jpg', name: 'Pork & Beef Sausages Thin', size: '1.5kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3202,7 +3202,7 @@ woolworths: { regularPrice: 11.50, salePrice: 11.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'salted-butter-block', name: 'Salted Butter Block', size: '250g', brand: 'Devondale',
+    id: 'salted-butter-block', sku: '9302360492104', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101912.jpg', name: 'Salted Butter Block', size: '250g', brand: 'Devondale',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3212,7 +3212,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 1 },
     }
   },
   {
-    id: 'unsalted-butter-block', name: 'Unsalted Butter Block', size: '250g', brand: 'Devondale',
+    id: 'unsalted-butter-block', sku: '9302640738813', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102139.jpg', name: 'Unsalted Butter Block', size: '250g', brand: 'Devondale',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3222,7 +3222,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'cheddar-cheese-block-tasty', name: 'Cheddar Cheese Block Tasty', size: '500g', brand: 'Bega',
+    id: 'cheddar-cheese-block-tasty', sku: '9303159256953', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102559.jpg', name: 'Cheddar Cheese Block Tasty', size: '500g', brand: 'Bega',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3232,7 +3232,7 @@ woolworths: { regularPrice: 9.50, salePrice: 7.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'grated-parmesan-cheese', name: 'Grated Parmesan Cheese', size: '125g', brand: 'Perfect Italiano',
+    id: 'grated-parmesan-cheese', sku: '9302712343699', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102197.jpg', name: 'Grated Parmesan Cheese', size: '125g', brand: 'Perfect Italiano',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3242,7 +3242,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 1 },
     }
   },
   {
-    id: 'shredded-mozzarella-cheese', name: 'Shredded Mozzarella Cheese', size: '250g', brand: 'Perfect Italiano',
+    id: 'shredded-mozzarella-cheese', sku: '9303253084045', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102635.jpg', name: 'Shredded Mozzarella Cheese', size: '250g', brand: 'Perfect Italiano',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3252,7 +3252,7 @@ woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'greek-style-yogurt-natural', name: 'Greek Style Yogurt Natural', size: '1kg', brand: 'Chobani',
+    id: 'greek-style-yogurt-natural', sku: '9303287651921', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102663.jpg', name: 'Greek Style Yogurt Natural', size: '1kg', brand: 'Chobani',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3262,7 +3262,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'light-sour-cream-tub', name: 'Light Sour Cream Tub', size: '250g', brand: 'Bulli',
+    id: 'light-sour-cream-tub', sku: '9302443208093', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101979.jpg', name: 'Light Sour Cream Tub', size: '250g', brand: 'Bulli',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3272,7 +3272,7 @@ woolworths: { regularPrice: 3.20, salePrice: 2.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'original-cream-cheese-tub', name: 'Original Cream Cheese Tub', size: '250g', brand: 'Philadelphia',
+    id: 'original-cream-cheese-tub', sku: '9303037034820', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102460.jpg', name: 'Original Cream Cheese Tub', size: '250g', brand: 'Philadelphia',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3282,7 +3282,7 @@ woolworths: { regularPrice: 5.30, salePrice: 4.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'almond-milk-unsweetened', name: 'Almond Milk Unsweetened', size: '1L', brand: 'Sanitarium',
+    id: 'almond-milk-unsweetened', sku: '9302895059615', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102345.jpg', name: 'Almond Milk Unsweetened', size: '1L', brand: 'Sanitarium',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3292,7 +3292,7 @@ woolworths: { regularPrice: 3.80, salePrice: 2.80, phaseOffset: 3 },
     }
   },
   {
-    id: 'soy-milk-original-active', name: 'Soy Milk Original Active', size: '1L', brand: 'Sanitarium',
+    id: 'soy-milk-original-active', sku: '9302962960800', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102400.jpg', name: 'Soy Milk Original Active', size: '1L', brand: 'Sanitarium',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3302,7 +3302,7 @@ woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'sourdough-loaf-fresh', name: 'Sourdough Loaf Fresh', size: 'Each', brand: 'WW',
+    id: 'sourdough-loaf-fresh', sku: '9302513578412', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102036.jpg', name: 'Sourdough Loaf Fresh', size: 'Each', brand: 'WW',
     category: 'bakery', emoji: '🥖', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3312,7 +3312,7 @@ woolworths: { regularPrice: 6.50, salePrice: 6.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'wholemeal-sliced-bread', name: 'Wholemeal Sliced Bread', size: '700g', brand: 'Tip Top',
+    id: 'wholemeal-sliced-bread', sku: '9302698763462', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102186.jpg', name: 'Wholemeal Sliced Bread', size: '700g', brand: 'Tip Top',
     category: 'bakery', emoji: '🥖', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3322,7 +3322,7 @@ woolworths: { regularPrice: 4.20, salePrice: 3.20, phaseOffset: 2 },
     }
   },
   {
-    id: 'white-sliced-bread-toast', name: 'White Sliced Bread Toast', size: '700g', brand: 'Tip Top',
+    id: 'white-sliced-bread-toast', sku: '9302929627491', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102373.jpg', name: 'White Sliced Bread Toast', size: '700g', brand: 'Tip Top',
     category: 'bakery', emoji: '🥖', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3332,7 +3332,7 @@ woolworths: { regularPrice: 4.20, salePrice: 3.20, phaseOffset: 1 },
     }
   },
   {
-    id: 'golden-crumpets-toast-6pk', name: 'Golden Crumpets Toast 6pk', size: '6 Pack', brand: 'Golden',
+    id: 'golden-crumpets-toast-6pk', sku: '9303060491593', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102479.jpg', name: 'Golden Crumpets Toast 6pk', size: '6 Pack', brand: 'Golden',
     category: 'bakery', emoji: '🥖', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3342,7 +3342,7 @@ woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 2 },
     }
   },
   {
-    id: 'english-muffins-original', name: 'English Muffins Original', size: '6 Pack', brand: 'Tip Top',
+    id: 'english-muffins-original', sku: '9303023454583', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102449.jpg', name: 'English Muffins Original', size: '6 Pack', brand: 'Tip Top',
     category: 'bakery', emoji: '🥖', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3352,7 +3352,7 @@ woolworths: { regularPrice: 5.00, salePrice: 3.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'soft-tortilla-wraps-large', name: 'Soft Tortilla Wraps Large', size: '8 Pack', brand: 'Mission',
+    id: 'soft-tortilla-wraps-large', sku: '9303128392778', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102534.jpg', name: 'Soft Tortilla Wraps Large', size: '8 Pack', brand: 'Mission',
     category: 'bakery', emoji: '🥖', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3362,7 +3362,7 @@ woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'frozen-baby-peas-bag', name: 'Frozen Baby Peas Bag', size: '1kg', brand: 'Birds Eye',
+    id: 'frozen-baby-peas-bag', sku: '9302385183444', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101932.jpg', name: 'Frozen Baby Peas Bag', size: '1kg', brand: 'Birds Eye',
     category: 'frozen', emoji: '🍕', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3372,7 +3372,7 @@ woolworths: { regularPrice: 5.50, salePrice: 4.20, phaseOffset: 2 },
     }
   },
   {
-    id: 'frozen-super-sweet-corn', name: 'Frozen Super Sweet Corn', size: '500g', brand: 'Birds Eye',
+    id: 'frozen-super-sweet-corn', sku: '9302888886780', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102340.jpg', name: 'Frozen Super Sweet Corn', size: '500g', brand: 'Birds Eye',
     category: 'frozen', emoji: '🍕', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3382,7 +3382,7 @@ woolworths: { regularPrice: 3.80, salePrice: 2.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'classic-vanilla-ice-cream', name: 'Classic Vanilla Ice Cream', size: '2L', brand: 'Streets Blue Ribbon',
+    id: 'classic-vanilla-ice-cream', sku: '9303013578047', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102441.jpg', name: 'Classic Vanilla Ice Cream', size: '2L', brand: 'Streets Blue Ribbon',
     category: 'frozen', emoji: '🍕', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3392,7 +3392,7 @@ woolworths: { regularPrice: 9.00, salePrice: 6.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'deep-pan-hawaiian-pizza', name: 'Deep Pan Hawaiian Pizza', size: '400g', brand: 'McCain',
+    id: 'deep-pan-hawaiian-pizza', sku: '9302790121420', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102260.jpg', name: 'Deep Pan Hawaiian Pizza', size: '400g', brand: 'McCain',
     category: 'frozen', emoji: '🍕', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3402,7 +3402,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'frozen-mixed-berries-bag', name: 'Frozen Mixed Berries Bag', size: '300g', brand: 'Creative Gourmet',
+    id: 'frozen-mixed-berries-bag', sku: '9302933331192', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102376.jpg', name: 'Frozen Mixed Berries Bag', size: '300g', brand: 'Creative Gourmet',
     category: 'frozen', emoji: '🍕', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3412,7 +3412,7 @@ woolworths: { regularPrice: 5.80, salePrice: 4.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'party-meat-pies-12pk', name: 'Party Meat Pies 12pk', size: '12 Pack', brand: 'FourNTwenty',
+    id: 'party-meat-pies-12pk', sku: '9302307405723', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101869.jpg', name: 'Party Meat Pies 12pk', size: '12 Pack', brand: 'FourNTwenty',
     category: 'frozen', emoji: '🍕', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -3422,7 +3422,7 @@ woolworths: { regularPrice: 9.50, salePrice: 7.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'party-sausage-rolls-12pk', name: 'Party Sausage Rolls 12pk', size: '12 Pack', brand: 'FourNTwenty',
+    id: 'party-sausage-rolls-12pk', sku: '9302856788038', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102314.jpg', name: 'Party Sausage Rolls 12pk', size: '12 Pack', brand: 'FourNTwenty',
     category: 'frozen', emoji: '🍕', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -3432,7 +3432,7 @@ woolworths: { regularPrice: 9.50, salePrice: 7.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'laundry-powder-sensitive', name: 'Laundry Powder Sensitive', size: '2kg', brand: 'Omo',
+    id: 'laundry-powder-sensitive', sku: '9303086417500', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102500.jpg', name: 'Laundry Powder Sensitive', size: '2kg', brand: 'Omo',
     category: 'household', emoji: '🧼', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 20.24, salePrice: 13.16, phaseOffset: 1 },
@@ -3442,7 +3442,7 @@ woolworths: { regularPrice: 22.00, salePrice: 11.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'fabric-softener-lavender', name: 'Fabric Softener Lavender', size: '1L', brand: 'Fluffy',
+    id: 'fabric-softener-lavender', sku: '9302992590408', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102424.jpg', name: 'Fabric Softener Lavender', size: '1L', brand: 'Fluffy',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
@@ -3452,7 +3452,7 @@ woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'dishwashing-liquid-lemon', name: 'Dishwashing Liquid Lemon', size: '400ml', brand: 'Morning Fresh',
+    id: 'dishwashing-liquid-lemon', sku: '9303029627418', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102454.jpg', name: 'Dishwashing Liquid Lemon', size: '400ml', brand: 'Morning Fresh',
     category: 'household', emoji: '🧼', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
@@ -3462,7 +3462,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 2 },
     }
   },
   {
-    id: 'glass-cleaner-spray', name: 'Glass Cleaner Spray', size: '500ml', brand: 'Windex',
+    id: 'glass-cleaner-spray', sku: '9302366664939', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101917.jpg', name: 'Glass Cleaner Spray', size: '500ml', brand: 'Windex',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.34, salePrice: 3.47, phaseOffset: 1 },
@@ -3472,7 +3472,7 @@ woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'multi-purpose-spray-citrus', name: 'Multi Purpose Spray Citrus', size: '500ml', brand: 'Dettol',
+    id: 'multi-purpose-spray-citrus', sku: '9303329627199', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102697.jpg', name: 'Multi Purpose Spray Citrus', size: '500ml', brand: 'Dettol',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
@@ -3482,7 +3482,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'sponge-scrubbers-4pk', name: 'Sponge Scrubbers 4pk', size: '4 Pack', brand: 'Chux',
+    id: 'sponge-scrubbers-4pk', sku: '9302449380928', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101984.jpg', name: 'Sponge Scrubbers 4pk', size: '4 Pack', brand: 'Chux',
     category: 'household', emoji: '🧼', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
@@ -3492,7 +3492,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'medium-garbage-bags-30pk', name: 'Medium Garbage Bags 30pk', size: '30 Pack', brand: 'Glad',
+    id: 'medium-garbage-bags-30pk', sku: '9302740738740', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102220.jpg', name: 'Medium Garbage Bags 30pk', size: '30 Pack', brand: 'Glad',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.52, salePrice: 3.59, phaseOffset: 1 },
@@ -3502,7 +3502,7 @@ woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'aluminium-foil-roll', name: 'Aluminium Foil Roll', size: '20m', brand: 'Glad',
+    id: 'aluminium-foil-roll', sku: '9302387652578', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101934.jpg', name: 'Aluminium Foil Roll', size: '20m', brand: 'Glad',
     category: 'household', emoji: '🧼', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 4.42, salePrice: 2.87, phaseOffset: 1 },
@@ -3512,7 +3512,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 1 },
     }
   },
   {
-    id: 'cling-wrap-plastic-roll', name: 'Cling Wrap Plastic Roll', size: '30m', brand: 'Glad',
+    id: 'cling-wrap-plastic-roll', sku: '9302833331265', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102295.jpg', name: 'Cling Wrap Plastic Roll', size: '30m', brand: 'Glad',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
@@ -3522,7 +3522,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'refreshing-body-wash-gel', name: 'Refreshing Body Wash Gel', size: '500ml', brand: 'Palmolive',
+    id: 'refreshing-body-wash-gel', sku: '9302939504027', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102381.jpg', name: 'Refreshing Body Wash Gel', size: '500ml', brand: 'Palmolive',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
@@ -3532,7 +3532,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'anti-dandruff-shampoo', name: 'Anti Dandruff Shampoo', size: '350ml', brand: 'Head & Shoulders',
+    id: 'anti-dandruff-shampoo', sku: '9302616047473', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102119.jpg', name: 'Anti Dandruff Shampoo', size: '350ml', brand: 'Head & Shoulders',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 8.74, salePrice: 5.68, phaseOffset: 1 },
@@ -3542,7 +3542,7 @@ woolworths: { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'smooth-care-conditioner', name: 'Smooth Care Conditioner', size: '350ml', brand: 'Pantene',
+    id: 'smooth-care-conditioner', sku: '9302899997883', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102349.jpg', name: 'Smooth Care Conditioner', size: '350ml', brand: 'Pantene',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
@@ -3552,7 +3552,7 @@ woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'antibacterial-hand-wash', name: 'Antibacterial Hand Wash', size: '250ml', brand: 'Dettol',
+    id: 'antibacterial-hand-wash', sku: '9302838269533', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102299.jpg', name: 'Antibacterial Hand Wash', size: '250ml', brand: 'Dettol',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 3.68, salePrice: 2.39, phaseOffset: 1 },
@@ -3562,7 +3562,7 @@ woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'deodorant-spray-men-sport', name: 'Deodorant Spray Men Sport', size: '250ml', brand: 'Rexona',
+    id: 'deodorant-spray-men-sport', sku: '9303138269314', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102542.jpg', name: 'Deodorant Spray Men Sport', size: '250ml', brand: 'Rexona',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
@@ -3572,7 +3572,7 @@ woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'roll-on-deodorant-women', name: 'Roll-on Deodorant Women', size: '50ml', brand: 'Nivea',
+    id: 'roll-on-deodorant-women', sku: '9302848146069', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102307.jpg', name: 'Roll-on Deodorant Women', size: '50ml', brand: 'Nivea',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 4.42, salePrice: 2.87, phaseOffset: 1 },
@@ -3582,7 +3582,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'mach-3-razor-blades-4pk', name: 'Mach 3 Razor Blades 4pk', size: '4 Pack', brand: 'Gillette',
+    id: 'mach-3-razor-blades-4pk', sku: '9302577775896', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102088.jpg', name: 'Mach 3 Razor Blades 4pk', size: '4 Pack', brand: 'Gillette',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 16.56, salePrice: 10.76, phaseOffset: 1 },
@@ -3592,7 +3592,7 @@ woolworths: { regularPrice: 18.00, salePrice: 14.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'ultra-dry-nappies-size-3', name: 'Ultra Dry Nappies Size 3', size: '44 Pack', brand: 'Huggies',
+    id: 'ultra-dry-nappies-size-3', sku: '9302855553471', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102313.jpg', name: 'Ultra Dry Nappies Size 3', size: '44 Pack', brand: 'Huggies',
     category: 'baby', emoji: '👶', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 17.02, salePrice: 11.06, phaseOffset: 1 },
@@ -3602,7 +3602,7 @@ woolworths: { regularPrice: 18.50, salePrice: 14.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'ultra-dry-nappies-size-4', name: 'Ultra Dry Nappies Size 4', size: '40 Pack', brand: 'Huggies',
+    id: 'ultra-dry-nappies-size-4', sku: '9302856788038', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102314.jpg', name: 'Ultra Dry Nappies Size 4', size: '40 Pack', brand: 'Huggies',
     category: 'baby', emoji: '👶', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 17.02, salePrice: 11.06, phaseOffset: 1 },
@@ -3612,7 +3612,7 @@ woolworths: { regularPrice: 18.50, salePrice: 14.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'baby-gold-formula-stage-2', name: 'Baby Gold Formula Stage 2', size: '900g', brand: 'Karicare',
+    id: 'baby-gold-formula-stage-2', sku: '9302908639852', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102356.jpg', name: 'Baby Gold Formula Stage 2', size: '900g', brand: 'Karicare',
     category: 'baby', emoji: '👶', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 22.08, salePrice: 14.35, phaseOffset: 1 },
@@ -3622,7 +3622,7 @@ woolworths: { regularPrice: 24.00, salePrice: 20.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'organic-baby-food-pouch', name: 'Organic Baby Food Pouch', size: '120g', brand: 'Raffertys Garden',
+    id: 'organic-baby-food-pouch', sku: '9302783948585', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102255.jpg', name: 'Organic Baby Food Pouch', size: '120g', brand: 'Raffertys Garden',
     category: 'baby', emoji: '👶', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 2.58, salePrice: 1.68, phaseOffset: 1 },
@@ -3632,7 +3632,7 @@ woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'tear-free-baby-shampoo', name: 'Tear Free Baby Shampoo', size: '200ml', brand: 'Johnsons',
+    id: 'tear-free-baby-shampoo', sku: '9302659257318', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102154.jpg', name: 'Tear Free Baby Shampoo', size: '200ml', brand: 'Johnsons',
     category: 'baby', emoji: '👶', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
@@ -3642,7 +3642,7 @@ woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'dog-food-beef-can', name: 'Dog Food Beef Can', size: '700g', brand: 'Pedigree',
+    id: 'dog-food-beef-can', sku: '9301951850427', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101581.jpg', name: 'Dog Food Beef Can', size: '700g', brand: 'Pedigree',
     category: 'pet', emoji: '🐾', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3652,7 +3652,7 @@ woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'cat-treats-chicken-bites', name: 'Cat Treats Chicken Bites', size: '50g', brand: 'Dine',
+    id: 'cat-treats-chicken-bites', sku: '9302920985522', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102366.jpg', name: 'Cat Treats Chicken Bites', size: '50g', brand: 'Dine',
     category: 'pet', emoji: '🐾', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3662,7 +3662,7 @@ woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'cat-litter-crystals-odour', name: 'Cat Litter Crystals Odour', size: '4kg', brand: 'Catsan',
+    id: 'cat-litter-crystals-odour', sku: '9303141973015', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102545.jpg', name: 'Cat Litter Crystals Odour', size: '4kg', brand: 'Catsan',
     category: 'pet', emoji: '🐾', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3672,7 +3672,7 @@ woolworths: { regularPrice: 18.00, salePrice: 14.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'vitamin-c-effervescent', name: 'Vitamin C Effervescent', size: '30 Pack', brand: 'Cenovis',
+    id: 'vitamin-c-effervescent', sku: '9302751849843', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102229.jpg', name: 'Vitamin C Effervescent', size: '30 Pack', brand: 'Cenovis',
     category: 'health', emoji: '💊', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 10.12, salePrice: 6.58, phaseOffset: 1 },
@@ -3682,7 +3682,7 @@ woolworths: { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'multivitamins-50plus-60pk', name: 'Multivitamins 50+ 60pk', size: '60 Pack', brand: 'Centrum',
+    id: 'multivitamins-50plus-60pk', sku: '9302955553398', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102394.jpg', name: 'Multivitamins 50+ 60pk', size: '60 Pack', brand: 'Centrum',
     category: 'health', emoji: '💊', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 22.08, salePrice: 14.35, phaseOffset: 1 },
@@ -3692,7 +3692,7 @@ woolworths: { regularPrice: 24.00, salePrice: 16.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'cough-lozenges-honey-lemon', name: 'Cough Lozenges Honey Lemon', size: '16 Pack', brand: 'Strepsils',
+    id: 'cough-lozenges-honey-lemon', sku: '9303241972942', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102626.jpg', name: 'Cough Lozenges Honey Lemon', size: '16 Pack', brand: 'Strepsils',
     category: 'health', emoji: '💊', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
@@ -3702,7 +3702,7 @@ woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'elastic-plastic-bandages', name: 'Elastic Plastic Bandages', size: '25 Pack', brand: 'Band-Aid',
+    id: 'elastic-plastic-bandages', sku: '9302967899068', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102404.jpg', name: 'Elastic Plastic Bandages', size: '25 Pack', brand: 'Band-Aid',
     category: 'health', emoji: '💊', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
@@ -3712,7 +3712,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'plain-flour-premium', name: 'Plain Flour Premium', size: '2kg', brand: 'White Wings',
+    id: 'plain-flour-premium', sku: '9302396294547', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101941.jpg', name: 'Plain Flour Premium', size: '2kg', brand: 'White Wings',
     category: 'baking', emoji: '🧁', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3722,7 +3722,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'brown-sugar-soft-cane', name: 'Brown Sugar Soft Cane', size: '1kg', brand: 'CSR',
+    id: 'brown-sugar-soft-cane', sku: '9302572837628', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102084.jpg', name: 'Brown Sugar Soft Cane', size: '1kg', brand: 'CSR',
     category: 'baking', emoji: '🧁', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3732,7 +3732,7 @@ woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'icing-sugar-mixture', name: 'Icing Sugar Mixture', size: '500g', brand: 'CSR',
+    id: 'icing-sugar-mixture', sku: '9302395059980', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101940.jpg', name: 'Icing Sugar Mixture', size: '500g', brand: 'CSR',
     category: 'baking', emoji: '🧁', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3742,7 +3742,7 @@ woolworths: { regularPrice: 3.20, salePrice: 3.20, phaseOffset: 3 },
     }
   },
   {
-    id: 'baking-powder-tin', name: 'Baking Powder Tin', size: '125g', brand: 'McKenzies',
+    id: 'baking-powder-tin', sku: '9302096294766', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101698.jpg', name: 'Baking Powder Tin', size: '125g', brand: 'McKenzies',
     category: 'baking', emoji: '🧁', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3752,7 +3752,7 @@ woolworths: { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 2 },
     }
   },
   {
-    id: 'pure-vanilla-extract', name: 'Pure Vanilla Extract', size: '50ml', brand: 'Queen',
+    id: 'pure-vanilla-extract', sku: '9302518516680', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102040.jpg', name: 'Pure Vanilla Extract', size: '50ml', brand: 'Queen',
     category: 'baking', emoji: '🧁', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3762,7 +3762,7 @@ woolworths: { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'dry-yeast-sachets-5pk-val1', name: 'Dry Yeast Sachets 5pk Val1', size: '5 Pack', brand: 'Lowan',
+    id: 'dry-yeast-sachets-5pk-val1', sku: '9303032096552', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102456.jpg', name: 'Dry Yeast Sachets 5pk Val1', size: '5 Pack', brand: 'Lowan',
     category: 'baking', emoji: '🧁', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3772,7 +3772,7 @@ woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'basmati-rice-premium-val1', name: 'Basmati Rice Premium Val1', size: '2kg', brand: 'SunRice',
+    id: 'basmati-rice-premium-val1', sku: '9302999997810', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102430.jpg', name: 'Basmati Rice Premium Val1', size: '2kg', brand: 'SunRice',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3782,7 +3782,7 @@ woolworths: { regularPrice: 8.00, salePrice: 5.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'jasmine-rice-fragrant-val1', name: 'Jasmine Rice Fragrant Val1', size: '5kg', brand: 'SunRice',
+    id: 'jasmine-rice-fragrant-val1', sku: '9303113577974', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102522.jpg', name: 'Jasmine Rice Fragrant Val1', size: '5kg', brand: 'SunRice',
     category: 'pantry', emoji: '🥫', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -3792,7 +3792,7 @@ woolworths: { regularPrice: 18.00, salePrice: 10.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'extra-virgin-olive-oil-val1', name: 'Extra Virgin Olive Oil Val1', size: '750ml', brand: 'Cobram Estate',
+    id: 'extra-virgin-olive-oil-val1', sku: '9303237034674', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102622.jpg', name: 'Extra Virgin Olive Oil Val1', size: '750ml', brand: 'Cobram Estate',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3802,7 +3802,7 @@ woolworths: { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'pure-canola-cooking-oil-val1', name: 'Pure Canola Cooking Oil Val1', size: '1L', brand: 'WW',
+    id: 'pure-canola-cooking-oil-val1', sku: '9303318516096', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102688.jpg', name: 'Pure Canola Cooking Oil Val1', size: '1L', brand: 'WW',
     category: 'pantry', emoji: '🥫', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3812,7 +3812,7 @@ woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'soy-sauce-gluten-free-val1', name: 'Soy Sauce Gluten Free Val1', size: '250ml', brand: 'Kikkoman',
+    id: 'soy-sauce-gluten-free-val1', sku: '9303087652067', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102501.jpg', name: 'Soy Sauce Gluten Free Val1', size: '250ml', brand: 'Kikkoman',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3822,7 +3822,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'tomato-paste-squeeze-val1', name: 'Tomato Paste Squeeze Val1', size: '500g', brand: 'Leggos',
+    id: 'tomato-paste-squeeze-val1', sku: '9303059257026', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102478.jpg', name: 'Tomato Paste Squeeze Val1', size: '500g', brand: 'Leggos',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3832,7 +3832,7 @@ woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'canned-sweet-corn-kernels-val1', name: 'Canned Sweet Corn Kernels Val1', size: '420g', brand: 'Edgell',
+    id: 'canned-sweet-corn-kernels-val1', sku: '9303593824537', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102911.jpg', name: 'Canned Sweet Corn Kernels Val1', size: '420g', brand: 'Edgell',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3842,7 +3842,7 @@ woolworths: { regularPrice: 2.00, salePrice: 1.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'chunky-tuna-in-olive-oil-val1', name: 'Chunky Tuna in Olive Oil Val1', size: '95g', brand: 'John West',
+    id: 'chunky-tuna-in-olive-oil-val1', sku: '9303428392559', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102777.jpg', name: 'Chunky Tuna in Olive Oil Val1', size: '95g', brand: 'John West',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3852,7 +3852,7 @@ woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 3 },
     }
   },
   {
-    id: 'tuna-tempters-springwater-val1', name: 'Tuna Tempters Springwater Val1', size: '95g', brand: 'Sirena',
+    id: 'tuna-tempters-springwater-val1', sku: '9303749379979', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103037.jpg', name: 'Tuna Tempters Springwater Val1', size: '95g', brand: 'Sirena',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3862,7 +3862,7 @@ woolworths: { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'crunchy-peanut-butter-val1', name: 'Crunchy Peanut Butter Val1', size: '375g', brand: 'Bega',
+    id: 'crunchy-peanut-butter-val1', sku: '9303192590262', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102586.jpg', name: 'Crunchy Peanut Butter Val1', size: '375g', brand: 'Bega',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3872,7 +3872,7 @@ woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'smooth-peanut-butter-jar-val1', name: 'Smooth Peanut Butter Jar Val1', size: '375g', brand: 'Bega',
+    id: 'smooth-peanut-butter-jar-val1', sku: '9303518515950', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102850.jpg', name: 'Smooth Peanut Butter Jar Val1', size: '375g', brand: 'Bega',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3882,7 +3882,7 @@ woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'strawberry-jam-spread-val1', name: 'Strawberry Jam Spread Val1', size: '480g', brand: 'IXL',
+    id: 'strawberry-jam-spread-val1', sku: '9303169133489', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102567.jpg', name: 'Strawberry Jam Spread Val1', size: '480g', brand: 'IXL',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3892,7 +3892,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'pure-honey-squeeze-bottle-val1', name: 'Pure Honey Squeeze Bottle Val1', size: '340g', brand: 'Capilano',
+    id: 'pure-honey-squeeze-bottle-val1', sku: '9303658022021', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102963.jpg', name: 'Pure Honey Squeeze Bottle Val1', size: '340g', brand: 'Capilano',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3902,7 +3902,7 @@ woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'whole-egg-mayonnaise-jar-val1', name: 'Whole Egg Mayonnaise Jar Val1', size: '380g', brand: 'Praise',
+    id: 'whole-egg-mayonnaise-jar-val1', sku: '9303450614765', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102795.jpg', name: 'Whole Egg Mayonnaise Jar Val1', size: '380g', brand: 'Praise',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3912,7 +3912,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 3 },
     }
   },
   {
-    id: 'traditional-tomato-pasta-sauce-val1', name: 'Traditional Tomato Pasta Sauce Val1', size: '500g', brand: 'Dolmio',
+    id: 'traditional-tomato-pasta-sauce-val1', sku: '9304267898119', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103457.jpg', name: 'Traditional Tomato Pasta Sauce Val1', size: '500g', brand: 'Dolmio',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3922,7 +3922,7 @@ woolworths: { regularPrice: 3.80, salePrice: 2.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'spaghetti-pasta-no-5-val1', name: 'Spaghetti Pasta No 5 Val1', size: '500g', brand: 'San Remo',
+    id: 'spaghetti-pasta-no-5-val1', sku: '9302879010244', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102332.jpg', name: 'Spaghetti Pasta No 5 Val1', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3932,7 +3932,7 @@ woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'penne-rigate-pasta-val1', name: 'Penne Rigate Pasta Val1', size: '500g', brand: 'San Remo',
+    id: 'penne-rigate-pasta-val1', sku: '9302733331338', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102214.jpg', name: 'Penne Rigate Pasta Val1', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3942,7 +3942,7 @@ woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'canned-chickpeas-drained-val1', name: 'Canned Chickpeas drained Val1', size: '400g', brand: 'Annalisa',
+    id: 'canned-chickpeas-drained-val1', sku: '9303444441930', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102790.jpg', name: 'Canned Chickpeas drained Val1', size: '400g', brand: 'Annalisa',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3952,7 +3952,7 @@ woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 0 },
     }
   },
   {
-    id: 'canned-brown-lentils-val1', name: 'Canned Brown Lentils Val1', size: '400g', brand: 'Annalisa',
+    id: 'canned-brown-lentils-val1', sku: '9303011108913', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102439.jpg', name: 'Canned Brown Lentils Val1', size: '400g', brand: 'Annalisa',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -3962,7 +3962,7 @@ woolworths: { regularPrice: 1.80, salePrice: 1.30, phaseOffset: 0 },
     }
   },
   {
-    id: 'table-salt-fine-iodised-val1', name: 'Table Salt Fine iodised Val1', size: '500g', brand: 'Saxons',
+    id: 'table-salt-fine-iodised-val1', sku: '9303287651921', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102663.jpg', name: 'Table Salt Fine iodised Val1', size: '500g', brand: 'Saxons',
     category: 'pantry', emoji: '🥫', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -3972,7 +3972,7 @@ woolworths: { regularPrice: 2.20, salePrice: 2.20, phaseOffset: 4 },
     }
   },
   {
-    id: 'black-pepper-grinder-val1', name: 'Black Pepper Grinder Val1', size: '50g', brand: 'MasterFoods',
+    id: 'black-pepper-grinder-val1', sku: '9302981479305', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102415.jpg', name: 'Black Pepper Grinder Val1', size: '50g', brand: 'MasterFoods',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3982,7 +3982,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'dijon-mustard-jar-val1', name: 'Dijon Mustard Jar Val1', size: '200g', brand: 'Maille',
+    id: 'dijon-mustard-jar-val1', sku: '9302622220308', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102124.jpg', name: 'Dijon Mustard Jar Val1', size: '200g', brand: 'Maille',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -3992,7 +3992,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 2 },
     }
   },
   {
-    id: 'tomato-ketchup-bottle-val1', name: 'Tomato Ketchup Bottle Val1', size: '500ml', brand: 'Heinz',
+    id: 'tomato-ketchup-bottle-val1', sku: '9303176540891', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102573.jpg', name: 'Tomato Ketchup Bottle Val1', size: '500ml', brand: 'Heinz',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4002,7 +4002,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'barbecue-sauce-squeeze-val1', name: 'Barbecue Sauce Squeeze Val1', size: '500ml', brand: 'MasterFoods',
+    id: 'barbecue-sauce-squeeze-val1', sku: '9303248145777', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102631.jpg', name: 'Barbecue Sauce Squeeze Val1', size: '500ml', brand: 'MasterFoods',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4012,7 +4012,7 @@ woolworths: { regularPrice: 4.20, salePrice: 3.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'sweet-chilli-sauce-val1', name: 'Sweet Chilli Sauce Val1', size: '250ml', brand: 'Fountain',
+    id: 'sweet-chilli-sauce-val1', sku: '9302737035039', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102217.jpg', name: 'Sweet Chilli Sauce Val1', size: '250ml', brand: 'Fountain',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4022,7 +4022,7 @@ woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'baked-beans-in-tomato-sauce-val1', name: 'Baked Beans in Tomato Sauce Val1', size: '300g', brand: 'Heinz',
+    id: 'baked-beans-in-tomato-sauce-val1', sku: '9303734565175', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103025.jpg', name: 'Baked Beans in Tomato Sauce Val1', size: '300g', brand: 'Heinz',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4032,7 +4032,7 @@ woolworths: { regularPrice: 2.20, salePrice: 1.60, phaseOffset: 1 },
     }
   },
   {
-    id: 'packham-pears-fresh-val1', name: 'Packham Pears Fresh Val1', size: '1kg', brand: 'Fresh',
+    id: 'packham-pears-fresh-val1', sku: '9302848146069', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102307.jpg', name: 'Packham Pears Fresh Val1', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4042,7 +4042,7 @@ woolworths: { regularPrice: 4.80, salePrice: 4.80, phaseOffset: 3 },
     }
   },
   {
-    id: 'yellow-peaches-sweet-val1', name: 'Yellow Peaches Sweet Val1', size: '1kg', brand: 'Fresh',
+    id: 'yellow-peaches-sweet-val1', sku: '9303032096552', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102456.jpg', name: 'Yellow Peaches Sweet Val1', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4052,7 +4052,7 @@ woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'navel-oranges-juicy-val1', name: 'Navel Oranges Juicy Val1', size: '1kg', brand: 'Fresh',
+    id: 'navel-oranges-juicy-val1', sku: '9302888886780', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102340.jpg', name: 'Navel Oranges Juicy Val1', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4062,7 +4062,7 @@ woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'imperial-mandarins-bag-val1', name: 'Imperial Mandarins Bag Val1', size: '1kg', brand: 'Fresh',
+    id: 'imperial-mandarins-bag-val1', sku: '9303225923571', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102613.jpg', name: 'Imperial Mandarins Bag Val1', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4072,7 +4072,7 @@ woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'lemons-fresh-bunch-val1', name: 'Lemons Fresh Bunch Val1', size: '500g', brand: 'Fresh',
+    id: 'lemons-fresh-bunch-val1', sku: '9302746911575', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102225.jpg', name: 'Lemons Fresh Bunch Val1', size: '500g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4082,7 +4082,7 @@ woolworths: { regularPrice: 3.80, salePrice: 3.80, phaseOffset: 1 },
     }
   },
   {
-    id: 'limes-fresh-bag-val1', name: 'Limes Fresh Bag Val1', size: '500g', brand: 'Fresh',
+    id: 'limes-fresh-bag-val1', sku: '9302319751393', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101879.jpg', name: 'Limes Fresh Bag Val1', size: '500g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4092,7 +4092,7 @@ woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'blueberries-fresh-tub-val1', name: 'Blueberries Fresh Tub Val1', size: '125g', brand: 'Fresh',
+    id: 'blueberries-fresh-tub-val1', sku: '9303143207582', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102546.jpg', name: 'Blueberries Fresh Tub Val1', size: '125g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4102,7 +4102,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'raspberries-fresh-punnet-val1', name: 'Raspberries Fresh Punnet Val1', size: '125g', brand: 'Fresh',
+    id: 'raspberries-fresh-punnet-val1', sku: '9303574071465', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102895.jpg', name: 'Raspberries Fresh Punnet Val1', size: '125g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4112,7 +4112,7 @@ woolworths: { regularPrice: 6.00, salePrice: 4.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'fresh-ginger-root-val1', name: 'Fresh Ginger Root Val1', size: '150g', brand: 'Fresh',
+    id: 'fresh-ginger-root-val1', sku: '9302630862277', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102131.jpg', name: 'Fresh Ginger Root Val1', size: '150g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4122,7 +4122,7 @@ woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'garlic-cloves-bag-val1', name: 'Garlic Cloves Bag Val1', size: '300g', brand: 'Fresh',
+    id: 'garlic-cloves-bag-val1', sku: '9302571603061', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102083.jpg', name: 'Garlic Cloves Bag Val1', size: '300g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4132,7 +4132,7 @@ woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'butternut-pumpkin-whole-val1', name: 'Butternut Pumpkin Whole Val1', size: 'Each', brand: 'Fresh',
+    id: 'butternut-pumpkin-whole-val1', sku: '9303490120909', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102827.jpg', name: 'Butternut Pumpkin Whole Val1', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4142,7 +4142,7 @@ woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'green-zucchini-fresh-val1', name: 'Green Zucchini Fresh Val1', size: '1kg', brand: 'Fresh',
+    id: 'green-zucchini-fresh-val1', sku: '9303003701511', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102433.jpg', name: 'Green Zucchini Fresh Val1', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4152,7 +4152,7 @@ woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'button-mushrooms-cup-val1', name: 'Button Mushrooms Cup Val1', size: '200g', brand: 'Fresh',
+    id: 'button-mushrooms-cup-val1', sku: '9303096294036', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102508.jpg', name: 'Button Mushrooms Cup Val1', size: '200g', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4162,7 +4162,7 @@ woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'fresh-beetroot-bunch-val1', name: 'Fresh Beetroot Bunch Val1', size: 'Each', brand: 'Fresh',
+    id: 'fresh-beetroot-bunch-val1', sku: '9303011108913', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102439.jpg', name: 'Fresh Beetroot Bunch Val1', size: 'Each', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4172,7 +4172,7 @@ woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'lebanese-cucumbers-val1', name: 'Lebanese Cucumbers Val1', size: '1kg', brand: 'Fresh',
+    id: 'lebanese-cucumbers-val1', sku: '9302792590554', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102262.jpg', name: 'Lebanese Cucumbers Val1', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4182,7 +4182,7 @@ woolworths: { regularPrice: 4.80, salePrice: 4.80, phaseOffset: 4 },
     }
   },
   {
-    id: 'roma-tomatoes-fresh-val1', name: 'Roma Tomatoes Fresh Val1', size: '1kg', brand: 'Fresh',
+    id: 'roma-tomatoes-fresh-val1', sku: '9302901232450', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102350.jpg', name: 'Roma Tomatoes Fresh Val1', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4192,7 +4192,7 @@ woolworths: { regularPrice: 5.80, salePrice: 5.80, phaseOffset: 4 },
     }
   },
   {
-    id: 'red-onions-loose-val1', name: 'Red Onions Loose Val1', size: '1kg', brand: 'Fresh',
+    id: 'red-onions-loose-val1', sku: '9302506171010', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102030.jpg', name: 'Red Onions Loose Val1', size: '1kg', brand: 'Fresh',
     category: 'produce', emoji: '🍎', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4202,7 +4202,7 @@ woolworths: { regularPrice: 3.50, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'rump-steak-grassfed-val1', name: 'Rump Steak Grassfed Val1', size: '500g', brand: 'WW',
+    id: 'rump-steak-grassfed-val1', sku: '9302891355914', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102342.jpg', name: 'Rump Steak Grassfed Val1', size: '500g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4212,7 +4212,7 @@ woolworths: { regularPrice: 16.00, salePrice: 16.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'ribeye-steak-premium-val1', name: 'Ribeye Steak Premium Val1', size: '400g', brand: 'WW',
+    id: 'ribeye-steak-premium-val1', sku: '9303024689150', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102450.jpg', name: 'Ribeye Steak Premium Val1', size: '400g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4222,7 +4222,7 @@ woolworths: { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'free-range-chicken-breast-val1', name: 'Free Range Chicken Breast Val1', size: '1kg', brand: 'WW',
+    id: 'free-range-chicken-breast-val1', sku: '9303532096187', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102861.jpg', name: 'Free Range Chicken Breast Val1', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4232,7 +4232,7 @@ woolworths: { regularPrice: 16.50, salePrice: 16.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'chicken-wings-bulk-val1', name: 'Chicken Wings Bulk Val1', size: '1kg', brand: 'WW',
+    id: 'chicken-wings-bulk-val1', sku: '9302733331338', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102214.jpg', name: 'Chicken Wings Bulk Val1', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4242,7 +4242,7 @@ woolworths: { regularPrice: 6.50, salePrice: 6.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'pork-chops-loin-bone-in-val1', name: 'Pork Chops Loin bone-in Val1', size: '1kg', brand: 'WW',
+    id: 'pork-chops-loin-bone-in-val1', sku: '9303272837117', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102651.jpg', name: 'Pork Chops Loin bone-in Val1', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4252,7 +4252,7 @@ woolworths: { regularPrice: 15.00, salePrice: 15.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'lamb-chops-loin-val1', name: 'Lamb Chops Loin Val1', size: '1kg', brand: 'WW',
+    id: 'lamb-chops-loin-val1', sku: '9302338269898', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101894.jpg', name: 'Lamb Chops Loin Val1', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4262,7 +4262,7 @@ woolworths: { regularPrice: 24.00, salePrice: 24.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'tasmanian-salmon-fillets-val1', name: 'Tasmanian Salmon Fillets Val1', size: '400g', brand: 'WW',
+    id: 'tasmanian-salmon-fillets-val1', sku: '9303540738156', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102868.jpg', name: 'Tasmanian Salmon Fillets Val1', size: '400g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4272,7 +4272,7 @@ woolworths: { regularPrice: 18.50, salePrice: 18.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'cooked-tiger-prawns-fresh-val1', name: 'Cooked Tiger Prawns Fresh Val1', size: '500g', brand: 'WW',
+    id: 'cooked-tiger-prawns-fresh-val1', sku: '9303608639341', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102923.jpg', name: 'Cooked Tiger Prawns Fresh Val1', size: '500g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4282,7 +4282,7 @@ woolworths: { regularPrice: 22.00, salePrice: 22.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'smoked-streaky-bacon-val1', name: 'Smoked Streaky Bacon Val1', size: '250g', brand: 'WW',
+    id: 'smoked-streaky-bacon-val1', sku: '9303007405212', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102436.jpg', name: 'Smoked Streaky Bacon Val1', size: '250g', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4292,7 +4292,7 @@ woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'beef-mince-premium-5-fat-val1', name: 'Beef Mince Premium 5% Fat Val1', size: '1kg', brand: 'WW',
+    id: 'beef-mince-premium-5-fat-val1', sku: '9303281479086', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102658.jpg', name: 'Beef Mince Premium 5% Fat Val1', size: '1kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4302,7 +4302,7 @@ woolworths: { regularPrice: 19.00, salePrice: 19.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'pork-beef-sausages-thin-val1', name: 'Pork & Beef Sausages Thin Val1', size: '1.5kg', brand: 'WW',
+    id: 'pork-beef-sausages-thin-val1', sku: '9303324688931', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102693.jpg', name: 'Pork & Beef Sausages Thin Val1', size: '1.5kg', brand: 'WW',
     category: 'meat', emoji: '🥩', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4312,7 +4312,7 @@ woolworths: { regularPrice: 11.50, salePrice: 11.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'salted-butter-block-val1', name: 'Salted Butter Block Val1', size: '250g', brand: 'Devondale',
+    id: 'salted-butter-block-val1', sku: '9302875306543', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102329.jpg', name: 'Salted Butter Block Val1', size: '250g', brand: 'Devondale',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4322,7 +4322,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'unsalted-butter-block-val1', name: 'Unsalted Butter Block Val1', size: '250g', brand: 'Devondale',
+    id: 'unsalted-butter-block-val1', sku: '9303155553252', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102556.jpg', name: 'Unsalted Butter Block Val1', size: '250g', brand: 'Devondale',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4332,7 +4332,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'cheddar-cheese-block-tasty-val1', name: 'Cheddar Cheese Block Tasty Val1', size: '500g', brand: 'Bega',
+    id: 'cheddar-cheese-block-tasty-val1', sku: '9303674071392', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102976.jpg', name: 'Cheddar Cheese Block Tasty Val1', size: '500g', brand: 'Bega',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4342,7 +4342,7 @@ woolworths: { regularPrice: 9.50, salePrice: 7.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'grated-parmesan-cheese-val1', name: 'Grated Parmesan Cheese Val1', size: '125g', brand: 'Perfect Italiano',
+    id: 'grated-parmesan-cheese-val1', sku: '9303227158138', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102614.jpg', name: 'Grated Parmesan Cheese Val1', size: '125g', brand: 'Perfect Italiano',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4352,7 +4352,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'shredded-mozzarella-cheese-val1', name: 'Shredded Mozzarella Cheese Val1', size: '250g', brand: 'Perfect Italiano',
+    id: 'shredded-mozzarella-cheese-val1', sku: '9303767898484', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103052.jpg', name: 'Shredded Mozzarella Cheese Val1', size: '250g', brand: 'Perfect Italiano',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4362,7 +4362,7 @@ woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'greek-style-yogurt-natural-val1', name: 'Greek Style Yogurt Natural Val1', size: '1kg', brand: 'Chobani',
+    id: 'greek-style-yogurt-natural-val1', sku: '9303802466360', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103080.jpg', name: 'Greek Style Yogurt Natural Val1', size: '1kg', brand: 'Chobani',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4372,7 +4372,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'light-sour-cream-tub-val1', name: 'Light Sour Cream Tub Val1', size: '250g', brand: 'Bulli',
+    id: 'light-sour-cream-tub-val1', sku: '9302958022532', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102396.jpg', name: 'Light Sour Cream Tub Val1', size: '250g', brand: 'Bulli',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4382,7 +4382,7 @@ woolworths: { regularPrice: 3.20, salePrice: 2.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'original-cream-cheese-tub-val1', name: 'Original Cream Cheese Tub Val1', size: '250g', brand: 'Philadelphia',
+    id: 'original-cream-cheese-tub-val1', sku: '9303551849259', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102877.jpg', name: 'Original Cream Cheese Tub Val1', size: '250g', brand: 'Philadelphia',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4392,7 +4392,7 @@ woolworths: { regularPrice: 5.30, salePrice: 4.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'almond-milk-unsweetened-val1', name: 'Almond Milk Unsweetened Val1', size: '1L', brand: 'Sanitarium',
+    id: 'almond-milk-unsweetened-val1', sku: '9303409874054', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102762.jpg', name: 'Almond Milk Unsweetened Val1', size: '1L', brand: 'Sanitarium',
     category: 'dairy', emoji: '🥛', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4402,7 +4402,7 @@ woolworths: { regularPrice: 3.80, salePrice: 2.80, phaseOffset: 4 },
     }
   },
   {
-    id: 'soy-milk-original-active-val1', name: 'Soy Milk Original Active Val1', size: '1L', brand: 'Sanitarium',
+    id: 'soy-milk-original-active-val1', sku: '9303477775239', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102817.jpg', name: 'Soy Milk Original Active Val1', size: '1L', brand: 'Sanitarium',
     category: 'dairy', emoji: '🥛', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4412,7 +4412,7 @@ woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'sourdough-loaf-fresh-val1', name: 'Sourdough Loaf Fresh Val1', size: 'Each', brand: 'WW',
+    id: 'sourdough-loaf-fresh-val1', sku: '9303028392851', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102453.jpg', name: 'Sourdough Loaf Fresh Val1', size: 'Each', brand: 'WW',
     category: 'bakery', emoji: '🥖', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4422,7 +4422,7 @@ woolworths: { regularPrice: 6.50, salePrice: 6.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'wholemeal-sliced-bread-val1', name: 'Wholemeal Sliced Bread Val1', size: '700g', brand: 'Tip Top',
+    id: 'wholemeal-sliced-bread-val1', sku: '9303213577901', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102603.jpg', name: 'Wholemeal Sliced Bread Val1', size: '700g', brand: 'Tip Top',
     category: 'bakery', emoji: '🥖', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4432,7 +4432,7 @@ woolworths: { regularPrice: 4.20, salePrice: 3.20, phaseOffset: 4 },
     }
   },
   {
-    id: 'white-sliced-bread-toast-val1', name: 'White Sliced Bread Toast Val1', size: '700g', brand: 'Tip Top',
+    id: 'white-sliced-bread-toast-val1', sku: '9303444441930', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102790.jpg', name: 'White Sliced Bread Toast Val1', size: '700g', brand: 'Tip Top',
     category: 'bakery', emoji: '🥖', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4442,7 +4442,7 @@ woolworths: { regularPrice: 4.20, salePrice: 3.20, phaseOffset: 4 },
     }
   },
   {
-    id: 'golden-crumpets-toast-6pk-val1', name: 'Golden Crumpets Toast 6pk Val1', size: '6 Pack', brand: 'Golden',
+    id: 'golden-crumpets-toast-6pk-val1', sku: '9303575306032', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102896.jpg', name: 'Golden Crumpets Toast 6pk Val1', size: '6 Pack', brand: 'Golden',
     category: 'bakery', emoji: '🥖', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4452,7 +4452,7 @@ woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 3 },
     }
   },
   {
-    id: 'english-muffins-original-val1', name: 'English Muffins Original Val1', size: '6 Pack', brand: 'Tip Top',
+    id: 'english-muffins-original-val1', sku: '9303538269022', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102866.jpg', name: 'English Muffins Original Val1', size: '6 Pack', brand: 'Tip Top',
     category: 'bakery', emoji: '🥖', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4462,7 +4462,7 @@ woolworths: { regularPrice: 5.00, salePrice: 3.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'soft-tortilla-wraps-large-val1', name: 'Soft Tortilla Wraps Large Val1', size: '8 Pack', brand: 'Mission',
+    id: 'soft-tortilla-wraps-large-val1', sku: '9303643207217', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102951.jpg', name: 'Soft Tortilla Wraps Large Val1', size: '8 Pack', brand: 'Mission',
     category: 'bakery', emoji: '🥖', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4472,7 +4472,7 @@ woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'frozen-baby-peas-bag-val1', name: 'Frozen Baby Peas Bag Val1', size: '1kg', brand: 'Birds Eye',
+    id: 'frozen-baby-peas-bag-val1', sku: '9302899997883', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102349.jpg', name: 'Frozen Baby Peas Bag Val1', size: '1kg', brand: 'Birds Eye',
     category: 'frozen', emoji: '🍕', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4482,7 +4482,7 @@ woolworths: { regularPrice: 5.50, salePrice: 4.20, phaseOffset: 1 },
     }
   },
   {
-    id: 'frozen-super-sweet-corn-val1', name: 'Frozen Super Sweet Corn Val1', size: '500g', brand: 'Birds Eye',
+    id: 'frozen-super-sweet-corn-val1', sku: '9303403701219', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102757.jpg', name: 'Frozen Super Sweet Corn Val1', size: '500g', brand: 'Birds Eye',
     category: 'frozen', emoji: '🍕', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4492,7 +4492,7 @@ woolworths: { regularPrice: 3.80, salePrice: 2.80, phaseOffset: 2 },
     }
   },
   {
-    id: 'classic-vanilla-ice-cream-val1', name: 'Classic Vanilla Ice Cream Val1', size: '2L', brand: 'Streets Blue Ribbon',
+    id: 'classic-vanilla-ice-cream-val1', sku: '9303528392486', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102858.jpg', name: 'Classic Vanilla Ice Cream Val1', size: '2L', brand: 'Streets Blue Ribbon',
     category: 'frozen', emoji: '🍕', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4502,7 +4502,7 @@ woolworths: { regularPrice: 9.00, salePrice: 6.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'deep-pan-hawaiian-pizza-val1', name: 'Deep Pan Hawaiian Pizza Val1', size: '400g', brand: 'McCain',
+    id: 'deep-pan-hawaiian-pizza-val1', sku: '9303304935859', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102677.jpg', name: 'Deep Pan Hawaiian Pizza Val1', size: '400g', brand: 'McCain',
     category: 'frozen', emoji: '🍕', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4512,7 +4512,7 @@ woolworths: { regularPrice: 7.50, salePrice: 5.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'frozen-mixed-berries-bag-val1', name: 'Frozen Mixed Berries Bag Val1', size: '300g', brand: 'Creative Gourmet',
+    id: 'frozen-mixed-berries-bag-val1', sku: '9303448145631', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102793.jpg', name: 'Frozen Mixed Berries Bag Val1', size: '300g', brand: 'Creative Gourmet',
     category: 'frozen', emoji: '🍕', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4522,7 +4522,7 @@ woolworths: { regularPrice: 5.80, salePrice: 4.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'party-meat-pies-12pk-val1', name: 'Party Meat Pies 12pk Val1', size: '12 Pack', brand: 'FourNTwenty',
+    id: 'party-meat-pies-12pk-val1', sku: '9302822220162', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102286.jpg', name: 'Party Meat Pies 12pk Val1', size: '12 Pack', brand: 'FourNTwenty',
     category: 'frozen', emoji: '🍕', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -4532,7 +4532,7 @@ woolworths: { regularPrice: 9.50, salePrice: 7.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'party-sausage-rolls-12pk-val1', name: 'Party Sausage Rolls 12pk Val1', size: '12 Pack', brand: 'FourNTwenty',
+    id: 'party-sausage-rolls-12pk-val1', sku: '9303371602477', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102731.jpg', name: 'Party Sausage Rolls 12pk Val1', size: '12 Pack', brand: 'FourNTwenty',
     category: 'frozen', emoji: '🍕', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -4542,7 +4542,7 @@ woolworths: { regularPrice: 9.50, salePrice: 7.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'laundry-powder-sensitive-val1', name: 'Laundry Powder Sensitive Val1', size: '2kg', brand: 'Omo',
+    id: 'laundry-powder-sensitive-val1', sku: '9303601231939', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102917.jpg', name: 'Laundry Powder Sensitive Val1', size: '2kg', brand: 'Omo',
     category: 'household', emoji: '🧼', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 20.24, salePrice: 13.16, phaseOffset: 1 },
@@ -4552,7 +4552,7 @@ woolworths: { regularPrice: 22.00, salePrice: 11.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'fabric-softener-lavender-val1', name: 'Fabric Softener Lavender Val1', size: '1L', brand: 'Fluffy',
+    id: 'fabric-softener-lavender-val1', sku: '9303507404847', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102841.jpg', name: 'Fabric Softener Lavender Val1', size: '1L', brand: 'Fluffy',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
@@ -4562,7 +4562,7 @@ woolworths: { regularPrice: 8.50, salePrice: 5.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'dishwashing-liquid-lemon-val1', name: 'Dishwashing Liquid Lemon Val1', size: '400ml', brand: 'Morning Fresh',
+    id: 'dishwashing-liquid-lemon-val1', sku: '9303544441857', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102871.jpg', name: 'Dishwashing Liquid Lemon Val1', size: '400ml', brand: 'Morning Fresh',
     category: 'household', emoji: '🧼', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
@@ -4572,7 +4572,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 1 },
     }
   },
   {
-    id: 'glass-cleaner-spray-val1', name: 'Glass Cleaner Spray Val1', size: '500ml', brand: 'Windex',
+    id: 'glass-cleaner-spray-val1', sku: '9302881479378', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102334.jpg', name: 'Glass Cleaner Spray Val1', size: '500ml', brand: 'Windex',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.34, salePrice: 3.47, phaseOffset: 1 },
@@ -4582,7 +4582,7 @@ woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'multi-purpose-spray-citrus-val1', name: 'Multi Purpose Spray Citrus Val1', size: '500ml', brand: 'Dettol',
+    id: 'multi-purpose-spray-citrus-val1', sku: '9303844441638', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103114.jpg', name: 'Multi Purpose Spray Citrus Val1', size: '500ml', brand: 'Dettol',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
@@ -4592,7 +4592,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'sponge-scrubbers-4pk-val1', name: 'Sponge Scrubbers 4pk Val1', size: '4 Pack', brand: 'Chux',
+    id: 'sponge-scrubbers-4pk-val1', sku: '9302964195367', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102401.jpg', name: 'Sponge Scrubbers 4pk Val1', size: '4 Pack', brand: 'Chux',
     category: 'household', emoji: '🧼', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
@@ -4602,7 +4602,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'medium-garbage-bags-30pk-val1', name: 'Medium Garbage Bags 30pk Val1', size: '30 Pack', brand: 'Glad',
+    id: 'medium-garbage-bags-30pk-val1', sku: '9303255553179', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102637.jpg', name: 'Medium Garbage Bags 30pk Val1', size: '30 Pack', brand: 'Glad',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.52, salePrice: 3.59, phaseOffset: 1 },
@@ -4612,7 +4612,7 @@ woolworths: { regularPrice: 6.00, salePrice: 4.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'aluminium-foil-roll-val1', name: 'Aluminium Foil Roll Val1', size: '20m', brand: 'Glad',
+    id: 'aluminium-foil-roll-val1', sku: '9302902467017', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102351.jpg', name: 'Aluminium Foil Roll Val1', size: '20m', brand: 'Glad',
     category: 'household', emoji: '🧼', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 4.42, salePrice: 2.87, phaseOffset: 1 },
@@ -4622,7 +4622,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.80, phaseOffset: 4 },
     }
   },
   {
-    id: 'cling-wrap-plastic-roll-val1', name: 'Cling Wrap Plastic Roll Val1', size: '30m', brand: 'Glad',
+    id: 'cling-wrap-plastic-roll-val1', sku: '9303348145704', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102712.jpg', name: 'Cling Wrap Plastic Roll Val1', size: '30m', brand: 'Glad',
     category: 'household', emoji: '🧼', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
@@ -4632,7 +4632,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'refreshing-body-wash-gel-val1', name: 'Refreshing Body Wash Gel Val1', size: '500ml', brand: 'Palmolive',
+    id: 'refreshing-body-wash-gel-val1', sku: '9303454318466', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102798.jpg', name: 'Refreshing Body Wash Gel Val1', size: '500ml', brand: 'Palmolive',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.98, salePrice: 3.89, phaseOffset: 1 },
@@ -4642,7 +4642,7 @@ woolworths: { regularPrice: 6.50, salePrice: 4.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'anti-dandruff-shampoo-val1', name: 'Anti Dandruff Shampoo Val1', size: '350ml', brand: 'Head & Shoulders',
+    id: 'anti-dandruff-shampoo-val1', sku: '9303130861912', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102536.jpg', name: 'Anti Dandruff Shampoo Val1', size: '350ml', brand: 'Head & Shoulders',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 8.74, salePrice: 5.68, phaseOffset: 1 },
@@ -4652,7 +4652,7 @@ woolworths: { regularPrice: 9.50, salePrice: 6.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'smooth-care-conditioner-val1', name: 'Smooth Care Conditioner Val1', size: '350ml', brand: 'Pantene',
+    id: 'smooth-care-conditioner-val1', sku: '9303414812322', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102766.jpg', name: 'Smooth Care Conditioner Val1', size: '350ml', brand: 'Pantene',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
@@ -4662,7 +4662,7 @@ woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'antibacterial-hand-wash-val1', name: 'Antibacterial Hand Wash Val1', size: '250ml', brand: 'Dettol',
+    id: 'antibacterial-hand-wash-val1', sku: '9303353083972', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102716.jpg', name: 'Antibacterial Hand Wash Val1', size: '250ml', brand: 'Dettol',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 3.68, salePrice: 2.39, phaseOffset: 1 },
@@ -4672,7 +4672,7 @@ woolworths: { regularPrice: 4.00, salePrice: 2.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'deodorant-spray-men-sport-val1', name: 'Deodorant Spray Men Sport Val1', size: '250ml', brand: 'Rexona',
+    id: 'deodorant-spray-men-sport-val1', sku: '9303653083753', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102959.jpg', name: 'Deodorant Spray Men Sport Val1', size: '250ml', brand: 'Rexona',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
@@ -4682,7 +4682,7 @@ woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'roll-on-deodorant-women-val1', name: 'Roll-on Deodorant Women Val1', size: '50ml', brand: 'Nivea',
+    id: 'roll-on-deodorant-women-val1', sku: '9303362960508', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102724.jpg', name: 'Roll-on Deodorant Women Val1', size: '50ml', brand: 'Nivea',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 4.42, salePrice: 2.87, phaseOffset: 1 },
@@ -4692,7 +4692,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'mach-3-razor-blades-4pk-val1', name: 'Mach 3 Razor Blades 4pk Val1', size: '4 Pack', brand: 'Gillette',
+    id: 'mach-3-razor-blades-4pk-val1', sku: '9303092590335', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102505.jpg', name: 'Mach 3 Razor Blades 4pk Val1', size: '4 Pack', brand: 'Gillette',
     category: 'personal-care', emoji: '🧴', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 16.56, salePrice: 10.76, phaseOffset: 1 },
@@ -4702,7 +4702,7 @@ woolworths: { regularPrice: 18.00, salePrice: 14.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'ultra-dry-nappies-size-3-val1', name: 'Ultra Dry Nappies Size 3 Val1', size: '44 Pack', brand: 'Huggies',
+    id: 'ultra-dry-nappies-size-3-val1', sku: '9303370367910', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102730.jpg', name: 'Ultra Dry Nappies Size 3 Val1', size: '44 Pack', brand: 'Huggies',
     category: 'baby', emoji: '👶', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 17.02, salePrice: 11.06, phaseOffset: 1 },
@@ -4712,7 +4712,7 @@ woolworths: { regularPrice: 18.50, salePrice: 14.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'ultra-dry-nappies-size-4-val1', name: 'Ultra Dry Nappies Size 4 Val1', size: '40 Pack', brand: 'Huggies',
+    id: 'ultra-dry-nappies-size-4-val1', sku: '9303371602477', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102731.jpg', name: 'Ultra Dry Nappies Size 4 Val1', size: '40 Pack', brand: 'Huggies',
     category: 'baby', emoji: '👶', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 17.02, salePrice: 11.06, phaseOffset: 1 },
@@ -4722,7 +4722,7 @@ woolworths: { regularPrice: 18.50, salePrice: 14.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'baby-gold-formula-stage-2-val1', name: 'Baby Gold Formula Stage 2 Val1', size: '900g', brand: 'Karicare',
+    id: 'baby-gold-formula-stage-2-val1', sku: '9303423454291', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102773.jpg', name: 'Baby Gold Formula Stage 2 Val1', size: '900g', brand: 'Karicare',
     category: 'baby', emoji: '👶', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 22.08, salePrice: 14.35, phaseOffset: 1 },
@@ -4732,7 +4732,7 @@ woolworths: { regularPrice: 24.00, salePrice: 20.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'organic-baby-food-pouch-val1', name: 'Organic Baby Food Pouch Val1', size: '120g', brand: 'Raffertys Garden',
+    id: 'organic-baby-food-pouch-val1', sku: '9303298763024', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102672.jpg', name: 'Organic Baby Food Pouch Val1', size: '120g', brand: 'Raffertys Garden',
     category: 'baby', emoji: '👶', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 2.58, salePrice: 1.68, phaseOffset: 1 },
@@ -4742,7 +4742,7 @@ woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'tear-free-baby-shampoo-val1', name: 'Tear Free Baby Shampoo Val1', size: '200ml', brand: 'Johnsons',
+    id: 'tear-free-baby-shampoo-val1', sku: '9303174071757', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102571.jpg', name: 'Tear Free Baby Shampoo Val1', size: '200ml', brand: 'Johnsons',
     category: 'baby', emoji: '👶', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 5.06, salePrice: 3.29, phaseOffset: 1 },
@@ -4752,7 +4752,7 @@ woolworths: { regularPrice: 5.50, salePrice: 4.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'dog-food-beef-can-val1', name: 'Dog Food Beef Can Val1', size: '700g', brand: 'Pedigree',
+    id: 'dog-food-beef-can-val1', sku: '9302466664866', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/101998.jpg', name: 'Dog Food Beef Can Val1', size: '700g', brand: 'Pedigree',
     category: 'pet', emoji: '🐾', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4762,7 +4762,7 @@ woolworths: { regularPrice: 3.50, salePrice: 2.50, phaseOffset: 2 },
     }
   },
   {
-    id: 'cat-treats-chicken-bites-val1', name: 'Cat Treats Chicken Bites Val1', size: '50g', brand: 'Dine',
+    id: 'cat-treats-chicken-bites-val1', sku: '9303435799961', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102783.jpg', name: 'Cat Treats Chicken Bites Val1', size: '50g', brand: 'Dine',
     category: 'pet', emoji: '🐾', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4772,7 +4772,7 @@ woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'cat-litter-crystals-odour-val1', name: 'Cat Litter Crystals Odour Val1', size: '4kg', brand: 'Catsan',
+    id: 'cat-litter-crystals-odour-val1', sku: '9303656787454', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102962.jpg', name: 'Cat Litter Crystals Odour Val1', size: '4kg', brand: 'Catsan',
     category: 'pet', emoji: '🐾', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4782,7 +4782,7 @@ woolworths: { regularPrice: 18.00, salePrice: 14.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'vitamin-c-effervescent-val1', name: 'Vitamin C Effervescent Val1', size: '30 Pack', brand: 'Cenovis',
+    id: 'vitamin-c-effervescent-val1', sku: '9303266664282', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102646.jpg', name: 'Vitamin C Effervescent Val1', size: '30 Pack', brand: 'Cenovis',
     category: 'health', emoji: '💊', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 10.12, salePrice: 6.58, phaseOffset: 1 },
@@ -4792,7 +4792,7 @@ woolworths: { regularPrice: 11.00, salePrice: 7.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'multivitamins-50plus-60pk-val1', name: 'Multivitamins 50+ 60pk Val1', size: '60 Pack', brand: 'Centrum',
+    id: 'multivitamins-50plus-60pk-val1', sku: '9303470367837', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102811.jpg', name: 'Multivitamins 50+ 60pk Val1', size: '60 Pack', brand: 'Centrum',
     category: 'health', emoji: '💊', cycleWeeks: 6,
     stores: {
       chemist_warehouse: { regularPrice: 22.08, salePrice: 14.35, phaseOffset: 1 },
@@ -4802,7 +4802,7 @@ woolworths: { regularPrice: 24.00, salePrice: 16.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'cough-lozenges-honey-lemon-val1', name: 'Cough Lozenges Honey Lemon Val1', size: '16 Pack', brand: 'Strepsils',
+    id: 'cough-lozenges-honey-lemon-val1', sku: '9303756787381', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103043.jpg', name: 'Cough Lozenges Honey Lemon Val1', size: '16 Pack', brand: 'Strepsils',
     category: 'health', emoji: '💊', cycleWeeks: 5,
     stores: {
       chemist_warehouse: { regularPrice: 7.82, salePrice: 5.08, phaseOffset: 1 },
@@ -4812,7 +4812,7 @@ woolworths: { regularPrice: 8.50, salePrice: 6.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'elastic-plastic-bandages-val1', name: 'Elastic Plastic Bandages Val1', size: '25 Pack', brand: 'Band-Aid',
+    id: 'elastic-plastic-bandages-val1', sku: '9303482713507', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102821.jpg', name: 'Elastic Plastic Bandages Val1', size: '25 Pack', brand: 'Band-Aid',
     category: 'health', emoji: '💊', cycleWeeks: 4,
     stores: {
       chemist_warehouse: { regularPrice: 4.14, salePrice: 2.69, phaseOffset: 1 },
@@ -4822,7 +4822,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 4 },
     }
   },
   {
-    id: 'plain-flour-premium-val1', name: 'Plain Flour Premium Val1', size: '2kg', brand: 'White Wings',
+    id: 'plain-flour-premium-val1', sku: '9302911108986', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102358.jpg', name: 'Plain Flour Premium Val1', size: '2kg', brand: 'White Wings',
     category: 'baking', emoji: '🧁', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4832,7 +4832,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'brown-sugar-soft-cane-val1', name: 'Brown Sugar Soft Cane Val1', size: '1kg', brand: 'CSR',
+    id: 'brown-sugar-soft-cane-val1', sku: '9303087652067', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102501.jpg', name: 'Brown Sugar Soft Cane Val1', size: '1kg', brand: 'CSR',
     category: 'baking', emoji: '🧁', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4842,7 +4842,7 @@ woolworths: { regularPrice: 4.50, salePrice: 4.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'icing-sugar-mixture-val1', name: 'Icing Sugar Mixture Val1', size: '500g', brand: 'CSR',
+    id: 'icing-sugar-mixture-val1', sku: '9302909874419', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102357.jpg', name: 'Icing Sugar Mixture Val1', size: '500g', brand: 'CSR',
     category: 'baking', emoji: '🧁', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4852,7 +4852,7 @@ woolworths: { regularPrice: 3.20, salePrice: 3.20, phaseOffset: 3 },
     }
   },
   {
-    id: 'baking-powder-tin-val1', name: 'Baking Powder Tin Val1', size: '125g', brand: 'McKenzies',
+    id: 'baking-powder-tin-val1', sku: '9302611109205', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102115.jpg', name: 'Baking Powder Tin Val1', size: '125g', brand: 'McKenzies',
     category: 'baking', emoji: '🧁', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4862,7 +4862,7 @@ woolworths: { regularPrice: 2.80, salePrice: 2.20, phaseOffset: 3 },
     }
   },
   {
-    id: 'pure-vanilla-extract-val1', name: 'Pure Vanilla Extract Val1', size: '50ml', brand: 'Queen',
+    id: 'pure-vanilla-extract-val1', sku: '9303033331119', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102457.jpg', name: 'Pure Vanilla Extract Val1', size: '50ml', brand: 'Queen',
     category: 'baking', emoji: '🧁', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4872,7 +4872,7 @@ woolworths: { regularPrice: 8.50, salePrice: 6.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'dry-yeast-sachets-5pk-val2', name: 'Dry Yeast Sachets 5pk Val2', size: '5 Pack', brand: 'Lowan',
+    id: 'dry-yeast-sachets-5pk-val2', sku: '9303033331119', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102457.jpg', name: 'Dry Yeast Sachets 5pk Val2', size: '5 Pack', brand: 'Lowan',
     category: 'baking', emoji: '🧁', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4882,7 +4882,7 @@ woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'basmati-rice-premium-val2', name: 'Basmati Rice Premium Val2', size: '2kg', brand: 'SunRice',
+    id: 'basmati-rice-premium-val2', sku: '9303001232377', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102431.jpg', name: 'Basmati Rice Premium Val2', size: '2kg', brand: 'SunRice',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4892,7 +4892,7 @@ woolworths: { regularPrice: 8.00, salePrice: 5.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'jasmine-rice-fragrant-val2', name: 'Jasmine Rice Fragrant Val2', size: '5kg', brand: 'SunRice',
+    id: 'jasmine-rice-fragrant-val2', sku: '9303114812541', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102523.jpg', name: 'Jasmine Rice Fragrant Val2', size: '5kg', brand: 'SunRice',
     category: 'pantry', emoji: '🥫', cycleWeeks: 6,
     stores: {
       chemist_warehouse: null,
@@ -4902,7 +4902,7 @@ woolworths: { regularPrice: 18.00, salePrice: 10.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'extra-virgin-olive-oil-val2', name: 'Extra Virgin Olive Oil Val2', size: '750ml', brand: 'Cobram Estate',
+    id: 'extra-virgin-olive-oil-val2', sku: '9303238269241', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102623.jpg', name: 'Extra Virgin Olive Oil Val2', size: '750ml', brand: 'Cobram Estate',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4912,7 +4912,7 @@ woolworths: { regularPrice: 16.00, salePrice: 12.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'pure-canola-cooking-oil-val2', name: 'Pure Canola Cooking Oil Val2', size: '1L', brand: 'WW',
+    id: 'pure-canola-cooking-oil-val2', sku: '9303319750663', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102689.jpg', name: 'Pure Canola Cooking Oil Val2', size: '1L', brand: 'WW',
     category: 'pantry', emoji: '🥫', cycleWeeks: 99,
     stores: {
       chemist_warehouse: null,
@@ -4922,7 +4922,7 @@ woolworths: { regularPrice: 5.50, salePrice: 5.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'soy-sauce-gluten-free-val2', name: 'Soy Sauce Gluten Free Val2', size: '250ml', brand: 'Kikkoman',
+    id: 'soy-sauce-gluten-free-val2', sku: '9303088886634', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102502.jpg', name: 'Soy Sauce Gluten Free Val2', size: '250ml', brand: 'Kikkoman',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4932,7 +4932,7 @@ woolworths: { regularPrice: 4.50, salePrice: 3.50, phaseOffset: 3 },
     }
   },
   {
-    id: 'tomato-paste-squeeze-val2', name: 'Tomato Paste Squeeze Val2', size: '500g', brand: 'Leggos',
+    id: 'tomato-paste-squeeze-val2', sku: '9303060491593', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102479.jpg', name: 'Tomato Paste Squeeze Val2', size: '500g', brand: 'Leggos',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4942,7 +4942,7 @@ woolworths: { regularPrice: 4.00, salePrice: 3.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'canned-sweet-corn-kernels-val2', name: 'Canned Sweet Corn Kernels Val2', size: '420g', brand: 'Edgell',
+    id: 'canned-sweet-corn-kernels-val2', sku: '9303595059104', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102912.jpg', name: 'Canned Sweet Corn Kernels Val2', size: '420g', brand: 'Edgell',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4952,7 +4952,7 @@ woolworths: { regularPrice: 2.00, salePrice: 1.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'chunky-tuna-in-olive-oil-val2', name: 'Chunky Tuna in Olive Oil Val2', size: '95g', brand: 'John West',
+    id: 'chunky-tuna-in-olive-oil-val2', sku: '9303429627126', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102778.jpg', name: 'Chunky Tuna in Olive Oil Val2', size: '95g', brand: 'John West',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -4962,7 +4962,7 @@ woolworths: { regularPrice: 2.80, salePrice: 1.80, phaseOffset: 0 },
     }
   },
   {
-    id: 'tuna-tempters-springwater-val2', name: 'Tuna Tempters Springwater Val2', size: '95g', brand: 'Sirena',
+    id: 'tuna-tempters-springwater-val2', sku: '9303750614546', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103038.jpg', name: 'Tuna Tempters Springwater Val2', size: '95g', brand: 'Sirena',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4972,7 +4972,7 @@ woolworths: { regularPrice: 3.00, salePrice: 2.00, phaseOffset: 0 },
     }
   },
   {
-    id: 'crunchy-peanut-butter-val2', name: 'Crunchy Peanut Butter Val2', size: '375g', brand: 'Bega',
+    id: 'crunchy-peanut-butter-val2', sku: '9303193824829', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102587.jpg', name: 'Crunchy Peanut Butter Val2', size: '375g', brand: 'Bega',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4982,7 +4982,7 @@ woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 3 },
     }
   },
   {
-    id: 'smooth-peanut-butter-jar-val2', name: 'Smooth Peanut Butter Jar Val2', size: '375g', brand: 'Bega',
+    id: 'smooth-peanut-butter-jar-val2', sku: '9303519750517', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102851.jpg', name: 'Smooth Peanut Butter Jar Val2', size: '375g', brand: 'Bega',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -4992,7 +4992,7 @@ woolworths: { regularPrice: 5.80, salePrice: 4.00, phaseOffset: 2 },
     }
   },
   {
-    id: 'strawberry-jam-spread-val2', name: 'Strawberry Jam Spread Val2', size: '480g', brand: 'IXL',
+    id: 'strawberry-jam-spread-val2', sku: '9303170368056', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102568.jpg', name: 'Strawberry Jam Spread Val2', size: '480g', brand: 'IXL',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -5002,7 +5002,7 @@ woolworths: { regularPrice: 4.80, salePrice: 3.50, phaseOffset: 0 },
     }
   },
   {
-    id: 'pure-honey-squeeze-bottle-val2', name: 'Pure Honey Squeeze Bottle Val2', size: '340g', brand: 'Capilano',
+    id: 'pure-honey-squeeze-bottle-val2', sku: '9303659256588', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102964.jpg', name: 'Pure Honey Squeeze Bottle Val2', size: '340g', brand: 'Capilano',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -5012,7 +5012,7 @@ woolworths: { regularPrice: 6.50, salePrice: 5.00, phaseOffset: 1 },
     }
   },
   {
-    id: 'whole-egg-mayonnaise-jar-val2', name: 'Whole Egg Mayonnaise Jar Val2', size: '380g', brand: 'Praise',
+    id: 'whole-egg-mayonnaise-jar-val2', sku: '9303451849332', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102796.jpg', name: 'Whole Egg Mayonnaise Jar Val2', size: '380g', brand: 'Praise',
     category: 'pantry', emoji: '🥫', cycleWeeks: 4,
     stores: {
       chemist_warehouse: null,
@@ -5022,7 +5022,7 @@ woolworths: { regularPrice: 5.50, salePrice: 3.80, phaseOffset: 1 },
     }
   },
   {
-    id: 'traditional-tomato-pasta-sauce-val2', name: 'Traditional Tomato Pasta Sauce Val2', size: '500g', brand: 'Dolmio',
+    id: 'traditional-tomato-pasta-sauce-val2', sku: '9304269132686', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/103458.jpg', name: 'Traditional Tomato Pasta Sauce Val2', size: '500g', brand: 'Dolmio',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -5032,7 +5032,7 @@ woolworths: { regularPrice: 3.80, salePrice: 2.50, phaseOffset: 1 },
     }
   },
   {
-    id: 'spaghetti-pasta-no-5-val2', name: 'Spaghetti Pasta No 5 Val2', size: '500g', brand: 'San Remo',
+    id: 'spaghetti-pasta-no-5-val2', sku: '9302880244811', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102333.jpg', name: 'Spaghetti Pasta No 5 Val2', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -5042,7 +5042,7 @@ woolworths: { regularPrice: 2.80, salePrice: 2.00, phaseOffset: 4 },
     }
   },
   {
-    id: 'penne-rigate-pasta-val2', name: 'Penne Rigate Pasta Val2', size: '500g', brand: 'San Remo',
+    id: 'penne-rigate-pasta-val2', sku: '9302734565905', imageUrl: 'https://images.woolworthsstatic.com.au/content/wowproductimages/large/102215.jpg', name: 'Penne Rigate Pasta Val2', size: '500g', brand: 'San Remo',
     category: 'pantry', emoji: '🥫', cycleWeeks: 5,
     stores: {
       chemist_warehouse: null,
@@ -5224,7 +5224,9 @@ function getVisibleProducts() {
     list = list.filter(p =>
       p.name.toLowerCase().includes(q) ||
       p.brand.toLowerCase().includes(q) ||
-      p.size.toLowerCase().includes(q)
+      p.size.toLowerCase().includes(q) ||
+      (p.sku && p.sku.toLowerCase().includes(q)) ||
+      p.id.toLowerCase().includes(q)
     );
   }
 
@@ -5433,6 +5435,8 @@ function cardHTML(p, idx) {
     badgeHTML = '<span class="rare-sale-badge">Rare Sale</span>';
   }
 
+  const cardMedia = p.imageUrl ? `<div class="card-media-wrap"><img src="${p.imageUrl}" alt="${p.name}" class="card-img" onerror="this.onerror=null; this.parentElement.innerHTML='<span class=\"card-emoji\">${p.emoji}</span>';"></div>` : `<div class="card-emoji" aria-hidden="true">${p.emoji}</div>`;
+
   return `
     <article class="product-card ${p.anyOnSale ? 'on-sale' : ''}"
              role="listitem"
@@ -5443,7 +5447,7 @@ function cardHTML(p, idx) {
       <button class="favorite-btn ${favClass}" onclick="toggleFavorite('${p.id}', event)" title="${isFav ? 'Remove from Watchlist' : 'Add to Watchlist'}" aria-label="${isFav ? 'Remove from Watchlist' : 'Add to Watchlist'}">${favStar}</button>
       <div class="card-head">
         <div>
-          <div class="card-emoji" aria-hidden="true">${p.emoji}</div>
+          ${cardMedia}
         </div>
         ${badgeHTML}
       </div>
@@ -5636,11 +5640,15 @@ function modalHTML(p) {
       </div>`;
   }
 
+  const skuHTML = p.sku ? `<span class="sku-badge" title="Product Barcode / SKU">🏷️ Barcode/SKU: ${p.sku}</span>` : `<span class="sku-badge">🏷️ ID: ${p.id}</span>`;
+  const mediaHTML = p.imageUrl ? `<img src="${p.imageUrl}" alt="${p.name}" class="modal-product-img" onerror="this.onerror=null; this.outerHTML='<span class=\"modal-product-emoji\">${p.emoji}</span>';">` : `<span class="modal-product-emoji" aria-hidden="true">${p.emoji}</span>`;
+
   return `
     <div class="modal-header">
-      <span class="modal-product-emoji" aria-hidden="true">${p.emoji}</span>
+      ${mediaHTML}
       <h2 id="modalProductName">${p.name}</h2>
-      <p class="modal-product-sub">${p.size} · ${p.brand} · ${CATEGORIES[p.category]?.label}</p>
+      <p class="modal-product-sub">${p.size} · ${p.brand} · ${CATEGORIES[p.category]?.label || p.category}</p>
+      ${skuHTML}
     </div>
 
     <!-- Current Prices -->
