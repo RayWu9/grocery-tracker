@@ -4981,6 +4981,37 @@ function closeModal() {
 
 function onEscKey(e) { if (e.key === 'Escape') closeModal(); }
 
+function findSimilarProducts(targetProduct, limit = 4) {
+  const stopWords = new Set(['and', 'the', 'or', 'in', 'of', 'for', 'with', 'a', 'an', 'pack', 'pk', 'g', 'ml', 'l', 'kg', 'x', '100g', '200g', '500g', '1kg']);
+  const getKeywords = (str) => {
+    return str.toLowerCase()
+      .replace(/[^a-z0-9\s]/g, '')
+      .split(/\s+/)
+      .filter(w => w.length > 1 && !stopWords.has(w));
+  };
+
+  const targetKeywords = getKeywords(targetProduct.name);
+
+  const scored = products
+    .filter(p => p.id !== targetProduct.id)
+    .map(p => {
+      let score = 0;
+      if (p.category === targetProduct.category) score += 50;
+      if (p.brand && targetProduct.brand && p.brand.toLowerCase() === targetProduct.brand.toLowerCase()) {
+        score += 30;
+      }
+      const otherKeywords = getKeywords(p.name);
+      for (const kw of targetKeywords) {
+        if (otherKeywords.includes(kw)) score += 15;
+      }
+      return { product: p, score };
+    })
+    .filter(item => item.score > 0)
+    .sort((a, b) => b.score - a.score);
+
+  return scored.slice(0, limit).map(item => item.product);
+}
+
 function modalHTML(p) {
   // Store price rows (detailed)
   const storeRowsHTML = Object.entries(STORES).map(([key, store]) => {
@@ -5028,8 +5059,6 @@ function modalHTML(p) {
   const minEver  = roundPrice(Math.min(...allHistoryPrices));
   const maxEver  = roundPrice(Math.max(...allHistoryPrices));
   const avgPrice = roundPrice(allHistoryPrices.reduce((a, b) => a + b, 0) / allHistoryPrices.length);
-  const totalSaleWeeks = Object.values(p.stores).filter(Boolean)
-    .flatMap(s => s.history).filter(h => h.onSale).length;
 
   // Predictions per store
   const predRowsHTML = Object.entries(STORES).map(([key, store]) => {
@@ -5055,6 +5084,39 @@ function modalHTML(p) {
         <div class="pred-info">${predInfo}</div>
       </div>`;
   }).filter(Boolean).join('');
+
+  // Similar / Comparative Products
+  const similarProducts = findSimilarProducts(p, 4);
+  let similarHTML = '';
+  if (similarProducts.length > 0) {
+    const similarCards = similarProducts.map(sim => {
+      const storeDots = Object.entries(STORES)
+        .filter(([key]) => sim.stores[key] !== null)
+        .map(([key, store]) => `<span class="store-dot ${store.dotClass}" title="${store.name}"></span>`)
+        .join('');
+
+      return `
+        <div class="similar-card" onclick="openModal('${sim.id}')" role="button" tabindex="0" aria-label="View ${sim.name}">
+          <div>
+            <div class="similar-card-head">
+              <span class="similar-card-emoji" aria-hidden="true">${sim.emoji}</span>
+              <div class="similar-card-title">${sim.name}</div>
+            </div>
+            <div class="similar-card-meta">${sim.size} · ${sim.brand}</div>
+          </div>
+          <div class="similar-card-foot">
+            <div class="similar-card-price ${sim.anyOnSale ? 'sale-price' : ''}">$${sim.lowestPrice.toFixed(2)}${sim.anyOnSale ? ' 🔥' : ''}</div>
+            <div class="similar-card-stores">${storeDots}</div>
+          </div>
+        </div>`;
+    }).join('');
+
+    similarHTML = `
+      <div class="modal-section">
+        <p class="modal-section-title">🔄 Similar Products to Compare</p>
+        <div class="similar-grid">${similarCards}</div>
+      </div>`;
+  }
 
   return `
     <div class="modal-header">
@@ -5109,7 +5171,10 @@ function modalHTML(p) {
         🔄 This item typically goes on sale every <strong>${p.cycleWeeks} weeks</strong> per store.
         Predictions are based on observed price patterns.
       </div>
-    </div>`;
+    </div>
+
+    <!-- Similar Products -->
+    ${similarHTML}`;
 }
 
 // =====================================================

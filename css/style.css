@@ -879,3 +879,70 @@ img { display: block; max-width: 100%; }
   background: rgba(251, 191, 36, 0.1);
 }
 
+/* Similar / Comparative Products in Modal */
+.similar-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 10px;
+}
+.similar-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 10px 12px;
+  cursor: pointer;
+  transition: all var(--t) var(--ease);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.similar-card:hover {
+  background: var(--surface-2);
+  border-color: var(--accent);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.similar-card-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.similar-card-emoji { font-size: 20px; flex-shrink: 0; }
+.similar-card-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.25;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.similar-card-meta {
+  font-size: 11px;
+  color: var(--text-2);
+  margin-bottom: 6px;
+}
+.similar-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 6px;
+  padding-top: 6px;
+  border-top: 1px solid var(--border);
+}
+.similar-card-price {
+  font-size: 13px;
+  font-weight: 800;
+  color: var(--text);
+}
+.similar-card-price.sale-price {
+  color: var(--sale);
+}
+.similar-card-stores {
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
